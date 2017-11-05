@@ -1,0 +1,37 @@
+PAGE#0.1
+#The first line of a pagefile is the page declaration to make sure the file is a page file.
+DELIM <-
+#The second valid line (not a comment) of the pagefile has to contain the delimiter, which is used for assignments. This is present for flexibility
+#Pages are a description of the structure that the output of the program will look like.
+#In this page guide is also a valid page for basic mathematical expressions.
+#The features of a pages are made of up statements, as described below.
+
+#Firstly, comments are prexifed with a
+#like this: comment
+
+op <- *
+#op is the name of the token being defined, and from that definition it can only be a *
+op <- +
+op <- -
+op <- /
+#Tokens can be defined multiple times, and each redefinition is a possibility, so we have the basic operations defined
+
+
+int <-1
+int <-2
+int <-3
+int <-4
+int <-5
+int <-6
+int <-7
+int <-8
+int <-9
+int <-%int%int
+intexp <-%int
+intexp <-(%intexp %op %intexp)
+#Elements of an expression that begin with '%' are references to other defined tokens.
+#The above defines an 'internal expression' aka an expression that is wrapped in brackets, or stands on it's own, to ensure order of operations is clear with brackets
+#elements can self reference
+
+*exp <- %intexp %op %intexp
+#Tokens that are prefixed with a * are top level elements, so stand on their own.
