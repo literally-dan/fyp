@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{exploringsteno}
+Johnson Neil~F and Jajodia Sushil.
+\newblock Exploring steganography: Seeing the unseen.
+\newblock {\em Computer}, 31(2):26--34, Feb 1998.
+
+\bibitem{introsteno}
+Provos N and Honeyman P.
+\newblock Hide and seek: an introduction to steganography.
+\newblock {\em {IEEE Security \& Privacy}}, 99:32--44, June 2003.
+
+\bibitem{detectingdns}
+Greg Farnham.
+\newblock Detecting dns tunneling.
+\newblock {\em SANS Institute Reading Room}, Feb 2013.
+
+\bibitem{rfc2616}
+Fielding R, Irvine UC, Gettys J, Compaq/W3C, Mogul J, Compaq, Frystyk H,
+  W3C/MIT, Masinter L, Xerox, Leach P, Microsoft, and Berners-Lee T.
+\newblock {Hypertext Transfer Protocol -- HTTP/1.1}.
+\newblock {RFC} 2616, {RFC Editor}, June 1999.
+
+\bibitem{freqanal}
+Born Kenton and Gustafson Dr.~David.
+\newblock Detecting dns tunnels using character frequency analysis.
+\newblock {\em CoRR}, abs,1004.4358, 2010.
+
+\end{thebibliography}

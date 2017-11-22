@@ -1,0 +1,9 @@
+#commented lines are ignored
+#first line is url/ip
+google.com
+#next is port to connect to
+80
+#port to listen on
+80
+#protocol for parsing
+http
