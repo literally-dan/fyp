@@ -1,0 +1,41 @@
+PAGE#0.1
+DELIM <-
+
+num <- 6
+num <- 7
+num <- 8
+num <- 9
+
+url <- https://en.wikipedia.org/wiki/Standards-compliant
+url <- https://en.wikipedia.org/wiki/The_Remaining_Documents_of_Talaat_Pasha
+url <- https://en.wikipedia.org/wiki/Millettia_pinnata
+url <- https://en.wikipedia.org/wiki/Lance_Tait
+url <- https://en.wikipedia.org/wiki/Doll,_Highland
+url <- https://en.wikipedia.org/wiki/Wilf_Spooner
+url <- https://en.wikipedia.org/wiki/May_Moustafa
+url <- https://en.wikipedia.org/wiki/London_District_Signals
+
+text <- Hello there
+text <- poo is really annoying
+text <- gotya
+text <- more
+
+
+3dnum <- %num%num%num
+
+imgbase <- http://lorempixel.com
+imgurl <- %imgbase/%3dnum/%3dnum
+
+tags <- <h1>%text</h1>
+tags <- <h2>%text<h2>
+tags <- <p>%text</p>
+tags <- <div>%tags</div>
+tags <- <span>%tags</span>
+tags <- <img src=%imgurl />
+tags <- <a href=%url>%text</a>
+tags <- <a href=%url>%tags</a>
+
+content <- <br />
+content <- %content<br>%tags
+
+*htmlbody <- %content

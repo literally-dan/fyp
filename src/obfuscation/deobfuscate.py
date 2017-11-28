@@ -40,6 +40,8 @@ for token in page.tokens:
                 replace = "%" + token.name + ":" + str(format(i, '0'+str(length)+'b'))[::-1]  + pattern + "%"
             find = form.toString()
 
+            print("find : " + find + ", replace : " + replace)
+
             if(token.name[0] == "*"):
                 final.append((re.compile(find),replace))
             else:
@@ -72,10 +74,12 @@ for line in lines:
         middle = s[2]
         last = l[s[1]:]
         l = first + middle + last
+        print(l)
 
     prev = ""
     while l != prev:
         prev = l 
+        print(l)
         l = replaceBranches(branches,l)
 
     l = replaceBranches(final,l)
@@ -83,6 +87,8 @@ for line in lines:
     l = l[pos+1:-1]
     binary+=l
 
+print("binary: ")
+print(binary)
 length=int(sys.argv[3])
 l = binary[:length]
 s = l[::-1]
