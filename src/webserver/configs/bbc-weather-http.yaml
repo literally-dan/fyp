@@ -5,13 +5,15 @@ config:
     remote: www.bbc.co.uk
     remote-port: 80
     local-port: 80
-    request: |+
+    test-request: |+
         GET /weather/ HTTP/1.1
         Host: www.bbc.co.uk
         User-Agent: Pikachu
 
 
-    response: HTTP/1.1 2\d\d.*
-    response-length: 16
-    #response-length is the number of characters to recieve and check against the regex
+    test-response: HTTP/1.1 2\d\d.*
+    test-response-length: 16
+    #test-response-length is the number of characters to recieve and check against the regex
+
+
 

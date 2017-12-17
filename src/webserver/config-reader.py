@@ -32,14 +32,14 @@ class ServerConfig:
 
 
             try:
-                x = int(self.yaml["config"]["response-length"])
+                x = int(self.yaml["config"]["test-response-length"])
             except ValueError:
                 print("Response-length in file is not a number")
                 return 0
 
-            if("response-length-stupid" not in self.yaml["config"]):
-                if(self.yaml["config"]["response-length"] > 1024):
-                    print("Very high response length specified - this is just for the response regex.\nTo allow the program to continue, add the following into the config in the same place as 'response-length':\n'response-length-stupid: yes'")
+            if("test-response-length-stupid" not in self.yaml["config"]):
+                if(self.yaml["config"]["test-response-length"] > 1024):
+                    print("Very high response length specified - this is just for the response regex.\nTo allow the program to continue, add the following into the config in the same place as 'test-response-length':\n'test-response-length-stupid: yes'")
                     return 0
 
             if(conn_check(self.yaml["config"]) == 0):
@@ -60,9 +60,9 @@ def conn_check(yaml):
     try:
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         s.connect((yaml['remote'],yaml['remote-port']))
-        s.send(str.encode(yaml['request'].replace('\n','\r\n')))
-        reply = s.recv(yaml['response-length']).decode("utf-8","replace")
-        if(not re.match(yaml['response'],reply)):
+        s.send(str.encode(yaml['test-request'].replace('\n','\r\n')))
+        reply = s.recv(yaml['test-response-length']).decode("utf-8","replace")
+        if(not re.match(yaml['test-response'],reply)):
             print("Server sent an invalid response: {}".format(repr(reply)))
             return 0
         s.close()
