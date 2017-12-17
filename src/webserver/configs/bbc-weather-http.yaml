@@ -1,0 +1,17 @@
+#specification of http server request and positive response
+config:
+    name: bbc-weather-http
+    page: http
+    remote: www.bbc.co.uk
+    remote-port: 80
+    local-port: 80
+    request: |+
+        GET /weather/ HTTP/1.1
+        Host: www.bbc.co.uk
+        User-Agent: Pikachu
+
+
+    response: HTTP/1.1 2\d\d.*
+    response-length: 16
+    #response-length is the number of characters to recieve and check against the regex
+

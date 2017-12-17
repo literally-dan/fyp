@@ -3,84 +3,87 @@ from pathlib import Path
 import os
 from subprocess import call
 import re
+import yaml
+import socket
 
-class Config:
-    supportedprotocols = ['http']
+class ServerConfig:
+    def __init__(self,path):
+        self.isyaml = 0
+        self.valid = 0
+        if(os.path.exists(path)):
+            with open(path, 'r') as stream:
+                try:
+                    self.yaml = yaml.load(stream)
+                    self.isyaml = 1
+                    self.check_config()
+                except yaml.YAMLError as exc:
+                    print(exc)
 
-    def __init__(self, path):
-        self.path = path
-        self.valid = -1
+    def check_config(self):
+        if(self.isyaml == 1):
+            print("Config for '" + self.yaml['config']['name'] + "' loading...")
+            self.pagefile = self.yaml['config']['page']
+            if(check_page(self.pagefile) == 0):
+                print("Page file '" + self.pagefile + "' cannot be found")
+                return 0
 
-    def parseconfig(self):
-        path = Path(self.path)
-        if(not path.is_file()):
-            return -1
-
-        configfile = open(self.path, "r")
-        lines = configfile.readlines();
-
-        config = []
-        for x in range(0,len(lines)):
-            if(lines[x][0] != '#'):
-                config.append(lines[x]);
-
-        for x in range(0,len(config)):
-            if config[x][len(config[x])-1] == "\n":
-                config[x] = config[x][:-1]
-        
-
-        self.url = config[0]
-        self.connectport = config[1]
-        self.listenport = config[2]
-        self.protocol = config[3]
-
-        if self.verifyself() == 0:
-            self.valid = 0
-
-        return self.valid
-
-    def verifyself(self):
-        total = 0
-        total += self.verifyurl(self.url)
-        total += self.verifyport(self.connectport, 0)
-        total += self.verifyport(self.listenport, 1)
-        total += self.verifyprotocol(self.protocol)
-        if total == 0:
-            return 0
-        return 1
+            if(check_port(self.yaml['config']['remote-port'],"remote-port") == 0 | check_port(self.yaml['config']['local-port'],"local-port") == 0):
+                return 0
 
 
-    def verifyurl(self, url):
-        response = os.system("host " + url + "&>/dev/null")
-        if(response !=  0):
-            print("Remote host not found")
-        return response
+            try:
+                x = int(self.yaml["config"]["response-length"])
+            except ValueError:
+                print("Response-length in file is not a number")
+                return 0
 
-    def verifyport(self, port, listen):
-        if(port.isdigit()):
-            port = int(port)
+            if("response-length-stupid" not in self.yaml["config"]):
+                if(self.yaml["config"]["response-length"] > 1024):
+                    print("Very high response length specified - this is just for the response regex.\nTo allow the program to continue, add the following into the config in the same place as 'response-length':\n'response-length-stupid: yes'")
+                    return 0
+
+            if(conn_check(self.yaml["config"]) == 0):
+                return 0
+
+            print("Config file valid")
+            self.valid = 1
         else:
-            print("Port specified for " + ("listening" if listen == 1 else "connecting")+ " was not a number")
-            return 1
-        if(port > 65535):
-            print("Port specified too high for " + ("listening" if listen == 1 else "connecting") + ".")
-            return 1
-        if port <= 0:
-            print("Port specified too low for "+ ("listening" if listen == 1 else "connecting"      ) + ".")      
-            return 1
-        return 0
-
-    def verifyprotocol(self, protocol):
-        if protocol in self.supportedprotocols:
-            return 0
-        print("Protocol "+ protocol + " not supported")
-        return 1
+            print("config file not loaded")
 
 def main():
-    c = Config("config");
-    c.parseconfig();
-    if(c.valid !=0 ):
-        print("Config not valid")
-        exit(1)
+    c = ServerConfig("configs/bbc-weather-http.yaml")
+
+def check_page(pagepath):
+    #placeholder, not yet implemented
+    return 1
+def conn_check(yaml):
+    try:
+        s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        s.connect((yaml['remote'],yaml['remote-port']))
+        s.send(str.encode(yaml['request'].replace('\n','\r\n')))
+        reply = s.recv(yaml['response-length']).decode("utf-8","replace")
+        if(not re.match(yaml['response'],reply)):
+            print("Server sent an invalid response: {}".format(repr(reply)))
+            return 0
+        s.close()
+    except socket.error as exc:
+        print("Connection failed: '" + exc + "'")
+        return 0
+
+    return 1
+
+
+def check_port(port_string, descriptor):
+    try:
+        x = int(port_string)
+    except ValueError:
+        print(descriptor + " port in file is not a number")
+        return 0
+
+    if(port_string < 1 | port_string > 65535):
+        print(descriptor + " port is out of range")
+        return 0
+
+    return 1
 
 if __name__ == "__main__": main()
