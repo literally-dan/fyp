@@ -21,7 +21,7 @@ class ProxyServer:
         self.listeningsocket.listen(5)
         while True:
             client,address = self.listeningsocket.accept()
-            client.settimeout(30)
+            client.settimeout(30000)
             threading.Thread(target=self.proxythread,args = (client,address,self.remote_host,self.remote_port)).start()
 
 

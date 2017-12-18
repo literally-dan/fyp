@@ -53,7 +53,7 @@ def conn_check(yaml):
         if(int(yaml['test-response-length']) ==  0):
             #as no response is needed, don't send anything
             return 1
-        s.send(str.encode(yaml['test-request'].repjace('\n','\r\n')))
+        s.send(str.encode(yaml['test-request'].replace('\n','\r\n')))
         reply = s.recv(yaml['test-response-length']).decode("utf-8","replace")
         if(not re.match(yaml['test-response'],reply)):
             print("Server sent an invalid response: {}".format(repr(reply)))
