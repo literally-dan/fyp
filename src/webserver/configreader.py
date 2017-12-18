@@ -22,10 +22,6 @@ class ServerConfig:
     def check_config(self):
         if(self.isyaml == 1):
             print("Config for '" + self.yaml['config']['name'] + "' loading...")
-            self.pagefile = self.yaml['config']['page']
-            if(check_page(self.pagefile) == 0):
-                print("Page file '" + self.pagefile + "' cannot be found")
-                return 0
 
             if(check_port(self.yaml['config']['remote-port'],"remote-port") == 0 | check_port(self.yaml['config']['local-port'],"local-port") == 0):
                 return 0
@@ -45,22 +41,19 @@ class ServerConfig:
             if(conn_check(self.yaml["config"]) == 0):
                 return 0
 
-            print("Config file valid")
             self.valid = 1
+            print("File valid!")
         else:
             print("config file not loaded")
 
-def main():
-    c = ServerConfig("configs/bbc-weather-http.yaml")
-
-def check_page(pagepath):
-    #placeholder, not yet implemented
-    return 1
 def conn_check(yaml):
     try:
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         s.connect((yaml['remote'],yaml['remote-port']))
-        s.send(str.encode(yaml['test-request'].replace('\n','\r\n')))
+        if(int(yaml['test-response-length']) ==  0):
+            #as no response is needed, don't send anything
+            return 1
+        s.send(str.encode(yaml['test-request'].repjace('\n','\r\n')))
         reply = s.recv(yaml['test-response-length']).decode("utf-8","replace")
         if(not re.match(yaml['test-response'],reply)):
             print("Server sent an invalid response: {}".format(repr(reply)))
@@ -85,5 +78,3 @@ def check_port(port_string, descriptor):
         return 0
 
     return 1
-
-if __name__ == "__main__": main()

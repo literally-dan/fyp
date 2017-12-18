@@ -1,12 +1,12 @@
 #specification of http server request and positive response
 config:
-    name: bbc-weather-http
-    remote: www.bbc.co.uk
+    name: cs-bham-http
+    remote: www.cs.bham.ac.uk
     remote-port: 80
     local-port: 80
     test-request: |+
-        GET /weather/ HTTP/1.1
-        Host: www.bbc.co.uk
+        GET / HTTP/1.1
+        Host: www.cs.bham.ac.uk
         User-Agent: Pikachu
 
 
