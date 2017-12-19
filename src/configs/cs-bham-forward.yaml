@@ -15,11 +15,11 @@ config:
     #test-response-length is the number of characters to receive and check against the regex
     proxy-mutator-location: mutators/forward.py
     #location of python program for mutator
-    proxy-mutate-receive: receive
+    proxy-mutate-receive: client_receive
     #this is the name of the function that takes two sockets for the receive journey:
         #receive(a,b)
         # a is the recieving socket from the remote server, and b is the sending socket back to the client
-    proxy-mutate-send: send 
+    proxy-mutate-send: client_send 
     #this is similar to the 'proxy-mutate-receive' except for data travelling in the other direction.
 
 
