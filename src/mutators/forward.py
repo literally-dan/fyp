@@ -30,7 +30,7 @@ def client_receive(receive,send,session_function,parent):
         try:
             length = len(receive.recv(MTU,socket.MSG_PEEK))
             if(length == 0):
-                continue
+                    continue
             recv = receive.recv(length)
             print("recv " + str(length))
         except socket.error as error:
