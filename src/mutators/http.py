@@ -20,8 +20,9 @@ def receive(receive,send,session_function,parent):
         except socket.error as error:
             print(error)
             return
-        except (StopIteration, http_parser.http.NoMoreData):
-            continue
+        except (StopIteration, http_parser.http.NoMoreData) as error:
+            print(error)
+            return
 
 
 
@@ -31,7 +32,6 @@ def send(receive,send,session_function,parent):
             r = SocketReader(receive)
             p = HttpStream(r)
             headers = p.headers()
-            print(headers)
             body = p.body_file().read()
             reqline = (str(p.method() + " " + p.path() + " HTTP/" + str(p.version()[0]) + "." + str(p.version()[1])))
             request = httprequest(reqline,headers,body)
@@ -39,8 +39,9 @@ def send(receive,send,session_function,parent):
         except socket.error as error:
             print(error)
             return
-        except (StopIteration, http_parser.http.NoMoreData):
-            continue
+        except (StopIteration, http_parser.http.NoMoreData) as error:
+            print(error)
+            return
 
 class httprequest:
     def __init__(self,reqline,headers,body):
@@ -49,7 +50,6 @@ class httprequest:
         for (key,value) in headers.items():
             self.headers[key] = value
         self.body = body
-        print(self.headers)
 
     def checklength(self):
         length = len(self.body)
@@ -63,7 +63,6 @@ class httprequest:
         socket.send(str.encode("\r\n"))
         for (key,value) in self.headers.items():
             headerline = str(key) + ": " + str(value) + "\r\n"
-            print(repr(headerline))
             socket.send(str.encode(headerline))
 
         socket.send(str.encode("\r\n"))
