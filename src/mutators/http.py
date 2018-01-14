@@ -14,12 +14,26 @@ MTU = 2**16
 #sending back to client
 def receive(receive,send,session_function,parent):
     #session = session_function(parent,"hello there")
+
+    ##chunked test code
+    #chunk = http_chunk()
+    #chunk.add_data("HELLO".encode('utf-8'))
+    #print(chunk.get_whole_data())
+    #chunk = http_chunk()
+    #chunk.add_data("no way".encode('utf-8'))
+    #print(chunk.get_whole_data())
+    #chunk = http_chunk()
+    #chunk.add_header("Expires","Wed, 21 Oct 2015 07:28:00 GMT")
+    #print(chunk.get_whole_data())
+
     while True:
         try:
             length = len(receive.recv(MTU,socket.MSG_PEEK))
             if(length == 0):
                 continue
             recv = receive.recv(length)
+
+
 
             send.send(recv)
         except socket.error as error:
@@ -64,5 +78,97 @@ def get_position(length):
     return current
 
 
+class http_chunk:
+    def __init__(self):
+        self.length = 0
+        self.data = bytes()
+        self.header = dict()
+        self.done = 0
 
+    def update_length(self):
+        self.length = len(self.data)
 
+    def update_data(self,data):
+        self.data = data
+        self.update_length()
+
+    def add_data(self,data):
+        self.data = self.data + bytes(data)
+        self.update_length()
+
+    def add_header(self,key,value):
+        self.header[key] = value
+
+    def is_done(self):
+        return self.done
+
+    def get_whole_data(self):
+        if(self.length == 0):
+            self.done = 1
+        out = bytes((hex(self.length)[2:]).encode('utf-8'))
+        out += bytes("\r\n".encode('utf-8'))
+        out += self.data
+        for key,value in self.header.items():
+            out += bytes((key + ": " + value + "\r\n").encode('utf-8'))
+        out += bytes("\r\n".encode('utf-8'))
+        return out
+
+class http_header_body:
+    def __init__(self):
+        self.chunked = 0
+        self.inital_length = 0
+        self.current_length = 0
+        self.headers = dict()
+        self.body = bytes()
+        self.req_line = bytes()
+        self.complete_body = 0
+
+    def update_header(self,key,value):
+        self.headers[key] = value
+
+    def remove_header(self,key):
+        del self.headers[key]
+
+    def get_header(self,key):
+        return self.headers[key]
+
+    def set_length(self,length):
+        self.body_length = length
+
+    def set_chunked(self):
+        self.chunked = 1
+
+    def set_notchunked(self):
+        self.chunked = 0
+
+    def add_header(self,key,value):
+        self.headers[key] = value
+
+    def append_body(self,body):
+        self.body += body
+        self.update_length()
+        if(self.current_length == self.inital_length):
+            complete_body = 1
+
+    def update_body(self,body):
+        self.body = body
+        self.update_length()
+
+    def update_length(self):
+        self.current_length = len(body)
+
+    def set_req_line(self, reqline):
+        self.req_line = reqline
+
+    def get_whole_data(self):
+        out = self.req_line
+        out += "\r\n".encode('utf-8')
+        if self.chunked == 0:
+            self.headers["content-length"] = self.current_length
+        for key,value in self.headers.items():
+            out += bytes((key + ": " + value + "\r\n").encode('utf-8'))
+
+        out+="\r\n".encode('utf-8')
+        out+=self.body
+
+        return out
