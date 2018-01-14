@@ -26,6 +26,7 @@ def receive(receive,send,session_function,parent):
     #chunk.add_header("Expires","Wed, 21 Oct 2015 07:28:00 GMT")
     #print(chunk.get_whole_data())
 
+
     while True:
         try:
             length = len(receive.recv(MTU,socket.MSG_PEEK))
@@ -33,7 +34,9 @@ def receive(receive,send,session_function,parent):
                 continue
             recv = receive.recv(length)
 
-
+            manager = http_clientside_data_manager()
+            manager.add_data(recv)
+            manager.get_req_line()
 
             send.send(recv)
         except socket.error as error:
@@ -76,6 +79,46 @@ def get_position(length):
         next = int(next)
 
     return current
+
+#this is from data from server->client
+class http_clientside_data_manager:
+    def __init__(self):
+        self.data = bytes()
+
+        self.state = 0
+        #0 waiting for req-line
+        #1 waiting for rest of headers
+        #2 waiting for body
+        #3 waiting for chunked encoding
+        #4 ended
+
+        self.http = http_header_body() #initialise both of these
+        self.chunk = http_chunk()
+        self.data = bytes()
+
+    def add_data(self,data):
+
+        response = 1
+
+        while response == 1:
+            self.data+=data
+
+
+
+    def get_req_line(self):
+        nlpos = self.data.find(b'\r\n')
+        if nlpos == -1:
+            return 0
+        reqline = self.data[:nlpos]
+        self.data = self.data[2+nlpos:]
+
+        self.http.set_req_line(reqline)
+
+        return 1
+
+
+
+
 
 
 class http_chunk:
