@@ -1,8 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {2}Main Body}{2}
-\contentsline {subsection}{\numberline {2.1}Image steganography}{2}
-\contentsline {subsection}{\numberline {2.2}DNS steganography}{2}
-\contentsline {subsection}{\numberline {2.3}HTTP protocol}{3}
-\contentsline {subsection}{\numberline {2.4}Detecting tunneled DNS traffic}{3}
-\contentsline {section}{\numberline {3}Conclusion}{3}
-\contentsline {section}{\numberline {4}References}{3}
