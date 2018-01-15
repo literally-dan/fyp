@@ -15,17 +15,7 @@ MTU = 2**16
 def receive(receive,send,session_function,parent):
     #session = session_function(parent,"hello there")
 
-    ##chunked test code
-    #chunk = http_chunk()
-    #chunk.add_data("HELLO".encode('utf-8'))
-    #print(chunk.get_whole_data())
-    #chunk = http_chunk()
-    #chunk.add_data("no way".encode('utf-8'))
-    #print(chunk.get_whole_data())
-    #chunk = http_chunk()
-    #chunk.add_header("Expires","Wed, 21 Oct 2015 07:28:00 GMT")
-    #print(chunk.get_whole_data())
-
+    manager = http_clientside_data_manager(send)
 
     while True:
         try:
@@ -33,10 +23,9 @@ def receive(receive,send,session_function,parent):
             if(length == 0):
                 continue
             recv = receive.recv(length)
-
-            manager = http_clientside_data_manager()
-            manager.add_data(recv)
-            manager.get_req_line()
+            #if manager.add_data(recv) == -1:
+                #reset
+                #manager = http_clientside_data_manager(send)
 
             send.send(recv)
         except socket.error as error:
@@ -48,6 +37,7 @@ def receive(receive,send,session_function,parent):
 #sending to server
 def send(receive,send,session_function,parent):
 
+    manager = http_serverside_data_manager(send)
     while True:
         try:
             length = len(receive.recv(MTU,socket.MSG_PEEK))
@@ -55,7 +45,12 @@ def send(receive,send,session_function,parent):
                 continue
             recv = receive.recv(length)
 
-            send.send(recv)
+            if manager.add_data(recv) == -1:
+                #reset
+                manager = http_serverside_data_manager(send)
+
+
+
         except socket.error as error:
             print(error)
             return
@@ -80,17 +75,118 @@ def get_position(length):
 
     return current
 
-#this is from data from server->client
-class http_clientside_data_manager:
-    def __init__(self):
+#this is for data from client->server
+class http_serverside_data_manager:
+
+    def __init__(self, send):
+        self.send = send
         self.data = bytes()
 
         self.state = 0
         #0 waiting for req-line
         #1 waiting for rest of headers
         #2 waiting for body
-        #3 waiting for chunked encoding
-        #4 ended
+        #3 ended
+
+        self.http = http_header_body() #initialise both of these
+        self.data = bytes()
+
+    def add_data(self,data):
+
+        response = 1
+        self.data+=data
+
+        while response != 0:
+            response = 0
+
+            if self.state == 0:
+                response = self.get_req_line()
+
+            if self.state == 1:
+                response = self.get_headers()
+
+            if self.state == 2:
+                response = self.get_body()
+
+            if self.state == 3:
+                self.make_changes()
+                self.http.send(self.send)
+                #self.http.get_whole_data()
+                return -1
+
+        return 0
+
+    def make_changes(self):
+        self.http.update_header(b"Accept-Encoding",b"None")
+
+    def get_headers(self):
+
+        nlpos = self.data.find(b'\r\n')
+        while nlpos != -1:
+            header = self.data[:nlpos]
+            if(len(header) == 0):
+                self.data = self.data[nlpos+2:]
+                self.state = 2
+                return 1
+            colonpos = self.data.find(b':')
+            if colonpos != -1:
+                key = header[:colonpos]
+                value = header[colonpos+2:]
+                if len(key) > 0 and len(value) > 0:
+                    self.http.add_header(key,value)
+                    self.data = self.data[nlpos+2:]
+                else:
+                    return 0
+
+            else:
+                return 0
+
+            nlpos = self.data.find(b'\r\n')
+
+        return 0
+
+    def get_body(self):
+        if b'Content-Length' in self.http.headers:
+            plength = int(self.http.headers[b'Content-Length'].decode('utf-8'))
+            if not len(self.data) > plength:
+                postdata = self.data[:plength]
+                self.data = self.data[plength:]
+                self.http.append_body(postdata)
+                self.state = 3
+                return 1
+            return -1
+
+        self.state = 3
+        return 1
+
+    def get_req_line(self):
+        nlpos = self.data.find(b'\r\n')
+        if nlpos == -1:
+            return 0
+
+        reqline = self.data[:nlpos]
+        self.data = self.data[2+nlpos:]
+
+        self.http.set_req_line(reqline)
+
+        self.state = 1
+        return 1
+
+
+
+#this is from data from server->client
+class http_clientside_data_manager:
+    def __init__(self, send):
+        self.send = send
+        self.data = bytes()
+
+        self.state = 0
+        #0 waiting for req-line
+        #1 waiting for rest of headers
+        #2 chunked or body
+        #3 waiting for body
+        #4 waiting for chunked encoding
+        #5 ended
 
         self.http = http_header_body() #initialise both of these
         self.chunk = http_chunk()
@@ -99,21 +195,81 @@ class http_clientside_data_manager:
     def add_data(self,data):
 
         response = 1
+        self.data+=data
 
-        while response == 1:
-            self.data+=data
+        while response > 0:
+            response = 0
+
+            if self.state == 0:
+                response += self.get_req_line()
+
+            if self.state == 1:
+                response += self.get_headers()
+
+            if self.state == 2:
+                response += self.chunkedornormal()
+
+            if self.state == 3:
+                response += self.get_body()
+
+            if self.state == 4:
+                response += self.get_chunks()
+
+            if self.state == 5:
+                return -1
+
+        return 0
+
+    def chunkedornormal(self):
+        self.state = 5
+        return 1
 
 
+    def get_headers(self):
+
+        nlpos = self.data.find(b'\r\n')
+        while nlpos != -1:
+            header = self.data[:nlpos]
+            if(len(header) == 0):
+                self.data = self.data[nlpos+2:]
+                self.state = 2
+                return 1
+            colonpos = self.data.find(b':')
+            if colonpos != -1:
+                key = header[:colonpos]
+                value = header[colonpos+2:]
+                if len(key) > 0 and len(value) > 0:
+                    self.http.add_header(key,value)
+                    self.data = self.data[nlpos+2:]
+                else:
+                    return 0
+
+            else:
+                return 0
+
+            nlpos = self.data.find(b'\r\n')
+
+        return 0
+
+    def get_body(self):
+        self.state = 4
+        return 0
+
+    def get_chunks(self):
+        self.state = 4
+        return 0
 
     def get_req_line(self):
         nlpos = self.data.find(b'\r\n')
         if nlpos == -1:
             return 0
+
         reqline = self.data[:nlpos]
         self.data = self.data[2+nlpos:]
 
         self.http.set_req_line(reqline)
 
+        self.state = 1
         return 1
 
 
@@ -140,6 +296,7 @@ class http_chunk:
         self.update_length()
 
     def add_header(self,key,value):
+        key = key.title()
         self.header[key] = value
 
     def is_done(self):
@@ -156,6 +313,9 @@ class http_chunk:
         out += bytes("\r\n".encode('utf-8'))
         return out
 
+    def send(self,socket):
+        socket.send(self.get_whole_data())
+
 class http_header_body:
     def __init__(self):
         self.chunked = 0
@@ -165,6 +325,9 @@ class http_header_body:
         self.body = bytes()
         self.req_line = bytes()
         self.complete_body = 0
+
+    def send(self,socket):
+        socket.send(self.get_whole_data())
 
     def update_header(self,key,value):
         self.headers[key] = value
@@ -185,6 +348,7 @@ class http_header_body:
         self.chunked = 0
 
     def add_header(self,key,value):
+        key = key.title()
         self.headers[key] = value
 
     def append_body(self,body):
@@ -198,20 +362,21 @@ class http_header_body:
         self.update_length()
 
     def update_length(self):
-        self.current_length = len(body)
+        self.current_length = len(self.body)
 
     def set_req_line(self, reqline):
         self.req_line = reqline
 
     def get_whole_data(self):
-        out = self.req_line
-        out += "\r\n".encode('utf-8')
+        out = self.req_line.decode('utf-8')
+        out += "\r\n"
         if self.chunked == 0:
-            self.headers["content-length"] = self.current_length
+            pass
+        #self.headers["Content-Length"] = bytes(str(self.current_length),'utf-8')
         for key,value in self.headers.items():
-            out += bytes((key + ": " + value + "\r\n").encode('utf-8'))
+            out += key.decode('utf-8') + ": " + value.decode('utf-8') + "\r\n"
 
-        out+="\r\n".encode('utf-8')
-        out+=self.body
-
-        return out
+        out+="\r\n"
+        out+=self.body.decode('utf-8')
+        print(out)
+        return bytes(out,'utf-8')
