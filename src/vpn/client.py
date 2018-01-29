@@ -2,21 +2,20 @@
 from threading import Thread
 import socket
 import pytun
+import sys
 
-IP = "spectre" #laptop hostname
+#IP = "danpc" #laptop hostname - who needs config
 PORT = 1337
 
 
 def main():
     server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    server.connect((IP,PORT))
+    server.connect((sys.argv[1],PORT))
 
     tun = pytun.TunTapDevice(flags=pytun.IFF_TUN|pytun.IFF_NO_PI)
-    tun.addr = '10.8.0.2'
-    tun.dstaddr = '10.8.0.1'
-    tun.netmask = '255.255.255.0'
     tun.mtu = 1500
-
+    tun.addr = '10.8.0.2'
+    tun.netmask = '255.255.255.0'
 
 
     tun.up() #the volume

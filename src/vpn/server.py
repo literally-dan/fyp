@@ -13,26 +13,26 @@ def main():
     listeningsocket.bind(('',PORT))
 
     listeningsocket.listen(5)
+    tun = pytun.TunTapDevice(flags=pytun.IFF_TUN|pytun.IFF_NO_PI,name='tap0')
+    tun.mtu = 1500
+
+    print(tun.name)
+    tun.persist(True)
+    tun.addr = '10.8.0.1'
+    tun.netmask = '255.255.255.0'
+
+    tun.up() #the volume
 
     while True:
         client,address = listeningsocket.accept()
         client.settimeout(300)
 
-        Thread(target=serverthread,args=(client,address)).start()
+        Thread(target=serverthread,args=(client,address,tun)).start()
 
-def serverthread(client,address):
-    print("Received connection from"+ str(address[0]) + "on" + str(address[1]))
+def serverthread(client,address,tun):
+    print("Received connection from "+ str(address[0]) + " on " + str(address[1]))
     try:
 
-        tun = pytun.TunTapDevice(flags=pytun.IFF_TUN|pytun.IFF_NO_PI)
-        tun.addr = '10.8.0.1'
-        tun.dstaddr = '10.8.0.2'
-        tun.netmask = '255.255.255.0'
-        tun.mtu = 1500
-
-
-
-        tun.up() #the volume
 
         readthread = threadWrapper(readfunc,tun,client)
 
