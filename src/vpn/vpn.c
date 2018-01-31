@@ -27,7 +27,9 @@ int get_tun(char * dev_name, int flags){
 
     ifr.ifr_flags = flags; //set the flags
 
-    if(*dev_name != 0){ //if a name is provided, set it
+    printf("%s\n",dev_name);
+
+    if(*dev_name){ //if a name is provided, set it
         strncpy(ifr.ifr_name,dev_name, IFNAMSIZ);
     }
 
@@ -54,16 +56,43 @@ int set_tun_persistent(int tun,int persist){
     return 0;
 }
 
-int main(){
-    char * dev_name = malloc(sizeof(char)*IFNAMSIZ);
-    int flags = IFF_TUN | IFF_NO_PI;
+int safe_write(int tun, char* buf, int n){
+    int write_count;
+    
+    write_count = write (tun,buf,n);
 
-    int tun = get_tun(dev_name,flags);
-    if(tun < 0){
-        exit(tun);
+    if(write_count < 0){
+        perror("writing data to tun");
+        exit(write_count);
     }
 
-    int persist = set_tun_persistent(tun,1);
+    return write_count;
+}
+int safe_read(int tun, char* buf, int n){
+    int read_count;
 
+    read_count = read(tun,buf,n);
 
+    if(read_count < 0){
+        perror("Reading data from tun");
+        exit(read_count);
+    }
+
+    return read_count;
+}
+
+int read_n(int fd, char *buffer, int to_read) {
+
+  int read_count;
+  int remaining = to_read;
+
+  while(remaining > 0) {
+    if ((read_count = safe_read(fd, buffer, remaining))==0){
+      return 0;
+    }else {
+      remaining -= read_count;
+      buffer += read_count;
+    }
+  }
+  return to_read;
 }
