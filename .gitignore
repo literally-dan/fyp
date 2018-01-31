@@ -24,5 +24,6 @@ __pycache__/
 *.mtc1
 *.out
 *.synctex.gz
+*.o
 
-
+.ycm_extra_conf.py
