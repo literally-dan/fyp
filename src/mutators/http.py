@@ -53,23 +53,3 @@ def send(receive,send,session_function,parent):
             return
 
     send.close()
-
-def insert_data(body,pattern,data):
-    result = re.findall(pattern,body)
-    length = len(result)
-    position = get_position(length)
-    print(position)
-
-
-
-def get_position(length):
-    current = 1
-    next = 1
-
-    while(next < length):
-        current = next
-        next += current*1.2+2
-        next += next*1.4 + 2
-        next = int(next)
-
-    return current

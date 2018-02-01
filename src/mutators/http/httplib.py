@@ -1,3 +1,5 @@
+import re
+
 class http_chunk:
     def __init__(self):
         self.length = -1
@@ -123,7 +125,54 @@ class http_header_body:
 
 def change_html(body,contenttype):
     if 'text/html' in contenttype.decode('utf-8'):
+        insert_data(body,b"<.*?>","poop")
         x = body.decode('utf-8')
         x = x.replace("Lecturer","Legend")
         return x.encode('utf-8')
     return body
+
+def insert_data(body,pattern,data):
+    resultlist = []
+    result = re.finditer(pattern,body)
+    for x in result:
+        resultlist.append(x)
+
+    count = len(resultlist)
+
+    position = get_position(count)
+    
+    match = resultlist[position]
+
+    print(match.start())
+    print(match.end())
+    print(match)
+    remadestring = body[:match.start()] + match[0] + body[match.end():]
+    print(body == remadestring)
+
+def get_position(length):
+    current = 1
+    next = 1
+
+    while(next < length):
+        current = next
+        next += current*1.2+2
+        next += next*1.4 + 2
+        next = int(next)
+
+    return current
+
+class databuffer():
+    def __init__():
+        self.data = bytes()
+
+    def read(size):
+        if(len(self.data) < size):
+            ret = self.data
+            self.data = bytes()
+        else:
+            ret = self.data[:size]
+            self.data = self.data[size:]
+        return ret
+
+    def write(data):
+        self.data.append(data)
