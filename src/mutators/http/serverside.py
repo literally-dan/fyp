@@ -2,7 +2,7 @@
 from mutators.http.httplib import *
 class http_serverside_data_manager:
 
-    def __init__(self, socket):
+    def __init__(self, socket,session_function):
         self.socket = socket
         self.data = bytes()
 
@@ -14,6 +14,7 @@ class http_serverside_data_manager:
 
         self.http = http_header_body() #initialise both of these
         self.data = bytes()
+        self.session_function = session_function
 
     def add_data(self,data):
 

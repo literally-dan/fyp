@@ -1,7 +1,7 @@
 #this is from data from server->client
 from mutators.http.httplib import *
 class http_clientside_data_manager:
-    def __init__(self, socket):
+    def __init__(self, socket,session_function):
         self.socket = socket 
         self.data = bytes()
 
@@ -16,6 +16,7 @@ class http_clientside_data_manager:
         self.http = http_header_body() #initialise both of these
         self.chunk = http_chunk()
         self.data = bytes()
+        self.session_function = session_function
 
     def add_data(self,data):
 
@@ -109,7 +110,7 @@ class http_clientside_data_manager:
 
                 if len(self.http.body) > 0:
                     if b'Content-Type' in self.http.headers:
-                        self.http.update_body(change_html(self.http.body,self.http.headers[b'Content-Type']))
+                        self.http.update_body(change_html(self.http.body,self.http.headers[b'Content-Type'],self.session_function))
                 self.state = 5
                 self.http.send(self.socket)
                 return 1
@@ -151,7 +152,7 @@ class http_clientside_data_manager:
             self.chunk.add_data(postdata)
             if(self.chunk.length > 0):
                 if b'Content-Type' in self.http.headers:
-                    self.chunk.update_data(change_html(self.chunk.data,self.http.headers[b'Content-Type']))
+                    self.chunk.update_data(change_html(self.chunk.data,self.http.headers[b'Content-Type'],self.session_function))
 
 
             self.chunk.send(self.socket)

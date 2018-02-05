@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import re
+from . import *
 
 class Token:
 

@@ -2,17 +2,14 @@
 import sys
 import math
 from pathlib import Path
+from . import *
 class Datasource:
 
-    def __init__(self,filename):
-        path = Path(filename)
+    def __init__(self,data):
+        self.data = data
         self.bitsdone = 0
-        if(not path.is_file()):
-            return -1
-        page = open(filename, "rb")
-        self.data = page.read()
         self.length = len(self.data)
-        print("Number of bits (you'll need this to decode): " + str(self.bitsleft()), file=sys.stderr)
+        #print("Number of bits (you'll need this to decode): " + str(self.bitsleft()), file=sys.stderr)
 
     def bitsleft(self):
         return self.length*8-self.bitsdone

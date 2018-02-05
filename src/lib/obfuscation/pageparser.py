@@ -3,9 +3,8 @@ import resource, sys
 resource.setrlimit(resource.RLIMIT_STACK, (2**31,-1))
 sys.setrecursionlimit(10**9)
 import random
-import pageclasses
+from . import *
 from pathlib import Path
-from datasource import *
 
 def readPage(filename):
     path = Path(filename)

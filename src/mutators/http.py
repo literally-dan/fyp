@@ -8,10 +8,11 @@ from mutators.http import *
 MTU = 2**16
 
 #sending back to client
-def receive(receive,send,session_function,parent):
+def receive(receive,send,session_function):
     #session = session_function(parent,"hello there")
 
-    manager = http_clientside_data_manager(send)
+
+    manager = http_clientside_data_manager(send,session_function)
 
     while True:
         try:
@@ -21,7 +22,7 @@ def receive(receive,send,session_function,parent):
             recv = receive.recv(length)
             if manager.add_data(recv) == 1:
                 #reset
-                manager = http_clientside_data_manager(send)
+                manager = http_clientside_data_manager(send,session_function)
 
             #send.send(recv)
         except socket.error as error:
@@ -33,19 +34,19 @@ def receive(receive,send,session_function,parent):
 
 
 #sending to server
-def send(receive,send,session_function,parent):
+def send(receive,send,session_function):
 
-    manager = http_serverside_data_manager(send)
+    manager = http_serverside_data_manager(send,session_function)
     while True:
         try:
             length = len(receive.recv(MTU,socket.MSG_PEEK))
             if(length == 0):
-                continue
+                break #eof
             recv = receive.recv(length)
 
             if manager.add_data(recv) == 1:
                 #reset
-                manager = http_serverside_data_manager(send)
+                manager = http_serverside_data_manager(send,session_function)
 
 
 
