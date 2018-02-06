@@ -5,7 +5,7 @@ from pathlib import Path
 import binascii
 from . import *
 
-def readObfsc(filename):
+def readFile(filename):
     path = Path(filename)
     if(not path.is_file()):
         return -1
@@ -17,7 +17,13 @@ def readObfsc(filename):
 
 def main():
     page = readPage(sys.argv[1])
-    lines = readObfsc(sys.argv[2])
+    lines = readFile(sys.argv[2])
+    length = int(sys.argv(3))
+
+    data = deobfuscate(page,lines,length)
+    print(data)
+
+def deobfuscate(page,lines,numberofbits):
 
     leaves = []
     branches = []
@@ -40,7 +46,6 @@ def main():
                     replace = "%" + token.name + ":" + str(format(i, '0'+str(length)+'b'))[::-1]  + pattern + "%"
                 find = form.toString()
 
-                print("find : " + find + ", replace : " + replace)
 
                 if(token.name[0] == "*"):
                     final.append((re.compile(find),replace))
@@ -51,8 +56,8 @@ def main():
                         branches.append((re.compile(find),replace))
             i += 1
 
-    for i in range(0,len(lines)):
-        lines[i] = lines[i][:-1]
+    #for i in range(0,len(lines)):
+        #lines[i] = lines[i][:-1] #not needed anymore
 
 
     binary = ""
@@ -70,12 +75,10 @@ def main():
             middle = s[2]
             last = l[s[1]:]
             l = first + middle + last
-            print(l)
 
         prev = ""
         while l != prev:
             prev = l 
-            print(l)
             l = replaceBranches(branches,l)
 
         l = replaceBranches(final,l)
@@ -83,18 +86,17 @@ def main():
         l = l[pos+1:-1]
         binary+=l
 
-    print("binary: ")
-    print(binary)
-    length=int(sys.argv[3])
+    length=numberofbits
     l = binary[:length]
     s = l[::-1]
     data = bytes(int(s[i : i + 8], 2) for i in range(0, len(s), 8))[::-1]
-    open('out.bin', 'wb').write(data)
+    return data
 
 
 def replaceBranches(branches, line):
     for b in branches:
         line = b[0].sub(b[1],line)
+
     return line
 
 if __name__ == "__main__":

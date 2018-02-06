@@ -2,6 +2,7 @@
 import re
 from lib.databuffer import *
 from lib.obfuscation import *
+from lib.datalistener import *
 
 def insert_data(body,pattern,session_function):
 
@@ -25,36 +26,22 @@ def insert_data(body,pattern,session_function):
 
     output = ""
 
-    datasource = Datasource(data)
 
     page = readPage("lib/obfuscation/pages/html.pg")
     
-    length = datasource.bitsleft()
+    length = len(data)*8
 
     zeros = '0000'
 
-    bitcount = str((zeros + str(length)))[-4:]
+    bitcount = bytes(str((zeros + str(length)))[-4:],'utf-8')
 
-    secondsource = Datasource(bytes(bitcount,'utf-8'))
+    datasource = Datasource(bitcount + data)
 
-    while secondsource.bitsleft() > 0:
-        output += walkPageR(page,secondsource)+"\n"
+    out = ''
 
     while datasource.bitsleft() > 0:
-        output += walkPageR(page,datasource) + "\n"
+        out += walkPageR(page,datasource) + "\n"
 
-    remadestring = body[:match.start()] + match[0] +  bytes(output,'utf-8') + body[match.end():]
+    remadestring = body[:match.start()] + match[0] +  bytes(output + out,'utf-8') + body[match.end():]
 
     return remadestring
-
-def get_position(length):
-    current = 1
-    next = 1
-
-    while(next < length):
-        current = next
-        next += current*1.2+2
-        next += next*1.4 + 2
-        next = int(next)
-
-    return current

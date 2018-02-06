@@ -1,4 +1,8 @@
 #!/bin/python
+import sys
+from pathlib import Path
+from . import *
+
 def main():
     path = Path(sys.argv[2])
     if(not path.is_file()):
