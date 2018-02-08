@@ -15,27 +15,29 @@ def begin_listen(session_function):
     while True:
         (client,address) = sock.accept()
         client.settimeout(300)
-        try:
-            while True:
-                length = len(client.recv(2**16,socket.MSG_PEEK))
-                if(length == 0):
-                    break
+        Thread(target=data_rec_thread,args=(client,sock,session_function)).start()
 
-                data = client.recv(length)
+def data_rec_thread(client,sock,session_function):
+    try:
+        while True:
+            length = len(client.recv(2**16,socket.MSG_PEEK))
+            if(length == 0):
+                break
 
-                session = session_function[0](session_function[1],session_function[2])
+            data = client.recv(length)
 
-                if(session.get_data("sendbuffer") == ""):
-                    session.add_data("sendbuffer",databuffer())
+            session = session_function[0](session_function[1],session_function[2])
+
+            if(session.get_data("sendbuffer") == ""):
+                session.add_data("sendbuffer",databuffer())
 
 
-                session.get_data("sendbuffer").write(data)
+            session.get_data("sendbuffer").write(data)
 
 
-            sock.close()
-        except socket.error as error:
-            print(error)
-            return
+    except socket.error as error:
+        print(error)
+        return
 
 def get_position(length):
     current = 1
