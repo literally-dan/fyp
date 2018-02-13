@@ -4,7 +4,9 @@ from lib.datalistener import *
 import re
 from lib.obfuscation import *
 
-def main():
+LENGTHCHARCOUNT = 6
+
+def run():
     pattern = "<.*?>"
     headers = {
         'accept-encoding': 'gzip, deflate, sdch',
@@ -33,27 +35,36 @@ def main():
     page = readPage("lib/obfuscation/pages/html.pg")
 
     for x in positions:
-        get_data(response,x,resultlist,page)
+        if(type(get_data(response,x,resultlist,page)) == int):
+            return
 
-
-
+    exit(1)
 
 def get_data(data,position,matches,page):
-    if(position == 70):
+    try:
         body = data[matches[position].end():]
         process = body.split("\n")
-        length = deobfuscate(page,process,32) #4 characters is 32 bits
+        length = deobfuscate(page,process,LENGTHCHARCOUNT*8) #4 characters is 32 bits
 
         real_length = int(length)
 
-        real_length += 32 #for the length, as we can't calculate how long it was, and it's more efficient to just do it again
+        real_length += LENGTHCHARCOUNT*8 #for the length, as we can't calculate how long it was, and it's more efficient to just do it again
 
         output = deobfuscate(page,process,real_length)
 
 
-        print(output[4:])
+        output = output[LENGTHCHARCOUNT:]
+        if(len(output) > 0):
+            f=open("done", "ab+")
+            f.write(output)
+            return len(output)
 
+    except Exception as e:
+        pass
 
+def main():
+    while True:
+        run()
 
 if __name__ == "__main__":
     main()
