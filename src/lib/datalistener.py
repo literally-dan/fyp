@@ -8,7 +8,7 @@ from lib.databuffer import *
 def begin_listen(session_function):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-    sock.bind(('localhost',39806)) #high random port number
+    sock.bind(('localhost',44444))
 
     sock.listen(5)
 

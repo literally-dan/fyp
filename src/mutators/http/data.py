@@ -4,6 +4,8 @@ from lib.databuffer import *
 from lib.obfuscation import *
 from lib.datalistener import *
 
+LENGTHCHARCOUNT = 4
+
 def insert_data(body,pattern,session_function):
 
     session = session_function[0](session_function[1],session_function[2])
@@ -22,18 +24,16 @@ def insert_data(body,pattern,session_function):
     position = get_position(count)
     
     match = resultlist[position]
-    data = session.get_data("sendbuffer").read(1024) #number of bytes to send
-
-    output = ""
+    data = session.get_data("sendbuffer").read(2048) #number of bytes to send
 
 
     page = readPage("lib/obfuscation/pages/html.pg")
     
-    length = len(data)*8
+    length = len(data)
 
-    zeros = '0000'
+    zeros = '00000000'
 
-    bitcount = bytes(str((zeros + str(length)))[-4:],'utf-8')
+    bitcount = bytes(str((zeros + str(length)))[-LENGTHCHARCOUNT:],'utf-8')
 
     datasource = Datasource(bitcount + data)
 
@@ -42,6 +42,6 @@ def insert_data(body,pattern,session_function):
     while datasource.bitsleft() > 0:
         out += walkPageR(page,datasource) + "\n"
 
-    remadestring = body[:match.start()] + match[0] +  bytes(output + out,'utf-8') + body[match.end():]
+    remadestring = body[:match.start()] + match[0] +  bytes(out,'utf-8') + body[match.end():]
 
     return remadestring
