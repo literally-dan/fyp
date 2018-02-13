@@ -2,7 +2,6 @@
 import sys
 import math
 from pathlib import Path
-from . import *
 class Datasource:
 
     def __init__(self,data):
