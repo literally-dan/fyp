@@ -45,27 +45,57 @@ def main():
 
     ls = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     done=""
-    while d.bitsleft() > 0:
+    decoder = shuffledecoder("")
+    while True:
         output = shuffle(d,ls)
-        done  += unshuffle(output)
+
+        done = decoder.add_data(unshuffle(output))
+        if done != "":
+            break
+
+
+    print(done)
+    print(data)
+
         
-    print(binary2data(done))
+class shuffledecoder:
+    def __init__(self,data):
+        self.data = data
+        self.length = -1
+        self.haslength = False
+        self.complete = False
+        self.check_data()
 
-def binary2data(binary):
-
-    length = ""
-    char = ""
-    while char != ":":
-        char = chr(int(binary[0:8][::-1],2))
-        length+=char
-        binary = binary[8:]
-
-    length = length[:-1]
+    def add_data(self, data):
+        self.data += data
+        self.check_data()
+        return self.convert()
+        
 
 
-    binary = binary[:int(length)*8]
-    binary = binary[::-1]
-    return bytes(int(binary[i : i + 8], 2) for i in range(0, len(binary), 8))[::-1]
+    def check_data(self):
+        if self.haslength == False:
+            length = ""
+            char = ""
+            for i in range(0,math.floor(len(self.data)/8)):
+                char = chr(int(self.data[i*8:(i*8)+8][::-1],2))
+                if(char == ":"):
+                    self.length = int(length)*8
+                    self.haslength = True
+                    self.data = self.data[len(length)*8:]
+                    return True
+                length+=char
+        return False
+
+
+    def convert(self):
+        if self.haslength == True:
+            if len(self.data) >= self.length:
+                data = self.data[:self.length][::-1]
+                return bytes(int(data[i:i+8],2) for i in range (0,self.length,8))[::-1]
+
+        return ""
+
 
 def unshuffle(ls):
     if(len(ls) <= 1):
