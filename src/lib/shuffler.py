@@ -1,10 +1,10 @@
 #!/bin/python
 import math
-#this should be imported, but python doesn't like imports
-class Datasource:
+
+class DatasourceWrapped:
 
     def __init__(self,data):
-        self.data = data
+        self.data = bytes(str(len(data)) + ":",'utf-8')+ data
         self.bitsdone = 0
         self.length = len(self.data)
         #print("Number of bits (you'll need this to decode): " + str(self.bitsleft()), file=sys.stderr)
@@ -41,19 +41,31 @@ class Datasource:
 
 def main():
     data = b"this is a testing string aaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbccccccccccccccccccdddddddddddddeeeeeeeeeefffffffgggggggghhhhhhhiiiiiiiiijjjjjjjjkkkkkkllllllmmmmmmmmmnnnnnnnooooooopppppppqqqqqqrrrrrssssssssttttttttttuuuuuuuuuvvvvvvvwwwwwwwwxxxxxxxxxyyyyyyyyyyzzzzzzzzzzzz"
-    d = Datasource(data)
+    d = DatasourceWrapped(data)
 
     ls = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     done=""
     while d.bitsleft() > 0:
         output = shuffle(d,ls)
         done  += unshuffle(output)
+        
+    print(binary2data(done))
 
-    done = done[:len(data)*8]
-    done = done[::-1]
-    banana = bytes(int(done[i : i + 8], 2) for i in range(0, len(done), 8))[::-1]
-    print(banana)
+def binary2data(binary):
 
+    length = ""
+    char = ""
+    while char != ":":
+        char = chr(int(binary[0:8][::-1],2))
+        length+=char
+        binary = binary[8:]
+
+    length = length[:-1]
+
+
+    binary = binary[:int(length)*8]
+    binary = binary[::-1]
+    return bytes(int(binary[i : i + 8], 2) for i in range(0, len(binary), 8))[::-1]
 
 def unshuffle(ls):
     if(len(ls) <= 1):
