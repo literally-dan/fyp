@@ -30,6 +30,7 @@ def run(socket,data_store):
     headers += [('Content-Length','0')]
     headers += [('X-Request-ID','8a5da39b-a61f-44eb-8952-c19ad81f3817')]
 
+
     if(len(data_store) == 0):
         ds = DatasourceWrapped(b"")
     else:
@@ -42,11 +43,10 @@ def run(socket,data_store):
                 ds = DatasourceWrapped(b"")
 
 
-    print(1,ds.bitsleft())
-    print(2,len(data_store))
+    left = ds.bitsleft()
     headers = shuffle(ds,headers)
-    print(3,ds.bitsleft())
 
+    sentdata = left - ds.bitsleft()-16 # this ISN'T a number of bits sent, it's an estimate on whether any was sent for when needing to send more data
 
     req = requests.Session()
 
@@ -72,7 +72,7 @@ def run(socket,data_store):
     for x in positions:
         if(type(get_data(socket,response,x,resultlist,page)) == int):
             return 0;
-    return 1;
+    return sentdata;
 
 
 def get_data(socket,data,position,matches,page):
@@ -127,7 +127,7 @@ def recv_thread(socket,data_store):
         try:
             while True:
                 ret = run(socket,data_store)
-                if(ret != 0):
+                if(ret == 0): #if data isn't sent/recv this will be 0
                     sleep(1)
         except Exception as e:
             print(e)
