@@ -71,7 +71,7 @@ def run(socket,data_store):
 
     for x in positions:
         if(type(get_data(socket,response,x,resultlist,page)) == int):
-            return 0;
+            return 1;
     return sentdata;
 
 
