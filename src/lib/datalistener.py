@@ -15,6 +15,8 @@ def begin_listen(session_function):
     while True:
         (client,address) = sock.accept()
         client.settimeout(300)
+        session = session_function[0](session_function[1],session_function[2])
+        session.add_data("socket",client)
         Thread(target=data_rec_thread,args=(client,sock,session_function)).start()
 
 def data_rec_thread(client,sock,session_function):

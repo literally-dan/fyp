@@ -26,7 +26,7 @@ def run(socket,data_store):
     headers += [('Accept-Encoding','gzip, deflate')]
     headers += [('Accept-Language', 'en-US,en;q=0.9,en-GB;q=0.8')]
     headers += [('Cookie','_ga=GA1.3.1924440076.1506628216')]
-    headers += [('referer','google.com')]
+    headers += [('Referer','google.com')]
     headers += [('Content-Length','0')]
     headers += [('X-Request-ID','8a5da39b-a61f-44eb-8952-c19ad81f3817')]
 
@@ -42,7 +42,7 @@ def run(socket,data_store):
             else:
                 ds = DatasourceWrapped(b"")
 
-
+    print("Added data:",ds.data)
     left = ds.bitsleft()
     headers = shuffle(ds,headers)
 
@@ -53,7 +53,6 @@ def run(socket,data_store):
     req.headers = listofdicttodict(headers)
 
     response = req.get(sys.argv[1]).text
-
     resultlist = []
     result = re.finditer(pattern,response)
     for x in result:

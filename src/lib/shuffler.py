@@ -5,6 +5,7 @@ class DatasourceWrapped:
 
     def __init__(self,data):
         self.data = bytes(str(len(data)) + ":",'utf-8')+ data
+        print("\n##",self.data,"##")
         self.bitsdone = 0
         self.length = len(self.data)
         #print("Number of bits (you'll need this to decode): " + str(self.bitsleft()), file=sys.stderr)
@@ -19,7 +20,7 @@ class DatasourceWrapped:
         x = ((self.data[byte]&(1<<(self.bitsdone % 8)))!=0);
         self.bitsdone += 1
         out = 1 if x else 0
-        #print(out, end='')
+        print(out, end='')
         return out
 
         def gettox(self, x):
@@ -65,8 +66,11 @@ class shuffledecoder:
         self.haslength = False
         self.complete = False
         self.check_data()
+        self.offset = 0
 
     def add_data(self, data):
+        if self.complete == True:
+            return self.data
         self.data += data
         self.check_data()
         return self.convert()
@@ -75,25 +79,56 @@ class shuffledecoder:
 
     def check_data(self):
         if self.haslength == False:
+            offset = self.calc_offset()
+            if offset == -1:
+                return False
             length = ""
             char = ""
             for i in range(0,math.floor(len(self.data)/8)):
-                char = chr(int(self.data[i*8:(i*8)+8][::-1],2))
+                char = chr(int(self.data[i*8+offset:i*8+8+offset][::-1],2))
                 if(char == ":"):
                     self.length = int(length)*8
+                    print("length",length)
                     self.haslength = True
-                    self.data = self.data[len(length)*8:]
+                    self.data = self.data[len(length)*8+offset+8:]
                     return True
                 length+=char
         return False
+
+    def calc_offset(self):
+        end = math.floor(len(self.data)/8)
+        if end > 10:
+            end = 10
+        for offset in range(0,8): #bit offset, note python range doesn't include upper limit
+            print("offset",offset)
+            for charindex in range(0,end): #characters to check though, maximum 10 or len/8-1
+                start = charindex*8+offset
+                finish = charindex*8+8+offset
+                char = chr(int(self.data[start:finish][::-1],2))
+                if charindex >= 1:
+                    if char == ":":
+                        self.offset = offset
+                        print(offset)
+                        return offset
+                if not str.isdigit(char):
+                    break
+
+        if(len(self.data) > 20):
+            self.data = ""
+        return -1
+
+
 
 
     def convert(self):
         if self.haslength == True:
             if len(self.data) >= self.length:
                 data = self.data[:self.length][::-1]
-                return bytes(int(data[i:i+8],2) for i in range (0,self.length,8))[::-1]
-
+                self.complete = True
+                self.data = bytes(int(data[i:i+8],2) for i in range (0,self.length,8))[::-1]
+                print(self.data)
+        if self.complete == True:
+            return self.data
         return ""
 
 
@@ -101,7 +136,7 @@ def unshuffle(ls):
     if(len(ls) <= 1):
         return ""
     output = ""
-    sortedls = sorted(ls)
+    sortedls = sorted(list(set(ls)))
     pivot = ls.index(sortedls[0])
     leftlist = ls[:pivot]
     rightlist = ls[pivot+1:]
@@ -117,8 +152,10 @@ def unshuffle(ls):
 
 
 def shuffle(datasource,ls):
+    print("##starting##")
     ls = sorted(list(set(ls))) #sort and remove duplicates
     x = shuffleR(datasource,ls)
+    print("\n##finishing##")
     return x
 
 def shuffleR(datasource,ls):

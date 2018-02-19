@@ -1,5 +1,6 @@
 #this is for data from client->server
 from mutators.http.httplib import *
+from lib.shuffler import *
 class http_serverside_data_manager:
 
     def __init__(self, socket,session_function):
@@ -39,7 +40,34 @@ class http_serverside_data_manager:
         return 0
 
     def make_changes(self):
+
+        header_list = []
+
+        for (key,value) in self.http.headers.items():
+            header_list.append((key.decode('utf-8'),value.decode('utf-8')))
+
+
+        data = unshuffle(header_list)
+        session = self.session_function[0](self.session_function[1],self.session_function[2])
+        
+
+        decoder = session.get_data("decoder")
+        if(decoder == ""): #there is no decoder
+            decoder = session.add_data("decoder",shuffledecoder(data))
+        else:
+            decoder.add_data(data)
+
+        out = decoder.add_data("")
+        if(decoder.complete == True):
+            x = session.get_data("socket")
+            if x != "":
+                x.send(out)
+            session.add_data("decoder","")
+
+
+
         self.http.update_header(b"Accept-Encoding",b"None")
+
 
     def get_headers(self):
 

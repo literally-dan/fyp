@@ -95,7 +95,7 @@ class ProxyServer:
 
 
     def proxythread(self,client,address,remote_host,remote_port,session_function):
-        print("connect to '" + remote_host + ":" + str(remote_port) + "' from '" + client.getpeername()[0] + "'")
+        #print("connect to '" + remote_host + ":" + str(remote_port) + "' from '" + client.getpeername()[0] + "'")
         filepath = self.config["proxy-mutator-location"]
         mod_name,file_ext = os.path.splitext(os.path.split(filepath)[-1])
         mutator = imp.load_source(mod_name, filepath)
