@@ -42,9 +42,10 @@ def run(socket,data_store):
             else:
                 ds = DatasourceWrapped(b"")
 
-    print("Added data:",ds.data)
     left = ds.bitsleft()
     headers = shuffle(ds,headers)
+
+    headers = add_whitespace(headers,ds,16)
 
     sentdata = left - ds.bitsleft()-16 # this ISN'T a number of bits sent, it's an estimate on whether any was sent for when needing to send more data
 
@@ -139,8 +140,21 @@ def listofdicttodict(ls):
 
     return dct
 
+def add_whitespace(headers,datasource,count):
+    ret = []
+    for header in headers:
+        left = header[0]
+        right = header[1]
+        right = right.rstrip()
+        num = datasource.gettox(count)
+        right = right + (" " * num)
+        ret += [(left,right)]
+
+    return ret
+
+
+
 if __name__ == "__main__":
     main()
-
 
 
