@@ -119,6 +119,7 @@ def send_thread(socket_obj,data_store):
 
                 recv = socket_obj.recv(length)
                 data_store += [DatasourceWrapped(recv)]
+                print(recv)
 
         except Exception as e:
             print(1,e)

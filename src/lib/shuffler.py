@@ -7,7 +7,8 @@ class DatasourceWrapped:
         self.data = bytes(str(len(data)) + ":",'utf-8')+ data
         self.bitsdone = 0
         self.length = len(self.data)
-        #print("Number of bits (you'll need this to decode): " + str(self.bitsleft()), file=sys.stderr)
+        if(self.length > 2):
+            self.printbits()
 
     def bitsleft(self):
         return self.length*8-self.bitsdone
@@ -36,6 +37,20 @@ class DatasourceWrapped:
             current+=1
 
         return int(total)
+
+    def printbits(self):
+        prevbitsdone = self.bitsdone
+        self.bitsdone = 0
+        count = self.bitsleft()
+        print("{",self.data,"} : ",end='')
+        for i in range(0,count):
+            print(self.getbit(),end='')
+
+        self.bitsdone = prevbitsdone
+        print()
+
+        
+            
 
 
 
@@ -119,6 +134,8 @@ class shuffledecoder:
             if len(self.data) >= self.length:
                 data = self.data[:self.length][::-1]
                 self.complete = True
+                if(self.length > 0):
+                    print(self.data)
                 self.data = bytes(int(data[i:i+8],2) for i in range (0,self.length,8))[::-1]
         if self.complete == True:
             return self.data
