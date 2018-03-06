@@ -96,25 +96,28 @@ class ProxyServer:
 
     def proxythread(self,client,address,remote_host,remote_port,session_function):
         #print("connect to '" + remote_host + ":" + str(remote_port) + "' from '" + client.getpeername()[0] + "'")
-        filepath = self.config["proxy-mutator-location"]
-        mod_name,file_ext = os.path.splitext(os.path.split(filepath)[-1])
-        mutator = imp.load_source(mod_name, filepath)
-        send = getattr(mutator,self.config["proxy-mutate-send"])
-        receive = getattr(mutator,self.config["proxy-mutate-receive"])
-        connectsocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        connectsocket.connect((self.remote_host,self.remote_port))
+        try:
+            filepath = self.config["proxy-mutator-location"]
+            mod_name,file_ext = os.path.splitext(os.path.split(filepath)[-1])
+            mutator = imp.load_source(mod_name, filepath)
+            send = getattr(mutator,self.config["proxy-mutate-send"])
+            receive = getattr(mutator,self.config["proxy-mutate-receive"])
+            connectsocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+            connectsocket.connect((self.remote_host,self.remote_port))
 
-        sendthread = threadWrapper(send,client,connectsocket,session_function)
-        recievethread = threadWrapper(receive,connectsocket,client,session_function)
-        recievethread.start()
-        sendthread.start()
+            sendthread = threadWrapper(send,client,connectsocket,session_function)
+            recievethread = threadWrapper(receive,connectsocket,client,session_function)
+            recievethread.start()
+            sendthread.start()
 
 
-        if recievethread.isAlive():
-            recievethread.join()
-        if sendthread.isAlive():
-            sendthread.join()
+            if recievethread.isAlive():
+                recievethread.join()
+            if sendthread.isAlive():
+                sendthread.join()
 
+        except Exception as e:
+            print(e)
 
     def data_fetch(self,identifier):
         return self.session_database.get(identifier)

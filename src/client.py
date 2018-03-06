@@ -50,7 +50,7 @@ def run(socket,data_store):
     sentdata = left - ds.bitsleft()-16 # this ISN'T a number of bits sent, it's an estimate on whether any was sent for when needing to send more data
 
     req = requests.Session()
-
+#
     req.headers = listofdicttodict(headers)
 
     response = req.get(sys.argv[1]).text
@@ -119,7 +119,7 @@ def send_thread(socket_obj,data_store):
 
                 recv = socket_obj.recv(length)
                 data_store += [DatasourceWrapped(recv)]
-                print(recv)
+                #print(recv)
 
         except Exception as e:
             print(1,e)
@@ -140,18 +140,6 @@ def listofdicttodict(ls):
         dct[key]=value
 
     return dct
-
-def add_whitespace(headers,datasource,count):
-    ret = []
-    for header in headers:
-        left = header[0]
-        right = header[1]
-        right = right.rstrip()
-        num = datasource.gettox(count)
-        right = right + (" " * num)
-        ret += [(left,right)]
-
-    return ret
 
 
 

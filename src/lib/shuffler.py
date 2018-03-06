@@ -8,7 +8,8 @@ class DatasourceWrapped:
         self.bitsdone = 0
         self.length = len(self.data)
         if(self.length > 2):
-            self.printbits()
+            pass
+          #  self.printbits()
 
     def bitsleft(self):
         return self.length*8-self.bitsdone
@@ -20,7 +21,6 @@ class DatasourceWrapped:
         x = ((self.data[byte]&(1<<(self.bitsdone % 8)))!=0);
         self.bitsdone += 1
         out = 1 if x else 0
-        #print(out, end='')
         return out
 
     def gettox(self, x):
@@ -42,7 +42,7 @@ class DatasourceWrapped:
         prevbitsdone = self.bitsdone
         self.bitsdone = 0
         count = self.bitsleft()
-        print("{",self.data,"} : ",end='')
+        print("{",self.data,"} : ")
         for i in range(0,count):
             print(self.getbit(),end='')
 
@@ -53,11 +53,11 @@ class DatasourceWrapped:
             
 
 
-
-def main():
+def test_shuffle():
     data = b"this is a testing string aaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbccccccccccccccccccdddddddddddddeeeeeeeeeefffffffgggggggghhhhhhhiiiiiiiiijjjjjjjjkkkkkkllllllmmmmmmmmmnnnnnnnooooooopppppppqqqqqqrrrrrssssssssttttttttttuuuuuuuuuvvvvvvvwwwwwwwwxxxxxxxxxyyyyyyyyyyzzzzzzzzzzzz"
     d = DatasourceWrapped(data)
-
+ 
+  
     ls = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     done=""
     decoder = shuffledecoder("")
@@ -68,7 +68,49 @@ def main():
         if done != "":
             break
 
+def test_whitespace():
+    data = b"this is a testing stringsssssssssssssssssssssssssssssssssssssssssssss\n\n\n\n\nddddddddddddddddddddddd;kasjhdkjahwdkjwahdkjawhd;iuwakhdiuwahd98qwpdh93824vunr983uv39pm45u349-v85muq9p8v6umv9-386yum49p869pq846um495w0[687w45bm967wb945459w67ub5w89,7u85697bu,95687ub-390,7-856,7u-36897ub,=w56,u70=5697uw0=987=94w57=4085b=w9i409s7ioiyu5d[0biyus,[0497i[509disssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssspooooooooooooooooooopppppppppooooooooo{@:@~:~@:LOP){~ $I_)$IO{$PKL${@P$L@:$L@:$L:L$$@KO:K{K}@_~P{I+~{O+~{}{~:}{{}[]][}{{}@}{@}{}{{}}{][p34roije;kj43iopu34598u5fj9pj3459385798798(*&(*&98798&(P*OU(IO*U(*&YIOUhu98YIUOHKJ(*OYIUHKLJn98&UOIHJLK&*()UIOJLK)&(UIOJKL&*()UJIOKL*()UOIJKL)&*(UIOJ)&_P(*)*O&H^*&(*O&^(*&&*("*2200
 
+    print(len(data))
+
+    d = DatasourceWrapped(data)
+    print(d.bitsleft())
+
+    ls = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    headers  = []
+    headers += [('Host', 'www.cs.bham.ac.uk')]
+    headers += [('Connection', 'keep-alive')]
+    headers += [('Pragma','no-cache')]
+    headers += [('Cache-Control','no-cache')]
+    headers += [('Upgrade-Insecure-Requests','1')]
+    headers += [('User-Agent','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36')]
+    headers += [('Accept','text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8')]
+    headers += [('DNT','1')]
+    headers += [('Accept-Encoding','gzip, deflate')]
+    headers += [('Accept-Language', 'en-US,en;q=0.9,en-GB;q=0.8')]
+    headers += [('Cookie','_ga=GA1.3.1924440076.1506628216')]
+    headers += [('Referer','google.com')]
+    headers += [('Content-Length','0')]
+    headers += [('X-Request-ID','8a5da39b-a61f-44eb-8952-c19ad81f3817')]
+
+    decoder = shuffledecoder("")
+    while True:
+        output = add_whitespace(headers,d,16)
+
+        done = decoder.add_data(get_whitespace(output))
+
+        output = shuffle(d,ls)
+
+        done = decoder.add_data(unshuffle(output))
+        
+        if done != "":
+            break
+
+    print(decoder.data)
+
+
+def main():
+    test_whitespace()
 
         
 class shuffledecoder:
@@ -118,11 +160,12 @@ class shuffledecoder:
                 if charindex >= 1:
                     if char == ":":
                         self.offset = offset
+                        print(offset)
                         return offset
                 if not str.isdigit(char):
                     break
 
-        if(len(self.data) > 20):
+        if(len(self.data) > 80):
             self.data = ""
         return -1
 
@@ -186,6 +229,32 @@ def get_sides(datasource,ls):
             left+=[x]
 
     return(right,left)
+
+
+
+def get_whitespace(header_list):
+    whitespacedata = ''
+
+    for header in header_list:
+        count = len(header[1])-len(header[1].rstrip())
+        binary = format(count,'04b')
+        whitespacedata += binary[::-1]
+
+    return whitespacedata
+
+
+def add_whitespace(headers,datasource,count):
+    ret = []
+    for header in headers:
+        left = header[0]
+        right = header[1]
+        right = right.rstrip()
+        num = datasource.gettox(count)
+        right = right + (" " * num)
+        ret += [(left,right)]
+
+    return ret
+
 
 if __name__ == "__main__":
     main()
