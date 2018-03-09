@@ -9,7 +9,7 @@ PORT1 = 44444
 PORT2 = 1194
 REMOTE1 = "localhost"
 REMOTE2 = "localhost"
-MTU = 2000
+MTU = 2**16
 
 
 
@@ -52,41 +52,44 @@ def data_transfer(send,recieve):
 
     data = b''
 
-    while(True):
+    while(True): 
 
-            if(data == b''):
+        print("loop")
+
+        if(data == b''):
+            try:
+            #get some data
+                data = recieve.recv()
+                x = len(data)
+                print("Got bytes:",x)
+            except:
                 try:
-                #get some data
-                    data = recieve.recv()
-                    print("I got:",data)
+                    recieve.kill_socket()
                 except:
-                    try:
-                        recv.kill_socket()
-                    except:
-                        pass
+                    pass
 
-                    try:
-                        recv.make_conn()
-                    except:
-                        pass
-            else:
                 try:
-                #send some data
-                    x = send.send(data)
-                    print("I sent",data,"  bytes:",x)
-                    data = b''
-
-
+                    recieve.make_conn()
                 except:
-                    try:
-                        send.kill_socket()
-                    except:
-                        pass
+                    pass
+        else:
+            try:
+            #send some data
+                x = send.send(data)
+                print("Sent bytes:",x)
+                data = b''
 
-                    try:
-                        send.make_conn()
-                    except:
-                        pass
+
+            except:
+                try:
+                    send.kill_socket()
+                except:
+                    pass
+
+                try:
+                    send.make_conn()
+                except:
+                    pass
 
 class socketwrapper():
     def __init__(self,remote,port):
@@ -111,14 +114,12 @@ class socketwrapper():
 
 
     def recv(self):
-        data = self.socket.recv(MTU)
-        if(len(data) == 0):
+        length = len(self.socket.recv(MTU,socket.MSG_PEEK))
+        print("aaa",length)
+        if(length == 0):
             raise Exception("socket is dead")
+        data = self.socket.recv(length)
         return data
-
-
-
-        
 
 
 

@@ -9,22 +9,48 @@ def begin_listen(session_function):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
     sock.bind(('localhost',44444))
+    sl = socket_list()
 
     sock.listen(5)
 
     while True:
         (client,address) = sock.accept()
         client.settimeout(300)
+        sl.add_socket(client)
         session = session_function[0](session_function[1],session_function[2])
-        session.add_data("socket",client)
+        session.add_data("socket",sl)
         Thread(target=data_rec_thread,args=(client,sock,session_function)).start()
+
+class socket_list:
+    def __init__(self):
+        self.sockets = []
+
+    def add_socket(self,sock):
+        self.sockets += [sock]
+
+    def send(self,data):
+        print(len(self.sockets))
+
+        def ds(sock):
+            print(sock)
+            try:
+                sock.send(data)
+                return True
+
+            except Exception as e:
+                pass
+
+        print("sending")
+        self.sockets = list(filter(ds,self.sockets))
+        print("sent")
+
 
 def data_rec_thread(client,sock,session_function):
     try:
         while True:
             length = len(client.recv(2**16,socket.MSG_PEEK))
             if(length == 0):
-                break
+                return
 
             data = client.recv(length)
 
@@ -36,8 +62,10 @@ def data_rec_thread(client,sock,session_function):
 
             session.get_data("sendbuffer").write(data)
 
+    except socket.timeout as e:
+        data_rec_thread(client,sock,session_function) # yeah this is probably a bad idea
 
-    except socket.error as error:
+    except Exception as error:
         print(error)
         return
 

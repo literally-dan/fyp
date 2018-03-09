@@ -10,8 +10,7 @@ from lib.shuffler import *
 LENGTHCHARCOUNT = 4
 MTU = 2**16
 
-
-def run(socket,data_store):
+def run(socket_list,data_store):
     pattern = "<.*?>"
 
     headers  = []
@@ -48,6 +47,7 @@ def run(socket,data_store):
     headers = add_whitespace(headers,ds,16)
 
     sentdata = left - ds.bitsleft()-16 # this ISN'T a number of bits sent, it's an estimate on whether any was sent for when needing to send more data
+    print(sentdata)
 
     req = requests.Session()
 #
@@ -70,12 +70,12 @@ def run(socket,data_store):
     page = readPage("lib/obfuscation/pages/html.pg")
 
     for x in positions:
-        if(type(get_data(socket,response,x,resultlist,page)) == int):
+        if(type(get_data(socket_list,response,x,resultlist,page)) == int):
             return 1;
     return sentdata;
 
 
-def get_data(socket,data,position,matches,page):
+def get_data(socket_list,data,position,matches,page):
     try:
         body = data[matches[position].end():]
         process = body.split("\n")
@@ -90,11 +90,33 @@ def get_data(socket,data,position,matches,page):
 
         output = output[LENGTHCHARCOUNT:]
         if(len(output) > 0):
-            socket.send(output)
+            socket_list.send(output)
             return len(output)
 
     except ValueError as e:
         pass
+
+class socket_list:
+    def __init__(self):
+        self.sockets = []
+
+    def add_socket(self,sock):
+        self.sockets += [sock]
+
+    def send(self,data):
+        print(len(self.sockets))
+
+        def ds(sock):
+            print(sock)
+            try:
+                sock.send(data)
+                return True
+            except socket.error:
+                pass
+
+        print("sending")
+        self.sockets = list(filter(ds,self.sockets))
+        print("sent")
 
 def main():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -102,12 +124,14 @@ def main():
     sock.bind(('localhost',33333)) #high random port number
 
     data_store = []
+    sl = socket_list()
+    Thread(target=recv_thread,args=(sl,data_store)).start()
 
     sock.listen(5)
     while True:
         (client,address) = sock.accept() 
         client.settimeout(300)
-        Thread(target=recv_thread,args=(client,data_store)).start()
+        sl.add_socket(client)
         Thread(target=send_thread,args=(client,data_store)).start()
 
 def send_thread(socket_obj,data_store):
@@ -120,14 +144,16 @@ def send_thread(socket_obj,data_store):
                 recv = socket_obj.recv(length)
                 data_store += [DatasourceWrapped(recv)]
                 #print(recv)
+        except socket.timeout as e:
+            send_thread(socket_obj,data_store) #yeah this is probably a bad idea
 
         except Exception as e:
-            print(1,e)
             return
-def recv_thread(socket,data_store):
+
+def recv_thread(socket_list,data_store):
         try:
             while True:
-                ret = run(socket,data_store)
+                ret = run(socket_list,data_store)
                 if(ret == 0): #if data isn't sent/recv this will be 0
                     sleep(1)
         except Exception as e:

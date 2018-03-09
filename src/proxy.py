@@ -21,10 +21,12 @@ class session_database:
             return self.dictionary[identifier]
 
     def check(self):
+        print("checking")
         keys =  list(self.dictionary.keys())
         for identifier in keys:
             max_age = 30
             if(self.dictionary[identifier].get_time() + max_age < time.clock()):
+                print("deleted",identifier)
                 del self.dictionary[identifier]
 
 
