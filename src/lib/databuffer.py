@@ -2,6 +2,9 @@ class databuffer():
     def __init__(self):
         self.data = bytes()
 
+    def get_len(self):
+        return len(self.data)
+
     def read(self,size):
         if(len(self.data) < size):
             ret = self.data

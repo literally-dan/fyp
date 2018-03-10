@@ -8,7 +8,15 @@ import sys
 from lib.shuffler import *
 
 LENGTHCHARCOUNT = 4
-MTU = 2**16
+MTU = 150
+BUFFERSIZE = MTU * 2
+
+def datacount(ds):
+    count = 0;
+    for dw in ds:
+        count+=dw.bitsleft()/8
+
+    return count
 
 def run(socket_list,data_store):
     pattern = "<.*?>"
@@ -44,10 +52,9 @@ def run(socket_list,data_store):
     left = ds.bitsleft()
     headers = shuffle(ds,headers)
 
-    headers = add_whitespace(headers,ds,16)
+    headers = add_whitespace(headers,ds,64)
 
     sentdata = left - ds.bitsleft()-16 # this ISN'T a number of bits sent, it's an estimate on whether any was sent for when needing to send more data
-    print(sentdata)
 
     req = requests.Session()
 #
@@ -71,7 +78,7 @@ def run(socket_list,data_store):
 
     for x in positions:
         if(type(get_data(socket_list,response,x,resultlist,page)) == int):
-            return 1;
+            return 1
     return sentdata;
 
 
@@ -104,19 +111,15 @@ class socket_list:
         self.sockets += [sock]
 
     def send(self,data):
-        print(len(self.sockets))
 
         def ds(sock):
-            print(sock)
             try:
                 sock.send(data)
                 return True
             except socket.error:
                 pass
 
-        print("sending")
         self.sockets = list(filter(ds,self.sockets))
-        print("sent")
 
 def main():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -137,7 +140,11 @@ def main():
 def send_thread(socket_obj,data_store):
         try:
             while True:
-                length = len(socket_obj.recv(MTU,socket.MSG_PEEK))
+                max_data = int(BUFFERSIZE - datacount(data_store))
+                if(max_data <= BUFFERSIZE/2):
+                    sleep(0.01)
+                    continue
+                length = len(socket_obj.recv(max_data,socket.MSG_PEEK))
                 if(length == 0):
                     socket_obj.close()
 
@@ -148,6 +155,7 @@ def send_thread(socket_obj,data_store):
             send_thread(socket_obj,data_store) #yeah this is probably a bad idea
 
         except Exception as e:
+            print(e)
             return
 
 def recv_thread(socket_list,data_store):

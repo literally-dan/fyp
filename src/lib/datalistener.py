@@ -3,6 +3,10 @@ from threading import Thread
 import socket
 import sys
 from lib.databuffer import *
+from time import sleep
+
+MTU = 2048
+BUFFERSIZE = MTU*2
 
 
 def begin_listen(session_function):
@@ -29,10 +33,8 @@ class socket_list:
         self.sockets += [sock]
 
     def send(self,data):
-        print(len(self.sockets))
 
         def ds(sock):
-            print(sock)
             try:
                 sock.send(data)
                 return True
@@ -40,26 +42,34 @@ class socket_list:
             except Exception as e:
                 pass
 
-        print("sending")
         self.sockets = list(filter(ds,self.sockets))
-        print("sent")
 
 
 def data_rec_thread(client,sock,session_function):
     try:
         while True:
-            length = len(client.recv(2**16,socket.MSG_PEEK))
-            if(length == 0):
-                return
-
-            data = client.recv(length)
 
             session = session_function[0](session_function[1],session_function[2])
 
             if(session.get_data("sendbuffer") == ""):
                 session.add_data("sendbuffer",databuffer())
 
+            bu = session.get_data("sendbuffer")
 
+            max_data = int(BUFFERSIZE - bu.get_len())
+
+
+            if(max_data <= BUFFERSIZE/2):
+                sleep(0.01)
+                continue
+
+            length = len(client.recv(max_data,socket.MSG_PEEK))
+            if(length == 0):
+                return
+
+
+
+            data = client.recv(length)
             session.get_data("sendbuffer").write(data)
 
     except socket.timeout as e:

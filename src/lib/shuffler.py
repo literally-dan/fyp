@@ -237,7 +237,7 @@ def get_whitespace(header_list):
 
     for header in header_list:
         count = len(header[1])-len(header[1].rstrip())
-        binary = format(count,'04b')
+        binary = format(count,'06b')
         whitespacedata += binary[::-1]
 
     return whitespacedata
