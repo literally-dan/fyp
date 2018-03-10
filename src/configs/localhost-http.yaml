@@ -1,15 +1,16 @@
 #specification of http server request and positive response
 config:
     name: localhost-http
-    remote: localhost 
-    remote-port: 8000 
+    remote: localhost
+    remote-port: 8080
     local-port: 80
     test-request: |+
         GET / HTTP/1.1
+        Host: localhost
         User-Agent: Pikachu
 
 
-    test-response: HTTP/1.[01] 2\d\d.*
+    test-response: HTTP/1.0 2\d\d.*
     test-response-length: 16
     #test-response-length is the number of characters to receive and check against the regex
     proxy-mutator-location: mutators/http.py
