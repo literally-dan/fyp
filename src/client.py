@@ -124,7 +124,8 @@ class socket_list:
 def main():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-    sock.bind(('localhost',33333)) #high random port number
+    sock.bind(('0.0.0.0',33333)) #high random port number
+    print("listening?")
 
     data_store = []
     sl = socket_list()
@@ -134,6 +135,7 @@ def main():
     while True:
         (client,address) = sock.accept() 
         client.settimeout(300)
+        print(client)
         sl.add_socket(client)
         Thread(target=send_thread,args=(client,data_store)).start()
 

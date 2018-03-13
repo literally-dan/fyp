@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>International Scholarships</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/international/">International</a></span>
+        <span class="crumb">International Scholarships</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">International Scholarships</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Admissions Home Page<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/" class="nav-link">Undergraduate Degrees</a>
+              <a href="/admissions/postgraduate-taught/" class="nav-link">Masters Degrees</a>
+              <a href="/admissions/postgraduate-research/" class="nav-link">PhD Computer Science</a>
+              <a href="/admissions/scholarships" class="nav-link">Scholarships</a>
+              <a href="/admissions/quality" class="nav-link">Teaching and Research Quality</a>
+              <a href="/admissions/international/" class="nav-link">For International Students</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days and Outreach</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+            </div>
+          </nav>
+          <p>The following awards are available to all privately funded international students applying for 2017 entry undergraduate programmes:</p>
+
+<table class="table">
+<thead>
+<tr>
+  <th>Scholarship</th>
+  <th>Amount awarded</th>
+  <th>Who is eligible?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Achievement Scholarship</td>
+  <td>£1,500</td>
+  <td>International students who attain AAA or equivalent qualification on entry.  <strong>Renewable annually, subject to obtaining full credits and an overall yearly mark of 70% or higher on the first attempt</strong></td>
+</tr>
+<tr>
+  <td>Excellence Scholarship</td>
+  <td>An additional £1,500</td>
+  <td>International students who attain A*AA/AAAA or equivalent qualification on entry. <strong>Not renewable.  The Excellence Scholarship is awarded for first year only</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><bk></p>
+
+<p>There is no special application process – the awards will be made automatically to all eligible students admitted to the School of 
+Computer Science who apply by the end of July to commence their studies in the September of year of entry.</p>
+
+<p>Students who are in receipt of support from other funding bodies which wholly cover their tuition fees are not eligible for 
+any of the awards. Students in receipt of part-funding should contact the <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Admissions Tutor</a> to check their eligibility.</p>
+
+<h2>University of Birmingham Scholarships</h2>
+
+<p>The University has a range of funding opportunities available to eligible international students. Please <a href="http://www.birmingham.ac.uk/undergraduate/funding/index.aspx">click here</a> for further information.</p>
+
+<h2>Please Note:</h2>
+
+<ul>
+<li><strong>Scholarships are subject to change</strong></li>
+<li><strong>Scholarships are awarded at the discretion of the School</strong></li>
+<li><strong>Further conditions will apply. These will be specified in the scholarship offer letter</strong></li>
+</ul>
+
+<hr />
+
+<h1>Get in Touch</h1>
+
+<p>Please contact our Admissions Team directly if you have any questions:</p>
+
+<p>Email: <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;</a><br />
+Tel: <a href="tel:+441214158742">+44 (0)121 415 8742</a></p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

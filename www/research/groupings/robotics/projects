@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link" href="/admissions/">Study</a>
+            <a class="link active" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/research/">Research</a></span>
+        <span class="crumb"><a class="link" href="/research/groupings/">Groupings</a></span>
+        <span class="crumb"><a class="link" href="/research/groupings/robotics/">Robotics</a></span>
+        <span class="crumb">Projects</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Projects</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Intelligent Robotics Lab<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/research/groupings/robotics/index" class="nav-link">Home Page</a>
+              <a href="/research/groupings/robotics/contacts" class="nav-link">Contacts</a>
+              <a href="/research/groupings/robotics/overview" class="nav-link">Overview of the group</a>
+              <a href="/research/groupings/robotics/people" class="nav-link">People</a>
+              <a href="/research/groupings/robotics/projects" class="nav-link">Projects</a>
+              <a href="/research/groupings/robotics/publications" class="nav-link">Publications</a>
+              <a href="/research/groupings/robotics/movies" class="nav-link">Movies</a>
+              <a href="/research/groupings/robotics/irlab-schedule" class="nav-link">IRLab Meetings</a>
+            </div>
+          </nav>
+          <p>The lists below describe the projects the IRLab is currently involved with and those which we previously contributed to. Click on the titles for more information.</p>
+
+<ul>
+<li><p><a href="http://cogimon.eu/">CogIMon - Cognitive Interaction in Motion</a>.  Seven partners from Germany, Italy, Switzerland and the UK will investigate how teams of compliant and humanoid robots can manipulate objects in joint action with humans.</p></li>
+<li><p><a href="http://strands-project.eu//">STRANDS: Spatio-Temporal Representations and Activities For Cognitive Control in Long-Term Scenarios</a>. This project will explore how a mobile robot can perform intelligent autonomous behaviour for long periods (up to four months) in human-populated environments. In order to support task behaviour, and to facilitate such long runtimes, STRANDS robots will extract quantitative and qualitative spatio-temporal structure from sensory experience, building representations that allow them to understand and exploit the dynamics of everyday activities. The project is coordinated by Dr Nick Hawes, who will collaborate with Prof Jeremy Wyatt in the IRLab.</p></li>
+<li><p><a href="http://www.pacman-project.eu/">PaCMan: Probabilistic and Compositional Representations of Objects for Robot Manipulation</a>.  The challenge of this project is to advance methods for object perception, representation and manipulation so that a robot is able to robustly manipulate objects even when those objects are unfamiliar, and even though the robot has unreliable perception and action. The project is coordinated by Prof Jeremy Wyatt with collaboration from Prof Ales Leonardis in the IRLab.</p></li>
+<li><p><a href="http://www.codyco.eu/">CoDyCo: Whole-body Compliant and Dynamical Contacts in Cognitive Humanoids</a>. This project will explore multi-contact control strategies for humanoid robots evolving in environments where contact interactions can be non rigid (compliant) and unpredictable. It includes human studies, control and learning aspects but also software developments and implementation on the iCub robot. Birmingham’s involvement is led by Dr. Michael Mistry</p></li>
+</ul>
+
+<h1>Previous Projects</h1>
+
+<ul>
+<li><p><a href="/research/groupings/robotics/projects/gert">GeRT: Generalizing Robot Manipulation Tasks</a>: The objective is to develop new methods to cope with novelty in manipulation tasks by enabling the robot to autonomously generalize its manipulation skills to new objects. The basic idea is that some successful implementations of a certain robot manipulation task, such as serving a drink, are given as input. These programs then constitute a database of prototypes representing that class of task. When confronted with a novel instance of the same task the robot needs to generalize from the prototypes.  In this way, prototypical task plans may be mapped to a new plan that is suitable for handling different geometric, kinematic, and dynamic task settings, hence solving a task that is physically substantially different but similar at an abstract level.  Birmingham’s involvement is led by Dr. Richard Dearden, Dr. Jeremy Wyatt and Dr. Rustam Stolkin.</p></li>
+<li><p><a href="/research/projects/cogaff">Cognition and Affect</a>: The main goal of this project is to understand the types of architectures that are capable of accounting for the whole range of human (and non-human) mental states and processes, including not only intelligent capabilities, such as the ability to learn to find your way in an unfamiliar town and the ability to think about infinite sets, but also moods, emotions, desires, and the like.</p></li>
+<li><p><a href="/research/groupings/robotics/projects/cogx">CogX: Cognitive Systems that Self-Understand and Self-Extend</a>: This project is concerned with building a theory, together with robotic implementations, of how cognitive systems, particularly robots, can understand what they know, and how what they know changes when they act. The IR Lab will also be the coordinator of this project, which starts May 1st 2008 and runs until the end of June 2012. The project is led by Jeremy Wyatt, Richard Dearden, Aaron Sloman and Nick Hawes.</p></li>
+<li><p><a href="/research/groupings/robotics/projects/afda">Automated Diagnosis for Fault Detection, Identification and Recovery in Autosub 6000</a>: The objective of the project is to provide an automated fault diagnosis system for a number of subsystems of Autosub 6000, an autonomous underwater vehicle (AUV) operated by the National Oceanography Centre, Southampton (NOCS). This project, funded by the National Environment Research Council, runs from October 2008 to September 2011. The project is funded from the Oceans 2025 Strategic Ocean Funding Initiative.</p></li>
+<li><p><a href="/research/groupings/robotics/projects/cosy">CoSy: Cognitive Systems for Cognitive Assistants</a>: The CoSy project is an interdisciplinary four year project on cognitive robotics funded by the European Commission, involving seven universities. At Birmingham we are working on cognitive architectures, learning about human actions, and learning about affordances and object behaviour.</p></li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

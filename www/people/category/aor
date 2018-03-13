@@ -1,0 +1,261 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <link rel="stylesheet" href="/people/css/person-search.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Person Search Results</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link active" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/people/">People</a></span>
+        <span class="crumb"><a class="link" href="/people/category/">Category</a></span>
+        <span class="crumb">Aor</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Person Search Results</h1>
+          
+<p>If you cannot find the person you are looking for, they may not have opted in
+  to being visible.</p>
+
+<p>9 results found:</p>
+
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Garfield Benjamin">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Garfield Benjamin">
+        Garfield Benjamin
+      </a></span>
+    <span class="role">Academic Administrator</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>234</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Bryan Fryer">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Bryan Fryer">
+        Bryan Fryer
+      </a></span>
+    <span class="role">Operations Manager</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>224</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 8814</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/kam.jpg"
+         alt="Photo of Keith Marlow">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Keith Marlow">
+        Keith Marlow
+      </a></span>
+    <span class="role">Computer Officer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG39</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3817</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/smp.jpg"
+         alt="Photo of Stephen Pillinger">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Stephen Pillinger">
+        Stephen Pillinger
+      </a></span>
+    <span class="role">Senior Experimental Computing Specialist</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>142</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3214</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/pnr.jpg"
+         alt="Photo of Padma Reddy">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Padma Reddy">
+        Padma Reddy
+      </a></span>
+    <span class="role">Business Development Manager</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>227</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 8815</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/msr.jpg"
+         alt="Photo of Mark Robbins">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Mark Robbins">
+        Mark Robbins
+      </a></span>
+    <span class="role">Computer Systems Officer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>142</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 415 8676</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/ams.jpg"
+         alt="Photo of Amarjit Sathi">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Amarjit Sathi">
+        Amarjit Sathi
+      </a></span>
+    <span class="role">Computer Officer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG39</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4769</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Mia Wright">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Mia Wright">
+        Mia Wright
+      </a></span>
+    <span class="role">College Wellbeing Officer</span>
+    <span class="school"></span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Hayley Yarnell">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Hayley Yarnell">
+        Hayley Yarnell
+      </a></span>
+    <span class="role">Operations Manager</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>134</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 8814</span>
+  </div>
+</div>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+    <script type="text/javascript" src="/people/js/person-search.js"></script>
+  </body>
+</html>

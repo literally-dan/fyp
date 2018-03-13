@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teaching and Research Quality in Computer Science</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb">Teaching and Research Quality in Computer Science</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Teaching and Research Quality in Computer Science</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Admissions Home Page<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/" class="nav-link">Undergraduate Degrees</a>
+              <a href="/admissions/postgraduate-taught/" class="nav-link">Masters Degrees</a>
+              <a href="/admissions/postgraduate-research/" class="nav-link">PhD Computer Science</a>
+              <a href="/admissions/scholarships" class="nav-link">Scholarships</a>
+              <a href="/admissions/quality" class="nav-link">Teaching and Research Quality</a>
+              <a href="/admissions/international/" class="nav-link">For International Students</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days and Outreach</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+            </div>
+          </nav>
+          <p>Computing at the University of Birmingham dates back to the 1950's, with the school boasting a strong tradition of academic excellence.</p>
+
+<p>We are an internationally top ranking computer science department, and are home to a number of staff working at the forefront of their fields of expertise.</p>
+
+<p>Our School is also home to a GCHQ-recognised <a href="http://sec.cs.bham.ac.uk/">Academic Centre of Excellence in Cyber Security Research</a>.</p>
+
+<h2>Research Excellence</h2>
+
+<p><strong>REF</strong></p>
+
+<p>Our School is placed 8th nationally for research quality in the <a href="http://www.ref.ac.uk/">'2014 Research Excellence Framework'</a>, and our work is regularly presented in international conferences and journals, indicating the high standards we achieve in research. We are currently working towards maintaining a high position in the REF 2021.</p>
+
+<p>In 2008, the UK Funding Councils undertook a national assessment of the quality of research at British universities in the Research and Assessment Exercise (RAE). Among 81 submissions nationally for computer science, the School is equal 7th in the proportion of 4* awards, for research quality that is world-leading in terms of originality, significance and rigour.</p>
+
+<p><strong>RAE</strong></p>
+
+<p>The 2008 Research Assessment Exercise (RAE) assesses the quality of research in universities and colleges in the UK.  The outcome of the RAE is used to determine the research grant given by the higher education funding bodies and also serves as an informal guide to research standing of schools and departments.</p>
+
+<p>The 2008 RAE results were <a href="http://www.rae.ac.uk/pubs/2008/01/">published</a> in the form of a 'quality profile'.  This shows a weighted distribution of those research activities which were submitted to the RAE for assessment.  A percentage is given for each of five categories, from 4* to U (see below for a detailed explanation of the categories). The published percentage has been rounded to the nearest 5%.</p>
+
+<p>The School submitted the work of 34 academic staff, and was <a href="http://www.rae.ac.uk/results/qualityProfile.aspx?id=108&amp;type=hei">awarded the profile</a>:</p>
+
+<p>4*  30%<br />
+3*  45%<br />
+2*  20%<br />
+1*   5%</p>
+
+<p>There were 81 submissions nationally for computer science. Comparisons can be made in a number of different ways.</p>
+
+<ul>
+<li>The School is equal 7th in the proportion of 4* awards.</li>
+<li>The School is 12th in the proportion of 4* and 3* awards.</li>
+<li>The School's average of 3.00* can be compared with the national average of 2.73*, the highest for Computer Science being 3.35* (for Cambridge).  This places us in equal 13th position.</li>
+</ul>
+
+<p>Within the University of Birmingham, the School has done particularly well.  The proportion of 4* awards is the highest in the College of Engineering and Physical Sciences and equal 3rd in the University as a whole.</p>
+
+<h3>Explanation of the Categories</h3>
+
+<p>4* Quality that is world-leading in terms of originality, significance and rigour.</p>
+
+<p>3* Quality that is internationally excellent in terms of originality, significance and rigour but which nonetheless falls short of the highest standards of excellence.</p>
+
+<p>2* Quality that is recognised internationally in terms of originality, significance and rigour.</p>
+
+<p>1* Quality that is recognised nationally in terms of originality, significance and rigour.</p>
+
+<p>U: Quality that falls below the standard of nationally recognised work. Or work which does not meet the published definition of research for the purposes of the assessment</p>
+
+<p>The School of Computer Science academic community consists of people who are working at the forefront of knowledge in their subject. This benefits you directly since you learn from their research as it is happening and while innovative developments are being made.</p>
+
+<p>In the previous RAE in 2001, the School of Computer Science at Birmingham received a Grade 5, one of the highest possible ratings.</p>
+
+<h2>Teaching Excellence</h2>
+
+<p><strong>TEF</strong></p>
+
+<p>The University has also been awarded a Gold rating in the <a href="https://www.birmingham.ac.uk/strategic-framework/Education/tef.aspx">2016/17 Teaching Excellence Framework (TEF)</a>.</p>
+
+<h2>Teaching Excellence</h2>
+
+<p>You will study at a School whose programmes have been consistently rated as excellent. Our teaching is regularly reviewed and achieves high scores and commendations. In our last review, we received the highest possible ratings for our Computer Science teaching from the QAA.  We respond to student feedback and requirements in industry and further study, and tailor our teaching and research accordingly.</p>
+
+<p>We are currently 8th for Computer Science in The Guardian League Table 2018, and 94% of our students go into graduate employment (Destination of Leavers from Higher Education Survey 2015/16).</p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

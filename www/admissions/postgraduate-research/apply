@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Apply for our Computer Science PhD</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/postgraduate-research/">Postgraduate research</a></span>
+        <span class="crumb">How to Apply for our Computer Science PhD</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">How to Apply for our Computer Science PhD</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">PhD in Computer Science<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/postgraduate-research/scholarships" class="nav-link">PhD Scholarships</a>
+              <a href="/admissions/postgraduate-research/apply" class="nav-link">How to Apply</a>
+              <a href="/admissions/postgraduate-research/entry" class="nav-link">Entry Requirements</a>
+              <a href="/admissions/postgraduate-research/fees" class="nav-link">Tuition Fees</a>
+              <a href="/research/" class="nav-link">Our Research Areas</a>
+              <a href="/admissions/quality" class="nav-link">Teaching &amp; Research Quality</a>
+              <a href="/admissions/postgraduate-research/international" class="nav-link">For International Students</a>
+              <a href="/admissions/postgraduate-research/resources" class="nav-link">Resources for our PhD Students</a>
+            </div>
+          </nav>
+          <p>You must indicate a research topic for your PhD, and you are strongly encouraged to indicate any preferred supervisor. If you do so, your application will be reviewed by that person, and can be processed much more efficiently than if we have to guess possible supervisors for you, who may not be interested in your application. If your PhD application is not related to our research interests and expertise, it will not be accepted.</p>
+
+<h2>1. Online application form</h2>
+
+<p>Please apply by completing the relevant <a href="//pga.bham.ac.uk/lpages/EPS003.htm">online application form</a> at the central University of Birmingham postgraduate admissions site.</p>
+
+<p>Note that the part-time PhD is <em>not</em> available to students from outside the European Union.</p>
+
+<h2>2. Research Proposal</h2>
+
+<p>Successful PhD applicants must show that they are capable of original and creative thinking. We ask you to write a research proposal which includes the following points:</p>
+
+<ul>
+<li>A description of work that you have done or would like to do. This work should have inspired you to want to study for a research degree.</li>
+<li>Briefly describe the way or ways in which this work could be extended to make good research topics.</li>
+<li>Using one of these research topics, give a plan for carrying through this research. Your plan should show the detailed stages which have to be carried out.</li>
+<li>Describe any other work you know of that is related to your proposed work, citing the relevant research literature.</li>
+<li>Explain how your work would be new and useful to other researchers in your field.</li>
+</ul>
+
+<p>The research proposal does not commit you to writing your thesis on exactly that topic, as the actual thesis proposal is written at a later stage. The topic you propose should be relevant to the research interests of at least one possible supervisor among the academics in our department. See the <a href="/research/">range of research areas</a> and <a href="/about/people/">personal web pages of academics</a>.</p>
+
+<p>Please be aware that the research proposal must be written solely by you. Any attempt at plagiarism will result in immediate rejection of your application.</p>
+
+<h2>3. Two Academic References</h2>
+
+<p>These should be written by two people who know you well, usually academics or in some cases employers. At least one reference must be written by someone who taught you when you studied for a previous degree.</p>
+
+<h2>4. Academic Transcripts</h2>
+
+<p>We need to see a list of the subjects/modules you have studied in your previous degree(s). This list should include the marks/grades you were given for each subject/module. If you have not finished your degree yet, you should send a transcript of the grades you were awarded in previous years.</p>
+
+<h2>5. English language certificate (if English is not your first language)</h2>
+
+<p>The University accepts a variety of english language qualifications. See <a href="http://www.birmingham.ac.uk/postgraduate/requirements-pgt/international/index.aspx">entry requirements</a> for details.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

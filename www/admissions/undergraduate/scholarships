@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Undergraduate Scholarships</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/undergraduate/">Undergraduate</a></span>
+        <span class="crumb">Undergraduate Scholarships</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Undergraduate Scholarships</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Undergraduate Admissions<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/scholarships" class="nav-link">Undergraduate Scholarships</a>
+              <a href="/admissions/undergraduate/faq" class="nav-link">Frequently Asked Questions</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days &amp; Outreach</a>
+              <a href="/admissions/undergraduate/applicant-visit-days" class="nav-link">Applicant Visit Days</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+              <span class="nav-link separator">External Links</span>
+              <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx" class="nav-link">Undergraduate Fees &amp; Finance</a>
+              <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/" class="nav-link">UG Facebook Group</a>
+            </div>
+          </nav>
+          <p>The School of Computer Science offers scholarships for students wishing to study for an undergraduate degree in a Computer Science subject. Scholarships are awarded to students who have, or expect to achieve, excellent academic results and are available to students in the following programmes (<strong>which include Year in Industry and Study Abroad variants</strong>):</p>
+
+<ul>
+<li><a href="/admissions/undergraduate/degrees/cs">BSc Computer Science</a></li>
+<li><a href="/admissions/undergraduate/degrees/se">MEng Computer Science and Software Engineering</a></li>
+<li><a href="/admissions/undergraduate/degrees/aics">BSc Artificial Intelligence and Computer Science</a></li>
+<li><a href="/admissions/undergraduate/degrees/msci">MSci Computer Science</a></li>
+</ul>
+
+<p><strong>Please note the 'BSc Computer Science with Digital Technology Partnership degree' is not eligible for our School scholarship consideration, as the tuition fees are fully funded and a monthly salary is awarded.</strong></p>
+
+<hr />
+
+<h2>UK/EU Students</h2>
+
+<p>We offer a number of scholarships worth £3000 for UK/EU applicants, for the first year of study.</p>
+
+<p>In order to be eligible for consideration of this scholarship, applicants must hold an offer, have attended an Applicant Visit Day and made Birmingham their Firm choice by 1st August. The Scholarship Committee will meet in mid-August to review all suitable applications, and decisions will be made on content of application and final grades achieved. Successful applicants will be notified via email/post.
+(Alternative arrangements will be made for EU students not resident in the UK. These applicants will be contacted directly regarding these arrangements.)</p>
+
+<p><strong>Please note that there are only a limited number of scholarships available, and these are awarded to the students with the best entrance exam results.</strong></p>
+
+<hr />
+
+<h2>International Students</h2>
+
+<p>We also offer a range of International Scholarships to applicants studying outside the UK/EU.</p>
+
+<p>The following awards are available to all privately funded international students applying for 2018 entry undergraduate programmes:</p>
+
+<table class="table">
+<thead>
+<tr>
+  <th>Scholarship</th>
+  <th>Amount awarded</th>
+  <th>Who is eligible?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Achievement Scholarship</td>
+  <td>£1,500</td>
+  <td>International students who attain AAA or equivalent qualification on entry.  <strong>Renewable annually, subject to obtaining full credits and an overall yearly mark of 70% or higher on the first attempt</strong></td>
+</tr>
+<tr>
+  <td>Excellence Scholarship</td>
+  <td>An additional £1,500</td>
+  <td>International students who attain A*AA/AAAA or equivalent qualification on entry. <strong>Not renewable.  The Excellence Scholarship is awarded for first year only</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><bk></p>
+
+<p>There is no special application process – the awards will be made automatically to all eligible students admitted to the School of 
+Computer Science who apply by the end of July and who intend to commence their study in September 2018.</p>
+
+<h2>Please Note:</h2>
+
+<ul>
+<li><strong>Students who are in receipt of support from other funding bodies which wholly cover their tuition fees are not eligible for these awards</strong></li>
+<li><strong>Students in receipt of part-funding should contact the <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Admissions Tutor</a> to check their eligibility</strong></li>
+<li><strong>Scholarships are subject to change, and are awarded at the discretion of the School</strong></li>
+<li><strong>Further conditions will apply. These will be specified in the scholarship offer letter</strong></li>
+</ul>
+
+<hr />
+
+<h2>BP STEM Scholarships</h2>
+
+<p>This year BP will offer scholarships to up to 10 first year students studying at the University of Birmingham. Each scholarship is worth up to £12,000, with scholars receiving £3,000 per year for the duration of their degree (up to four years).  These scholarships are intended to encourage and support students with a passion for Science, Technology, Engineering and Mathematics, and first year Computer Science students will be able to apply.</p>
+
+<p>You can find out more information and how to apply <a href="http://www.birmingham.ac.uk/university/colleges/eps/study/undergraduate/BP-STEM-scholarships.aspx">here</a>.</p>
+
+<hr />
+
+<h2>General University Scholarships</h2>
+
+<p>Please visit our <a href="http://www.birmingham.ac.uk/students/fees/undergraduate/funding/index.aspx">University Scholarships website</a> for information about general financial support regarding bursaries, grants and scholarships.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Marco Devesas Campos</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body ontouchstart="">
+<header>
+<h1 class="title">Marco Devesas Campos</h1>
+<h2 class="subtitle">
+    Research Fellow, University of Birmingham
+</h2>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#bio">Bio</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#talks">Talks</a></li>
+<li><a href="#thesis">Thesis</a></li>
+</ul>
+</nav>
+<figure id="pic">
+<a href="https://en.wikipedia.org/wiki/Álvaro_de_Campos"><img src="./AdC.png" alt="An artist&#39;s rendition" /></a>
+<figcaption>
+An artist's rendition
+</figcaption>
+</figure>
+<h1 id="bio">Bio</h1>
+<p>I work with <a href="http://www.cs.bham.ac.uk/~pbl/">Paul Blain Levy</a> on <a href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/N023757/1">Recursion, guarded recursion and computational effects</a>.</p>
+<p>I completed my PhD at the <a href="http://www.cl.cam.ac.uk/">University of Cambridge</a> under the supervision of <a href="http://www.cl.cam.ac.uk/~mpf23">Prof. Marcelo Fiore</a>. I also hold an <a href="http://www.cl.cam.ac.uk/admissions/acs/">MPhil</a> from Cambridge. My first degree was in <a href="http://di.uminho.pt/lesi">Systems and Informatics Engineering</a> at <a href="http://di.uminho.pt">Minho University</a> where I specialised in formal methods.</p>
+<p>I worked for <a href="http://home.cern">CERN</a> as a Junior Fellow in the <a href="http://dashboard.cern.ch">Dashboard</a> project. I also had stints at the Nordic Data Grid Facility, and <a href="http://www.philips.com/a-w/research/home.html">Philips Research</a>.</p>
+<p>If you don't set <code>p{max-width: 30rem;}</code> (or something to that effect) in your webpages we can't be friends.</p>
+<h4 id="contact">Contact</h4>
+<p>Email: <code>m.devesascampos</code> at the <a href="http://cs.bham.ac.uk">department's URL</a>.</p>
+<h1 id="research">Research</h1>
+<p>My primary preoccupation lies with the Logical foundations of Computer Science. I aim to describe the behaviour of programs through rigorous proof. For that I try to develop both semantical and operational proof techniques capable of handling as wide a range of programming language features as possible. Chief among these features, for its ubiquity, is recursion—in its term, type, guarded, and <em>à la</em> Mendler varieties.</p>
+<p>Proofs themselves can be seen as programs—after all, they manipulate the truth of some things into the truth of something else. It’s the “Curry-Howard isomorphism”, as this observation is known, that explains the title of my <a href="#thesis">PhD</a> (“<em>Classical Logic…</em>”). I study how proof systems can influence programming language design and how results about programs can be turned into results about the provability of certain statements.</p>
+<h1 id="publications">Publications</h1>
+<p><strong>Classical Logic with Mendler Induction—A Dual Calculus and its Strong Normalization</strong> <em>With Marcelo Fiore</em>. In Logical Foundations of Computer Science (LFCS 2016) <a href="./papers/lfcs2016/preprint.pdf">Preprint</a> <a href="./papers/lfcs2016/bibtex.bib">BibTeX</a> <a href="http://dx.doi.org/10.1007/978-3-319-27683-0_4">DOI</a> <a href="./papers/lfcs2016/talk.pdf">Talk</a></p>
+<p><strong>The Algebra of Directed Acyclic Graphs</strong> <em>With Marcelo Fiore</em>. In Computation, Logic, Games, and Quantum Foundations. The Many Facets of Samson Abramsky: Essays Dedicated to Samson Abramsky on the Occasion of His 60th Birthday (2013) <a href="./papers/dags/bibtex.bib">BibTeX</a> <a href="http://dx.doi.org/10.1007/978-3-642-38164-5_4">DOI</a></p>
+<p><strong>Implementation of an Orchestration Language as a Haskell Domain Specific Language</strong> <em>With Luís Soares Barbosa</em>. In 8th International Workshop on the Foundations of Coordination Languages and Software Architectures (FOCLASA 2009). <a href="./papers/horc/bibtex.bib">BibTeX</a> <a href="http://dx.doi.org/10.1016/j.entcs.2009.10.024">DOI</a> <a href="./papers/horc/talk.pdf">Talk</a></p>
+<h1 id="talks">Talks</h1>
+<p><strong>Messing with the Future—or the Art of Continuations</strong> A lecture aimed at undergraduate students on the continuation passing style of programming and its immense expressive power. <a href="./talks/TAoC/slides.pdf">Slides (PDF)</a></p>
+<h1 id="thesis">Thesis</h1>
+<p><strong>Mendler Induction and Classical Logic</strong> <a href="./thesis/thesis.pdf">PDF</a> <a href="./thesis/bibtex.bib">BibTeX</a><br /><em>Abstract.</em> This thesis lies at the intersection of two fields: Computer Science and Logic. It follows in the tradition of studies on the Curry-Howard correspondence between types and propositions, and between programs and proofs.</p>
+<p>We commence from the Dual Calculus, a language which exhibits interesting computational behaviour by including control effects—the ability for a piece of code to alter its running context. Such manipulations are known to correspond Logically to laws such as Peirce's, the excluded middle, or double negation elimination. For this we dub this language Classical. Our study of the Dual Calculus is guided by a comparative effort between the programming language and Gentzen's related seminal system, the Sequent Calculus; and we refine the (oft presumed) connection between the two. Our discussion is quite general, spanning both propositional—including negation—and quantified types, and, less familiarly, subtractive types.</p>
+<p>Next we turn to the reduction rules of the calculus and show that they satisfy several properties: self-duality, substitutivity, subject preservation and, strong normalization—this despite them being non-deterministic and inherently non-confluent. We prove strong normalization by recourse to a very powerful and general realizability argument. Further, we synthesize from our model a lattice structure that is not present in other realizability proofs of strong normalization.</p>
+<p>The second half of the thesis focuses on Mendler induction—first in a functional setting, and then within the Dual Calculus. The functional setting serves to motivate and explicate this lesser known form of induction that is, nonetheless, more general than the usual notion—which it subsumes—in that it enables well-founded induction on types with <em>negative</em> occurrences of the induction variable. The definition of the necessary extension of the Dual Calculus follows. Subtractive types are paramount to this definition.</p>
+<p>The system thus created is very general, and can embed several other calculi. We show in particular two: the original Mendler inductive (functional) system and a (Classical) Dual Calculus with inductive types. But despite this generality, we still retain the nice reduction behaviour of the of the second-order system—even if this is shown only classically.</p>
+<picture class="footer">
+    <img src="UoB_logo.svg">
+</picture>
+</imgset>
+</body>
+</html>

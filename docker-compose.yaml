@@ -1,0 +1,73 @@
+version: "2.3"
+services:
+    tunnel-server:
+        hostname: tunnel-server
+        entrypoint: '/bin/sh -c "cd src; python proxy.py configs/docker-http.yaml"'
+        depends_on:
+            - "cs-local-webserver"
+        build: .
+        networks:
+            - wan
+            - remote-lan
+
+    cs-local-webserver:
+        hostname: cs-local-webserver
+        build: .
+        entrypoint: '/bin/sh -c "cd www; python -m http.server 80"'
+        networks:
+            - remote-lan
+
+    tunnel-client:
+        hostname: tunnel-client
+        entrypoint: '/bin/sh -c "cd src; python client.py http://tunnel-server"'
+        depends_on:
+            - "tunnel-server"
+        build: .
+        networks:
+            - wan
+            - local-lan
+
+    ssh-client:
+        hostname: ssh-client
+        depends_on:
+            - "tcp-server-joining-service"
+        entrypoint: 'ssh -4 -D 0.0.0.0:8080 -C tunnel-client -o StrictHostKeyChecking=no -N -p 33333'
+        ports:
+            - "8080:8080"
+        build: .
+        networks:
+            - local-lan
+
+    tcp-server-joining-service:
+        hostname: tcp-joiner
+        depends_on:
+            - "ssh-server"
+        entrypoint: '/bin/sh -c "cd src; python serversideforward.py 22 ssh-server 44444 tunnel-server"'
+        build: .
+        networks:
+            - remote-lan
+
+
+
+    ssh-server:
+        hostname: ssh-server
+        depends_on:
+            - "tunnel-client"
+        entrypoint: '/usr/sbin/sshd -D -E /log'
+        build: .
+        networks:
+            - remote-lan
+
+networks:
+    wan:
+        name: wan
+        driver_opts:
+            com.docker.network.bridge.name: "wan"
+    local-lan:
+        name: local-lan
+        driver_opts:
+            com.docker.network.bridge.name: "local-lan"
+    remote-lan:
+        name: remote-lan
+        driver_opts:
+            com.docker.network.bridge.name: "remote-lan"

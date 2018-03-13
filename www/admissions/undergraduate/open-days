@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Days and Outreach</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/undergraduate/">Undergraduate</a></span>
+        <span class="crumb">Open Days and Outreach</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Open Days and Outreach</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Undergraduate Admissions<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/scholarships" class="nav-link">Undergraduate Scholarships</a>
+              <a href="/admissions/undergraduate/faq" class="nav-link">Frequently Asked Questions</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days &amp; Outreach</a>
+              <a href="/admissions/undergraduate/applicant-visit-days" class="nav-link">Applicant Visit Days</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+              <span class="nav-link separator">External Links</span>
+              <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx" class="nav-link">Undergraduate Fees &amp; Finance</a>
+              <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/" class="nav-link">UG Facebook Group</a>
+            </div>
+          </nav>
+          <p>Reading and research can give you vital information about a university. But it's not the same as seeing it for yourself. At Birmingham you are welcome to visit, talk to students, explore the campus, see where you might live, and come to your own conclusions.</p>
+
+<h2>Open Days</h2>
+
+<ul>
+<li>The next <a href="https://www.birmingham.ac.uk/undergraduate/visit/opendays/index.aspx">Undergraduate Open Days</a> will be held on Friday 22nd and Saturday 23rd June 2018 </li>
+<li>The next <a href="https://www.birmingham.ac.uk/postgraduate/visit/open-day/index.aspx">Postgraduate Open Day</a> will be held on Saturday 10th March 2018</li>
+</ul>
+
+<p>These days provide excellent opportunities to speak to academic staff, CS students and to explore the University.</p>
+
+<h2>Campus tours</h2>
+
+<p>Birmingham encourages prospective students to come and see the University, so we run general events throughout the year. <a href="http://www.birmingham.ac.uk/undergraduate/visit/campus-tours.aspx">Guided campus tours</a> are organised every Tuesday and Thursday at 11.00am and 2.00pm.  <strong>Please note that booking for these tours is essential and do not include visits to individual departments or halls of residence</strong>.</p>
+
+<p>You can register to attend <a href="https://bham.hobsonsradius.com/crm/sites/University_of_Birmingham/campustours?_ga=1.136177457.1886413946.1455122644">here</a>, or to find out specific information, please contact:</p>
+
+<p>Student Recruitment and Outreach<br />
+Tel: 0121 414 3374<br />
+Email: <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#99;&#104;&#111;&#111;&#108;&#115;&#45;l&#x69;&#x61;&#x69;&#x73;&#x6f;&#x6e;&#x40;&#x62;&#104;&#97;&#109;&#46;&#97;&#99;&#46;uk">&#115;&#99;&#104;&#111;&#111;&#108;&#115;&#45;l&#x69;&#x61;&#x69;&#x73;&#x6f;&#x6e;&#x40;&#x62;&#104;&#97;&#109;&#46;&#97;&#99;&#46;uk</a></p>
+
+<h2>Outreach within the College of Engineering and Physical Sciences</h2>
+
+<p>At Birmingham we believe University should be an option available to everyone.  We provide opportunities for students and staff to inspire the next generation of computer scientists, and we develop and provide resources for children, parents and teachers to use at home and in the classroom.  The University works with teachers and careers advisors to ensure that talented students from all backgrounds and cultures have access to higher education. We host visits, arrange talks and events to help introduce students to Birmingham, and provide information about routes to study here. For further information on these activities in relation to Computer Science (part of the <a href="https://www.birmingham.ac.uk/university/colleges/eps/index.aspx">College of Engineering and Physical Sciences</a>) please click <a href="https://www.birmingham.ac.uk/university/colleges/eps/outreach/outreach.aspx">here</a>, or contact:</p>
+
+<p>Eleanor Mestel<br />
+College of Engineering &amp; Physical Sciences Schools Liaison Officer<br />
+Tel: +44 (0)121 414 7566<br />
+Email: <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;:&#108;&#x69;&#97;&#x69;&#115;&#x6f;&#110;&#x40;m&#97;&#x74;&#104;&#x73;&#46;&#x62;&#104;&#x61;&#x6d;&#46;&#x61;&#99;&#x2e;&#117;&#x6b;">&#108;&#x69;&#97;&#x69;&#115;&#x6f;&#110;&#x40;m&#97;&#x74;&#104;&#x73;&#46;&#x62;&#104;&#x61;&#x6d;&#46;&#x61;&#99;&#x2e;&#117;&#x6b;</a></p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

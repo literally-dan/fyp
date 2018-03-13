@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="/~hxt/hthome.css" />
+
+<title>Hayo Thielecke's Home Page</title>
+
+<meta name="Description" content="Hayo Thielecke's home page at the
+University of Birmingham: contact details, research and teaching" />
+
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+<meta name="keywords" content="hayo thielecke, hayo, thielecke" />
+
+<meta name="Author" content="Hayo Thielecke" />
+
+<meta name="google-site-verification" content="jG4llxtPT5ntmVsfT63Jq1nkY3O59AcxNbX_qqODGQ0" />
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+<h1>Hayo Thielecke -  Lecturer in Computer Science</h1>
+
+<div id="navigation">
+
+<h4>Current research</h4>
+
+<ul>
+
+
+<li>
+<a href="research/hayo-thielecke-publications.shtml">Publications</a>
+</li>
+
+<li>
+<a href="research/rxxr2/index.shtml">RXXR2 REDoS analysis</a>
+</li>
+
+<li>
+<a href="phd-topics.html">PhD research topics</a>
+</li>
+
+</ul>
+
+<h4>Teaching 2016/17</h4>
+
+<ul>
+
+<li>
+<a href="http://www.cs.bham.ac.uk/~hxt/2015/mgs-ll-lr/">MGS LL LR</a>
+</li>
+
+<li>
+<a href="/~hxt/2016/c-plus-plus/index.shtml">C/C++</a>
+</li>
+
+<li>
+<a href="/~hxt/2015/compilers">Compilers and Languages</a>
+</li>
+
+<li>
+<a href="/~hxt/student-projects.shtml">Student project topics</a>
+</li>
+
+</ul>
+
+</div>
+
+<div id="main">
+
+<h2>Contact details</h2>
+
+
+<div>
+
+<div class="pic">
+
+</div>
+
+<div id="addressbox">
+
+<address>
+Email: H.Thielecke@cs.bham.ac.uk
+<br />
+<br />
+
+<a href="http://www.cs.bham.ac.uk" >Computer Science</a><br />
+<a href="http://www.bham.ac.uk/" >University of Birmingham</a><br />
+Birmingham B15 2TT<br />
+United Kingdom<br/>
+Skype: <code>hayo.thielecke1</code>
+</address>
+
+</div>
+
+</div>
+
+<ul>
+
+<li>
+My office is 208 (second floor and on the left) in the <a
+href="computer-science-building.shtml" >Computer
+Science building</a>.
+</li>
+
+<li>
+My office hour (in Semester 2, 2016/17) is Thursdays 15:00 - 17:00.
+</li>
+
+<li>
+Can't pronounce my name? See the
+<a href="hayo-thielecke-pronunciation.shtml" >Pronunciation and Etymology</a> page.
+</li>
+
+</ul>
+
+<h2>Research</h2>
+
+<p>
+I am a member of
+ the <a href="http://www.cs.bham.ac.uk/research/groupings/theory/">Theory
+ group</a> (which include programming language research) at Birmingham
+ and the Academic Centre of Excellence in Cyber Security Research
+ (ACE-CSR).
+</p>
+
+<p>
+My research interests are in  programming languages. Currently I am  particularly interested in:
+</p>
+<ul>
+<li>Concurrency, such as rely-guarantee logic and linearizability</li>
+<li>Substructural logics and types for programming languages, such as
+linear and separation logic and Lambek calculus</li>
+<li>Compiling, particularly CPS compiling or LLVM/clang</li>
+<li>Using Agda for programming language semantics</li>
+<li>Secure programming and memory safety</li>
+<li>Program analysis for security</li>
+
+<li><a href="research/parsing-regular-expressions.shtml">parsing and
+regular expression matching</a> using semantic ideas
+</li>
+
+<li><a href="research/control-concurrency.shtml">control and concurrency</a> particularly in low-level language close to hardware or OS 
+</li>
+
+<li> Secure programming and software security, particularly in
+conjunction with programming language design and technology.  
+</li>
+
+<li>Abstract machines (in the tradition of Landin's SECD machine)</li>
+
+</ul>
+
+<p>
+There is a <a href="research/hayo-thielecke-publications.shtml">
+page with my publications (all online)</a>.
+</p>
+
+<p>
+If you are interested in studying for a PhD with me,
+I would be happy to discuss possible <a href="phd-topics.html">PhD topics in
+Programming Languages and Software Security</a>.
+</p>
+
+<h2>Teaching 2016/17</h2>
+
+<ul>
+
+<li>
+<a href="http://www.cs.bham.ac.uk/~hxt/2015/mgs-ll-lr/">Midlands
+Graduate School course on LL and LR parsing with abstract
+machines</a>
+</li>
+
+<li>
+<a href="2016/c-plus-plus/">C/C++</a>
+</li>
+
+<li>
+<a href="2015/compilers/">Compilers and Languages</a>
+</li>
+
+</ul>
+
+<h2>Past teaching</h2>
+
+<ul>
+
+<li>
+<a href="2014/secure-programming">Secure Programming</a>
+</li>
+
+<li>
+<a href="2013/parallel-programming/">Parallel Programming</a>
+</li>
+
+<li>
+<a href="http://www.cs.bham.ac.uk/~hxt/2011/02552/">Principles of Programming Languages</a>
+</li>
+
+</ul>
+
+<h3>Past PhD students</h3>
+
+<p>I have supervised the following PhDs at Birmingham:</p>
+<ul>
+
+<li>Asiri Rathnayake, graduated in 2015, now Compiler Engineer at  ARM Ltd in Cambridge. Thesis title: Semantics, Analysis and Security of Backtracking Regular Expression Matchers</li>
+
+<li>Maxim Strygin, graduated 2014, now at HP in Moscow. Thesis title: Semantics and logics for signals</li>
+
+<li>Horia Corcalciuc, graduated 2014. Thesis title:  Taxonomies for software security</li>
+
+</ul>
+
+
+
+<h2>Events</h2>
+
+<ul>
+
+<li>PC member of
+<a href="http://users-cs.au.dk/danvy/woc15/">2015 Workshop on Continuations (WoC 2015)</a>, co-located with ETAPS 2015
+</li>
+
+<li>PC member of <a href="http://logic.cs.tsukuba.ac.jp/cw2011/">CW2011 - ACM SIGPLAN Continuation Workshop 2011</a>
+</li>
+
+<li>PC member of <a href="http://www.pps.jussieu.fr/~saurin/tpdc2011/">
+TPDC 2011 - 
+Theory and Practice of Delimited Continuations Workshop
+</a>
+</li>
+
+<li> PC member of <a href="http://lola.pps.jussieu.fr/">LOLA 2010 -
+Syntax and Semantics of Low Level Languages</a>
+</li>
+
+<li>The <a
+href="http://www.cs.bham.ac.uk/~hxt/kazam/">KAZAM</a> workshop was
+organized by <a href="http://www.brics.dk/~danvy">Olivier Danvy</a>
+and me.
+</li>
+<li> Guest editor for the special issue on continuations of the
+journal Higher-Order and Symbolic Computation (<a
+href="http://springerlink.metapress.com/link.asp?id=102420">HOSC</a>). 
+</li>
+<li> PC chair of the <a
+href="http://www.cs.bham.ac.uk/~hxt/cw04/index.html">Fourth
+Continuation Workshop (CW'04)</a>, co-located with POPL'04 in Venice,
+17 January 2004.The proceedings is available on-line. 
+</li>
+      <li> I was a PC member of The Third ACM
+      SIGPLAN Workshop on Continuations (CW'01)
+</li>
+</ul>
+
+
+<!--
+
+<h2>Some colleagues and students</h2>
+
+<ul>
+
+
+<li>
+<a href="http://www.cs.bham.ac.uk/~apr015/">Asiri Rathnayake</a>
+ started his PhD with me in 2011.
+</li>
+
+<li><a href="/~mxs895">Maxim Strygin</a> started his PhD with me in
+ 2010, having been awarded an EPS Elite postgraduate scholarship.
+ </li>
+
+
+  <li> <a href="http://research.microsoft.com/~jjb/">Josh Berdine</a>
+  was <a href="http://www.dcs.qmul.ac.uk/~ohearn">Peter O'Hearn</a>'s
+  student, co-supervised by me while I was Peter's postdoc.  Josh's
+  PhD thesis is on linear continuation passing (as in exceptions and
+  coroutines). Josh is now at Microsoft Research in Cambridge.
+  </li>
+
+<li>My Erd&#337;s number is 3, thanks to <a
+href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Power:John.html">
+John Power</a>, co-supervisor of my PhD at Edinburgh.  <br /> (John
+&isin; Erd&#337;s(2) via Michael Makkai.)  </li>
+
+</ul>
+
+-->
+
+<hr></hr>
+
+
+<p>
+Last modified:
+
+<script type="text/javascript">
+document.write(document.lastModified);
+</script>
+</p>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6600696-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+
+</html>

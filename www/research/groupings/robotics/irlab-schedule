@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IRLab Meeting Schedule</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link" href="/admissions/">Study</a>
+            <a class="link active" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/research/">Research</a></span>
+        <span class="crumb"><a class="link" href="/research/groupings/">Groupings</a></span>
+        <span class="crumb"><a class="link" href="/research/groupings/robotics/">Robotics</a></span>
+        <span class="crumb">IRLab Meeting Schedule</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">IRLab Meeting Schedule</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Intelligent Robotics Lab<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/research/groupings/robotics/index" class="nav-link">Home Page</a>
+              <a href="/research/groupings/robotics/contacts" class="nav-link">Contacts</a>
+              <a href="/research/groupings/robotics/overview" class="nav-link">Overview of the group</a>
+              <a href="/research/groupings/robotics/people" class="nav-link">People</a>
+              <a href="/research/groupings/robotics/projects" class="nav-link">Projects</a>
+              <a href="/research/groupings/robotics/publications" class="nav-link">Publications</a>
+              <a href="/research/groupings/robotics/movies" class="nav-link">Movies</a>
+              <a href="/research/groupings/robotics/irlab-schedule" class="nav-link">IRLab Meetings</a>
+            </div>
+          </nav>
+          <h2>Spring 2017</h2>
+
+<ul>
+<li>30 January        Jeremy – Tutorial: Reinforcement Learning Basics</li>
+<li>13 February       Jeremy – Tutorial: Recent work in Reinforcement Learning</li>
+<li>27 February       Dario Farina, seminar.</li>
+<li>13 March      Oliver – Journal Paper: Deep Mind Deep Neural Computer</li>
+<li>27 March      Christian Reuther - SLAM</li>
+<li>10 April          Bruno – Research Talk: Probabilistic Verification with Monte Carlo Tree Search</li>
+<li>24 April          Ermano – Short Talk on Deep RL </li>
+<li>8 May         Joshua Knowles: Research talk: RL in Online Design of Experiments</li>
+<li>5 June            Hector – Tutorial on SOTA in object recognition and pose estimation</li>
+<li>19 June           Lenka: PhD talk</li>
+<li>3 July            TBA</li>
+<li>17 July           TBA</li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud Computing</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link" href="/admissions/">Study</a>
+            <a class="link active" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/research/">Research</a></span>
+        <span class="crumb"><a class="link" href="/research/groupings/">Groupings</a></span>
+        <span class="crumb"><a class="link" href="/research/groupings/software-engineering/">Software engineering</a></span>
+        <span class="crumb">Cloud Computing</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Cloud Computing</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Software Engineering<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/research/groupings/software_engineering/component-based" class="nav-link">Component Based</a>
+              <a href="/research/groupings/software_engineering/cloud-computing" class="nav-link">Cloud Computing</a>
+              <a href="/research/groupings/software_engineering/people" class="nav-link">People</a>
+              <a href="/research/groupings/software_engineering/postgraduate-study" class="nav-link">Postgraduate Study</a>
+            </div>
+          </nav>
+          <p><a href="/~rzb">Dr. Rami Bahsoon</a> is working on the software engineering research in and for cloud computing. The focus includes green cloud, self-managed cloud architectures, cloud requirement engineering etc. More details can be found at: Cloud Computing Research.</p>
+
+<p>Collaborators:</p>
+
+<ul>
+<li><a href="/~txc919">Tao Chen</a></li>
+<li><a href="/~beo136">Bendra Ojameruaye</a></li>
+<li><a href="/~sxa706">Sarah al Azzani</a></li>
+<li><a href="/~fof861">Funmilade Faniyi</a></li>
+<li><a href="/~sxz845">Shehnila Zardari</a></li>
+<li><a href="/~efa004">Esra Zaghoul</a></li>
+<li><a href="/~fma018">Faisal Alrebeish</a></li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>﻿Undergraduate Frequently Asked Questions</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/undergraduate/">Undergraduate</a></span>
+        <span class="crumb">﻿Undergraduate Frequently Asked Questions</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">﻿Undergraduate Frequently Asked Questions</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Undergraduate Admissions<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/scholarships" class="nav-link">Undergraduate Scholarships</a>
+              <a href="/admissions/undergraduate/faq" class="nav-link">Frequently Asked Questions</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days &amp; Outreach</a>
+              <a href="/admissions/undergraduate/applicant-visit-days" class="nav-link">Applicant Visit Days</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+              <span class="nav-link separator">External Links</span>
+              <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx" class="nav-link">Undergraduate Fees &amp; Finance</a>
+              <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/" class="nav-link">UG Facebook Group</a>
+            </div>
+          </nav>
+          <p><strong>Got a question? Check out below or contact us directly:</strong></p>
+
+<p>Helen Whitby<br />
+Admissions and Marketing Coordinator</p>
+
+<p><a href="tel:+441214158742">+44 121 415 8742</a><br />
+<a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;</a></p>
+
+<ul>
+<li><a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/">Get in touch on Facebook</a></li>
+<li><a href="https://twitter.com/uobcompsci">@uobcompsci</a></li>
+<li><a href="https://twitter.com/eps_unibham">@eps_unibham</a></li>
+</ul>
+
+<hr />
+
+<h2>What are your entry requirements?</h2>
+
+<p>Our minimum entry requirements for 2018 for A-level students are:</p>
+
+<ul>
+<li>AAA (for BSc programmes) with Grade A in A Level Mathematics</li>
+<li>A*AA (for MSci/MEng programmes) with Grade A in A Level Mathematics</li>
+<li>Level 3 BTEC qualifications at D* are considered alongside Grade A/A* in A Level Mathematics. Please see <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/">individual course pages</a> for further information  </li>
+<li>Grade C in GCSE English must also be offered</li>
+<li>We also consider a variety of UK, international and EU qualifications.  Please contact the <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Admissions Team</a> to make direct enquiries</li>
+</ul>
+
+<hr />
+
+<h2>How much are the tuition fees?</h2>
+
+<p>Information on current undergraduate tuition fees can be found <a href="https://www.birmingham.ac.uk/undergraduate/fees/fees.aspx">here</a>.</p>
+
+<hr />
+
+<h2>What courses are available?</h2>
+
+<p>You will have the choice of one of the following six specialist degree programmes:</p>
+
+<ul>
+<li><a href="/admissions/undergraduate/degrees/cs">BSc Computer Science</a></li>
+<li><a href="/admissions/undergraduate/degrees/se">MEng Computer Science and Software Engineering</a></li>
+<li><a href="/admissions/undergraduate/degrees/aics">BSc Artificial Intelligence and Computer Science</a></li>
+<li><a href="/admissions/undergraduate/degrees/msci">MSci Computer Science</a></li>
+<li><a href="https://www.cs.bham.ac.uk/admissions/undergraduate/degrees/cspwc">BSc Computer Science with Digital Technology Partnership - PwC</a></li>
+</ul>
+
+<p>All of our undergraduate degree programmes are available with a <a href="/admissions/undergraduate/year-in-industry">Year in Industry</a> (with the Digital Technology Partnership students spending their year working for PwC). This is an excellent opportunity to supplement studies with a year working in industry and many of our students go on to work for their year-out employers after graduating.  Both our BSc and MSci Computer Science degrees are also available to take with a <a href="/admissions/undergraduate/year-abroad">Year Abroad</a>.</p>
+
+<hr />
+
+<h2>Can I take Computer Science with another subject?</h2>
+
+<p>Yes, Computer Science related subjects may be combined with another subject. The University currently offers:</p>
+
+<ul>
+<li><a href="https://www.birmingham.ac.uk/undergraduate/courses/maths/maths-computer-science.aspx">BSc/MSci Mathematics and Computer Science</a> (hosted by the School of Mathematics).</li>
+</ul>
+
+<hr />
+
+<h2>Are the courses accredited?</h2>
+
+<p>All our current 2017 computing programmes are accredited by the British Computer Society (BCS), which is the UK professional body for  computing practitioners, and a member of the Engineering Council.  That provides exemption from the professional examinations of the BCS, and BSC Membership is recognised by the Engineering Council as enabling registration as a Chartered Engineer (CEng), an internationally accepted qualification.</p>
+
+<p>We have an exciting new curriculum planned for 2018 entry that will be being put forward for new accreditation.  Find out more information <a href="https://www.cs.bham.ac.uk/admissions/undergraduate/degrees/new-curriculum/">here</a>.</p>
+
+<h2>What scholarships do you offer?</h2>
+
+<p>The School of Computer Science offers a range of scholarships to both UK/EU students and international students.  Find out more <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/scholarships">here</a>.</p>
+
+<hr />
+
+<h2>University Scholarships</h2>
+
+<p>The University of Birmingham also offers a number of other <a href="http://www.birmingham.ac.uk/undergraduate/fees/funding/index.aspx">central scholarships</a>.  UK students with a household income of below £36,000 may be eligible for either one of the University’s Chamberlain Awards.  Whatever your circumstances, we encourage you to review what the <a href="http://www.birmingham.ac.uk/undergraduate/fees/funding/index.aspx">University offers</a>.</p>
+
+<hr />
+
+<h2>What will I study?</h2>
+
+<ul>
+<li><p>The first and second year is designed so that you can delay your decision about specialisation until your final year. You will study compulsory modules in the first two years, and gain a firm foundation in the principles of algorithms, software and hardware engineering and relevant mathematics. You also learn computer programming in Java - a language widely used.  You will be able to choose from a wide range of optional modules in your final year, with the addition of a final year project.  (Those studying the MSci or MEng will choose from a range of optional modules in third year and optional extended masters-level modules and a final year project in their last year.)  You can find more information on our new curriculum <a href="https://www.cs.bham.ac.uk/admissions/undergraduate/degrees/new-curriculum/">here</a>.</p></li>
+<li><p><a href="/admissions/undergraduate/degrees/aics">Artificial Intelligence and Computer Science</a> students will also learn about theories of mind, and techniques for generating intelligent behaviour. You experiment with the techniques by implementing them as computer programs, and to this end, learn a major AI programming language.</p></li>
+<li><p>The <a href="https://www.cs.bham.ac.uk/admissions/undergraduate/degrees/cspwc">BSc Computer Science with Digital Technology Partnership</a> follows the curriculum of our BSc, with the addition of some first year business modules and one in the final year.</p></li>
+</ul>
+
+<hr />
+
+<h2>Do you offer a Foundation Programme?</h2>
+
+<p>The University offers a <a href="http://www.birmingham.ac.uk/undergraduate/courses/fd/physical-sciences-foundation.aspx">Physical Sciences Foundation Year</a> and <a href="http://www.birmingham.ac.uk/International/foundation-pathways/pathways/engineering-and-physical-sciences-pathway.aspx">Foundation Pathway</a></p>
+
+<ul>
+<li><p><strong>Home and EU sudents</strong>:  Our <a href="http://www.birmingham.ac.uk/undergraduate/courses/fd/physical-sciences-foundation.aspx">Foundation Year</a> is designed for Home/EU students who do not have the recommended qualifications for entry into year one of our computer science programmes. Please <a href="http://www.birmingham.ac.uk/undergraduate/courses/fd/physical-sciences-foundation.aspx">click here</a> for further information, eligibility and how to apply.</p></li>
+<li><p><strong>International students</strong>:  Our <a href="http://www.birmingham.ac.uk/International/foundation-pathways/pathways/engineering-and-physical-sciences-pathway.aspx">Foundation Pathway</a> offers three undergraduate pathways for international students, allowing you to complete a foundation year before entering into a full time undergraduate degree in computer science.  Please <a href="http://www.birmingham.ac.uk/International/foundation-pathways/pathways/engineering-and-physical-sciences-pathway.aspx">click here</a> for further information.</p></li>
+</ul>
+
+<hr />
+
+<h2>If I haven't applied to study the Year in Industry option, can I change my mind?</h2>
+
+<p>It is possible to opt-in or out of the Year in Industry option at any time before the end of your second year.  We have a dedicated Careers and Employability  Officer and Industrial Placement Tutor, who provide support to students seeking a <a href="/admissions/undergraduate/year-in-industry">work placement in industry</a>.</p>
+
+<hr />
+
+<h2>How do I apply to study at Birmingham?</h2>
+
+<p>Applications for undergraduate programmes are made through <a href="https://www.ucas.com">UCAS</a>.</p>
+
+<p>You will need our course and institution codes which are listed below:</p>
+
+<ul>
+<li>Institution Code Name: BIRM</li>
+<li><p>Institution Code: B32</p>
+
+<p>You can find the individual UCAS codes for the variants of our degrees on each programme page:</p></li>
+<li><a href="/admissions/undergraduate/degrees/cs">BSc Computer Science</a></li>
+<li><a href="/admissions/undergraduate/degrees/se">MEng Computer Science and Software Engineering</a></li>
+<li><a href="/admissions/undergraduate/degrees/aics">BSc Artificial Intelligence and Computer Science</a></li>
+<li><a href="/admissions/undergraduate/degrees/msci">MSci Computer Science</a></li>
+<li><a href="https://www.cs.bham.ac.uk/admissions/undergraduate/degrees/cspwc">BSc Computer Science with Digital Technology Partnership - PwC</a></li>
+</ul>
+
+<hr />
+
+<h1>What is Computer Science at Birmingham like?</h1>
+
+<blockquote>
+  <p>"I didn't know what to expect when I came to Birmingham, but when I came here everyone was so friendly and there was a real sense of community within Computer Science. There are great lectures, great people and a vibrant campus, I wouldn't want to be studying anywhere else!"</p>
+  
+  <p>&#45; <strong>Katie MacLachlan, 4th Year BSc Computer Science</strong></p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <p>"On arrival, I was struck by how close-knit and friendly the School felt. Students from all years made me feel welcome, and I was surprised by the enthusiasm of lecturers who are always happy to stop for a chat."</p>
+  
+  <p>&#45; <strong>George Brighton, 3rd Year, MEng Computer Science and Software Engineering</strong></p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <p>"Computer Science is pioneering and hugely exciting. It gives you the ability to work at a local level, but reach out at a global scale. This is the information age, and as such a very interesting time to study computer science, where the rise of social networks like Twitter, Facebook is ubiquitous in daily life, and every business is becoming increasingly electronic. This University is excellent in terms of career service, employer relationships and extra curricular activities. The staff are the most friendly and intelligent bunch I have ever come across."</p>
+  
+  <p>&#45; <strong>Atif Hussain, Graduate in MEng Computer Science and Software Engineering with Year in Industry</strong></p>
+</blockquote>
+
+<hr />
+
+<h2>Open Days</h2>
+
+<p>We hold regular <a href="http://www.birmingham.ac.uk/undergraduate/visit/opendays/index.aspx">University Open Days</a> where you can find out more about courses on offer at the School of Computer Science and speak to students about what it is like living and studying at the University of Birmingham.</p>
+
+<hr />
+
+<h2>Applicant Visit Days</h2>
+
+<p>The School of Computer Science operates exclusive <a href="/admissions/undergraduate/applicant-visit-days">Applicant Visit Days</a> for applicants who have applied to our undergraduate courses and are eligible to be considered for an offer. We strongly recommend that come along if you can - it's a great opportunity to meet current students and academic staff, experience subject specific talks and demonstrations, explore the campus and take a look at the fantastic facilities and accommodation that we have to offer.</p>
+
+<hr />
+
+<h2>School and College visits:</h2>
+
+<p>The University <a href="http://www.birmingham.ac.uk/university/colleges/eps/outreach/outreach.aspx">works with teachers and careers advisors</a> to ensure that talented students from all backgrounds and cultures have access to higher education. We host visits, arrange talks and events to help introduce students to Birmingham, and provide information about routes to study here. For further information on these activities please contact:</p>
+
+<p>College of Engineering &amp; Physical Sciences Schools Liaison Officer<br />
+Tel: +44 (0)121 414 7566<br />
+Email: <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;:&#108;&#x69;&#97;&#x69;&#115;&#x6f;&#110;&#x40;m&#97;&#x74;&#104;&#x73;&#46;&#x62;&#104;&#x61;&#x6d;&#46;&#x61;&#99;&#x2e;&#117;&#x6b;">&#108;&#x69;&#97;&#x69;&#115;&#x6f;&#110;&#x40;m&#97;&#x74;&#104;&#x73;&#46;&#x62;&#104;&#x61;&#x6d;&#46;&#x61;&#99;&#x2e;&#117;&#x6b;</a></p>
+
+<hr />
+
+<h2>I have applied for a specific degree in Computer Science, but would like to change to another course, is this possible?</h2>
+
+<p>It is possible to change courses from the one you have initially applied for providing that you meet the minimum entry requirements for the course you wish to be considered for.  Requests to change course should be sent to the  the <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Admissions Team</a>. Please include details of why you are requesting to change course and include your name and UCAS ID number where possible.</p>
+
+<p>Our undergraduate courses  have been designed to have a common first and second year. This allows students the flexibility to change course at any point before the beginning of years three/four so that you can mould your course and career direction as your ideas and interests evolve.</p>
+
+<hr />
+
+<h2>How are each of the modules assessed?</h2>
+
+<p>Detailed information on each of the current 2017/18 modules, along with information about how they are assessed can be found on our <a href="/internal/programmes/2018">website</a>.</p>
+
+<p><strong><em>We have an exciting new curriculum planned for 2018 entry.  Please see <a href="https://www.cs.bham.ac.uk/admissions/undergraduate/degrees/new-curriculum/">here</a> for further information, including any future changes to assessment to our new curriculum.</em></strong></p>
+
+<hr />
+
+<h2>Do you have academic leads for each of your Research Themes?</h2>
+
+<p>Our Research Themes and Groups do have an academic lead.  You can find out more about our Research Groups in our School <a href="/research/">here</a>.</p>
+
+<hr />
+
+<h2>Is it possible to study part-time or externally?</h2>
+
+<p>All School of Computer Science programmes are only available as a full-time programme with full-time attendance at the University of Birmingham. It is not possible to study our programmes by distance learning or external study.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

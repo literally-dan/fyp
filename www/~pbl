@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>Paul Blain Levy</title>
+  </head>
+
+  <body>
+<img SRC="blain2.gif" ALT="photo of Paul" height=188 width=153 align=RIGHT>
+   <b><font size = "+2">Paul Blain Levy</font></b> (rhymes with "all plain Stevie") <p>
+
+  Reader in Theoretical Computer Science <br>
+ <a href="http://www.cs.bham.ac.uk">School of Computer Science</a>, <a href="http://www.birmingham.ac.uk">University of Birmingham</a> <br>
+  Edgbaston, Birmingham, B15 2TT, UK <br>
+  phone: +44 121 414 4792 <br>
+  email: <A HREF="mailto:P.B.Levy@cs.bham.ac.uk"><B>P.B.Levy@cs.bham.ac.uk</B></A> <br><br>
+ <p>
+
+<tr><td colspan=2>
+<p><hr><p>
+I am a member of the <a href="http://www.cs.bham.ac.uk/research/groupings/theory/">Birmingham Theoretical Computer Science group</a>, and my interests include 
+<ul>
+<li> semantics of programming languages, including denotational, operational and game semantics
+<li> computational effects, both individually and generally
+<li> call-by-push-value
+<li> semantics of nondeterminism
+<li> category theory, in particular categorical semantics and coalgebra.
+</ul>
+If you're interested in PhD research in any of the above topics, please <a href="mailto:P.B.Levy@cs.bham.ac.uk">contact me</a>. <p>
+
+<p><hr><p>
+</td>
+</table>
+
+
+<a href="papers/index.html">Papers</a> <br>
+<a href="papers/index.html#manuscripts">Manuscripts</a><br>
+<a href="papers/index.html#slides">Slides<a><br>
+Course notes on <a href="mgsall.pdf">typed &lambda;-calculus</a> and <a href="coalglect.pdf">coalgebra</a> and <a href ="mgsfastlam.pdf">effects and call-by-push-value</a> from <a href="http://www.cs.nott.ac.uk/MGS/">Midlands Graduate School</a> <br>
+My <a href = "http://www.springer.com/computer/swe/book/978-1-4020-1730-8">book on call-by-push-value</a><br> 
+<a href="http://eptcs.org/content.cgi?MSFP2012">Proceedings</a> of the <a href="http://cs.ioc.ee/msfp/msfp2012/">4th Workshop on Mathematically Structured Functional Programming</a> coedited with James Chapman<br>
+<a href="http://eptcs.org/content.cgi?MSFP2014">Proceedings</a> of the <a href="msfp2014/index.html">5th Workshop on Mathematically Structured Functional Programming</a> coedited with Neelakantan Krishnaswami<br>
+<p><hr><p>
+
+<h3> PhD Students </h3>
+
+<a href="http://www.cs.bham.ac.uk/~yxf566/">Yuning Feng</a> <br>
+<a href="http://www.cs.bham.ac.uk/~bxg314">Bram Geron</a> <br>
+<a href="http://www.dcs.gla.ac.uk/~roly/">Roly Perera</a>, graduated 2013 <p>
+
+<h3> Postdocs </h3>
+
+<a href="http://www.cs.bham.ac.uk/~devesasm/">Marco Devesas Campos</a> on the project <a href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/N023757/1">Recursion, Guarded Recursion and Computational Effects</a> <br>
+<a href="http://user.it.uu.se/~kyemane/">Kidane Yemane</a> on the project Semantics of Nondeterminism, ended 2008 <br>
+
+<p><hr><p>
+    <address><a href="mailto:P.B.Levy@cs.bham.ac.uk">Paul Blain Levy</a></address>
+<!-- Created: Thu Mar 19 10:53:31 PST 1998 -->
+<!-- hhmts start -->
+Last modified: Tue Aug  1 10:22:19 BST 2017
+<!-- hhmts end -->
+  </body>
+</html>

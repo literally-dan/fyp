@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coming to study with us from outside the UK?  </title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/undergraduate/">Undergraduate</a></span>
+        <span class="crumb">Coming to study with us from outside the UK?  </span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Coming to study with us from outside the UK?  </h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Undergraduate Admissions<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/scholarships" class="nav-link">Undergraduate Scholarships</a>
+              <a href="/admissions/undergraduate/faq" class="nav-link">Frequently Asked Questions</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days &amp; Outreach</a>
+              <a href="/admissions/undergraduate/applicant-visit-days" class="nav-link">Applicant Visit Days</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+              <span class="nav-link separator">External Links</span>
+              <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx" class="nav-link">Undergraduate Fees &amp; Finance</a>
+              <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/" class="nav-link">UG Facebook Group</a>
+            </div>
+          </nav>
+          <p><strong>Coming to a new place to study can feel a little daunting, but we want you to feel as comfortable as possible, so we've put together a short list of 'Frequently Asked Questions' to help.</strong></p>
+
+<hr />
+
+<h2>Meet some of our international Computer Science students</h2>
+
+<p>Goda, Hung, Gwen and Tsanimir are all studying Computer Science with us.  Take a look at some of the <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/ambassadors">things they wanted to know</a> when applying to study in the UK.</p>
+
+<h2>Virtual Tour of Computer Science</h2>
+
+<iframe width="650" height="400"
+       src="https://www.youtube.com/embed/DHlWkqj7z1E" frameborder="0" allowfullscreen
+       style="max-width: 100%"></iframe>
+
+<h2>Computer Science Photo Gallery</h2>
+
+<p>Our School is situated in a purpose built multi-million pound building in the heart of campus, with state of the art facilities and 24-hour swipe card access for our students only.  Check out images of the School of Computer Science <a href="http://www.cs.bham.ac.uk/about/gallery/">here</a>.</p>
+
+<h2>School of Computer Science</h2>
+
+<p>The School is a friendly, welcoming Department, and we run various events for our staff and students (including a welcome event for all new students).  Our <a href="https://www.facebook.com/CSSBham">Computer Science Society</a> is run by our students and offers lots of different activities (hackathons, meals, social trips, careers events, LAN parties).  It is a great way to get to know your fellow classmates and to try new things.</p>
+
+<p>The environment is very supportive, and staff are always ready to help with any questions.  We have a great student welfare team within the School, an International Students Tutor and personal tutor allocation.  Our second and third year students also help in your classes as demonstrators, so there are always people for you to talk to.</p>
+
+<hr />
+
+<h2>I will be coming to study in the UK for the first time - is there alot of student support?</h2>
+
+<p>The University has a large international student body, and we as a School want to make sure that you are supported and happy during your time with us.  You can get in touch with us anytime, by chatting to us on <a href="https://www.facebook.com/groups/UG2017Applicants/">Facebook</a>, or by emailing <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Helen, our Admissions and Marketing Coordinator</a>.  Please feel free to ask us anything - what the weather is like, where the best supermarkets are, how to get into the City Centre - we are happy to help.  We have many <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/ambassadors">international Computer Science students</a> already studying here, who will have had the same questions when they applied.</p>
+
+<h2>The University</h2>
+
+<p>The University also has a <a href="http://www.guildofstudents.com/">Guild of Students</a> (with many different societies to join), a large <a href="https://intranet.birmingham.ac.uk/as/studentservices/projects/support/index.aspx">support service</a> in place for our students, and information specifically for our students applying to us from <a href="http://www.birmingham.ac.uk/International/students/index.aspx">outside the UK</a>.  We can help with many types of questions about living and studying here.</p>
+
+<h2>I have received my offer from the University, but how do I send my documents in?</h2>
+
+<p>The <a href="http://www.birmingham.ac.uk/university/colleges/professional/external/admissions/index.aspx">Central Admissions Office</a> is responsible for issuing all offers and <a href="http://www.birmingham.ac.uk/welcome/international/visas/student.aspx">Confirmation of Prior Acceptances (CAS)</a> for visa purposes (if required), and you should have received a letter/email detailing your conditions, and where to send documents to.  If you have not received it, or need to ask a question about your offer, you can get in touch with the Admissions Office <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x61;d&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#98;&#x68;&#97;&#x6d;&#46;&#x61;&#99;&#x2e;&#117;&#x6b;">here</a>.</p>
+
+<p><strong>Please note that documents cannot be emailed to fulfil conditions.  They must be originals or officially verified copies and posted to the Admissions Office (translated if needed).  If you have any problems, please get in touch with <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Helen</a>.</strong></p>
+
+<h2>Do you offer scholarships?</h2>
+
+<p>The School of Computer Science offers a <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/scholarships">number of Scholarships</a>, both for <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/home-scholarships">EU</a> students and <a href="http://www.cs.bham.ac.uk/admissions/international/scholarships">International (non-EU)</a> students.  The University also has a <a href="http://www.birmingham.ac.uk/undergraduate/funding/index.aspx">Funding Database</a>, that details other scholarships or bursaries that might be available.</p>
+
+<h2>I am not sure if my English language qualification is acceptable?</h2>
+
+<p>You will have been sent information on <a href="http://www.birmingham.ac.uk/undergraduate/requirements/international/index.aspx">acceptable english language qualifications</a> with your offer, but you can also check <a href="http://www.birmingham.ac.uk/undergraduate/requirements/international/index.aspx">here</a>.  Computer Science falls into Group A for IELTS and TOEFL scores, but you can also view 'Alternative qualifications for undergraduate programmes' to see if we can accept anything else.</p>
+
+<h2>I have already applied for my accommodation.  When will I hear about it?</h2>
+
+<p>Applications for accommodation close on 31st May for EU students, and 31st July for non-EU students.  You can view all our <a href="http://www.birmingham.ac.uk/study/accommodation/index.aspx">accommodation and options</a>, and make an application <a href="http://www.birmingham.ac.uk/study/accommodation/Apply-for-accommodation/Apply-Online.aspx">here</a>.  It is important to make your application by the dates given, in order to be eligible to be considered for the <a href="http://www.birmingham.ac.uk/study/accommodation/guarantee.aspx">Freshers Guarantee Scheme</a>.  Accommodation is normally <a href="http://www.birmingham.ac.uk/study/accommodation/Apply-for-accommodation/allocation.aspx">assigned</a> in July and August, and is allocated via a computer generated system, based on the preferences of accommodation you give.  Our students have lived in various accommodation blocks that we have, so please feel free to <a href="https://www.facebook.com/groups/UG2017Applicants/">chat to them</a> about their experiences.   If you have further questions about accommodation, you can contact Living directly <a href="http://www.birmingham.ac.uk/study/accommodation/contact-us.aspx">here</a>.</p>
+
+<h2>Can I have a part time job?</h2>
+
+<p>There are lots of opportunities, both on campus and in the city for part time work for students.  The University has its own Employment Agency called <a href="https://www.worklink.bham.ac.uk/">Worklink</a> for students, which details casual vacancies across campus that students can apply for to fit around their studies.  They can also advise you on any restrictions on work undertaken in term time etc.  The School of Computer Science often has internships and other opportunities that students can apply for too.</p>
+
+<h2>What kind of modules will I be studying?</h2>
+
+<p>You can view all current modules and assessment methods of each of the degrees that we offer <a href="https://www.cs.bham.ac.uk/internal/programmes/">here</a>.  Our modules are taught through lectures, seminars, lab sessions and small group work.  There is flexibility if you decide you would like to study a different degree within the School, just <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">get in touch</a>.</p>
+
+<h2>I have a question about the degree I have applied for?</h2>
+
+<p>We're here to answer any questions you might have about the course you have chosen to study - please get in touch with <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Helen</a> and she'll be happy to help.</p>
+
+<h2>What if I don't get the offer grades?</h2>
+
+<p>Once you receive final confirmation of your studies, please let the <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x61;d&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#98;&#x68;&#97;&#x6d;&#46;&#x61;&#99;&#x2e;&#117;&#x6b;">Admissions Office</a>/<a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">School of Computer Science</a> know by sending confirmation of your grades.  If you meet the exact terms of your offer (including English language if requested), the Admissions Office will be able to process your offer, and in time your CAS will follow if required.  If you do not meet the conditions of your offer, the Admissions Office will liaise with the Computer Science Admissions Tutor for a decision.</p>
+
+<h2>I have an offer for the MSci/MEng but my offer letter states that if I don't meet the grades, but do for the BSc degree I will be made an automatic offer for that.  What would the lower offer be?</h2>
+
+<p>It is be best to contact the <a href="mailto@admissions@bham.ac.uk">Admissions Office</a> directly, to confirm what a revised offer would be.</p>
+
+<h2>When will I receive more information from you?</h2>
+
+<p>You'll be receiving regular communications from different Departments from the University over the coming months.  This information will advise you on things that you might need to do, but don't worry you will have significant contact with us.</p>
+
+<h2>Our international community</h2>
+
+<p>We host students from over 150 countries, and we have <a href="http://www.birmingham.ac.uk/International/students/country/index.aspx">country-specific information pages</a> that you may find useful, where current students and alumni from your country share their experience of being a Birmingham student and studying in the UK.  We also have an <a href="https://intranet.birmingham.ac.uk/as/studentservices/international/documents/public/international-student-survival-guide.pdf">International Student Survival Guide</a> that has lots of useful information.</p>
+
+<hr />
+
+<h1>Have we answered your question?</h1>
+
+<p>If not please <a href="https://www.facebook.com/groups/UG2017Applicants/">talk to us</a> or get in touch with <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">Helen</a>, and see what our <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/ambassadors">current international students</a> thought when they were applying.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

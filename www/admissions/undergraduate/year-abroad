@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>School of Computer Science - Year Abroad</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/undergraduate/">Undergraduate</a></span>
+        <span class="crumb">School of Computer Science - Year Abroad</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">School of Computer Science - Year Abroad</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Undergraduate Admissions<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/scholarships" class="nav-link">Undergraduate Scholarships</a>
+              <a href="/admissions/undergraduate/faq" class="nav-link">Frequently Asked Questions</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days &amp; Outreach</a>
+              <a href="/admissions/undergraduate/applicant-visit-days" class="nav-link">Applicant Visit Days</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+              <span class="nav-link separator">External Links</span>
+              <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx" class="nav-link">Undergraduate Fees &amp; Finance</a>
+              <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/" class="nav-link">UG Facebook Group</a>
+            </div>
+          </nav>
+          <p><strong>All students enrolled on the BSc Computer Science and the BSc Artificial Intelligence and Computer Science are eligible to take part in the Erasmus or International Exchange Programme. This means that you will spend your third year at an approved institution in another country, returning to Birmingham for a fourth year. During your year abroad you will study computer science topics that are appropriate to a second-year computer science student at the University of Birmingham.</strong></p>
+
+<p>Choosing to study abroad gives you the opportunity to experience new cultures, meet new people, and see more of the world - all whilst continuing your studies. Other benefits include:</p>
+
+<ul>
+<li>Developing relevant, marketable skills: problem solving, communication, patience and perseverance, determination, self-motivation, analytical and study skills</li>
+<li>Academic or subject related reasons: experience a different academic environment and way of teaching</li>
+<li>Enhanced career prospects</li>
+<li>Language and culture: opportunity to be genuinely immersed into another culture rather than just being a traveller</li>
+<li>Personal development: increased confidence and ability to deal with difficult situations and unfamiliar surroundings</li>
+<li>Contacts: build worldwide relationships that can last a lifetime and benefit you in years to come</li>
+</ul>
+
+<h2>What are my options?</h2>
+
+<p>Birmingham University has an excellent international reputation, and we are proud of the growing opportunities for our computer science students to study overseas at one of our European (Erasmus) or International Exchange partner institutions.</p>
+
+<h3><strong>ERASMUS</strong></h3>
+
+<p>ERASMUS(European Community Action Scheme for the Mobility of University Students) is the European Commission's educational programme for Higher Education students, teachers and institutions.  As one of the largest exchange programmes in the UK, Erasmus encourages students to move around within the EU, strengthening educational, cultural and linguistic interchange.  As part of this, the University of Birmingham has relationships with many partner institutions throughout Europe.</p>
+
+<p>Within the School of Computer Science in particular, the programme is available at several European universities, in countries including:</p>
+
+<ul>
+<li>Germany </li>
+<li>France </li>
+</ul>
+
+<p>For further information on ERASMUS opportunities, please see <a href="https://www.birmingham.ac.uk/International/study-abroad/study-abroad-outgoing/where.aspx#erasmus">here</a>.</p>
+
+<h3><strong>International Exchange Programme</strong></h3>
+
+<p>We have international partner universities all over the world that offer study opportunities for our students.  Countries include:</p>
+
+<ul>
+<li>Argentina</li>
+<li>Australia</li>
+<li>Brazil</li>
+<li>Canada</li>
+<li>Chile</li>
+<li>China</li>
+<li>Ecuador</li>
+<li>Ghana</li>
+<li>Israel</li>
+<li>Japan</li>
+<li>Korea</li>
+<li>Malaysia</li>
+<li>Mexico</li>
+<li>New Zealand</li>
+<li>Singapore</li>
+<li>USA</li>
+<li>West Indies</li>
+</ul>
+
+<hr />
+
+<h1><strong>Learn more</strong></h1>
+
+<p>For further information please see our <a href="http://www.birmingham.ac.uk/international/study-abroad.aspx">Study Abroad and Exchanges Office website</a>, or contact our Computer Science Study Abroad Exchanges Tutor:</p>
+
+<p>Dr Bob Hendley:<br />
+<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;:&#x72;&#x2e;&#x6a;&#x2e;&#104;&#101;&#110;d&#x6c;&#x65;&#x79;&#64;&#99;&#115;&#46;b&#x68;&#x61;&#x6d;&#46;&#97;&#99;&#46;&#x75;&#x6b;">r.j.hendley@cs.bham.ac.uk</a></p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

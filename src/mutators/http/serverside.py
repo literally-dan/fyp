@@ -50,7 +50,7 @@ class http_serverside_data_manager:
 
         data = unshuffle(header_list)
 
-        print("#",data,whitespacedata)
+        #print("#",data,whitespacedata)
         data = data + whitespacedata
 
         session = self.session_function[0](self.session_function[1],self.session_function[2])

@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Applicant Visit Days       </title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/undergraduate/">Undergraduate</a></span>
+        <span class="crumb">Applicant Visit Days       </span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Applicant Visit Days       </h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Undergraduate Admissions<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/scholarships" class="nav-link">Undergraduate Scholarships</a>
+              <a href="/admissions/undergraduate/faq" class="nav-link">Frequently Asked Questions</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days &amp; Outreach</a>
+              <a href="/admissions/undergraduate/applicant-visit-days" class="nav-link">Applicant Visit Days</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+              <span class="nav-link separator">External Links</span>
+              <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx" class="nav-link">Undergraduate Fees &amp; Finance</a>
+              <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/" class="nav-link">UG Facebook Group</a>
+            </div>
+          </nav>
+          <p>The School of Computer Science operates exclusive Applicant Visit Days (AVDs) from November to March for students who have applied to our <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/">undergraduate courses</a> and who meet our admissions criteria. You will automatically receive an invitation if you are offering standard qualifications and are made a conditional offer.</p>
+
+<h2>Benefits of attending an Applicant Visit Day</h2>
+
+<p>We strongly recommend that you attend an AVD. It gives you a great opportunity to meet current students and academic staff, experience subject specific talks and demonstrations, explore the campus and take a look at the <a href="http://www.birmingham.ac.uk/university/building/index.aspx">fantastic facilities</a> and <a href="http://www.birmingham.ac.uk/undergraduate/accommodation/index.aspx">accommodation</a> that we have to offer. We also hope to provide you with further information on the practical side of attending university (<a href="https://intranet.birmingham.ac.uk/as/employability/careers/college/eps/index.aspx">careers and employability</a>, <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx">fees and finance</a>, <a href="http://www.birmingham.ac.uk/undergraduate/birmingham/mybham/index.aspx">university life</a> and <a href="https://intranet.birmingham.ac.uk/as/studentservices/projects/support/index.aspx">student welfare</a>), and give a chance for both applicants and parents/guests to find out more. Our Computer Science ambassadors are a mixture of first, second and third year students, and will be with you throughout the day.</p>
+
+<p>We also use the information when allocating our Undergraduate Scholarships in August, worth up to £3000. Applicants who do not attend an AVD will not be considered for one of our scholarships.  (Please note that different provisions will be put in place in terms of scholarship consideration for EU/International applicants unable to attend an AVD.)  The day is a really useful way to get to know us and our School, and information gathered can be very useful when results are released.</p>
+
+<h2>What our students say:</h2>
+
+<p>"The day is a fantastic opportunity for you to learn more about the School, and get an accurate impression of what it's like to live and study here. You'll be accompanied by current students throughout the day who are best-placed to answer any questions you may have - not only regarding the course, but also university life in general.</p>
+
+<p>The schedule is designed to give you the chance to see and experience as much as possible. Over the course of the day, you'll be given a number of tours around the School, campus and student accommodation, as well as student demonstrations, a sample lecture and Q &amp; A sessions."</p>
+
+<p><strong>George Brighton, 5th Year MEng Computer Science and Software Engineering with Year in Industry</strong></p>
+
+<h2>Your Invitation</h2>
+
+<p>Applicants offering standard qualifications will be invited to an AVD shortly after an offer is made.  We'll email you with a choice of dates and a copy of our schedule, and information needed to register online.  We'll also send a letter to you with the same instructions. Don't worry, if you can't make a date you can simply amend your registration online.  We'll be offering a  number of weekday and Saturday dates.  Saturdays have proved very popular so early registration is advisable.</p>
+
+<p>Our AVD starts at approximately 10.45am and ends at 4.15pm, and we'll send further information out to you after registration.</p>
+
+<h2>Applying to us from outside the UK?</h2>
+
+<p>Don't worry if you are living outside the UK!</p>
+
+<p>We know that some of our applicants are applying to us from outside the UK, and therefore it is difficult to attend an Applicant Visit Day with us.  Whilst you are very welcome to attend, we realise that it not usually possible.  We'd encourage you to talk to us <a href="https://www.facebook.com/groups/UG2017Applicants/">here</a>, where you can ask any admissions-based questions, <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/international-faq">check our our FAQs</a> or simply chat to our current students about life at Birmingham.  We've also got a team of <a href="http://www.cs.bham.ac.uk/admissions/undergraduate/ambassadors">EU/International Computer Science Ambassadors</a>, who will be happy to talk to you!</p>
+
+<hr />
+
+<h2>Travel and directions</h2>
+
+<p>Detailed instructions on how to find us and a map of the campus can be found <a href="http://www.cs.bham.ac.uk/about/directions">here</a>.</p>
+
+<hr />
+
+<h2>The City of Birmingham</h2>
+
+<p>Birmingham is a wonderful city to visit and a vibrant place to study. If you are looking to visit Birmingham either before or after your Applicant Visit Day, please find further information on things to do <a href="http://visitbirmingham.com/morebirmingham">here</a>.  If you need advice on travel or where to stay, please contact us and we'll be happy to help!</p>
+
+<hr />
+
+<h2>Open Days for Prospective Students</h2>
+
+<p>If you have yet to apply, please come along to one of our <a href="http://www.birmingham.ac.uk/undergraduate/visit/opendays/index.aspx">University Open Days</a>.</p>
+
+<hr />
+
+<h1>Talk to Us:</h1>
+
+<p>If you've applied to us or are thinking about doing so, we'd like to invite you to get in touch with us via our <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/">Applicant Facebook Group</a> too. This is a great way to talk to fellow applicants, current students and the Admissions Team. We'll also use this page to update you with information throughout the year. You can also contact Helen Whitby directly.</p>
+
+<p>Helen Whitby<br />
+Admissions and Marketing Coordinator - Computer Science<br />
++44 (0)121 415 8742<br />
+<a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;</a></p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

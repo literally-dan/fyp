@@ -1,0 +1,449 @@
+<html>
+<head>
+<style type="text/css">
+h2, h4 {
+    margin:0px;
+    padding:0px;
+    font-size:13px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+  .bottom-three {
+     margin-bottom: -0.4cm;
+  }
+
+#container {
+
+    width:750px;    
+    margin:auto;
+    margin-top:30px;
+}
+ 
+/* --------- COLLAPSIBLE PANELS ----------*/
+ 
+.expandable-panel {
+    width:100%; 
+    position:relative;
+    min-height:50px;
+    overflow:auto;
+    margin-bottom: 20px;
+    border:1px solid #999;
+}   
+.expandable-panel-heading {
+    width:100%; 
+    cursor:pointer;
+    min-height:50px;
+    clear:both;
+    background-color:#E5E5E5;
+    position:relative;
+}
+.expandable-panel-heading:hover {
+    color:#666;
+}
+.expandable-panel-heading h2 {
+    padding:14px 10px 9px 15px; 
+    font-size:18px;
+    line-height:40px;
+}
+.expandable-panel-content { 
+    padding:0 15px 0 15px;
+    margin-top:-999px;
+}
+.expandable-panel-content p {
+    padding:4px 0 6px 0;
+}
+.expandable-panel-content p:first-child  {
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.expandable-panel-content p:last-child {
+    padding-bottom:15px;    
+}
+.icon-close-open {
+    width:20px;
+    height:20px;
+    position:absolute;
+    background-image:url(icon-close-open.png);
+    right:15px;
+}
+.expandable-panel-content img {
+    float:right;
+    padding-left:12px;
+}
+.header-active {
+    background-color:#D0D7F3;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+(function($) {
+    $(document).ready(function () { 
+        /*-------------------- EXPANDABLE PANELS ----------------------*/
+        var panelspeed = 500; //panel animate speed in milliseconds
+        var totalpanels = 1; //total number of collapsible panels   
+        var defaultopenpanel = 0; //leave 0 for no panel open   
+        var accordian = false; //set panels to behave like an accordian, with one panel only ever open at once      
+  
+        var panelheight = new Array();
+        var currentpanel = defaultopenpanel;
+        var iconheight = parseInt($('.icon-close-open').css('height'));
+        var highlightopen = true;
+          
+        //Initialise collapsible panels
+        function panelinit() {
+                for (var i=1; i<=totalpanels; i++) {
+                    panelheight[i] = parseInt($('#cp-'+i).find('.expandable-panel-content').css('height'));
+                    $('#cp-'+i).find('.expandable-panel-content').css('margin-top', -panelheight[i]);
+                    if (defaultopenpanel == i) {
+                        $('#cp-'+i).find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+                        $('#cp-'+i).find('.expandable-panel-content').css('margin-top', 0);
+                    }
+                }
+        }
+  
+        $('.expandable-panel-heading').click(function() {           
+            var obj = $(this).next();
+            var objid = parseInt($(this).parent().attr('ID').substr(3,2));  
+            currentpanel = objid;
+            if (accordian == true) {
+                resetpanels();
+            }
+              
+            if (parseInt(obj.css('margin-top')) <=
+						       (panelheight[objid]*-1)) {
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.icon-close-open').css('background-position', '0px -'+iconheight+'px');
+                obj.animate({'margin-top':0}, panelspeed);
+                if (highlightopen == true) {
+                    $('#cp-'+currentpanel + ' .expandable-panel-heading').addClass('header-active');
+                }
+            } else {
+                obj.clearQueue();
+                obj.stop();
+                obj.prev().find('.icon-close-open').css('background-position', '0px 0px');
+                obj.animate({'margin-top':(panelheight[objid]*-1)}, panelspeed); 
+                if (highlightopen == true) {
+                    $('#cp-'+currentpanel + ' .expandable-panel-heading').removeClass('header-active');   
+                }
+            }
+        });
+          
+        function resetpanels() {
+            for (var i=1; i<=totalpanels; i++) {
+                if (currentpanel != i) {
+                    $('#cp-'+i).find('.icon-close-open').css('background-position', '0px 0px');
+                    $('#cp-'+i).find('.expandable-panel-content').animate({'margin-top':-panelheight[i]}, panelspeed);
+                    if (highlightopen == true) {
+                        $('#cp-'+i + ' .expandable-panel-heading').removeClass('header-active');
+					               }
+                }
+            }
+        }
+              
+  
+        $(window).load(function() {
+            panelinit();
+        }); //END LOAD
+    }); //END READY
+})(jQuery);
+</script>
+
+<LINK REV=made HREF="mailto:j.knowles.1@cs.bham.ac.uk">
+   <META NAME="Author" CONTENT="Joshua D. Knowles">
+   <META NAME="keywords" CONTENT="Joshua Knowles, evolutionary computation, Pareto optimization, multiobjective optimization, multicriteria decision making (MCDM), 
+combinatorial optimization,
+metaheuristics, local search, memetic algorithms, reinforcement learning, neural networks, robust learning and optimization under noise and uncertainty">
+   <title>Joshua D. Knowles</title>
+</head>
+<BODY bgcolor=white>
+    <table 'table-layout:fixed' border="0" cellpadding="20" cellspacing="20" valign="top" width="100%" height="90%">
+      <td valign=top width="150" bgcolor = "white">
+	  <table border="0" cellpadding="10" valign="top">
+	        <tr>
+		        <td><h1><font color="black">Home</font></h1></td>
+			    </tr>
+		    <tr>
+		            <td><a href="http://www.cs.bham.ac.uk/~jdk/">Home</a></td>
+			        </tr>
+            <tr>
+	            <td><a href="contact.html">Contact</a></td>
+		        </tr>
+	        <tr>
+		        <td><a href="news.html">My News</a></td>
+			    </tr>
+		    <tr>
+		            <td><a href="research.html">Research</a></td>
+			        </tr>
+		        <tr>
+			        <td><a href="pubs2.html">Publications</a></td>
+				    </tr>
+            <tr>
+             <td><a href="teaching.html">Teaching</a></td>
+            </tr>
+ <tr>             <td><a href="students.html">Students</a></td>
+            </tr>
+            <tr>
+	            <td><a href="prof.html">Service</a></td>
+		        </tr>
+	        <tr>
+		        <td><a href="cv.html">CV</a></td>
+			    </tr>
+ <tr>
+      <!--   <td><a href="farrago.html">Farrago</a></td>-->
+          </tr>
+   </table>
+	  </td>
+        <td valign=center bgcolor="white">
+	  <table border=0 cellpadding=10 cellspacing=0 width="800" height="100%">    
+	        
+	        <tr>
+		  <td>  
+		      <!img border=0 height = "250" src="jp.jpg"  alt="A recent mugshot" ></a>
+ <img border=0 height = "250" src="hundertwasser.jpg"
+       alt="A mugshot at the Hundertwasserhaus in Vienna" ></a>
+      </td>
+      
+      <td align=middle valign=middle>
+	<h1 align=top><font-size:18px;>Joshua Knowles</font>
+      </h1><h3>Professor of Natural Computation</h3><br>
+<!--<h4>Co-Chair, Dagstuhl Seminar
+		        15031 (2015) - Understanding Complexity in
+		        Multiobjective Optimization</h4><br>--><a
+								        href="contact.html">Contact</a> | <a href="calendar.html">Diary</a><br><br>
+<a href="https://www.twitter.com/joshuadknowles">twitter</a> | <a href="https://scholar.google.com/citations?user=nltQkfgAAAAJ&hl=en">google scholar</a> | <a href="http://www.slideshare.net/JoshuaKnowles/">slideshare</a> | <a href="https://www.linkedin.com/in/joshua-d-knowles">linkedin</a> | <a href="https://www.researchgate.net/profile/Joshua_Knowles?ev=hdr_xprf&_sg=9R-SRPFEDDuZO7XTJanaYu2Hz1I3CBBWsQ2HCCmG7DSnINFjuGMPZrOXLlrdBd7f">researchgate</a><br><p>
+<img src="research.rinse.png" width="340"></img></p>
+      </td>
+      
+    </tr>
+<tr>
+<td colspan="2">
+<center>
+<!--<img src="research.rinse.png" width="800"></img>-->
+</center>
+<!--p>
+
+Recent news: I gave a <a href="http://www.slideshare.net/JoshuaKnowles/nips-2016-bayesopt-workshop-invited-talk">talk</a> at NIPS 2016. (= NIPS newbie).
+</p><p>
+
+<br>
+<!---b>Further recent news: I now believe in <a href="aphorisms.html">teaching by aphorism</a>.</b>
+</p>
+<br>-->
+<h3>About</h3>
+<p>
+I develop and analyse <em>algorithms</em> for optimization and learning, focusing partly on those that mimic or simulate natural systems. Some of the algorithms I've worked on are: PAES (cited by 2,000+), ParEGO (cited by 400+), MOCK (cited by 400+), and a duality framework, called "multiobjectivization" (cited by 300+). I have been doing this in the Natural Computation Group at Birmingham since June 2015, alongside working with many external collaborators. This follows on from 11 years at the University of Manchester (spent, variously, in the School of Chemistry, the MIB, and the School of Computer Science). Previously to that, I was a Marie Curie Fellow in the IRIDIA artificial intelligence lab in Brussels, and, before that, a PhD student at the University of Reading, UK. I hold an honorary post at Manchester in the Decision Sciences group of the Alliance Manchester Business School. I do all the usual academic stuff: think; research; teach; supervise student projects and PhDs; employ postdocs; apply for grants; go to, and run, conferences and seminars; informally mentor; edit journals and conference proceedings; review papers; and so on. "If you want something done, give it to a busy man."
+<!---</p><p>
+
+Another pseudo-paradox I like is this one:<br>
+<center>"My problems with mathematics are much greater than yours." (Albert Einstein)</center><br>
+
+My tuppence-worth: Einstein was not putting himself above you, or below you in that quote, or self-aggrandizing or
+mock self-deprecating. His problems in mathematics probably <em>were</em> far greater than yours, no matter how much you think
+you are struggling. He was doing differential geometry, and Hilbert spaces, and so on, to try to specify general
+relativity properly, and he was mostly a creative and a visionary. He had help from his wife, but I'm sure he undertook
+to understand everything, and check everything. He is telling us about the pain of doing hard things, and telling us that
+there is no magic to it. It is a lesson for us all. So put in some work on your maths problems, and be patient with yourself.
+--->
+
+<!--- and am an affiliate of the Natural Computation (research) Group.-->
+<!--- I also have roles in undergraduate teaching, and in postgraduate student development and support.-->
+
+<h3>Research Interests</h3>
+
+</p>
+<span style="text-decoration:underline;">Research key
+  terms:</span> <em>algorithms, complexity analysis, evolutionary computation, heuristics, <a href="https://scholar.google.co.uk/scholar?q=joshua+knowles+multiobjective+nondominated&btnG=&hl=en&as_sdt=0%2C5">multiobjective optimization</a>, combinatorial optimization, Bayesian optimization, multiobjective machine learning, data science, ensemble methods,
+swarm intelligence, sequential design of experiments, search-based software engineering, unsupervised learning, cluster analysis, active learning, inverse problems, reinforcement learning, decision analysis and support, operations research, surrogate modeling, artificial life, complex networks, complex systems, benchmarking and performance analysis, statistics, game theory, psychology, education, computing at schools, philosophy of science, and cross-disciplinary work in the bio-sciences (especially Evolutionary Biology), astrophysics, telecommunications, analytical chemistry, and more.</em>
+<br>
+
+<p>
+For more specific information about what my group, collaborators and I get up to (and get up for), please see my <a href="research.html">research pages</a>. 
+</p>
+<div id="container">
+    <div class="expandable-panel" id="cp-1">
+        <div class="expandable-panel-heading">
+            <h2>Some personal research highlights in the view of others (click to expand)
+         <!--<span class="icon-close-open"></span>-->
+         </h2>
+         </div>
+        <div class="expandable-panel-content">
+            <p><font color="#3366FF">Hypervolume maximization (2002)</font>: "Knowles and Corne were the first to propose the
+            integration of the hypervolume indicator into the
+optimization process. In particular, they described a strategy
+to maintain a separate bounded archive of nondominated solutions
+based on the hypervolume indicator", J. Bader (2009)</p>
+ <p><font color="#3366FF">Multiobjective memetic algorithms (2000)</font>: "Knowles and Corne proposed a greedy local
+search
+method mainly based on dominance relation. Their idea is to accept a
+new neighborhood
+solution if it dominates the current solution...
+An obvious advantage of dominance relation is its independence on any
+monotonic
+transformation of objective functions." A. Jaszkiewicz et al. (2012)</p>
+<p><font color="#3366FF">Adaptive grid-based archiving (1999)</font>: "Since the procedure is adaptive, no
+extra parameters
+are required [...] . This adaptive grid (or variations of
+it) has been adopted by several modern multiobjective evolutionary
+algorithms." C. A. C. Coello (2006).</p>
+<p><font color="#3366FF">PAES algorithm (1999)</font>:
+"... the most competitive algorithm" [concerning scalability in
+decision space, and] "...the second best algorithm in terms of
+speed." J. J. Durillo et al. (2008), an empirical comparison of
+scalability of MOEAs.</p>
+ <p><font color="#3366FF">Multiobjectivization (2001)</font>: "...researchers
+ proposed the
+ so-called 'multiobjectivization'
+by which a single-objective optimization
+problem is decomposed into several subcomponents considering
+a multi-objective approach (Jensen, 2003), (Knowles et al., 2001). This procedure
+has been found to be helpful in removing local
+optima from a problem and has attracted a lot of attention
+in the last few years." C. A. C. Coello (2006)</p>
+ <p><font color="#3366FF">ParEGO (2006)</font>: 
+"In ParEGO, the nondifferentiabilities are smoothed out by the
+surrogate model, making the actual EI criterion continuous and
+differentiable. ... For ParEGO, only one model has to be computed
+making it the fastest of all approaches." T. Wagner et al. (2010)<br>
+"Recently, some
+researchers have proposed the use of black-box optimization
+techniques normally adopted in engineering to perform
+an incredibly low number of fitness function
+evaluations while still producing reasonably good solutions
+(see for example (Knowles, 2006))." C. A. C. Coello (2006)<br>
+<img height=20px>
+</p>
+<p class="bottom-three">&nbsp;</p>
+        </div>
+    </div>     
+</div>
+<!--
+<span style="text-decoration:underline;">Research key
+  terms:</span> <em>evolutionary computation, heuristics, <a href="https://scholar.google.co.uk/scholar?q=joshua+knowles+multiobjective+nondominated&btnG=&hl=en&as_sdt=0%2C5">multiobjective optimization</a>, combinatorial optimization, multiobjective machine learning, ensemble methods, 
+swarm intelligence, sequential design of experiments, unsupervised learning, active learning, inverse problems, reinforcement learning, decision analysis and support, surrogate modeling, artificial life, networks, games, cross-disciplinary work in the bio-sciences</em>.
+-->
+<p>
+What's happening now? ...see <a href="news.html">My News</a>.
+</p>
+
+
+<h3>Qualifications</h3>
+BSc (Hons); PGCE; MSc (Dist'n); PhD; FHEA
+
+<h3>Awards and Fellowships</h3>
+<ul>
+<li> Outstanding IEEE Transactions on Evolutionary Computation Paper Award (2006)
+<li> BBSRC David Phillips Fellowship (2002-2008)
+<li> FNRS Charg&eacute; de Recherche (Fellowship of the Belgian National
+  Science Fund) (declined 2003)
+<li> Outstanding IEEE Transactions on Evolutionary Computation Paper Award (2003)
+<li> EC Marie Curie Posdoctoral Fellowship (2001-2003)
+</ul>
+
+<!--<p>
+My former PhD student, <a href="http://www.ucl.ac.uk/~ucberal/">Richard
+    Allmendinger</a>, passed his viva in February 2012, and is now
+    a postdoc at UCL. Here is his <a href="PhD_Richard.pdf">thesis</a>
+    on Closed-Loop Optimization.
+</p>
+
+<p>Further details of my research activity are <a href="http://www.cs.man.ac.uk/~jknowles/research.html">here</a>.
+-->
+
+<h3>Industrial Collaboration</h3>
+
+My PhD was sponsored by BT. 
+Other projects were carried out in collaboration with HBOS, Astra Zeneca, GSK,
+Waters, Thermo Instruments, and Combimatrix.
+I did a sabbatical at Theo Chocolate, Seattle and The University of Washington in 2009.
+
+<h3>Grant Income</h3>
+<p>
+<i>Latest funding:</i><br>
+
+<ul style="list-style-type:circle">
+<li>European Commission, Marie Sklodowska Curie Fellowship: MSC-IF-EF-ST "ACTING-NOW" 704330 Krzysztof Michalak (Fellow) / Joshua Knowles (Host / PI). Algorithmic Containment of Threats in Graphs, Networks, Webs.</li>
+<li>EPSRC institutional fund: Achieving the earliest diagnosis of Cancer through a cascaded 
+computational decision support system (co-I)</li>
+<li>EPSRC institutional (Manchester): Constrained global optimization for fragment-assembly approaches to
+protein structure prediction (co-I)</li>
+</p>
+</ul>
+<p><i>Previous funding:</i><br>
+<ul style="list-style-type:circle">
+<li>BB/I023755/1 MUSCLE: Multi-platform Unbiased optimization of Spectrometry via Closed-Loop
+  Experimentation (PI)</li>
+<li>BB/C008219/1 MCISB: The Manchester Centre for Integrative Systems Biology (co-I)</li>
+<li>BBS/A/00013 BBSRC David Phillips Fellowship: Interactive evolutionary search for post-genomic
+  knowledge discovery and prediction using GRID computing (PI)</li>
+<li>BB/C007158/1 Constrained optimisation of metabolic and signalling pathway models: towards an understanding of the language of cells (co-I)<br>
+<li>BB/C519038/1 HUSERMET: The human serum metabolome in health and
+disease (co-I)</li>
+<li>EP/D013615/1 A convergent strategy for high efficiency quantitative
+proteomics (co-I)</li>
+</ul>
+</p>
+
+
+<!--
+<h3>Publications</h3>
+See my <a href="pubs2.html">publications page</a> for a full list. My
+papers on Google Scholar
+are <a href="http://scholar.google.co.uk/citations?user=nltQkfgAAAAJ&hl=e">here</a>.
+-->
+
+<h3>People</h3>
+We (i.e. my students and I) have (or have had) collaborations with the following people -- with my apologies for
+any omissions.
+<ul>
+<li>David Corne (Heriot-Watt)</li>
+<li>Julia Handl (Manchester Business School, UoM)</li>
+<li>Douglas Kell (Manchester Institute for Biotechnology, UoM)</li>
+<li>Richard Allmendinger (UCL)</li>
+<li>Steve O'Hagan (MIB, UoM)</li>
+<li>Ben Stappers (Jodrell Bank, UoM)</li>
+<li>John Brooke (IMG / Research Computing Services, UoM)</li>
+<li>Richard A. Watson (Southampton)</li>
+<li>Carlos Fonseca (U. Coimbra)</li>
+<li>Eckart Zitzler (PH Bern)</li>
+<li>Lothar Thiele (ETH Zurich)</li>
+<li>Manuel Lopez-Ibanez (IRIDIA, Code, Brussels)</li>
+<li>Marco Laumanns (IBM)</li>
+<li>Mark Viant (Biological Sciences, U. Birmingham)</li>
+<li>Warwick Dunn (Biological Sciences, U. Birmingham)</li>
+<li>Shan He (Computer Science, U. Birmingham)</li>
+<li>Robert Synovec (University of Washington, Seattle)</li>
+<li>Andy McShea (Theo Chocolate, Seattle)</li>
+<li>Liz Humston (University of Washington, Seattle)</li>
+<li>Leonora Bianchi (IDSIA)
+<li>Will Rowe (Faculty of Life Sciences, UoM)
+<li>Mark Platt (Loughborough)
+<li>Chris Knight (Faculty of Life Sciences, UoM)
+<li>Philip J. Day (School of Chemistry / MIB, UoM)
+<li>David Wedge (Sanger Institute)</li>
+<li>Martin Brown (Control Systems Centre, EEE, UoM)</li>
+<li>David Brough (Faculty of Life Sciences, UoM)</li>
+<li>Ben Small (Faculty of Life Sciences, UoM)</li>
+<li>Pedro Mendes (School of Computer Science / MIB)</li>
+<li>Nancy Rothwell (Faculty of Life Sciences, UoM)</li>
+<li>Marco Dorigo (IRIDIA, Free University of Brussels)</li>
+<li>Norman Paton (School of Computer Science, UoM)</li>
+<li>Sandra Sampaio (School of Computer Science, UoM)</li>
+<li>Ludi Mikhailov (Manchester Business School, UoM)</li>
+<li>Paul Popelier (School of Chemistry / MIB, UoM)</li>
+<li>Roy Goodacre (School of Chemistry / MIB, UoM)</li>
+<li>Robin Purshouse (Sheffield)</li>
+<li>Shaul Salomon (Sheffield)</li>
+<li>Valentina di Pietro (Medical School, UoB)</li>
+<li>Andrew Peet (Institute of Cancer and Genomic Sciences, UoB)</li>
+<li>Georgios Gkoutos (Institute of Cancer and Genomic Sciences, UoB)</li>
+</ul>
+
+</td>
+</table>
+
+<hr>
+ 
+</body>
+</html>

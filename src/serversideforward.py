@@ -6,7 +6,7 @@ import sys
 
 
 PORT1 = 44444
-PORT2 = 1194
+PORT2 = 22
 REMOTE1 = "localhost"
 REMOTE2 = "localhost"
 MTU = 2**16

@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tuition Fees for Computer Science MSc degrees</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/postgraduate-taught/">Postgraduate taught</a></span>
+        <span class="crumb">Tuition Fees for Computer Science MSc degrees</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Tuition Fees for Computer Science MSc degrees</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Masters Degrees<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/postgraduate-taught/apply" class="nav-link">How to Apply</a>
+              <a href="/admissions/postgraduate-taught/fees" class="nav-link">Fees &amp; Finance</a>
+              <a href="/admissions/postgraduate-taught/scholarships/" class="nav-link">Masters Scholarships</a>
+              <a href="/admissions/quality" class="nav-link">Teaching &amp; Research Quality</a>
+              <a href="https://www.facebook.com/groups/141366716487384/" class="nav-link">PG Facebook Group</a>
+              <a href="/admissions/international/" class="nav-link">For International Students</a>
+              <a href="/admissions/postgraduate-taught/" class="nav-link separator">Programmes</a>
+              <a href="/admissions/postgraduate-taught/programmes/msc-cs/" class="nav-link">MSc Computer Science</a>
+              <a href="/admissions/postgraduate-taught/programmes/msc-acs/" class="nav-link">MSc Advanced Computer Science</a>
+              <a href="/admissions/postgraduate-taught/programmes/msc-csec/" class="nav-link">MSc Cyber Security</a>
+              <a href="/admissions/postgraduate-taught/programmes/msc-hci/" class="nav-link">MSc Human Computer Interaction (HCI)</a>
+              <a href="/admissions/postgraduate-taught/programmes/msc-robotics/" class="nav-link">MSc Robotics</a>
+              <a href="/admissions/postgraduate-taught/programmes/mres-nc/" class="nav-link">MRes Natural Computation</a>
+            </div>
+          </nav>
+          <p>The University charges an annual fee which includes tuition, examination and graduation, as well as fees payable to the Guild of Students. Fees are usually paid annually in advance at the start of the programme but it is possible for you to pay by instalments providing certain conditions are met. A small charge is made for this service.</p>
+
+<h2><strong>2018 MSc Tuition Fees</strong></h2>
+
+<p><strong><em>UK and EU Students 2018 entry (Full Time):</em></strong></p>
+
+<ul>
+<li>MSc Computer Science:           £9,270  </li>
+<li>MSc Advanced Computer Science:  £9000  </li>
+<li>MSc Robotics:  £9000  </li>
+<li>MSc Human Computer Interaction:  £9000     </li>
+<li>MSc Cyber Security:  £9000  </li>
+</ul>
+
+<p><strong><em>International Students 2018 entry (Full Time):</em></strong></p>
+
+<ul>
+<li>All programmes (except Robotics):  £21,330  </li>
+<li>MSc Robotics:  £20,610</li>
+</ul>
+
+<h2><strong>UK EU referendum and tuition fees</strong></h2>
+
+<p>Please see <a href="http://www.birmingham.ac.uk/postgraduate/pgt-fees/eu-ref-fees.aspx">here</a> for updated information regarding the EU referendum and associated tuition fees for 2018 entry.</p>
+
+<h2><strong>Useful Information</strong></h2>
+
+<p><strong>The University Council reserves the right to revise fees at any time without previous notice</strong>.</p>
+
+<p>An offer of a place at the University cannot be confirmed until evidence that you can pay your tuition fees and support yourself has been produced - for example evidence of a scholarship award from an awarding body such as The British Council. If you are a self-financing student, you will be required to sign a statement that you accept your obligation to pay fees and that you will do so when they are due. You will not be permitted to continue your studies if you fail to pay the fees.</p>
+
+<ul>
+<li><a href="http://www.cs.bham.ac.uk/admissions/postgraduate-taught/scholarships/">Computer Science Scholarships</a></li>
+<li><a href="//www.birmingham.ac.uk/students/pg/finance/index.aspx">University Tuition Fee Information</a></li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

@@ -21,7 +21,6 @@ class session_database:
             return self.dictionary[identifier]
 
     def check(self):
-        print("checking")
         keys =  list(self.dictionary.keys())
         for identifier in keys:
             max_age = 30
@@ -97,7 +96,6 @@ class ProxyServer:
 
 
     def proxythread(self,client,address,remote_host,remote_port,session_function):
-        #print("connect to '" + remote_host + ":" + str(remote_port) + "' from '" + client.getpeername()[0] + "'")
         try:
             filepath = self.config["proxy-mutator-location"]
             mod_name,file_ext = os.path.splitext(os.path.split(filepath)[-1])

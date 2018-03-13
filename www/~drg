@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+
+
+<title>Dan R. Ghica</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<style type="text/css">
+   .hide { display: none; }
+   span.show { display: inline; }
+ </style>
+</head>
+
+<script type="text/javascript">
+
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+
+//if (detectmob()) { 
+//window.location.replace("http://www.cs.bham.ac.uk/~drg/index.m.html");  
+//}
+/*<![CDATA[*/
+
+/***********************************************
+* Encrypt Email script- Please keep notice intact
+* Tool URL: http://www.dynamicdrive.com/emailriddler/
+* **********************************************/
+<!-- Encrypted version of: d.r.ghica [at] **.****.**.** //-->
+
+var emailriddlerarray=[100,46,114,46,103,104,105,99,97,64,99,115,46,98,104,97,109,46,97,99,46,117,107]
+var encryptedemail_id12='' //variable to contain encrypted email 
+for (var i=0; i<emailriddlerarray.length; i++)
+ encryptedemail_id12+=String.fromCharCode(emailriddlerarray[i])
+<!--emailline = '<'+'a href="mailto:'+encryptedemail_id12+'"><span class="show">d.</span><span class="hide"> css </span><span class="show">r.</span><span class="hide"> required </span><span class="show">ghica</span><span class="hide"> to display </span><span class="show">@</span><span class="hide"> correctly </span>cs.bham.ac.uk</a>'-->
+emailline = '<'+'a href="mailto:'+encryptedemail_id12+'"><span class="show">Email</a>'
+
+function setVisibility(id, visibility) {
+	document.getElementById(id).style.display = visibility;
+}
+
+
+/*]]>*/
+</script>
+
+<body>
+
+<div id="wrap">
+<div id="header"><div id="menu">
+<a href="http://www.bham.ac.uk">Bham</a> |
+<a href="http://www.cs.bham.ac.uk">CompSci</a> |
+<a href="pubs.html">Publications</a> |
+<a href="student-projects
+.html">Projects</a> | 
+<a href="https://danghica.blogspot.co.uk/">Blog</a> |
+<a href="http://www.veritygos.org">Verity</a> |
+<a href="http://www.cs.bham.ac.uk/~drg/cal.html">Calendar</a> | 
+<script type="text/javascript">
+document.write(emailline)
+</script>
+</div>
+
+<div id="title">Dan R. Ghica
+</div></div>
+
+<div id="container">
+<div id="content">
+<!--
+<p id="nomob2"> <iframe width='100%' height='82' 
+frameborder='1' 
+src="https://docs.google.com/document/pub?id=1ZQxM3CWOotQBJQIFxcvC-bqJg3iNXeYq85FsoYDWLdQ&amp;embedded=true"></iframe>
+</p>
+-->
+<h3>Tweets and news</h3>
+<p>
+<a class="twitter-timeline" 
+   href="https://twitter.com/danghica" 
+   data-widget-id="659686722297593856"
+   data-chrome="noheader nofooter noborders">
+Tweets by @danghica</a>
+<script>!function(d,s,id){var 
+js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+
+<h3>Research</h3>
+<p>
+I am a <i>Reader in Semantics of Programming Languages</i> in the School of Computer Science, University of Birmingham.</p><p>
+I study programming languages using type systems and semantics, particularly game semantics. The main problem I work on transparently compiling conventional programming languages on unconventional architectures (<i>seamless computing</i>). I am a member of the <a href="http://www.cs.bham.ac.uk/research/groupings/theory/">Theory Research Group</a>.
+</p>
+<div style="width:100%;overflow-x:scroll;white-space: nowrap;">
+<iframe id="nomob4" src="http://player.vimeo.com/video/67889493?portrait=0&title=0&byline=0" 
+width="400" height="296"
+frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+<iframe id="nomob5" src="http://player.vimeo.com/video/51212478?portrait=0&title=0&byline=0" width="400" height="296" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+<p>Read a fairly accessible introduction to and history of <a href="papers/lics09tut.pdf">Game Semantics</a> (LICS'09) or a slightly more technical introduction to the <a href="papers/memocode11.pdf">Geometry of Synthesis</a> (MEMOCODE'11) or watch a <a href="http://research.microsoft.com/apps/video/dl.aspx?id=152886">video</a> of the associated talk.
+I also have a small collection of research talks on <a href="https://vimeo.com/channels/497431">Vimeo</a>.</p>
+<p>If you are interest, our research group has <b>PhD studentships</b> available. Apply <a href="http://www.cs.bham.ac.uk/admissions/postgraduate-research/">online</a>. It's helpful to drop me an email to let me know you are interested.</p>
+<p>If you are planning to <b>visit</b> me please read this page with <a href="travel.html">directions and travel information</a>.
+<h3>Activities</h3>
+<p>
+I am a founding co-chair, with Guy McCusker, of the workshop Game Semantics for Logic 
+and 
+Languages (<a href="http://www.gamesemantics.org">GaLoP</a>).
+</p>
+<p>
+I have been an invited speaker at 
+<a href="http://www2.informatik.hu-berlin.de/lics/lics09/">LICS 2009</a>, 
+<a href="http://www.floc-conference.org/LOLA-program.html">LOLA 2010</a>, 
+<a href="http://research.microsoft.com/en-us/um/cambridge/events/memocode2011/">MEMOCODE 2011</a>, 
+<a href="http://babel.ls.fi.upm.es/mpc2012/">MPC 2012</a>,
+<a href="http://www.cs.bham.ac.uk/~mdr/research/projects/12-TGC/">TGC 2012</a>,
+<a href="http://dice14.tcs.ifi.lmu.de/">DICE 2014</a>.
+</p>
+<p>I am PC Chair for <a href="http://events.cs.bham.ac.uk/mfps31/">Mathematical Foundations of Programming Semantics XXXI</a>.
+<p>
+I have served on the program committee of TLCA 2009, LICS 2010 and 2014, POPL 2012, FSTTCS 2013, MFPS 2011 and 2013, FOSSACS 2009 and 2013 as well as a number of workshops. 
+</p>
+
+<p class="footer">  
+<a href="http://plus.google.com/112856385906138841457/about"><img src="gpi.png" style="height="30" width="30""></a>
+<a href="http://www.facebook.com/dan.ghica"><img src="fbi.png" style="height="30" width="30""></a>
+<a href="http://www2.clustrmaps.com/counter/maps.php?url=http://www.cs.bham.ac.uk/~drg/" id="clustrMapsLink"><img src="http://www2.clustrmaps.com/counter/index2.php?url=http://www.cs.bham.ac.uk/~drg/" style="width="60" height="30" border:1px solid; border:0" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" /></a>
+</p>
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function cantload() {
+img = document.getElementById("clustrMapsImg");
+img.onerror = null;
+img.src = "http://clustrmaps.com/images/clustrmaps-back-soon.jpg";
+document.getElementById("clustrMapsLink").href = "http://clustrmaps.com";
+}
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8582794-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</script>
+
+<script type="text/javascript">
+if (detectmob()) {
+  //window.location.replace("http://www.cs.bham.ac.uk/~drg/index.m.html");
+  setVisibility('nomob1', 'none');
+  setVisibility('nomob2', 'none');
+  setVisibility('nomob3', 'none');
+  setVisibility('nomob4', 'none');
+  setVisibility('nomob5', 'none');
+}
+</script>
+</body>
+</html>

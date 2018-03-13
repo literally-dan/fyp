@@ -1,0 +1,844 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <link rel="stylesheet" href="/people/css/person-search.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Person Search Results</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link active" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/people/">People</a></span>
+        <span class="crumb"><a class="link" href="/people/category/">Category</a></span>
+        <span class="crumb">Academic</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Person Search Results</h1>
+          
+<p>If you cannot find the person you are looking for, they may not have opted in
+  to being visible.</p>
+
+<p>46 results found:</p>
+
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Morteza Azad">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Morteza Azad">
+        Morteza Azad
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>242</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/rzb.jpg"
+         alt="Photo of Rami Bahsoon">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Rami Bahsoon">
+        Rami Bahsoon
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>112</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4770</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Ian Batten">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Ian Batten">
+        Ian Batten
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>132</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 9195</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/rxb.jpg"
+         alt="Photo of Russell Beale">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Russell Beale">
+        Russell Beale
+      </a></span>
+    <span class="role">Professor of Human-Computer Interaction</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>141</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3729</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/jxb.jpg"
+         alt="Photo of John Bullinaria">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/John Bullinaria">
+        John Bullinaria
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>113</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 2590</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Hyung Jin Chang">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Hyung Jin Chang">
+        Hyung Jin Chang
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 41 </span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/tpc.jpg"
+         alt="Photo of Tom Chothia">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Tom Chothia">
+        Tom Chothia
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>111</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4779</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Ela Claridge">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Ela Claridge">
+        Ela Claridge
+      </a></span>
+    <span class="role">Professor of Medical Image Analysis</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>139</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4778</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/dehghanh.jpg"
+         alt="Photo of Hamid Dehghani">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Hamid Dehghani">
+        Hamid Dehghani
+      </a></span>
+    <span class="role">Professor of Medical Imaging</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>LG06B</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 8728</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/mhe.jpg"
+         alt="Photo of Martin Escardo">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Martin Escardo">
+        Martin Escardo
+      </a></span>
+    <span class="role">Reader in Theoretical Computer Science</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>212</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 2797</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/fleckr.jpg"
+         alt="Photo of Rowanne Fleck">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Rowanne Fleck">
+        Rowanne Fleck
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>140</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4789</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of David Galindo">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/David Galindo">
+        David Galindo
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>116</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4794</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Flavio Garcia">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Flavio Garcia">
+        Flavio Garcia
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>115</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/drg.jpg"
+         alt="Photo of Dan Ghica">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Dan Ghica">
+        Dan Ghica
+      </a></span>
+    <span class="role">Reader</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG35</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 8819</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Sandy Gould">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Sandy Gould">
+        Sandy Gould
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>110</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3816</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/pjh.jpg"
+         alt="Photo of Peter Hancox">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Peter Hancox">
+        Peter Hancox
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>240</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3819</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/szh.jpg"
+         alt="Photo of Shan He">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Shan He">
+        Shan He
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG36</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 2775</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/rjh.jpg"
+         alt="Photo of Bob Hendley">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Bob Hendley">
+        Bob Hendley
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>236</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4761</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/howesa.jpg"
+         alt="Photo of Andrew Howes">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Andrew Howes">
+        Andrew Howes
+      </a></span>
+    <span class="role">Head of School and Professor of HCI</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>135</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/axj.jpg"
+         alt="Photo of Achim Jung">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Achim Jung">
+        Achim Jung
+      </a></span>
+    <span class="role">Professor of Computer Science</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>213</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4776</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/axk.jpg"
+         alt="Photo of Ata Kaban">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Ata Kaban">
+        Ata Kaban
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG32</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 2792</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/kennyis.jpg"
+         alt="Photo of Ian Kenny">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Ian Kenny">
+        Ian Kenny
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>232</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 9194</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/mmk.jpg"
+         alt="Photo of Manfred Kerber">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Manfred Kerber">
+        Manfred Kerber
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>137</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4787</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Joshua Knowles">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Joshua Knowles">
+        Joshua Knowles
+      </a></span>
+    <span class="role">Professor of Natural Computation</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>138</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4763</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/mgl.jpg"
+         alt="Photo of Mark Lee">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Mark Lee">
+        Mark Lee
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>110</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4765</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Per Kristian Lehre">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Per Kristian Lehre">
+        Per Kristian Lehre
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>207</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3746</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Ales Leonardis">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Ales Leonardis">
+        Ales Leonardis
+      </a></span>
+    <span class="role">Professor</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>235</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/pbl.jpg"
+         alt="Photo of Paul Levy">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Paul Levy">
+        Paul Levy
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>216</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4792</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of David Oswald">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/David Oswald">
+        David Oswald
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>238</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3877</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/parkerdx.jpg"
+         alt="Photo of David Parker">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/David Parker">
+        David Parker
+      </a></span>
+    <span class="role">Reader</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>107</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 7264</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Christophe Petit">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Christophe Petit">
+        Christophe Petit
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>237</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 7361</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Kashif Rajpoot">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Kashif Rajpoot">
+        Kashif Rajpoot
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/udr.jpg"
+         alt="Photo of Uday Reddy">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Uday Reddy">
+        Uday Reddy
+      </a></span>
+    <span class="role">Professor of Computer Science</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>210</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 2740</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/exr.jpg"
+         alt="Photo of Eike Ritter">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Eike Ritter">
+        Eike Ritter
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>209</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4772</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/jer.jpg"
+         alt="Photo of Jon Rowe">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Jon Rowe">
+        Jon Rowe
+      </a></span>
+    <span class="role">Professor</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG38</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 2985</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/mdr.jpg"
+         alt="Photo of Mark Ryan">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Mark Ryan">
+        Mark Ryan
+      </a></span>
+    <span class="role">Professor of Computer Security</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>237</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 7361</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/aps.jpg"
+         alt="Photo of Alan Sexton">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Alan Sexton">
+        Alan Sexton
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>239</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3703</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/vxs.jpg"
+         alt="Photo of Volker Sorge">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Volker Sorge">
+        Volker Sorge
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG38</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3746</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/ibs.jpg"
+         alt="Photo of Iain Styles">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Iain Styles">
+        Iain Styles
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>109</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 8559</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Hayo Thielecke">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Hayo Thielecke">
+        Hayo Thielecke
+      </a></span>
+    <span class="role">Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>208</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/pxt.jpg"
+         alt="Photo of Peter Tino">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Peter Tino">
+        Peter Tino
+      </a></span>
+    <span class="role">Professor</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>UG33</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 8558</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/sjv.jpg"
+         alt="Photo of Steven Vickers">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Steven Vickers">
+        Steven Vickers
+      </a></span>
+    <span class="role">Senior Lecturer</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>215</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3743</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/jlw.jpg"
+         alt="Photo of Jeremy Wyatt">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Jeremy Wyatt">
+        Jeremy Wyatt
+      </a></span>
+    <span class="role">Professor of Robotics and Artificial Intelligence</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>241</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 4788</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/xin.jpg"
+         alt="Photo of Xin Yao">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Xin Yao">
+        Xin Yao
+      </a></span>
+    <span class="role">Professor of Computer Science</span>
+    <span class="school"></span>
+    <span class="office"><strong>Office: </strong>211</span>
+    <span class="phone"><strong>Telephone: </strong>+44 (0)121 414 3747</span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Karen Yeung">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Karen Yeung">
+        Karen Yeung
+      </a></span>
+    <span class="role">Interdisciplinary Professorial Fellow in Law, Ethics and Informatics</span>
+    <span class="school"></span>
+  </div>
+</div>
+<div class="person-summary">
+  <div class="photo">
+    <img src="/people/images/placeholder.png"
+         alt="Photo of Noam Zeilberger">
+  </div>
+  <div class="details">
+    <span class="name">
+      <a href="/people/Noam Zeilberger">
+        Noam Zeilberger
+      </a></span>
+    <span class="role">Birmingham Fellow</span>
+    <span class="school"></span>
+  </div>
+</div>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+    <script type="text/javascript" src="/people/js/person-search.js"></script>
+  </body>
+</html>

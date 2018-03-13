@@ -1,0 +1,467 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <link rel="stylesheet" href="/people/css/person-search.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rowanne Fleck</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link active" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/people/">People</a></span>
+        <span class="crumb">Rowanne Fleck</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Rowanne Fleck</h1>
+          <div class="person">
+
+  <div class="photo">
+    <img src="/people/images/fleckr.jpg"
+         alt="Photo of Rowanne Fleck">
+  </div>
+
+  <div class="details">
+    <span class="role">Lecturer</span>
+
+    <span class="phone"><strong>Phone:</strong> +44 (0)121 414 4789</span>
+
+    <span class="office"><strong>Office:</strong> 140</span>
+
+      <span class="email"><strong>Email:</strong>
+        <span class="reveal-email"
+              data-name="Rowanne Fleck">Click to reveal...</span>
+      </span>
+
+      <span class="web"><strong>Web:</strong>
+        <a href="https://www.cs.bham.ac.uk/~fleckr">https://www.cs.bham.ac.uk/~fleckr</a></span>
+  </div>
+
+
+  <div class="about">
+
+    <div class="research-interests expandable">
+      <h2>Research Interests</h2>
+      <div class="content">
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Research</title>
+  </head>
+  <body>
+    My research interests lie in the field of Human Computer
+    Interaction, and involves conducting qualitative studies to
+    understand how people use new and emerging technologies in real
+    world settings in order to reveal and design for the future. Current
+    research interests include understanding the impacts of mobile
+    digital technologies on work-life balance and productivity;
+    exploring the use of personal informatics tools to promote
+    reflection and behaviour change; considering people’s sharing
+    behaviours around and through technology; understanding the impacts
+    on and potential of mobile technology for small children; and
+    understanding the gap between the academic study of HCI and user
+    experience (UX) practice and research in industry.<br>
+    <br>
+    I currently supervise MSc project students on these topics and am
+    happy to hear from prospective PhD students with interests in these
+    areas.<br>
+  </body>
+</html>
+
+      </div>
+    </div>
+
+    <div class="bibliography expandable">
+      <h2>Bibliography</h2>
+      <div class="content">
+        @article{fleck_rating_2012,
+	title = {Rating reflection on experience: {A} case study of teachers’ and tutors’ reflection around images},
+	volume = {24},
+	issn = {0953-5438, 1873-7951},
+	shorttitle = {Rating reflection on experience},
+	url = {http://iwc.oxfordjournals.org/content/24/6/439},
+	doi = {10.1016/j.intcom.2012.07.003},
+	abstract = {Reflection on personal experience is described as a means to learn from experience, enable self-development and improve professional practice amongst other things. Recently there has been a move in HCI to explore new ways technology may support us in doing this. However, within this community there is little use made of existing literature to evaluate how well such tools support this reflection. In this paper we present a case study of the development of a ‘levels of reflection’ framework for the purposes of evaluating a wearable digital camera (SenseCam) to support teachers’ and tutors’ reflective practice. The framework enabled us to rate and compare reflection achieved by participants in different situations, and to explore the relationship between the ways images were used by participants and the level of reflection this led to, with implications for designing future SenseCam use to better support teachers’ and tutors’ reflection on experience. Beyond our particular case study, we suggest that the framework and associated methodological approach for rating reflection is of value to those within the HCI community interested in designing for reflection on experience. Rating reflection in this way can enable new tools or techniques for supporting reflection to be explored over time, across similar situations or with adaptations, and to build understandings of how reflection is being most effectively supported – ultimately inspiring the design of future technologies by building up an understanding of the most effective ways of supporting reflection on experience.},
+	language = {en},
+	number = {6},
+	urldate = {2015-10-12},
+	journal = {Interacting with Computers},
+	author = {Fleck, Rowanne},
+	month = nov,
+	year = {2012},
+	keywords = {Rating framework, Reflection on experience, Reflective practice, SenseCam, Teacher training},
+	pages = {439--449},
+	file = {Full Text PDF:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/DBDS4E59/Fleck - 2012 - Rating reflection on experience A case study of t.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/JRDEJNMG/439.html:text/html}
+}
+
+@inproceedings{fleck_reflecting_2010,
+	title = {Reflecting on reflection: framing a design landscape},
+	shorttitle = {Reflecting on reflection},
+	url = {http://dl.acm.org/citation.cfm?id=1952269},
+	urldate = {2015-10-12},
+	booktitle = {Proceedings of the 22nd {Conference} of the {Computer}-{Human} {Interaction} {Special} {Interest} {Group} of {Australia} on {Computer}-{Human} {Interaction}},
+	publisher = {ACM},
+	author = {Fleck, Rowanne and Fitzpatrick, Geraldine},
+	year = {2010},
+	pages = {216--223},
+	file = {[PDF] from researchgate.net:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/U72TRMT6/Fleck and Fitzpatrick - 2010 - Reflecting on reflection framing a design landsca.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/B4PMURNT/citation.html:text/html}
+}
+
+@article{fleck_teachers_2009,
+	title = {Teachers’ and tutors’ social reflection around {SenseCam} images},
+	volume = {67},
+	issn = {10715819},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S1071581909001268},
+	doi = {10.1016/j.ijhcs.2009.09.004},
+	language = {en},
+	number = {12},
+	urldate = {2015-10-12},
+	journal = {International Journal of Human-Computer Studies},
+	author = {Fleck, Rowanne and Fitzpatrick, Geraldine},
+	month = dec,
+	year = {2009},
+	pages = {1024--1036}
+}
+
+@article{fleck_supporting_2006,
+	title = {Supporting collaborative reflection with passive image capture},
+	url = {http://discovery.ucl.ac.uk/1342004/},
+	urldate = {2016-05-12},
+	author = {Fleck, Rowanne and Fitzpatrick, Geraldine},
+	year = {2006},
+	file = {[PDF] from ucl.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/JJ56P64Q/Fleck and Fitzpatrick - 2006 - Supporting collaborative reflection with passive i.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/CMV7SZWF/1342004.html:text/html}
+}
+
+@phdthesis{fleck_exploring_2008,
+	title = {Exploring the potential of passive image capture to support reflection on experience},
+	url = {http://discovery.ucl.ac.uk/1342001/},
+	urldate = {2016-05-12},
+	school = {University of Sussex},
+	author = {Fleck, Rowanne},
+	year = {2008},
+	file = {Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/4K6BSCF9/1342001.html:text/html}
+}
+
+@article{fleck_shared_2015,
+	title = {Shared {PI}: {Sharing} {Personal} {Data} to {Support} {Reflection} and {Behaviour} {Change}},
+	shorttitle = {Shared {PI}},
+	url = {http://di.ncl.ac.uk/beyondpersonalinformatics/files/2015/03/Fleck.pdf},
+	urldate = {2016-05-12},
+	author = {Fleck, Rowanne and Harrison, D.},
+	year = {2015},
+	file = {[PDF] from ncl.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/B6E55W3C/Fleck and Harrison - 2015 - Shared PI Sharing Personal Data to Support Reflec.pdf:application/pdf}
+}
+
+@inproceedings{fleck_balancing_2015,
+	title = {Balancing {Boundaries}: {Using} {Multiple} {Devices} to {Manage} {Work}-{Life} {Balance}},
+	shorttitle = {Balancing {Boundaries}},
+	url = {http://dl.acm.org/citation.cfm?id=2702386},
+	urldate = {2016-05-12},
+	booktitle = {Proceedings of the 33rd {Annual} {ACM} {Conference} on {Human} {Factors} in {Computing} {Systems}},
+	publisher = {ACM},
+	author = {Fleck, Rowanne and Cox, Anna L. and Robison, Rosalyn AV},
+	year = {2015},
+	pages = {3985--3988},
+	file = {Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/EG7DJTVG/citation.html:text/html}
+}
+
+@article{fleck_exploring_2005,
+	title = {Exploring {SenseCam} to inform the design of image capture and replay devices for supporting reflection},
+	volume = {576},
+	journal = {Cognitive Science Research Paper-University of Sussex CSRP},
+	author = {Fleck, Rowanne},
+	year = {2005},
+	pages = {22}
+}
+
+@article{cox_digital_2013,
+	title = {Digital {Epiphanies}: how self-knowledge can change habits and our attitudes towards them},
+	shorttitle = {Digital {Epiphanies}},
+	url = {http://discovery.ucl.ac.uk/1416686/},
+	urldate = {2016-05-12},
+	author = {Cox, Anna L. and Bird, Jon and Fleck, Rowanne},
+	year = {2013},
+	file = {[PDF] from ucl.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/AZ7923KD/Cox et al. - 2013 - Digital Epiphanies how self-knowledge can change .pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/DCEJBWAW/1416686.html:text/html}
+}
+
+@article{fleck_supporting_2003,
+	title = {Supporting {Reflection} and {Learning} with {New} {Technology}},
+	journal = {COGNITIVE SCIENCE RESEARCH PAPER-UNIVERSITY OF SUSSEX CSRP},
+	author = {Fleck, R},
+	year = {2003},
+	pages = {50--52}
+}
+
+@article{fleck_community_2013,
+	title = {Community {Beat}: {Revealing} the {Hidden} {Rhythms} of a {Neighbourhood}},
+	author = {Fleck, R and Robertson, C and Fleck, C},
+	year = {2013}
+}
+
+@article{fleck_changing_2013,
+	title = {Changing perspectives of time: {Is} the future of time flexi-time?},
+	author = {Fleck, Rowanne},
+	year = {2013}
+}
+
+@article{fleck_designing_2012,
+	title = {Designing for {Reflection}, {Sustainability} and {Simplicity}},
+	author = {Fleck, R},
+	year = {2012}
+}
+
+@article{rick_tabletop_2008,
+	title = {Tabletop computing as educational technology},
+	author = {Rick, Jochen and Dalton, Sheep and Hornecker, Eva and Marshall, Paul and Pantidi, Nadia and Morris, Richard and Rogers, Yvonne and Farr, William and Fleck, Rowanne and Harris, A and {others}},
+	year = {2008}
+}
+
+@article{fleck_balancing_2014,
+	title = {Balancing {Boundaries}: {The} {Role} of {Technology} {Boundary} {Work} in {Managing} {Work}-{Life} {Balance}},
+	author = {Fleck, Rowanne and Robison, Rosalyn AV and Cox, Anna L},
+	year = {2014}
+}
+
+@inproceedings{kirmani_people_2014,
+	title = {People don't bump: sharing around mobile phones in close proximity},
+	booktitle = {Proceedings of the 16th international conference on {Human}-computer interaction with mobile devices \& services},
+	publisher = {ACM},
+	author = {Kirmani, Afshan and Fleck, Rowanne},
+	year = {2014},
+	pages = {549--554}
+}
+
+@article{cecchinato_online_2015,
+	title = {Online vs. {Offline}: {Implications} for {Work} {Identity}},
+	author = {Cecchinato, M and Fleck, R and Bird, J and Cox, AL},
+	year = {2015}
+}
+
+@inproceedings{pinder_accept_2016,
+	title = {Accept the {Banana}: {Exploring} {Incidental} {Cognitive} {Bias} {Modification} {Techniques} on {Smartphones}},
+	booktitle = {Proceedings of the 2016 {CHI} {Conference} {Extended} {Abstracts} on {Human} {Factors} in {Computing} {Systems}},
+	publisher = {ACM},
+	author = {Pinder, Charlie and Fleck, Rowanne and Segundo Díaz, Rosa Lilia and Beale, Russell and Hendley, Robert J},
+	year = {2016},
+	pages = {2923--2931}
+}
+
+@article{spasojevic_ubiquitous_2005,
+	title = {The {Ubiquitous} {Camera}: {An} {In}-{Depth} {Study} of {Cameraphone} {Use}},
+	shorttitle = {The {Ubiquitous} {Camera}},
+	url = {http://research.microsoft.com/apps/pubs/default.aspx?id=69232},
+	urldate = {2016-05-17},
+	author = {Spasojevic, Mirjana and Kindberg, Tim and Fleck, Rowanne and Sellen, Abigail},
+	year = {2005},
+	file = {Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/MEEJAQ96/default.html:text/html}
+}
+
+@inproceedings{fleck_actions_2009,
+	title = {Actions speak loudly with words: unpacking collaboration around the table},
+	shorttitle = {Actions speak loudly with words},
+	url = {http://dl.acm.org/citation.cfm?id=1731939},
+	urldate = {2016-05-17},
+	booktitle = {Proceedings of the {ACM} international conference on interactive tabletops and surfaces},
+	publisher = {ACM},
+	author = {Fleck, Rowanne and Rogers, Yvonne and Yuill, Nicola and Marshall, Paul and Carr, Amanda and Rick, Jochen and Bonnett, Victoria},
+	year = {2009},
+	pages = {189--196},
+	file = {[PDF] from researchgate.net:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/XAF78WZD/Fleck et al. - 2009 - Actions speak loudly with words unpacking collabo.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/5CCCH5VV/citation.html:text/html}
+}
+
+@inproceedings{harris_around_2009,
+	title = {Around the table: are multiple-touch surfaces better than single-touch for children's collaborative interactions?},
+	shorttitle = {Around the table},
+	url = {http://dl.acm.org/citation.cfm?id=1600104},
+	urldate = {2016-05-17},
+	booktitle = {Proceedings of the 9th international conference on {Computer} supported collaborative learning-{Volume} 1},
+	publisher = {International Society of the Learning Sciences},
+	author = {Harris, Amanda and Rick, Jochen and Bonnett, Victoria and Yuill, Nicola and Fleck, Rowanne and Marshall, Paul and Rogers, Yvonne},
+	year = {2009},
+	pages = {335--344},
+	file = {[PDF] from open.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/5H5FGHP2/Harris et al. - 2009 - Around the table are multiple-touch surfaces bett.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/6RC9GUSH/citation.html:text/html}
+}
+
+@inproceedings{rick_children_2009,
+	title = {Children designing together on a multi-touch tabletop: an analysis of spatial orientation and user interactions},
+	shorttitle = {Children designing together on a multi-touch tabletop},
+	url = {http://dl.acm.org/citation.cfm?id=1551807},
+	urldate = {2016-05-17},
+	booktitle = {Proceedings of the 8th {International} {Conference} on {Interaction} {Design} and {Children}},
+	publisher = {ACM},
+	author = {Rick, Jochen and Harris, Amanda and Marshall, Paul and Fleck, Rowanne and Yuill, Nicola and Rogers, Yvonne},
+	year = {2009},
+	pages = {106--114},
+	file = {[PDF] from open.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/IDMK742E/Rick et al. - 2009 - Children designing together on a multi-touch table.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/44QS3PW8/citation.html:text/html}
+}
+
+@article{fleck_supporting_2009,
+	title = {Supporting reflection on experience with {SenseCam}},
+	url = {http://discovery.ucl.ac.uk/1387203/},
+	urldate = {2016-05-17},
+	author = {Fleck, Rowanne},
+	year = {2009},
+	file = {[PDF] from ucl.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/7NTM4354/Fleck - 2009 - Supporting reflection on experience with SenseCam.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/R842WBI5/1387203.html:text/html}
+}
+
+@inproceedings{marshall_fighting_2009,
+	title = {Fighting for control: children's embodied interactions when using physical and digital representations},
+	shorttitle = {Fighting for control},
+	url = {http://dl.acm.org/citation.cfm?id=1519027},
+	urldate = {2016-05-17},
+	booktitle = {Proceedings of the {SIGCHI} {Conference} on {Human} {Factors} in {Computing} {Systems}},
+	publisher = {ACM},
+	author = {Marshall, Paul and Fleck, Rowanne and Harris, Amanda and Rick, Jochen and Hornecker, Eva and Rogers, Yvonne and Yuill, Nicola and Dalton, Nick Sheep},
+	year = {2009},
+	pages = {2149--2152},
+	file = {[PDF] from open.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/2I7TE5V3/Marshall et al. - 2009 - Fighting for control children's embodied interact.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/NW7NV4ST/citation.html:text/html}
+}
+
+@inproceedings{kindberg_i_2005,
+	title = {I saw this and thought of you: some social uses of camera phones},
+	shorttitle = {I saw this and thought of you},
+	url = {http://dl.acm.org/citation.cfm?id=1056962},
+	urldate = {2016-05-17},
+	booktitle = ,
+	year = {2004},
+	pages = {3--10},
+	file = {[PDF] from bris.ac.uk:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/TJ22AUXN/Rogers et al. - 2004 - Ambient wood designing new forms of digital augme.pdf:application/pdf;Snapshot:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/PR6PIP4F/citation.html:text/html}
+}
+
+@article{sellen_how_2004,
+	title = {How and why people use camera phones},
+	url = {http://research.microsoft.com/pubs/70115/tr-2004-127.pdf},
+	urldate = {2016-05-17},
+	author = {Sellen, Abigail and Fleck, Rowanne and Kindberg, Tim and Spasojevic, Mirjana},
+	year = {2004},
+	file = {[PDF] from microsoft.com:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/5HDACSJ4/Sellen et al. - 2004 - How and why people use camera phones.pdf:application/pdf}
+}
+
+@article{wood_playing_2004,
+	title = {Playing with {SenseCam}},
+	url = {https://www.researchgate.net/profile/Ken_Woodberry/publication/242283628_Playing_with_SenseCam/links/0f31753737746c9c78000000.pdf},
+	urldate = {2016-05-17},
+	journal = {Proc. Playing with Sensors (W3) at UbiComp 2004},
+	author = {Wood, Ken and Fleck, Rowanne and Williams, Lyndsay},
+	year = {2004},
+	file = {[PDF] from researchgate.net:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/EEZFP2F4/Wood et al. - 2004 - Playing with SenseCam.pdf:application/pdf}
+}
+
+@article{fleck_how_2003,
+	title = {How the move to physical user interfaces can make human computer interaction a more enjoyable experience},
+	url = {https://www.researchgate.net/profile/Rowanne_Fleck/publication/238699021_How_the_move_to_physical_user_interfaces_can_make_human_computer_interaction_a_more_enjoyable_experience/links/543fbe280cf21227a11b5271.pdf},
+	urldate = {2016-05-17},
+	journal = {Workshop on Real World User Interfaces, Mobile HCI},
+	author = {Fleck, Rowanne},
+	year = {2003},
+	file = {[PDF] from researchgate.net:/Users/fleckr/Library/Application Support/Zotero/Profiles/wqq9b6be.default/zotero/storage/JUPTUK3M/Fleck - 2003 - How the move to physical user interfaces can make .pdf:application/pdf}
+}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="recaptcha-modal">
+  <div id="recaptcha"></div>
+</div>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+    <script type="text/javascript" src="/people/js/person-search.js"></script>
+  </body>
+</html>

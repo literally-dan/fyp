@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Imaging and Image Interpretation Group</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link" href="/admissions/">Study</a>
+            <a class="link active" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/research/">Research</a></span>
+        <span class="crumb"><a class="link" href="/research/groupings/">Groupings</a></span>
+        <span class="crumb">Medical Imaging and Image Interpretation Group</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Medical Imaging and Image Interpretation Group</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Medical Imaging and Image Interpretation<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/research/groupings/medical-image-interpretation/news" class="nav-link">News</a>
+              <a href="/research/groupings/medical-image-interpretation/people" class="nav-link">People</a>
+              <a href="/research/groupings/medical-image-interpretation/projects" class="nav-link">Projects</a>
+              <a href="/research/groupings/medical-image-interpretation/publications" class="nav-link">Publications</a>
+              <a href="/research/groupings/medical-image-interpretation/imaging-lab" class="nav-link">Imaging Laboratory</a>
+              <a href="/research/groupings/medical-image-interpretation/medical-image-analysis" class="nav-link">Medical Image Analysis</a>
+              <a href="/research/groupings/medical-image-interpretation/collaborators" class="nav-link">Collaborators and Visitors</a>
+              <a href="/research/groupings/medical-image-interpretation/jobs" class="nav-link">Research Jobs</a>
+              <a href="/research/groupings/medical-image-interpretation/contact" class="nav-link">Contact</a>
+            </div>
+          </nav>
+          <p>Note: this page is under construction. An updated version of the group webpage will be available soon.</p>
+
+<p>The Medical Imaging and Image Interpretation Group is focused on finding novel, non-invasive methods of acquiring image data and extracting information from these data. Some of the recent work has been focused on developing novel techniques that allow us to use the features and properties of an optical image to infer quantitative information about the structure and composition of the tissue being imaged. Specific areas of work include:</p>
+
+<ul>
+<li><a href="/~exc/Research/EPSRC_skin/epsrc_skin_project.html">Optical imaging for the detection of skin cancer</a>: This work relies on a detailed understanding of the physics of image formation, and has led to the development of the successful skin imaging system, the SIAScope.</li>
+<li><a href="/~exc/Research/EPSRC_eye/index.html">Detection of early signs of retinopathies</a>: A recently completed project has successfully demonstrated the ability of these methods to detect and quantify retinopathies from images of the human eye.</li>
+<li>Optical diagnosis of colon cancer.</li>
+<li>Detection and characterisation of breast cancer using optical imaging.</li>
+<li>Optical tomographic imaging of the human brain.</li>
+<li>Small animal imaging using molecular markers.</li>
+<li>Multi-modality imaging and image coregistration.</li>
+</ul>
+
+<p>We are also developing new techniques for modelling light transport in tissues. A finite element model based image reconstruction package (NIRFAST), freely available and developed for MATLAB, has been developed and is being used for applications in optical imaging using intrinsic and extrinsic molecular markers. We are also especially interested in the application of cutting-edge techniques from <a href="/research/groupings/natural_computation/">natural computation</a> to help us to explore and optimise our models and imaging methods. The group is also interested in statistical methods of image analysis, especially the identification of the boundaries of lesions, and the extraction of textural information from an image. This information can be of great benefit to a clinician when making a diagnosis.</p>
+
+<p>The group hosts and maintains a fully-equipped <a href="/research/groupings/medical-image-interpretation/multispeclab.php">multispectral imaging laboratory</a>, part of the university's <a href="http://www.birmingham.ac.uk/research/activity/crni/index.aspx">Collaborative Research Network in Imaging and Visualisation</a>. Further information about the group can be found <a href="/research/groupings/medical-image-interpretation/medical_image_analysis">here</a>.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>

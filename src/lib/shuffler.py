@@ -160,7 +160,6 @@ class shuffledecoder:
                 if charindex >= 1:
                     if char == ":":
                         self.offset = offset
-                        print(offset)
                         return offset
                 if not str.isdigit(char):
                     break

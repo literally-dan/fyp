@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Jeremy L Wyatt &ndash; Home Page &ndash; Pure</title>
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+ 
+   <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+ 
+
+<style>
+    .l-box {
+        padding: 1em;
+    }
+</style>
+
+</head>
+<body>
+
+<div id="layout">
+
+     <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="#"></a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="http://www.cs.bham.ac.uk/go/irlab"
+                class="pure-menu-link">IR Lab</a></li>
+                <li class="pure-menu-item"><a href="http://www.cncr.bham.ac.uk" class="pure-menu-link">CN-CR</a></li>
+
+                <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
+                    <a href="https://www.youtube.com/channel/UC3npJznGRV44sdqG7vij8og" class="pure-menu-link">Movies</a>
+		<li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
+                    <a
+                    href="https://scholar.google.co.uk/citations?user=9FSuHUQAAAAJ&hl=en&oi=ao"
+                    class="pure-menu-link">Papers</a>
+				<li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
+                    <a href="http://www.cs.bham.ac.uk/~jlw/timetable.html" class="pure-menu-link">Timetable</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+
+	     <div class="header">
+               <h1 color="black">Jeremy L Wyatt</h1> <br>
+               <h2>Professor of Robotics and Artificial Intelligence</h2>
+             </div>
+	
+        <div class="content">
+	 <div class"pure-g">
+	   <div class="pure-u-5-24">
+	     <div class="l-box">
+	     
+              <img class="pure-img-responsive"
+	 src="http://www.cs.bham.ac.uk/~jlw/jlw-new.jpg" alt="Picture
+	 of Me">
+	     </div>
+	   </div>
+          
+	   <div class="pure-u-18-24">
+	     <a name="news"></a>
+             <h3>News</h3>
+             <p>
+             <b> Paper: </b> New paper on <a
+	     href="https://research.birmingham.ac.uk/portal/en/publications/gpatlasrrt-a-local-tactile-exploration-planner-for-recovering-the-shape-of-novel-objects(a86d9133-a1be-4584-a4f1-d2da69984c69).html">tactile
+	     exploration</a> coming
+	     out in IJHR. <br>
+	     <b> Talk: </b> I gave the Seelye Fellowship Lecture at the
+	     University of Auckland. <br>
+             <b> Media: </b> An interview with Radio New Zealand
+	     on AI and Robotics.
+             <a href="https://www.radionz.co.nz/national/programmes/ninetonoon/audio/2018629395/the-human-touch-ai-and-dexterous-manipulation">
+	     Listen here.</a>
+	     <br>
+	     <b> Paper: </b> I am proud to publish <a
+	     href="https://research.birmingham.ac.uk/portal/en/publications/slurs-roles-and-power(880675ea-f7b7-4f23-8dcd-2afd899c5eb5).html">
+	     my first philosophy
+	     paper</a>, with Mihaela
+	     Popa-Wyatt, appearing in Philosophical Studies. <br>
+	     <b> Paper: </b> Read our paper on <a
+	     href="https://link.springer.com/article/10.1007/s10514-016-9571-3">
+	     learning to predict for manipulation, in Autonomous Robots. </a> <br>
+             <b> Paper: </b> Read our paper on robot task planning in 
+             <a href="http://www.sciencedirect.com/science/article/pii/S000437021500123X">
+            AI Journal</a>.
+	     <br> 
+
+	    <b> Paper: </b> Read our paper on dexterous grasp
+	    learning</a> in <a href="http://ijr.sagepub.com/content/early/2015/09/15/0278364915594244">IJRR</a>.<br>
+
+	     <b> Paper: </b> Read our paper on robot
+             task planning with non-monotonic logic and POMDPs in 
+             <a href="http://dx.doi.org/10.1109/TRO.2015.2422531">
+            IEEE TRO</a>.
+	     <br>
+
+             <b> Talk: </b> I gave a <a
+             href="https://www.youtube.com/watch?v=3moqCM1JUos">
+             public lecture</a> called "Robot Life:
+             A User's Manual".<br>
+	    </p>
+            </div>
+            <h2 class="content-subhead">Research</h2>
+            <p>
+            We create algorithms that enable robots to work in uncertain and
+            unfamiliar worlds. I work on autonomous robot
+            planning, architectures for robot intelligence, robots that
+            learn, robot manipulation, machine vision and general machine learning. One goal of my
+             work is to endow a robot with explicit representations of
+             what it does and doesn't
+             know, and of how its knowledge changes
+             under the actions it can perform. This ability allows
+             robots to plan in challenging worlds where they know little.
+            <br><br>
+	     
+            I am a member of the <a href="https://www.cs.bham.ac.uk/go/irlab">Intelligent
+            Robotics Laboratory</a>, and of <a
+            href="http://www.cncr.bham.ac.uk/">CN-CR</a>, a centre for
+            neuroscience and robotics. In my own laboratory I am lucky
+            enough to work with a wonderful team of about a dozen incredibly talented
+            researchers, most of whom work on dexterous robot manipulation.
+	    
+	    Previously, I was the Project Coordinator for the FP7 funded project
+            <a href="http://www.pacman-project.eu">PacMan</a> on robot
+            manipulation. I also coordinated the <a href="http://cogx.eu">CogX</a>
+            project on robots that plan and learn in the face of
+            knowledge gaps. I worked in the project Strands on long term
+            autonomy and spatial temporal mapping, and I was part of
+            the projects <a href="http://www.gert-project.eu">GeRT</a>
+            on robot manipulation, and <a
+            href="http://www.cognitivesystems.org">CoSy</a> on Cognitive
+            Robotics.
+            </p>
+
+	    <h2 class="content-subhead">Publications</h2>
+            <p>
+	    A locally maintained <a href="https://research.birmingham.ac.uk/portal/en/persons/jeremy-wyatt(aebbfbcb-c688-4866-9c56-5d1ef50b57be)/publications.html"> list</a>, or my <a
+            href="https://scholar.google.co.uk/citations?user=9FSuHUQAAAAJ&hl=en">
+            Google Scholar Profile</a>.           
+            </p>
+
+            <h2 class="content-subhead">Movies</h2>
+            <p>
+            For video updates on our work see my personal <a
+            href="https://www.youtube.com/channel/UC3npJznGRV44sdqG7vij8og">
+            YouTube Channel</a>, and the <a
+            href="https://www.youtube.com/channel/UCC-u5KVRVpFCsvb2az_bS7A">
+            PacMan</a> channel.
+            </p>
+
+            <h2 class="content-subhead">Media</h2>
+            <p>
+            Some recent <a
+            href="http://www.pacman-project.eu/media1/">
+            appearances in the media</a>.
+            </p>
+
+            <h2 class="content-subhead">Whereabouts</h2>
+            <p>
+            My public <a
+            href="http://www.cs.bham.ac.uk/~jlw/timetable.html">
+            timetable</a>.
+            </p>
+
+            <h2 class="content-subhead">Curriculum Vitae</h2>
+            <p>
+            A <a href="http://www.cs.bham.ac.uk/~jlw/cv-jeremylwyatt-2015.pdf">
+            summary</a> of what I get up to.
+            </p>
+
+            <h2 class="content-subhead">Contact Details</h2>
+            <p>
+        <div class"pure-g">
+           <div class="pure-u-11-24">
+	    <a href="http://www.cs.bham.ac.uk/go/irlab">Intelligent Robotics Laboratory </a><br>
+            <a href="http://www.cncr.bham.ac.uk/">Centre for Computational Neuroscience and Cognitive Robotics</a><br>
+            <a href="http://www.cs.bham.ac.uk/">School of Computer Science</a><br>
+             <a href="http://www.bham.ac.uk/">University of
+            Birmingham</a><br>
+             Edgbaston, Birmingham<br>
+             B15 2TT, UK<br> <br>
+</div>
+
+ <div class="pure-u-11-24">
+             Phone: +44 (0)121 414 4788<br>
+            <br>
+            Teaching email: <code>jlw @
+            cs dot bham dot ac dot uk</code><br>
+            Research email: <code>jeremy dot l dot wyatt @
+            gmail dot com </code><br>
+</div>   
+           </div>
+          </div>
+         </div>
+</div>
+
+<script src="js/ui.js"></script>
+
+
+</body>
+</html>

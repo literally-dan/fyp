@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/sys/trifecta/css/trifecta/trifecta.css?v=0.8.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Year in Industry</title>
+  </head>
+  <body class="page">
+
+    <div class="site-search">
+      <button class="hide-search"></button>
+      <form action="https://www.birmingham.ac.uk/search.aspx"
+            method="get" role="search">
+        <div class="search-box">
+            <input type="text" name="q" placeholder="Search...">
+        </div>
+        <button class="search" type="submit"></button>
+      </form>
+    </div>
+
+    <div class="top-row">
+      <div class="content">
+        <a class="university-logo"
+            href="//www.birmingham.ac.uk"
+            aria-label="University of Birmingham">
+        </a>
+        <a class="site-header" href="/">
+          School of Computer Science
+        </a>
+        <nav class="site-nav">
+          <a class="link first">Menu</a>
+            <a class="link active" href="/admissions/">Study</a>
+            <a class="link" href="/research/">Research</a>
+            <a class="link" href="/people/">People</a>
+            <a class="link" href="/about/">About</a>
+            <a class="link" href="/contact">Contact</a>
+            <a class="link" href="/internal/">Internal</a>
+        </nav>
+        <button class="toggle-search"><i class="search-icon"></i></button>
+      </div>
+    </div>
+
+
+    <div class="breadcrumb">
+      <nav class="breadcrumb-nav">
+        <span class="crumb"><a class="link" href="/">School of Computer Science</a></span>
+        <span class="crumb"><a class="link" href="/admissions/">Admissions</a></span>
+        <span class="crumb"><a class="link" href="/admissions/undergraduate/">Undergraduate</a></span>
+        <span class="crumb">Year in Industry</span>
+      </nav>
+    </div>
+
+
+    <div class="main-row">
+      <div class="content">
+        <main>
+          <h1 class="title">Year in Industry</h1>
+          <nav class="primary-nav">
+            <span class="nav-title">Undergraduate Admissions<i class="nav-toggle"></i></span>
+            <div class="nav-links">
+              <a href="/admissions/undergraduate/scholarships" class="nav-link">Undergraduate Scholarships</a>
+              <a href="/admissions/undergraduate/faq" class="nav-link">Frequently Asked Questions</a>
+              <a href="/admissions/undergraduate/open-days" class="nav-link">Open Days &amp; Outreach</a>
+              <a href="/admissions/undergraduate/applicant-visit-days" class="nav-link">Applicant Visit Days</a>
+              <a href="/admissions/contact" class="nav-link">Contact Us</a>
+              <span class="nav-link separator">External Links</span>
+              <a href="http://www.birmingham.ac.uk/undergraduate/fees/index.aspx" class="nav-link">Undergraduate Fees &amp; Finance</a>
+              <a href="https://www.facebook.com/groups/UoBCSUGApplicants2018/" class="nav-link">UG Facebook Group</a>
+            </div>
+          </nav>
+          <p><strong>Competition for graduate jobs is tough so you need to do what you can to stand out from the crowd. Gaining relevant work experience can often give you that point of difference, helping you to develop skills and experience that will enhance your university education and maximise your prospects.</strong></p>
+
+<p>School of Computer Science students all have an excellent opportunity to supplement their studies with a year working in industry. In fact, many of our students go on to work for their year-out employers after graduating.</p>
+
+<h3><strong>How does it work?</strong></h3>
+
+<p>If you choose this option, you will spend the first two years of your degree at Birmingham, followed by the placement year on a salary, then back to the University for your final year. During your year in industry you will be able to put taught theory into practice, as well as gain valuable experience and skills.</p>
+
+<h3><strong>Who will my placement be with?</strong></h3>
+
+<p>We have strong local and national relationships with major industry players, from both the public and private sector.  The School of Computer Science runs <a href="http://www.birmingham.ac.uk/university/colleges/eps/study/undergraduate/computer-science/industry-links.aspx">specialist Careers Fairs</a>, where different companies come to meet our students to showcase opportunities for Years in Industry and graduate employment.  You should find an opportunity that suits your career goals, and whilst it is your responsibility to choose and apply for a Year in Industry placement, you will be supported by the Department throughout, and can access the <a href="https://intranet.birmingham.ac.uk/as/employability/careers/college/eps/index.aspx">Engineering and Physical Sciences (EPS) Careers Network Team </a> for help.</p>
+
+<p>Companies that employ our students on placements include:  Expedia, Goldman Sachs, GCHQ, BAE Systems, Microsoft, IBM, Bloomberg, General Electric, Google, UBS, EY, Accenture and JP Morgan Chase.  Our students are also employed by emerging start up companies.</p>
+
+<h3><strong>What will I do?</strong></h3>
+
+<p>The School and placement company work together to devise a programme of study for you that is linked to the industrial work expected to be undertaken.  You will learn how different organisations operate, gain valuable interpersonal skills and knowledge, apply theory to practice, and experience a real  working environment, which will all help towards your future career choices.  At the end of the year you will be awarded your degree with 'A Year in Industry'.</p>
+
+<hr />
+
+<h1>Contact:</h1>
+
+<ul>
+<li>Undergraduate Admissions:  <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">&#x75;&#103;&#x2d;&#97;&#x64;&#109;&#x69;&#115;&#x73;&#105;&#x6f;&#110;&#x73;&#64;&#x63;s&#46;&#x62;&#104;&#x61;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;</a></li>
+<li>The School of Computer Science Industrial Placements Tutor: <a href="mail&#116;&#111;&#58;&#73;&#80;&#84;&#117;&#116;&#111;&#114;&#64;&#99;&#115;&#46;&#98;&#104;&#97;&#109;&#46;&#97;&#99;&#46;&#117;&#x6b;">&#73;&#80;&#84;&#117;&#116;&#111;&#114;&#64;&#99;&#115;&#46;&#98;&#104;&#97;&#109;&#46;&#97;&#99;&#46;&#117;&#x6b;</a></li>
+<li>External Relations Manager, Ms. Padma Reddy: <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#80;&#x2e;&#82;e&#x64;&#100;&#x79;&#64;&#x63;&#115;&#x2e;&#98;&#x68;&#97;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;">&#80;&#x2e;&#82;e&#x64;&#100;&#x79;&#64;&#x63;&#115;&#x2e;&#98;&#x68;&#97;&#109;&#x2e;&#97;&#x63;&#46;&#x75;&#107;</a></li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="contact-row">
+        <div class="content">
+          <a class="university-logo"
+              href="//www.birmingham.ac.uk"
+              aria-label="University of Birmingham">
+          </a>
+          <address class="contact-address">
+            School of Computer Science<br>
+            University of Birmingham<br>
+            B15 2TT, United Kingdom
+          </address>
+
+          <span class="contact-telephone">
+            University Switchboard: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
+            School Reception: <a href="tel:441214143744">+44 (0)121 414 3744</a><br>
+          </span>
+        </div>
+      </div>
+      <div class="policies-row">
+        <div class="content">
+          <div class="policy-links">
+            <span>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/">Privacy</a>
+              <a class="link" href="http://www.birmingham.ac.uk/legal/">Legal</a>
+              <a class="link" href="http://www.birmingham.ac.uk/accessibility/">Accessibility</a>
+              <a class="link" href="https://canvas.bham.ac.uk/">Canvas Learning Environment</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/policies-regs/information/">Freedom of Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable Information</a>
+              <a class="link" href="http://www.birmingham.ac.uk/privacy/cookies.aspx">Cookie Policy</a>
+              <a class="link" href="/about/feedback/">Website Feedback</a>
+            </span>
+            <div class="copyright">
+              © University of Birmingham 2017 - Delivered by Computer Science
+            </div>
+          </div>
+          <div class="footer-badge">
+            <img src="/sys/trifecta/images/logos/athena-swan-bronze.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/sys/trifecta/js/trifecta/trifecta-bundle.js?v=0.8.0"></script>
+  </body>
+</html>
