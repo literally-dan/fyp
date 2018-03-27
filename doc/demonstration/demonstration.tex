@@ -177,14 +177,15 @@ Bits Encoded & 482 & 493 & 4851 & 474 \\ \bottomrule
 \end{table}
 {\small * Just for clarification, the Random data test was run 100 times and this is the average.\\ The english data test was run on different data from Lorem Ipsum 100 times and this is the average. \\ The binary 0's is a repeated binary steam of 0's.\\ The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0$\times$10101010).}
 
-\newpage
 \subsection{Appending whitespace to headers}
 Appending whitespace to headers is a simple way to insert more data into the header of the HTTP request, because as in previous sections it is assumed that if the traffic was being inspected, it would be sanitised before inspection. \\
 Whitespace can be added up to a customisable maximum, which represents data.
 For example, 7 spaces out of a maximum of 16 would represent `0111'.
 
+\newpage
+
 \section{Architecture}
-The program is split into multiple parts.\\
+The program is split into multiple parts, all of which can be used and tested individually.
 These are detailed in the diagram and sections below.
 
 \begin{center}
@@ -192,7 +193,7 @@ These are detailed in the diagram and sections below.
     semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=1 cm}, line/.style={color=black,arrows=-,line cap=butt,line width=0.07cm}]
 \node[state] (A)[]{HTTP-Tunnel Client};
 \node[state] (B)[above=of A]{HTTP-Tunnel Server};
-\node[state] (C)[left=of B]{Web Server};
+\node[state] (C)[left=of B]{Webserver};
 \node[state] (D)[below=of A]{SSH Client};
 \node[state] (E)[above right=of B]{Server-Server adapter};
 \node[state] (F)[above left=of E]{SSH Server};
@@ -210,9 +211,26 @@ If there is no data to be sent, it sends a request once a second, and if it rece
 Therefore when no data is being transferred, the requests are infrequent, however when data is in the buffers, the request speed increases.
 
 \subsection{HTTP-Tunnel Server}
-The tunnel server has a listening socket where data is received, it also listens on port 80, which acts as a valid webserver if no data is received. It proxies the requests and sends them on to the webserver (which can be external or internal) to get a response
+The tunnel server has a listening socket where data is received, it also listens on port 80, which acts as a valid webserver if no data is received. It proxies the requests and sends them on to the webserver (which can be external or internal) to get a valid and live response to insert data into.
 
+\subsection{Webserver}
+This is either a local or remote webserver that can serve pages over HTTP (not HTTPS).
 
+\subsection{SSH Client}
+This is an SSH client that acts as a SOCKS proxy.
+The SSH command used is:
+\begin{verbatim}
+    ssh -4 -D 0.0.0.0:8080 -C localhost -N -p 33333
+\end{verbatim}
+This starts a local SOCKS listener on port 8080 and connects to the listening socket of the HTTP-Tunnel client.
+
+\subsection{SSH Server}
+This is simply an SSH Server that listens for SSH connections.
+
+\subsection{Server-Server adapter}
+This makes two connections, one two the SSH server, and one to the HTTP-Tunnel Server.
+It then forwards all data between the two servers.
+This allows two server applications to communicate.
 
 
 \end{document}
