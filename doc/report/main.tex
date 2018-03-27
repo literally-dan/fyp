@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{tikz-qtree}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{hyperref}
+\definecolor{processblue}{cmyk}{0.96,0,0,0}
+
+
+\title{VPN over HTTP}
+\author{Daniel Jones}
+\date{\today}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\vspace{2cm}
+	{\scshape\LARGE University of Birmingham \par}
+	\vspace{1cm}
+	{\scshape\Large School of Computer Science \par}
+	{\scshape\Large Final year project\par}
+	\vspace{1cm}
+	\includegraphics[scale = 0.12]{images/uni-crest}
+	\vfill
+    {\huge\bfseries VPN over HTTP \par}
+    {\Large Project Report \par}
+	\vspace{2cm}
+    {\Large{Author: Daniel Jones (1427970)} \par}
+	\vspace{0.25cm}
+    {\Large{BSc Computer Science} \par}
+	\vfill
+	supervised by\par
+	Dr Ian \textsc{Batten}\par
+    \vfill
+    \tiny{Submitted in conformity with the requirements\\
+for the degree of Bsc Computer Science\\
+School of Computer Science\\
+University of Birmingham}
+	\vfill
+
+	{\par}
+\end{titlepage}
+
+
+\maketitle
+\include{subsections/abstract}
+\include{subsections/acknowledgements}
+\tableofcontents
+\include{subsections/introduction}
+\include{subsections/backgroundmaterial}
+\include{subsections/specification}
+\include{subsections/design}
+\include{subsections/implementation}
+\include{subsections/testing}
+\include{subsections/projectmanagement}
+\include{subsections/evaluation}
+\include{subsections/conclusion}
+\include{subsections/bibliography}
+\include{subsections/appendices}
+\end{document}
