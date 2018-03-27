@@ -54,14 +54,12 @@ def data_transfer(send,recieve):
 
     while(True): 
 
-        print("loop")
 
         if(data == b''):
             try:
             #get some data
                 data = recieve.recv()
                 x = len(data)
-                print("Got bytes:",x)
             except:
                 try:
                     recieve.kill_socket()
@@ -98,24 +96,19 @@ class socketwrapper():
         self.make_conn()
 
     def make_conn(self):
-        print("trying to make")
         self.socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.socket.connect((self.remote,self.port))
-        print("made")
 
     def send(self,data):
         return self.socket.send(data)
 
     def kill_socket(self):
-        print("trying to kill")
         self.socket.shutdown(SHUT_RDWR)
         self.socket.close()
-        print("killed")
 
 
     def recv(self):
         length = len(self.socket.recv(MTU,socket.MSG_PEEK))
-        print("aaa",length)
         if(length == 0):
             raise Exception("socket is dead")
         data = self.socket.recv(length)

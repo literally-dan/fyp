@@ -177,7 +177,8 @@ class shuffledecoder:
                 data = self.data[:self.length][::-1]
                 self.complete = True
                 if(self.length > 0):
-                    print(self.data)
+                    pass
+                    #print(self.data)
                 self.data = bytes(int(data[i:i+8],2) for i in range (0,self.length,8))[::-1]
         if self.complete == True:
             return self.data

@@ -2,7 +2,7 @@
 config:
     name: localhost-http
     remote: localhost
-    remote-port: 8080
+    remote-port: 8000
     local-port: 80
     test-request: |+
         GET / HTTP/1.1

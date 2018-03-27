@@ -15,10 +15,10 @@ url <- https://en.wikipedia.org/wiki/Wilf_Spooner
 url <- https://en.wikipedia.org/wiki/May_Moustafa
 url <- https://en.wikipedia.org/wiki/London_District_Signals
 
-text <- Hello there
-text <- Good morning
-text <- I need more coffee... 
-text <- This is text 
+text <- Statement #4
+text <- Rubber ducks are planning world domination
+text <- This is text?
+text <- Save water, drink beer
 
 
 3dnum <- %num%num%num

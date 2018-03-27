@@ -19,7 +19,9 @@ class Datasource:
         byte = math.floor(self.bitsdone/8)
         x = ((self.data[byte]&(1<<(self.bitsdone % 8)))!=0);
         self.bitsdone += 1
-        return 1 if x else 0 
+        bit = 1 if x else 0
+        #print(bit, end='')
+        return bit
 
     def gettox(self, x):
         bits = math.floor(math.log2(x))
@@ -34,5 +36,7 @@ class Datasource:
         for i in bitstream:
             total+=math.pow(2,current)*int(i)
             current+=1
+        #print()
 
+        #print("total:",int(total))
         return int(total)
