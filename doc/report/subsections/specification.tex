@@ -1,1 +1,21 @@
 \section{Specification}
+\subsection{Functional Requirements}
+\begin{enumerate}
+    \item The system must allow duplex communication with a remote server and local client
+    \item All communication between the user and the server must be encapsulated within the HTTP Protocol
+    \item The user must be able to browse websites
+    \item The user must be able to connect to a remote server, over SSH for example
+    \item The server and client must expose a TCP port which can be used for multiple applications
+    \item The server must act as a valid HTTP server serving a valid web page if navigated to
+    \item The server must act as a mirror to another HTTP server when serving HTTP to both the client and any other clients that may discover it
+    \item The system should not encrypt data traveling over it, data should be assumed to be already encrypted
+    \item The client should poll the server for data
+    \item When the client or server has data to send, the client should increase the frequency of requests
+    \item The system should be able to serve multiple clients at a time without interference
+\end{enumerate}
+\subsection{Non-functional Requirements}
+\begin{enumerate}
+    \item The extra data encapsulated within the HTTP protocol must be done in such a way that is looks like typical HTTP traffic and is not easy or obvious to spot.
+    \item The connection speed must be such that browsing the internet is possible without undue difficulty.
+    \item If the connection drops, the server and client must work to re-establish the connection
+\end{enumerate}
