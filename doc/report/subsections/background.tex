@@ -2,27 +2,88 @@
 This section provides an overview of all of the technologies mentioned in the remainder of the project, along with some more abstract concepts.
 \subsection{HTTP}
 HTTP is the most important protocol in this project and as such needs to be covered in detail.
-\texttt{HTTP/1.1} is defined in \texttt{RFC2616}\cite{rfc2616} and all of the information about HTTP comes from that document.\\
+\texttt{HTTP/1.1} is defined in \texttt{RFC2616}\cite{rfc2616} and all of the information about HTTP comes from that document unless otherwise specified.
 HTTP is a Request/Response protocol, which means the client Requests some data from the server, and the server returns it.\\
 An example request is as follows:
 \begin{verbatim}
-
+GET / HTTP/1.1
+Host: localhost
+User-Agent: curl/7.58.0
+Accept: */*
 \end{verbatim}
+In this request, there is first the request line, and then a series of headers. The headers are a set of key-value pairs which form a dictionary that tells the server extra information about the client.\vspace{0.4cm}\newline
+An example response is as follows:
+\begin{verbatim}
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.6.4
+Date: Tue, 20 Mar 2018 14:25:01 GMT
+Content-type: text/html
+Content-Length: 10088
+Last-Modified: Tue, 13 Mar 2018 15:27:09 GMT
+
+<!doctype html>
+<html>
+<head>
+...
+\end{verbatim}
+In this request the response line is sent, along with some headers which provide important meta-data about the response itself, which is then included when the headers are finished.
+
+\subsubsection{HTTP Encoding types}
+HTTP has a variety of different encoding types and methods.
+These are specified in the \texttt{Transfer-Encoding} and \texttt{Content-Encoding}, both of which are  used in similar ways to perform compression and other encoding of data.\par
+Transfer encoding allows for chunked encoding\cite{rfc7230}, which splits the page or portions of data up into multiple sections, and sends the length for each section separately. This is done as then servers can send data as it is generated, rather than having to buffer the entire page.
 
 \subsection{TCP}
+TCP is defined in \texttt{RFC793}\cite{rfc793} and all of the information about TCP comes from there unless otherwise specified.
+TCP is a connection based protocol that allows for reliable data transfer between a server and a client.\\
+TCP connections are a connection between two sockets, one active and one passive.\\
+A passive socket is listening, and is typically a \texttt{server} whereas an active socket is connecting and is typically a \texttt{client}.
 
-\subsection{Privacy}
-
-\subsection{VPN}
-
-\subsection{Stenography}
+\subsection{Steganography}
+Steganography is defined as\cite{dictsteno}:
+\begin{verbatim}
+    the art or practice of concealing a message, image, or file within
+    another message, image, or file
+\end{verbatim}
+For example this could be encoding data into an image, or into a HTTP stream.
 
 \subsection{Obfuscation}
-
-\subsection{Data Tunneling}
+Obfuscate is defined as\cite{dictobfs}:
+\begin{verbatim}
+     to be evasive, unclear, or confusing
+\end{verbatim}
+Obfuscation is simply the act of being \texttt{evasive, unclear, or confusing}.\par
+When applied to computers, this is similar to steganography and the two terms are often used interchangeably, however steganography is the art of concealing and disguising data, whereas obfuscation just makes data difficult to read and understand. 
 
 \subsection{Encryption}
+\begin{Verbatim}[commandchars=\\\[\]]
+    Encryption is the process of converting data to an unrecognizable or
+    `encrypted' form. It is commonly used to protect sensitive
+    information so that only authorized parties can view it\cite[dictenc].
+\end{Verbatim}
+There are many types of encryption, AES and RSA are two major examples.\par
+It's generally referred to as bad practice to `\texttt{roll your own crypto}'\cite{memtocrypto}, which simply means that it is a bad idea to write a cryptographic algorithm yourself, or to try and come up with your own cryptographic scheme.
 
-\subsection{Other tools and terminologies}
+\subsection{Privacy}
+Privacy on the internet is often overlooked, however, it is vitally important\cite{privacyrulez}. Almost everything that you do on the internet is tracked by multiple parties: Your internet service provider (ISP), the websites you are visiting, DNS servers, third party servers and many more. These parties could all be gathering information about you to sell.
+
+\subsection{Blocking of services}
+When you connect to Public Wi-Fi, often the provider will limit what content you have access to, often by blocking `ports' or preventing a blacklist of websites.\\
+HTTP is run over port 80, and this is often one of the only ports available. ISP's have also been known to block certain websites.
+
+\subsection{Data Tunnelling}
+Data Tunnelling is a term for transmitting data in a different form to how it is usually transmitted. A VPN is an example of this, as is an SSH (Secure SHell) tunnel.
+
+\subsection{Binary}
+Binary is how a computer represents data, and it is a series of 1's and 0's, each one is called a bit.
+All characters have a binary representation, and typically characters are made up of 8 bits. Some files and formats don't have a concept of characters, and instead use a stream, which means that they are dealt with a bit at a time.
+
+\subsection{VPN}
+A VPN or Virtual Private Network which is defined in \texttt{RFC2764}\cite{rfc2764}, is a piece of software, split into a server and a client, where the server and the client (or clients) form a network which is both virtual and private.\\
+For a network to be private, it needs to be encrypted so no one else can see the data, and for it to be virtual, it only has to exist inside computers, and not physically connected by cables.\par In practical terms this means that data is tunnelled from one computer to another, generally by use of \texttt{tun} or \texttt{tap} devices.
+\texttt{IP} packets can be read from and written to a \texttt{tun} device.\\
+\texttt{Ethernet} frames can be read from and written to a \texttt{tap} device.\\
+Which ever device type is used, the packets/frames are transmitted through an existing connection to a remote client or server, which will also read and write from a corresponding device.\par
+A typical example of a VPN is OpenVPN, \texttt{https://openvpn.net/}.
 
 
