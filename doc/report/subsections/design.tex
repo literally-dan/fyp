@@ -1,1 +1,97 @@
 \section{Design}
+This section sets out the High level program architecture and design, along with areas that are configurable and the different design choices that were made in the development of the project.
+
+During the design of the project, efforts were made to keep the entire program modular, so all sections are reusable and replaceable.
+
+\subsection{Server Overview}
+The server of the project is split into two parts.\\
+The actual `server' that runs, which acts as a manager for the two duplex connections that are active. The server (called the proxy) creates a TCP listening socket, and then when that socket is connected to it, it creates a connection to the remote server.
+In the most basic configuration, data is read from one socket and written directly to the other, acting as a TCP-Forwarder:
+\begin{center}
+\begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 5cm ,on grid,
+    semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=1 cm}, line/.style={color=black,line width=0.07cm}]
+\node[state] (A)[]{Remote Client};
+\node[state] (B)[above=of A]{Proxy Server};
+\node[state] (C)[above=of B]{Remote Server};
+\draw[line] (B) to[bend right] node[left] {Data forwarded}(A);
+\draw[line] (C) to[bend right] node[left] {Data sent} (B);
+\draw[line] (A) to[bend right] node[right] {Data sent}(B);
+\draw[line] (B) to[bend right] node[right] {Data forwarded} (C);
+\end{tikzpicture}
+\end{center}
+
+The server runs two threads, one from the client to the server, and one in the return direction.\par
+One of the reasons I chose this design is because it allows traffic to be `\texttt{mutated}' on the fly:
+\begin{center}
+\begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 4cm ,on grid,
+    semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=1 cm}, line/.style={color=black,line width=0.07cm}]
+\node[state] (A)[]{Remote Client};
+\node[state] (B)[above=of A]{Proxy Server};
+\node[state] (C)[above=of B]{Remote Server};
+\draw[line] (B) to[bend right] node[left] {Mutated data forwarded}(A);
+\draw[line] (C) to[bend right] node[left] {Data sent} (B);
+\draw[line] (A) to[bend right] node[right] {Data sent}(B);
+\draw[line] (B) to[bend right] node[right] {Mutated data forwarded} (C);
+\end{tikzpicture}
+\end{center}
+The other reasons I chose this design are:
+\begin{itemize}
+    \item It allows the lower level to deal with keeping the connection alive, and the upper levels can assume that if they are running, both of the TCP sockets are alive.
+    \item It allows ease of customisation, because the mutators can be easily switched out.
+    \item It allows the lover level to provide a `data storage' to the upper threads, which is provided thread safe and reliably so they can access current data about the session.
+\end{itemize}
+
+\subsubsection{Configurable Options}
+In the main `proxy' part of the program, there are lots of options that are customisable.
+Here is an example configuration file:
+\begin{verbatim}
+config:
+    name: localhost-http
+    remote: localhost
+    remote-port: 8000
+    local-port: 80
+    test-request: |+
+        GET / HTTP/1.1
+        Host: localhost
+        User-Agent: Test-Agent
+
+
+    test-response: HTTP/1.0 2\d\d.*
+    test-response-length: 16
+    proxy-mutator-location: mutators/http.py
+    proxy-mutate-receive: receive
+    proxy-mutate-send: send
+\end{verbatim}
+The config file is in yaml format.\par
+The `\texttt{name}' field is just a unique identifier.\\
+The `\texttt{remote}' and `\texttt{remote-port}' specify the remote host and port to connect to.\\
+The `\texttt{local-port}' specifies the local port to listen on.\\
+The `\texttt{test-request}' provides an example request to send to the remote server to check it is active, and the first `\texttt{test-response-length}' bytes are read from the socket and compared to the regular expression defined in `\texttt{test-response}'.\\
+`\texttt{proxy-mutator-location}' is the location of the file that stores the mutator code.
+`\texttt{proxy-mutate-receive}' and `\texttt{proxy-mutate-send}' are the names of the functions that are called when data is recieved from the remote server and needs mutating before sending to the client, and vice versa.\par
+Because of all of this configuration testing connections, debugging, and attempting new things were made significantly simpler. It has also left significant scope for future expansion of the project.
+
+\subsection{Obfuscation Overview}
+Early on in the project, I created a `\texttt{generic}' obfuscation program.\\
+The program reads a configuration file, called `\texttt{pages}', which sets out the structure the obfuscated data should fit into. It uses a custom configuration file format, for a number of reasons:
+\begin{itemize}
+    \item Easy to extend
+    \item Concise
+    \item Easy to understand
+\end{itemize}
+An example of the file format is as follows:
+\begin{verbatim}
+PAGE#0.1
+DELIM <-
+
+bin <-0
+bin <-1 
+
+byte <- %bin%bin%bin%bin%bin%bin%bin%bin
+*out <- %byte
+\end{verbatim}
+This is a very simple example that will simply print out a byte of the input at a time, but in binary.
+The reason I designed the obfuscation like this is because it allows for easy expansion, and testing.
+The obfuscation is completely reversable, and more details about how it works will be explained in a later section.
+
+\subsection{Design Overview}

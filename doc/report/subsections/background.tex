@@ -1,9 +1,9 @@
 \section{Background}
-This section provides an overview of all of the technologies mentioned in the remainder of the project, along with some more abstract concepts.
+This section provides an overview of all of the technologies mentioned in the remainder of the project.
 \subsection{HTTP}
-HTTP is the most important protocol in this project and as such needs to be covered in detail.
+HTTP (Hyper Text Transfer Protocol) is the most important protocol in this project and as such needs to be covered in detail.
 \texttt{HTTP/1.1} is defined in \texttt{RFC2616}\cite{rfc2616} and all of the information about HTTP comes from that document unless otherwise specified.
-HTTP is a Request/Response protocol, which means the client Requests some data from the server, and the server returns it.\\
+HTTP is a Request/Response protocol, which means the client Requests data from the server, and the server returns it.\\
 An example request is as follows:
 \begin{verbatim}
 GET / HTTP/1.1
@@ -30,11 +30,11 @@ In this request the response line is sent, along with some headers which provide
 
 \subsubsection{HTTP Encoding types}
 HTTP has a variety of different encoding types and methods.
-These are specified in the \texttt{Transfer-Encoding} and \texttt{Content-Encoding}, both of which are  used in similar ways to perform compression and other encoding of data.\par
-Transfer encoding allows for chunked encoding\cite{rfc7230}, which splits the page or portions of data up into multiple sections, and sends the length for each section separately. This is done as then servers can send data as it is generated, rather than having to buffer the entire page.
+These are specified in the \texttt{Transfer-Encoding} and \texttt{Content-Encoding}, both of which are  used to perform compression and other encoding of data.\par
+\texttt{Transfer-Encoding} allows for \texttt{Chunked} encoding\cite{rfc7230}, which splits the page or portions of data up into multiple sections, and sends the length for each section separately. This is done as then servers can send data as it is generated, rather than having to buffer the entire page.
 
 \subsection{TCP}
-TCP is defined in \texttt{RFC793}\cite{rfc793} and all of the information about TCP comes from there unless otherwise specified.
+TCP (Transfer Control Protocol) is defined in \texttt{RFC793}\cite{rfc793} and all of the information about TCP comes from there unless otherwise specified.
 TCP is a connection based protocol that allows for reliable data transfer between a server and a client.\\
 TCP connections are a connection between two sockets, one active and one passive.\\
 A passive socket is listening, and is typically a \texttt{server} whereas an active socket is connecting and is typically a \texttt{client}.
@@ -45,10 +45,10 @@ Steganography is defined as\cite{dictsteno}:
     the art or practice of concealing a message, image, or file within
     another message, image, or file
 \end{verbatim}
-For example this could be encoding data into an image, or into a HTTP stream.
+An example of this could be encoding data into an image, or into a HTTP stream.
 
 \subsection{Obfuscation}
-Obfuscate is defined as\cite{dictobfs}:
+To obfuscate is defined as\cite{dictobfs}:
 \begin{verbatim}
      to be evasive, unclear, or confusing
 \end{verbatim}
@@ -62,10 +62,11 @@ When applied to computers, this is similar to steganography and the two terms ar
     information so that only authorized parties can view it\cite[dictenc].
 \end{Verbatim}
 There are many types of encryption, AES and RSA are two major examples.\par
-It's generally referred to as bad practice to `\texttt{roll your own crypto}'\cite{memtocrypto}, which simply means that it is a bad idea to write a cryptographic algorithm yourself, or to try and come up with your own cryptographic scheme.
+It's generally referred to as bad practice to `\texttt{roll your own crypto}'\cite{memtocrypto}, which simply means that it is a bad idea to write a bespoke cryptographic algorithm, or to try and come up with your own cryptographic scheme.
 
 \subsection{Privacy}
-Privacy on the internet is often overlooked, however, it is vitally important\cite{privacyrulez}. Almost everything that you do on the internet is tracked by multiple parties: Your internet service provider (ISP), the websites you are visiting, DNS servers, third party servers and many more. These parties could all be gathering information about you to sell.
+Privacy on the internet is often overlooked, however, it is vitally important\cite{privacyrulez}. Almost everything that is done on the internet is tracked by multiple parties: Internet service providers (ISPs), the websites visited, DNS servers, third party servers and many more. These parties could all be gathering information in order to profile and build a model to predict behavoir. This can then be used for highly targeted advertising which is not always desirable for the end user. An extreme example of this was a case in 2012 where a retailer inadvertently told a father his daughter was pregnant by sending her coupons for baby clothes and cribs.\cite{babyshower}
+This case was first reported in early 2012, and since then statistical models have become significantly more complex and intrusive. This is demonstrated by Google recently allowing you to mark Adverts as `\texttt{knowing too much}'\cite{googlearewatching}.
 
 \subsection{Blocking of services}
 When you connect to Public Wi-Fi, often the provider will limit what content you have access to, often by blocking `ports' or preventing a blacklist of websites.\\
