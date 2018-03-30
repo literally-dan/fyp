@@ -68,7 +68,7 @@ The `\texttt{remote}' and `\texttt{remote-port}' specify the remote host and por
 The `\texttt{local-port}' specifies the local port to listen on.\\
 The `\texttt{test-request}' provides an example request to send to the remote server to check it is active, and the first `\texttt{test-response-length}' bytes are read from the socket and compared to the regular expression defined in `\texttt{test-response}'.\\
 `\texttt{proxy-mutator-location}' is the location of the file that stores the mutator code.
-`\texttt{proxy-mutate-receive}' and `\texttt{proxy-mutate-send}' are the names of the functions that are called when data is recieved from the remote server and needs mutating before sending to the client, and vice versa.\par
+`\texttt{proxy-mutate-receive}' and `\texttt{proxy-mutate-send}' are the names of the functions that are called when data is received from the remote server and needs mutating before sending to the client, and vice versa.\par
 Because of all of this configuration testing connections, debugging, and attempting new things were made significantly simpler. It has also left significant scope for future expansion of the project.
 
 \subsection{Obfuscation Overview}
@@ -92,6 +92,51 @@ byte <- %bin%bin%bin%bin%bin%bin%bin%bin
 \end{verbatim}
 This is a very simple example that will simply print out a byte of the input at a time, but in binary.
 The reason I designed the obfuscation like this is because it allows for easy expansion, and testing.
-The obfuscation is completely reversable, and more details about how it works will be explained in a later section.
+The obfuscation is completely reversible, and more details about how it works will be explained in a later section.\par
+The obfuscation layer also contains functionality to store data in the order of lists, and by appending whitespace to whitespace independent places.
 
-\subsection{Design Overview}
+\subsection{HTTP Layer}
+The HTTP Layer consists of a `\texttt{mutator}' (as defined in the previous section), and a corresponding client. The HTTP layer understands the HTTP Protocol, and how data can be inserted into it.
+The layer also calls the `\texttt{obfuscater}' which is used to insert data into the HTTP protocol.
+
+\subsubsection{Listening Ports}
+As a part of the HTTP layer (on both server and client), a TCP socket is listening, which is where all data that is transferred from client to server (and vice versa) is read from and written to.
+\begin{center}
+\begin{tikzpicture}[-latex ,auto ,node distance =2 cm and 6cm ,on grid,
+    semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=2 cm}, line/.style={color=black,line width=0.02cm}]
+\node[state] (A)[]{Server};
+\node[state] (B)[right=of A]{Client};
+\node[state] (C)[below=of B]{Client listening socket};
+\node[state] (D)[below=of A]{Server listening socket};
+\draw[line] (B) to[bend right] node[above] {HTTP encoded data}(A);
+\draw[line] (A) to[bend left] (B);
+\draw[line] (B) -- node[right] {IO from the socket}(C);
+\draw[line] (C) -- (B);
+\draw[line] (A) -- node[left] {IO from the socket}(D);
+\draw[line] (D) -- (A);
+\end{tikzpicture}
+\end{center}
+Using listening ports instead of directly interfacing with an application means that there is significantly more flexibility.
+
+\subsection{Modular Sections Overview}
+The overall design of the project is to be very modular, so things can be switched out and replaced.
+
+Below is a diagram showing all of the parts that could be switched out and replaced between the server and client.
+\begin{center}
+\begin{tikzpicture}[-latex ,auto ,node distance =.7 cm and 6cm ,on grid,
+    semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=4 cm}, line/.style={color=black,line width=0.07cm}]
+\node[state] (A)[]{Proxy};
+\node[state] (B)[above=of A]{HTTP Mutator};
+\node[state] (C)[above=of B]{Obfuscater};
+\node[state] (D)[right=of B]{HTTP Client};
+\node[state] (E)[right=of C]{Obfuscater};
+\node[label] (F)[above=of C]{Server};
+\node[label] (G)[above=of E]{Client};
+\draw[line] (B) -- (D);
+\draw[line] (D) -- (B);
+\draw[line] (E) -- (C);
+\draw[line] (C) -- (E);
+\end{tikzpicture}
+\end{center}
+Both the server and the client have a HTTP section and an Obfuscater section.
+Either of these sections (on both the server and the client) could be switched out with an equivalent pair, and it would continue to function correctly without changing other parts of the program.
