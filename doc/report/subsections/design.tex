@@ -2,6 +2,17 @@
 This section sets out the High level program architecture and design, along with areas that are configurable and the different design choices that were made in the development of the project.
 
 During the design of the project, efforts were made to keep the entire program modular, so all sections are reusable and replaceable.
+\subsection{HTTP Analysis}
+To embed data in HTTP on its own would be trivial, putting the data to send and receive as the request/response body as data, while this would get around many web filters, it would only require trivial inspection to determine it is in fact not real HTTP traffic.
+For this reason, I decided that I wanted to insert the data into real websites and realistic browsing patterns, and to do this I decided that the VPN-Server would act as a website mirror when browsed to in the browser.
+
+This means that to an observer, the VPN-Server will appear as a live mirror of a real website that updates as the original does.
+
+When talking about how data is transferred in detail, I will refer to the client uploading, or sending data to the server as the `Request' side, and when the client downloads, or receives data from the server as the `Response' side.
+
+Putting data in the Response side of the connection is trivial, as when you make a HTTP request, data is returned, and it is often different even if the same request is sent multiple times.
+The Request side, however is significantly more difficult. This is because when you are browsing a website, the request doesn't significantly change, and it would be incredibly obvious to an observer if for example the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order doesn't matter, and insensitive to whitespace.
+
 
 \subsection{Server Overview}
 The server of the project is split into two parts.\\
@@ -93,7 +104,7 @@ byte <- %bin%bin%bin%bin%bin%bin%bin%bin
 This is a very simple example that will simply print out a byte of the input at a time, but in binary.
 The reason I designed the obfuscation like this is because it allows for easy expansion, and testing.
 The obfuscation is completely reversible, and more details about how it works will be explained in a later section.\par
-The obfuscation layer also contains functionality to store data in the order of lists, and by appending whitespace to whitespace independent places.
+The obfuscation layer also contains functionality to store data in the order of lists, and by appending whitespace to whitespace independent places, all of which is replaceable.
 
 \subsection{HTTP Layer}
 The HTTP Layer consists of a `\texttt{mutator}' (as defined in the previous section), and a corresponding client. The HTTP layer understands the HTTP Protocol, and how data can be inserted into it.
@@ -140,3 +151,6 @@ Below is a diagram showing all of the parts that could be switched out and repla
 \end{center}
 Both the server and the client have a HTTP section and an Obfuscater section.
 Either of these sections (on both the server and the client) could be switched out with an equivalent pair, and it would continue to function correctly without changing other parts of the program.
+
+\subsection{Data Buffer}
+As the entire project is about transmitting data, a lot of the data transfer is built on `Data Buffers' which are essentially a bit-stream that encapsulates length, which means it's easy to tell when the bit-stream is complete.
