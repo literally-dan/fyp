@@ -136,7 +136,6 @@ The algorithm that I came up with resembles quicksort, however instead of compar
 Here is some side-by-side python to demonstrate this, and differences are highlighted:
 \lstset{frame=tb,
   language=Python,
-  showstringspaces=false,
   columns=flexible,
   basicstyle={\scriptsize\ttfamily},
   numbers=left,
@@ -144,7 +143,6 @@ Here is some side-by-side python to demonstrate this, and differences are highli
   commentstyle=\color{dkgreen},
   stringstyle=\color{mauve},
   breaklines=true,
-  breakatwhitespace=true,
   framerule=0pt,
   tabsize=2,
   stepnumber=1,
@@ -260,7 +258,139 @@ It is notable that English text gets fewer bits encoded than random data, which 
 This idea can be applied to HTTP headers, to get data from the client to the server.
 
 \subsection{HTTP Mutator}
+The HTTP Mutator is the layer that understands HTTP, and where data can be inserted.
+To make this work, I had to implement a the HTTP protocol to a level where every part of it can be manipulated. I started of by using libraries, but the library support was not there for chunked encoding, or modifying requests and forwarding them on.\par
+Implementing HTTP was not too difficult, as it is a plaintext protocol that is reasonably well defined, however in order to make it work, all of the different compression types have to be handled. I chose to strip the compression out rather than spend time implementing lots of variations on the same compression scheme.\par
 
+\subsubsection{Inserting HTML-encoded data}
+In order to insert HTML-encoded data in a sensible place, there are a some problems to solve:
+\begin{itemize}
+    \item The length of the HTML-encoded data will change
+    \item The length of the initial HTML will change
+    \item The position of the HTML-encoded data needs to be calculated
+\end{itemize}
+
+The solution I came up with to solve the above issues is twofold.\par
+Firstly, the data is encoded with a length appended to the front.
+The length is in ascii with a colon immediately following which while being more inefficient from a data-storage perspective, provides a token that allows the program to be certain that if for a given section of HTML the HTML can be decoded into data, and the data is the same length as expected that it is in fact the data to be decoded.\par
+Secondly, there are only a limited number of places the data can be inserted. The number of valid `insertion' points (where HTML can be correctly inserted) is counted, and then a function is run which generates the following sequence of numbers:
+\begin{lstlisting}
+1
+12
+70
+376
+1992
+10524
+55573
+293432
+1549327
+8180453
+\end{lstlisting}
+The last valid insertion point is used to insert the data.
+The code used to generate the numbers is:
+\begin{lstlisting}
+def get_position(length):
+    current = 1
+    next = 1
+
+    while(next < length):
+        current = next
+        next += current*1.2+2
+        next += next*1.4 + 2
+        next = int(next)
+    return current
+\end{lstlisting}
+This sequence was used because it provides a small number of points to test to see if data is present, and it expands exponentially, but starts quite slow. There was a lot of testing and trial and error to get a sensible function.
+Typically a HTML page doesn't have even \texttt{55573} `insertion' points, however in testing, pages with up to \texttt{300,000} insertion points were found.
+
+\subsubsection{Chunked Encoding}
+Chunked encoding differs from standard HTTP by not sending a length of the entire response, but sending it in chunks, and sending the length of each chunk individually.
+More headers can also be sent with each chunk, and the webserver does not have to inform the client when all of the chunks have been sent. All of these complicate the matter of receiving data via chunked encoding.\par
+To solve these issues, the program concatenates multiple chunks together before inserting the extra HTML-encoded data inside.
 
 \subsection{HTTP Client}
+The HTTP client makes HTTP requests to the server, and data is encoded by changing the order of the headers and appending whitespace, as previously explained.\par
+To make the HTTP Requests, the Python Requests library is used. When requests are added to the request use by the requests library, it does not preserve the order they are added in, so to bypass this, the client modifies the fields directly inside the library.\par
+HTTP is a response/request protocol, so the client has to poll the server at regular intervals to check to see if the server has any data to return. If the server returns any data encoded into the HTML response, the client waits for a short amount of time before requesting another page. This continues until the server returns no data when the client goes back to polling at regular intervals. The same behavior occurs if the client has any data to send to the server, it makes frequent requests until all of the data has been sent.
+
 \subsection{Complete data flow}
+\subsubsection{Configuration}
+In this section, an end to end data flow is going to be explained by sending short messages in both directions with a direct connection to the TCP sockets exposed by the client and server of the program. All of the data here is present in a wireshark capture which is submitted as an appendix.\par
+\vspace{0.2cm}
+
+\texttt{netcat} is used to connect to listening socket on each computer.\par
+\vspace{0.2cm}
+
+The program has been set up as follows on two separate computers:
+
+\begin{center}
+\begin{tikzpicture}[-latex ,auto ,node distance =2 cm and 6cm ,on grid,
+    semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=2 cm}, line/.style={color=black,line width=0.02cm}]
+\node[state] (A)[]{\texttt{./proxy.py config/cs-bham-http.yaml}};
+\node[state] (B)[below=4cm of A]{\texttt{./client.py http://computer1}};
+\node[state] (C)[below=of B]{\texttt{nc localhost 33333}};
+\node[state] (D)[above=of A]{\texttt{nc localhost 44444}};
+\node[fit=(A)(D), draw, thick, inner sep=0.2cm, blue,minimum width=9cm](PC1){};
+\node (PC1l) [right=of PC1] {Computer 1};
+\node[fit=(B)(C), draw, thick, inner sep=0.2cm, blue,minimum width=9cm](PC2){};
+\node (PC2l) [right=of PC2] {Computer 2};
+\draw[line] (B) to[bend right] node[right] {Wireshark recording all packets}(A);
+\draw[line] (A) to[bend left] (B);
+\draw[line] (B) -- node[right] {}(C);
+\draw[line] (C) -- (B);
+\draw[line] (A) -- node[left] {}(D);
+\draw[line] (D) -- (A);
+\end{tikzpicture}
+\end{center}
+\newpage
+\subsubsection{Encoded Whitespace}
+The first request with data encoded in it is:
+\begin{lstlisting}[basicstyle={\ttfamily},breaklines=true,numbers=none,showstringspaces=true,showlines=true,showspaces=false]
+GET / HTTP/1.1
+Content-Length: 0                          (26)
+X-Request-ID: 8a5da39b-a61f-44eb-8952-c19ad81f3817                                         (41)
+Accept-Encoding: gzip, deflate             (13)
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36       (7)
+Pragma: no-cache        (8)
+Cookie: _ga=GA1.3.1924440076.1506628216                                         (41)
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8             (13)
+Referer: google.com       (7)
+Accept-Language: en-US,en;q=0.9,en-GB;q=0.8        (8)
+Connection: keep-alive                                 (33)
+Host: www.cs.bham.ac.uk (1)
+Cache-Control: no-cache                  (18)
+DNT: 1                           (27)
+Upgrade-Insecure-Requests: 1                                     (37)
+
+\end{lstlisting}
+The numbers at the end of each line are the number of spaces.
+For the purposes of demonstration, the number of bits transferred in whitespace have been increased, and there are a maximum of 64 spaces per line, which means 6 bits/header.
+The first number is \texttt{26}, which is \texttt{11010} in binary.
+However, this is only 5 binary digits, and each line represents 6, so a 0 is appended to the start, resulting in: \texttt{011010}. As previously, the binary is transferred as least significant bit first, which means the order is reversed to \texttt{010110}.
+Therefore, the binary from appending whitespace is the following:\\
+\texttt{010110100101101100111000000100100101101100\\
+111000000100100001100000010010110110101001}\\
+\vspace{0.3cm}
+\subsubsection{Reordering of headers}
+In the example above, the headers are out of order, and data is stored in the order of them.
+To get the data back out, the list is sorted, and the first item is taken to act as a `pivot', which is the \texttt{Accept:} header.
+The sorted list is then compared to the original list, and for every element in the sorted list that appears before \texttt{Accept:} a 1 is output, and if it appears afterwards, a 0 is output.
+For the top level, this results in the following binary output: \texttt{1000110010011}, and this is recursed upon on each sub-list (before and after the pivot).
+When this has been repeated for all of the sub-lists until the sublists are empty, the following data is output:\\
+\texttt{1000110010011100010111000010101000}.\\
+This is appended to the start of the previous binary stream, and is half of the data we need for the current data.
+\subsubsection{Client Side remainder}
+The rest of the data is in another request, and is:\\
+\texttt{1011001110110011101000011011100110101001\\
+1010000100010100000000000000000000000000\\
+000000000000000000000000000000000000000}\\
+Lots of the data is 0's, and this is because when the whitespace is appended to the headers, if no whitespace is appended, that represents only 0's.
+To get the initial data out, we append the current data to the end of this, and then reverse all of it.\\
+The first 24 bits of this are:\\
+\texttt{100011001001110001011100}\\
+Which is \texttt{:91} in ascii. However, this is backwards, and when it is reversed it tells us that the length is 19. Therefore, to get the full data out, we have to read the next $19 * 8 = 152$ bits.\\
+This means the resulting message is:\par
+\texttt{This is a message!}
+
+\subsubsection{Data encoded in HTML}
+
