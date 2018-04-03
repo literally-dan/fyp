@@ -140,7 +140,7 @@ Here is some side-by-side python to demonstrate this, and differences are highli
   basicstyle={\scriptsize\ttfamily},
   numbers=left,
   keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
+  commentstyle=\color{green},
   stringstyle=\color{mauve},
   breaklines=true,
   framerule=0pt,
@@ -272,7 +272,7 @@ In order to insert HTML-encoded data in a sensible place, there are a some probl
 
 The solution I came up with to solve the above issues is twofold.\par
 Firstly, the data is encoded with a length appended to the front.
-The length is in ascii with a colon immediately following which while being more inefficient from a data-storage perspective, provides a token that allows the program to be certain that if for a given section of HTML the HTML can be decoded into data, and the data is the same length as expected that it is in fact the data to be decoded.\par
+The length is in ASCII which while being more inefficient from a data-storage perspective, provides a token that allows the program to be certain that if for a given section of HTML the HTML can be decoded into data, and the data is the same length as expected that it is in fact the data to be decoded.\par
 Secondly, there are only a limited number of places the data can be inserted. The number of valid `insertion' points (where HTML can be correctly inserted) is counted, and then a function is run which generates the following sequence of numbers:
 \begin{lstlisting}
 1
@@ -392,5 +392,97 @@ Which is \texttt{:91} in ascii. However, this is backwards, and when it is rever
 This means the resulting message is:\par
 \texttt{This is a message!}
 
+\newpage
 \subsubsection{Data encoded in HTML}
+To encapsulate data in the HTTP Response (from the server to the client), data is encoded into the HTML response.
 
+\lstdefinelanguage{pagefile}{% list of keywords
+  morekeywords={DELIM,PAGE},
+  otherkeywords = {<-,\%,*},
+  sensitive=false, % keywords are not case-sensitive
+  morecomment=[s]{\{}{\}}
+}
+The config file used to generate the HTML to insert into the page is as follows, and the binary value for each choice is appended to end of each line and highlighted (the order may seem strange, but this is because of the bit-order):
+\begin{lstlisting}[language=pagefile]
+PAGE#0.1
+DELIM <-
+
+num <- 6 {00}
+num <- 7 {10}
+num <- 8 {01} 
+num <- 9 {11}
+
+url <- https://en.wikipedia.org/wiki/Standards-compliant {000}
+url <- https://en.wikipedia.org/wiki/The_Remaining_Documents_of_Talaat_Pasha {100}
+url <- https://en.wikipedia.org/wiki/Millettia_pinnata {010}
+url <- https://en.wikipedia.org/wiki/Lance_Tait {110}
+url <- https://en.wikipedia.org/wiki/Doll,_Highland {001}
+url <- https://en.wikipedia.org/wiki/Wilf_Spooner {101}
+url <- https://en.wikipedia.org/wiki/May_Moustafa {011}
+url <- https://en.wikipedia.org/wiki/London_District_Signals {111}
+
+text <- Statement #4 {00}
+text <- Rubber ducks are planning world domination {10}
+text <- This is text? {01}
+text <- Save water, drink beer {10}
+
+
+3dnum <- %num%num%num
+
+imgbase <- http://lorempixel.com {0}
+imgurl <- %imgbase/%3dnum/%3dnum {1}
+
+tags <- <h1>%text</h1> {000}
+tags <- <h2>%text<h2> {100}
+tags <- <p>%text</p> {010}
+tags <- <div>%tags</div> {110}
+tags <- <span>%tags</span> {001}
+tags <- <img src=%imgurl /> {101}
+tags <- <a href=%url>%text</a> {011}
+tags <- <a href=%url>%tags</a> {111}
+
+content <- <br /> {0}
+content <- %content<br>%tags {1}
+
+*htmlbody <- %content
+\end{lstlisting}
+In the example, the data is inserted into position 70, and below is the first section of this:
+\begin{lstlisting}[language=HTML,numbers=none]
+<br />
+<br />
+<br />
+<br />
+<br /><br><h1>Statement #4</h1><br><div><span><span><h2>Rubber ducks are planning world domination<h2></span></span></div>
+<br /><br><div><p>Statement #4</p></div>
+<br />
+\end{lstlisting}
+The lines with just \texttt{<br />} are just the bit \texttt{0}, as defined in the file above.
+The next line is slightly more complex.
+To calculate the value of it, the `\texttt{leaf}' nodes are replaced with their binary value and the type of node like so:
+\begin{lstlisting}[numbers=none]
+%content:0%<br><h1>%text:00%</h1><br><div><span><span><h2>%text:10%<h2></span></span></div>
+\end{lstlisting}
+The next step is to parse valid patterns, so for example a \texttt{tag} can be a \texttt{<h1>\%text</h1>}, and repeat.\\
+Each step is shown below:
+\begin{lstlisting}[numbers=none]
+%content:1000000%<br><div><span>%tags:00110010%</span></div>
+%content:1000000%<br><div>%tags:00100110010%</div>
+%content:1100000011000100110010%
+%htmlbody:1100000011000100110010%
+\end{lstlisting}
+As \texttt{htmlbody} is the top-level, this is the output:\\
+\texttt{1100000011000100110010}\\
+Adding in the previous 0's, we get:\\
+\texttt{00001100000011000100110010}\\
+This is only a portion of the data in the request, but the entirety of it is:
+\begin{lstlisting}[numbers=none,breaklines=true,breakatwhitespace=false]
+000011000000110001001100101011001000001001110110001001100000010000101110000101101001
+011011001110001101000000010010010110110011100000010010000110000001000100111010100110
+1100111000001110111101100111011011001110101001100111010001010000
+\end{lstlisting}
+Which when converted to ASCII is:
+0025And this, is a response.
+The 4 digit number at the start is the length in bytes of the message that has been sent, and the length is sent in ASCII for the reasons described in the previous section.
+
+\subsubsection{Note on binary reordering}
+In the previous sections, there is a lot of reversing the order of bits and bytes etc, this is because in the implementation, I used treated the binary byte order as least significant bit first, which is different to the typical use. There is no real reason for this, and no advantages/disadvantages, aside from that it makes it slightly more difficult to explain. 
