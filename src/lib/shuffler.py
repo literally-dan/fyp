@@ -190,8 +190,8 @@ def unshuffle(ls):
         return ""
     output = ""
     sortedls = sorted(list(set(ls)))
-    pivot = ls.index(sortedls[0])
-    leftlist = ls[:pivot]
+    pivot = ls.index(sortedls[0]) #accept
+    leftlist = ls[:pivot] 
     rightlist = ls[pivot+1:]
     for x in sortedls[1:]:
         if x in leftlist:
@@ -199,7 +199,10 @@ def unshuffle(ls):
         else:
             output+="0"
 
-    return output + unshuffle(leftlist) + unshuffle(rightlist)
+    L = unshuffle(leftlist)
+    R = unshuffle(rightlist)
+
+    return output + L + R
 
 
 
@@ -258,4 +261,3 @@ def add_whitespace(headers,datasource,count):
 
 if __name__ == "__main__":
     main()
-

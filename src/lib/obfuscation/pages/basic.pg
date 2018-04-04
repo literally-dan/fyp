@@ -21,7 +21,6 @@ int <-1
 int <-2
 int <-3
 int <-4
-int <-%int%int
 intexp <-%int
 intexp <-(%intexp %op %intexp)
 #Elements of an expression that begin with '%' are references to other defined tokens.
