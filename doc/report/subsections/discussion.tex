@@ -1,1 +1,32 @@
 \section{Discussion}
+In this section, the successes and failures of the project will be discussed, along with how it could be improved.
+\subsection{Successes}
+The project was successful in that it met all of its aims, and even surpassed some of them, with it going undetected by a number of open-source deep-packet-inspection tools in my own testing.
+
+\subsection{Failures and Limitations}
+Most of the project went reasonably well, however there are areas that I feel the project performs badly, and design choices that were made that while they made sense at the time were not the most sensible choice in reflection.\par
+Chief amongst these is to act as a TCP tunnel rather than a UDP tunnel. A TCP tunnel was chosen originally because it's easier to test and do the initial setup for the program.\par
+UDP would have been better, because it's split into packets, and UDP does not require any guarantees that the data arrives, instead relying on the applications at each end to keep track of everything that has and has not arrived.\par
+This would mean that the project internals could be streamlined, and everything could have been done on a packet-by-packet basis rather than breaking a TCP stream up into arbitrary chunks.\par
+Using UDP would also mean that OpenVPN would have worked considerably better than it does over TCP\@.\par
+The other issue that is noteworthy is the transmission speed of the data.\par
+At sub-dial up speeds, accessing the internet is not the most seamless experience.\par
+The reasons behind this are complex, and a considerable amount of it stems from my choice of using Python, rather than using a lower level language, as Python is relatively slow.
+\subsection{Mitigations}
+While existing solutions do not seem to detect the presence of additional data being transferred over HTTP, if the project became widely used, or even noticed, it would be trivial to stop all of the methods of data insertion.\par
+\begin{itemize}
+    \item Inserting HTML could be prevented by inserting any HTML towards the start of the page, or otherwise manipulating the HTML present in the page.
+    \item Appending whitespace to the end of the headers could be prevented by sanitising the header fields
+    \item Encoding data into the order of the headers could be prevented by sorting the headers
+\end{itemize}
+All of these would be reasonably trivial to carry out.
+
+\subsection{Reflection}
+If I were to do the project again, I would not use Python. I did not anticipate the how slow areas of the project would be in Python, and the lack of strong-types caused me endless headaches, along with Pythons interesting approach to including local files.
+\subsection{Further Work}
+If the project were to be continued, a sensible next step would be to work on improving the throughput. This could be done in a number of ways, however the immediate speed improvements would be seen by improving the speed of the generic obfuscation layer, as it relies heavily on regular expressions, which are slow.\par
+More configuration would also definitely be a positive, as while there is a lot of configuration available there are options which are configurable in the way the code is written, but never exposed to the user.\par
+Another area that would be good would be an option to use UDP as well as TCP, which would enable more applications to be used with the project.
+\subsection{Final Thoughts}
+I spent a lot of time making this project, and I feel like it was a very valuable use of time from which I learnt a lot. Before starting the project, I had never used Python, which was one of the reasons I decided to develop it in Python, even though as previously stated it probably was not the best fit for the project.\par
+I also experimented with lots of technologies for testing that didn't fit into the report, one of which is using Docker, which allowed me to easily create varied testing environments to run the project in for testing.
