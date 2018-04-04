@@ -1,3 +1,24 @@
+\lstset{frame=tb,
+  language=Python,
+  columns=flexible,
+  basicstyle={\scriptsize\ttfamily},
+  numbers=left,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  framerule=0pt,
+  tabsize=2,
+  stepnumber=1,
+  escapeinside=\@\@,
+}
+\lstdefinelanguage{pagefile}{% list of keywords
+  morekeywords={DELIM,PAGE},
+  otherkeywords = {<-,\%,*},
+  sensitive=false, % keywords are not case-sensitive
+  morecomment=[s]{\{}{\}}
+}
+
 \section{Implementation}
 In this section I am going through all of the areas of the project that I have talked about in the design section, along with discussing programming language choice and the use of libraries.
 
@@ -23,8 +44,6 @@ It also verifies the config file passed to it in the following ways:
 This helps make sure the project is stable.\par
 
 The Proxy maintains both sockets by storing a buffer each way of data that is ready to send, but not yet sent. When the data is sent, it checks the sockets to make sure it has been sent successfully, and if it has not been it tears down the socket and rebuilds it. If the socket cannot come back up, it terminates the program.
-The benefit of this is that the mutator layer above does not need to worry about maintaining sockets (however in my mutator code I do perform some basic error and sanity checking).
-
 \subsection{Obfuscator}
 The Obfuscator is split into three parts:
 \begin{itemize}
@@ -38,7 +57,7 @@ The generic obfuscator that I created can be used to take any input and generate
 As this is for generating structured data, and in the context of this project, HTML, it is only used on the response side of the program to inject valid HTML into the page that is returned from the webserver.\par
 As an example, generating simple mathematical formulae from data is demonstrated below because it is significantly simpler and less verbose than HTML, however the process is the same and it is trivial to understand.\par
 The format defined for simple mathematical equations is as follows:
-\begin{verbatim}
+\begin{lstlisting}[language=pagefile]
 op <- *
 op <- +
 op <- -
@@ -50,7 +69,8 @@ int <-4
 intexp <-%int
 intexp <-(%intexp %op %intexp)
 *exp <- %intexp %op %intexp
-\end{verbatim}
+\end{lstlisting}
+
 As can be seen here, the format is defined recursively.
 The format is the built up by selecting the top level element which in this case `\texttt{exp}' (the asterisk is only to mark that it is the top level element).
 \texttt{exp} can only be represented by \texttt{\%intexp \%op \%intexp}. \\
@@ -134,20 +154,6 @@ In a list of 14 elements, there are $\Factorial{14}$ or $87178291200$ different 
 This means that there are $\Log[2]{\Factorial{14}}$, or roughly $36$ bits, or around 4 bytes of data that can be stored.\par
 The algorithm that I came up with resembles quicksort, however instead of comparing two elements to each other, the next bit of a bitstream is used to decide the order.
 Here is some side-by-side python to demonstrate this, and differences are highlighted:
-\lstset{frame=tb,
-  language=Python,
-  columns=flexible,
-  basicstyle={\scriptsize\ttfamily},
-  numbers=left,
-  keywordstyle=\color{blue},
-  commentstyle=\color{green},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  framerule=0pt,
-  tabsize=2,
-  stepnumber=1,
-  escapeinside=\@\@,
-}
 \vspace{0.5cm}
 \hrule
 {\setlength\multicolsep{0pt}
@@ -396,12 +402,6 @@ This means the resulting message is:\par
 \subsubsection{Data encoded in HTML}
 To encapsulate data in the HTTP Response (from the server to the client), data is encoded into the HTML response.
 
-\lstdefinelanguage{pagefile}{% list of keywords
-  morekeywords={DELIM,PAGE},
-  otherkeywords = {<-,\%,*},
-  sensitive=false, % keywords are not case-sensitive
-  morecomment=[s]{\{}{\}}
-}
 The config file used to generate the HTML to insert into the page is as follows, and the binary value for each choice is appended to end of each line and highlighted (the order may seem strange, but this is because of the bit-order):
 \begin{lstlisting}[language=pagefile]
 PAGE#0.1
@@ -480,8 +480,8 @@ This is only a portion of the data in the request, but the entirety of it is:
 011011001110001101000000010010010110110011100000010010000110000001000100111010100110
 1100111000001110111101100111011011001110101001100111010001010000
 \end{lstlisting}
-Which when converted to ASCII is:
-0025And this, is a response.
+Which when converted to ASCII is:\\
+\texttt{0025And this, is a response.}\\
 The 4 digit number at the start is the length in bytes of the message that has been sent, and the length is sent in ASCII for the reasons described in the previous section.
 
 \subsubsection{Note on binary reordering}
