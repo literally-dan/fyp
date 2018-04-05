@@ -1,25 +1,24 @@
 \section{Introduction}
+\subsection{Problem Definition}
+Censorship and monitoring of web traffic is a common occurrence around the world, as is deep packet inspection to ensure that traffic on port 80 is in fact HTTP traffic.
+On top of this, organisations have been known to man-in-the-middle HTTPS traffic by adding their own certificates to devices owned by the organisation.
+Therefore it would be useful to be able to tunnel data over HTTP and make it virtually impossible to tell that data transfer is occurring.
+
+\subsection{Aims}
 The aim of this project is to be able to tunnel data, and by extension operate a VPN over the Hypertext Transfer Protocol (HTTP). There are multiple reasons why this would want to be done, for example:
 \begin{itemize}
     \item To access services that are blocked by the current network
     \item To hide the fact that blocked services are being accessed
     \item To maintain privacy regarding services that are being accessed
 \end{itemize}
-
-In simple terms, the aims of the project are as follows:
+\vspace{0.5cm}
+In formal terms, the aims of the project are as follows:
 \begin{enumerate}
     \item To hide data in the HTTP requests and responses
     \item For the Server to be able to function as a valid HTTP Server
     \item To be able to communicate between the server and client using only HTTP
     \item To make the traffic look to a casual observer as valid HTTP traffic
 \end{enumerate}
-
-This project enables connections to be made and transmit data only over the HTTP protocol, and provide all of the benefits highlighted above.
-
-\subsection{Problem Defininition}
-Censorship and monitoring of web traffic is a common occurrence around the world, as is deep packet inspection to ensure that traffic on port 80 is in fact HTTP traffic.
-On top of this, organisations have been known to man-in-the-middle HTTPS traffic by adding their own certificates to devices owned by the organisation.
-The aim of this project is to be able to tunnel data over HTTP and make it virtually impossible to tell that data transfer is occurring.
 
 \subsection{Paper Overview}
 \begin{enumerate}
