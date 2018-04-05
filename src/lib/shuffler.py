@@ -191,7 +191,7 @@ def unshuffle(ls):
     output = ""
     sortedls = sorted(list(set(ls)))
     pivot = ls.index(sortedls[0]) #accept
-    leftlist = ls[:pivot] 
+    leftlist = ls[:pivot]
     rightlist = ls[pivot+1:]
     for x in sortedls[1:]:
         if x in leftlist:
