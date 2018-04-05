@@ -28,10 +28,8 @@ For the project, I opted to use Python for a number of reasons:
     \item Quick to develop and prototype
     \item Generally Safe
     \item Solid language design and features
+    \item Wealth of useful libraries
 \end{itemize}
-
-On top of this, I did not know any python when I started the project, and I wanted to learn something new, which I definitely feel I did.\\
-Python also has a wealth of useful libraries.
 
 \subsection{Proxy}
 As discussed previously, the proxy creates and maintains two sockets, and acts as a man in the middle between them, receiving data from one socket, mutating it with the current mutator, and then passing it on to the second socket.\par
@@ -148,11 +146,11 @@ In the project, a maximum of 16 spaces (or 4 bits) is used, for example, 7 space
 \subsubsection{Shuffling the order of lists}
 HTTP headers are stored as a dictionary, which means that we can reorder them, and the remote server, nor anyone listening to the traffic are likely to notice.
 If we have a list of 14 elements:\\
-`\texttt{A B C D E F G H I J K L M N}'
+`\texttt{A B C D E F G H I J K L M N}'\\
 Simple maths would dictate that data can be stored in the order of the list.\\
 In a list of 14 elements, there are $\Factorial{14}$ or $87178291200$ different ways to order the list.
 This means that there are $\Log[2]{\Factorial{14}}$, or roughly $36$ bits, or around 4 bytes of data that can be stored.\par
-The algorithm that I came up with resembles quicksort, however instead of comparing two elements to each other, the next bit of a bitstream is used to decide the order.
+The algorithm that I came up with resembles quicksort, however instead of comparing two elements to each other, the next bit of a bitstream is used to decide the order.\\
 Here is some side-by-side python to demonstrate this, and differences are highlighted:
 \vspace{0.5cm}
 \hrule
@@ -257,7 +255,7 @@ Type of data & English Text & Random Data & Binary 0's & Repeated `U's \\ \midru
 Bits Encoded & 482 & 493 & 4851 & 474 \\ \bottomrule
 \end{tabular}
 \end{table}
-{\tiny * The Random data test was run 100 times and this is the average.The english data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's.The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0$\times$10101010).}\par
+{\tiny * The Random data test was run 100 times and this is the average.The english data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's.The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0b10101010).}\par
 \vspace{0.5cm}
 It is notable that English text gets fewer bits encoded than random data, which is very different to different compression schemes.\par
 \vspace{0.5cm}
