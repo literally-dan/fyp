@@ -5,7 +5,7 @@ In this section, I will detail the various ways I tested the project during deve
 \subsection{Development Testing}
 As described in the design section, the project was built in layers, and each of these could be testing individually.
 \subsubsection{Proxy}
-The proxy was tested in development by using it as a TCP passthrough, and sending files through it and checking the hash of the file at both sides to ensure it was the same.\par
+The proxy was tested in development by using it as a TCP passthrough by transmitting files through it, and verifying the files were identical before and after transmission.
 On top of this, time-sensitive tests were run to ensure that buffering was not massively increasing latency.\par
 The next tests I ran was disconnecting the sockets at both ends at different times and reopening the sockets to see if the connection could be re-established.\par
 \subsubsection{HTTP layer}
@@ -98,7 +98,7 @@ Wed Apr  4 03:49:32 2018 127.0.0.1:49474 SIGUSR1[soft,connection-reset] received
 \end{verbatim}
 \end{lstlisting}
 They seem to be linked and caused by the issues highlighted above.\\
-It may have been possible to debug and solve all of the issues, however the throughput from OpenVPN was so low, it was almost unusable so there was not much point.
+It may have been possible to debug and solve all of the issues, however the throughput from OpenVPN was so low, it was almost unusable so it would serve little purpose
 
 \subsubsection{iperf}
 Iperf is a TCP-based performance tester.
@@ -112,7 +112,7 @@ The three initial aims for the project were:
     \item To hide data in the HTTP requests and responses
     \item For the Server to be able to function as a valid HTTP Server
     \item To be able to communicate between the server and client using only HTTP
-    \item To make the traffic look to a casual observer as valid HTTP traffic
+    \item To make the traffic appear as valid HTTP
 \end{enumerate}
 In this section, the aims are tested.
 \subsubsection{To hide data in the HTTP requests and responses}
@@ -124,7 +124,7 @@ This aim was fulfilled, as the HTTP server could be communicated with by using a
 \subsubsection{To be able to communicate between the server and client using only HTTP}
 With only port 80 (HTTP) available to communicate on, the server and client were able to communicate and send data.
 
-\subsubsection{To make the traffic look to a casual observer as valid HTTP traffic}
+\subsubsection{To make the traffic appear as valid HTTP}
 To test this, a network was created with a blacklist of websites, and only port 80 (HTTP) and DNS was allowed to leave the network.\par
 Using the project, SSH was able to access remote servers, and a SOCKS proxy was able to be used to access the blocked websites.\par
 A PFSense router was used as router/firewall for the network previously described, and PFSense comes with a suite of tools for deep packet inspection, and all of the traffic was shown as being HTTP traffic.\par

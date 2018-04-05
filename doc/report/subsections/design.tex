@@ -10,8 +10,8 @@ This means that to an observer, the VPN-Server will appear as a live mirror of a
 
 When talking about how data is transferred in detail, I will refer to the client uploading, or sending data to the server as the `Request' side, and when the client downloads, or receives data from the server as the `Response' side.
 
-Putting data in the Response side of the connection is trivial, as when you make a HTTP request, data is returned, and it is often different even if the same request is sent multiple times.
-The Request side, however is significantly more difficult. This is because when you are browsing a website, the request doesn't significantly change, and it would be incredibly obvious to an observer if for example the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order doesn't matter, and insensitive to whitespace.
+Putting data in the Response side of the connection is trivial, as when a user make a HTTP request, data is returned, and it is often different even if the same request is sent multiple times.
+The Request side, however is significantly more difficult. This is because when a user is browsing a website, the request doesn't significantly change, and it would be incredibly obvious to an observer if for example the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order doesn't matter, and insensitive to whitespace.
 
 \newpage
 \subsection{Server Overview}
@@ -117,11 +117,11 @@ bin <-1
 byte <- %bin%bin%bin%bin%bin%bin%bin%bin
 *out <- %byte
 \end{verbatim}
-This is a simple example that will simply print out a byte of the input at a time, but in binary.
+This is a simple example that will print out a byte of the input at a time, but in binary.
 The obfuscation was designed like this because it makes it easy to modify, extend and debug.
-The obfuscation is completely reversible, and more details about how it works will be explained in a later section.\par
+The obfuscation is completely reversible, and more details about how it works will be explained later.
 \subsubsection{List-Order Obfuscation}
-The idea behind List-Order obfuscation is that data can be stored in the order of a list, and retrieved. This is explained in detail in a later section.
+The idea behind List-Order obfuscation is that data can be stored in the order of a list, and retrieved. This is explained in detail later.
 
 \subsubsection{Whitespace Obfuscation}
 Whitespace Obfuscation is when binary data is converted to unary, and appended to whitespace insensitive fields.
