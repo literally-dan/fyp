@@ -1,1 +1,62 @@
 \section{Appendices}
+\subsection{Structure of ZIP file}
+\lstdefinestyle{tree}{literate=
+    {├}{{\smash{\raisebox{-1ex}{\rule{1pt}{\baselineskip}}}\raisebox{0.5ex}{\rule{1ex}{1pt}}}}1
+    {│}{{\smash{\raisebox{-1ex}{\rule{1pt}{\baselineskip}}}\raisebox{0.5ex}{\rule{1ex}{0pt}}}}1
+    {─}{{\raisebox{0.5ex}{\rule{1.5ex}{1pt}}}}1
+    {\ }{{\raisebox{0.5ex}{\rule{1.5ex}{0pt}}}}2
+    {└}{{\smash{\raisebox{0.5ex}{\rule{1pt}{\dimexpr\baselineskip-1.5ex}}}\raisebox{0.5ex}{\rule{1ex}{1pt}}}}1}
+
+
+\begin{lstlisting}[language=none,style=tree,firstline=2,lastline=8]
+\begin{verbatim}
+├── doc - contains the documentation for the project
+│   ├── demonstration - contains a short write-up for the demonstration
+│   ├── litreview - contains the literature review
+│   └── report - contains the report
+│       └── appendices
+├── src - contains the source code for the project
+└── www - a minimal clone of the Computer Science web page
+\end{verbatim}
+\end{lstlisting}
+
+\subsection{capture.pcapng}
+This is the capture file which was used when walking through the process step by step.
+
+\newpage
+\subsection{Running the code}
+The code can all be run separately, and should be platform independent, however the instructions are only provided for Linux using Docker, this is because it is multiple programs all which have to be run for the project to function.
+There is a \texttt{Dockerfile} and \texttt{docker-compose.yaml} file in the root of the included zip file, running \texttt{docker-compose up} will bring up 5 containers:
+\begin{itemize}
+    \item A webserver serving the index page of the computer science webpage
+    \item The proxy server
+    \item The client
+    \item An SSH Server
+    \item An SSH Client acting as a SOCKS proxy.
+\end{itemize}
+The layout is as such:
+\begin{center}
+\begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 5cm ,on grid,
+    semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=1 cm}, line/.style={color=black,arrows=-,line cap=butt,line width=0.07cm}]
+\node[state] (A)[]{HTTP-Tunnel Client};
+\node[state] (B)[above=of A]{HTTP-Tunnel Server};
+\node[state] (C)[left=of B]{Webserver};
+\node[state] (D)[below=of A]{SSH Client};
+\node[state] (E)[above right=of B]{Server-Server adapter};
+\node[state] (F)[above left=of E]{SSH Server};
+\path[line] (A) edge node[left] {HTTP Traffic} (B);
+\path[line] (A) edge node[left] {SSH Traffic} (D);
+\path[line] (B) edge node[above,rotate=90,anchor=west] {HTTP Traffic} (C);
+\path[line] (B) edge node[] {SSH Traffic} (E);
+\path[line] (E) edge node[] {SSH Traffic} (F);
+\end{tikzpicture}
+\end{center}
+This will start the computer you are running the containers on listening on port 8080, which will act as a SOCKS proxy.
+To see it in action, you can listen to the traffic created by the project on the local bridge called \texttt{wan}:
+\begin{lstlisting}[language=bash,numbers=none]
+    tcpdump -nni wan -vv
+\end{lstlisting}
+To do a \texttt{cUrl} request for example, the following command requests google.com over the proxy:
+\begin{lstlisting}[language=bash,numbers=none]
+    curl google.com --socks5 localhost:8080
+\end{lstlisting}
