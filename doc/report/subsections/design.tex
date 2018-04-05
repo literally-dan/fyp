@@ -8,7 +8,7 @@ For this reason, data is inserted into real websites and realistic browsing patt
 
 This means that to an observer, the VPN-Server will appear as a live mirror of a real website that updates as the original does.
 
-When talking about how data is transferred in detail, I will refer to the client uploading, or sending data to the server as the `Request' side, and when the client downloads, or receives data from the server as the `Response' side.
+When talking about how data is transferred in detail, the client uploading, or sending data to the server is called the `Request' side, and when the client downloads, or receives data from the server is the `Response' side.
 
 Putting data in the Response side of the connection is trivial, as when a user make a HTTP request, data is returned, and it is often different even if the same request is sent multiple times.
 The Request side, however is significantly more difficult. This is because when a user is browsing a website, the request doesn't significantly change, and it would be incredibly obvious to an observer if for example the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order doesn't matter, and insensitive to whitespace.

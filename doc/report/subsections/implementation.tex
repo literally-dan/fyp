@@ -23,7 +23,7 @@
 In this section all of the areas of the project that have been talked about in the design section are discussed in detail.
 
 \subsection{Programming Language Choice}
-For the project, I opted to use Python for a number of reasons:
+For the project, Python was chosen for a number of reasons:
 \begin{itemize}
     \item Quick to develop and prototype
     \item Generally Safe
@@ -51,7 +51,7 @@ The Obfuscator is split into three parts:
 \end{itemize}
 
 \subsubsection{Generic Obfuscation}
-The generic obfuscator that I created can be used to take any input and generate an output of structured data. This is very useful for generating tree-like structures like HTML, as it is highly structured.\par
+The generic obfuscator that was created as part of the project can be used to take any input and generate an output of structured data. This is very useful for generating tree-like structures like HTML, as it is highly structured.\par
 As this is for generating structured data, and in the context of this project, HTML, it is only used on the response side of the program to inject valid HTML into the page that is returned from the webserver.\par
 As an example, generating simple mathematical formulae from data is demonstrated below because it is significantly simpler and less verbose than HTML, however the process is the same and it is simpler to understand.\par
 The format defined for simple mathematical equations is as follows:
@@ -150,7 +150,7 @@ If we have a list of 14 elements:\\
 Simple maths would dictate that data can be stored in the order of the list.\\
 In a list of 14 elements, there are $\Factorial{14}$ or $87178291200$ different ways to order the list.
 This means that there are $\Log[2]{\Factorial{14}}$, or roughly $36$ bits, or around 4 bytes of data that can be stored.\par
-The algorithm that I devised resembles quicksort, however instead of comparing two elements to each other, the next bit of a bitstream is used to decide the order.\\
+The algorithm devised resembles quicksort, however instead of comparing two elements to each other, the next bit of a bitstream is used to decide the order.\\
 Here is some side-by-side python to demonstrate this, and differences are highlighted:
 \vspace{0.5cm}
 \hrule
@@ -255,7 +255,7 @@ Type of data & English Text & Random Data & Binary 0's & Repeated `U's \\ \midru
 Bits Encoded & 482 & 493 & 4851 & 474 \\ \bottomrule
 \end{tabular}
 \end{table}
-{\tiny * The Random data test was run 100 times and this is the average.The english data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's.The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0b10101010).}\par
+{\tiny * The Random data test was run 100 times and this is the average.The English data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's.The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0b10101010).}\par
 \vspace{0.5cm}
 It is notable that English text gets fewer bits encoded than random data, which is very different to different compression schemes.\par
 \vspace{0.5cm}
@@ -263,8 +263,8 @@ This idea can be applied to HTTP headers, to get data from the client to the ser
 
 \subsection{HTTP Mutator}
 The HTTP Mutator is the layer that understands HTTP, and where data can be inserted.
-To make this work, I had to implement a the HTTP protocol to a level where every part of it can be manipulated. I started of by using libraries, but the library support was not there for chunked encoding, or modifying requests and forwarding them on.\par
-Implementing HTTP was not too difficult, as it is a plaintext protocol that is reasonably well defined, however in order to make it work, all of the different compression types have to be handled. I chose to strip the compression out rather than spend time implementing lots of variations on the same compression scheme.\par
+To make this work, the HTTP protocol had to be implemented to a level where every part of it can be manipulated. Using libraries was initially,  but the library support was not there for chunked encoding, or modifying requests and forwarding them on.\par
+Implementing HTTP was not too difficult, as it is a plaintext protocol that is reasonably well defined, however in order to make it work, all of the different compression types have to be handled. It was chosen to strip the compression out rather than spend time implementing lots of variations on the same compression scheme.\par
 
 \subsubsection{Inserting HTML-encoded data}
 In order to insert HTML-encoded data in a sensible place, there are a some problems to solve:
@@ -274,7 +274,7 @@ In order to insert HTML-encoded data in a sensible place, there are a some probl
     \item The position of the HTML-encoded data needs to be calculated
 \end{itemize}
 
-The solution I came up with to solve the above issues is twofold.\par
+The solution used to solve the above issues is twofold.\par
 Firstly, the data is encoded with a length appended to the front.
 The length is in ASCII which while being more inefficient from a data-storage perspective, provides a token that allows the program to be certain that if for a given section of HTML the HTML can be decoded into data, and the data is the same length as expected that it is in fact the data to be decoded.\par
 Secondly, there are only a limited number of places the data can be inserted. The number of valid `insertion' points (where HTML can be correctly inserted) is counted, and then a function is run which generates the following sequence of numbers:
@@ -483,4 +483,4 @@ Which when converted to ASCII is:\\
 The 4 digit number at the start is the length in bytes of the message that has been sent, and the length is sent in ASCII for the reasons described in the previous section.
 
 \subsubsection{Note on binary reordering}
-In the previous sections, there is a lot of reversing the order of bits and bytes etc, this is because in the implementation, I used treated the binary byte order as least significant bit first, which is different to the typical use. There is no real reason for this, and no advantages/disadvantages, aside from that it makes it slightly more difficult to explain.
+In the previous sections, there is a lot of reversing the order of bits and bytes etc, this is because in the implementation, the binary byte order is least significant bit first, which is different to the typical use. There is no real reason for this, and no advantages/disadvantages, aside from that it makes it slightly more difficult to explain.

@@ -1,13 +1,13 @@
 \lstdefinelanguage{none}{identifierstyle=}
 \def\listingsfont{\ttfamily}
 \section{Testing}
-In this section, I will detail the various ways I tested the project during development and the more in depth testing upon completion.
+In this section, the various ways the project was tested during development and the more in depth testing upon completion.
 \subsection{Development Testing}
 As described in the design section, the project was built in layers, and each of these could be testing individually.
 \subsubsection{Proxy}
 The proxy was tested in development by using it as a TCP passthrough by transmitting files through it, and verifying the files were identical before and after transmission.
 On top of this, time-sensitive tests were run to ensure that buffering was not massively increasing latency.\par
-The next tests I ran was disconnecting the sockets at both ends at different times and reopening the sockets to see if the connection could be re-established.\par
+The next tests run were disconnecting the sockets at both ends at different times and reopening the sockets to see if the connection could be re-established.\par
 \subsubsection{HTTP layer}
 Testing the HTTP layer was done by parsing a variety of HTTP requests from a browser to multiple sites and the sites responses and making sure that the layer correctly understood all of the data that it was being given.\par
 Data was then manipulated in the requests to ensure that both chunked and normal encoding types were supported when the data was manipulated.
@@ -35,7 +35,7 @@ The client was set up on one computer, and the server was setup on a second, con
 The webserver that the server connects to was also hosted on the local network.
 
 \subsubsection{TCP Server-Server adapter}
-For all of the following tests as the server exposes a TCP listening socket, and as does the service with which to connect, a bridge is needed between the two, so I made a small program which connects to both servers and forwards all data between them.
+For all of the following tests as the server exposes a TCP listening socket, and as does the service with which to connect, a bridge is needed between the two, so a small program was created which connects to both servers and forwards all data between them.
 
 \subsubsection{Testing with cUrl}
 cUrl is a program that can be used to download web pages and make HTTP requests.
@@ -80,13 +80,13 @@ A connection was successfully established, and data is transferred, however ther
     \item OpenVPN sometimes detects it is being tunneled and thinks it is an attack on TCP
 \end{itemize}
 The first issue is to be expected, as a VPN is quite a heavy piece of software, and it was possible to access services over the VPN link.
-The second issue was intermittent, and as far as I can work out is caused by a combination of a few things:
+The second issue was intermittent, and the precise cause is unknown, however it seems to be caused by a combination of a few things:
 \begin{itemize}
     \item OpenVPN reads and writes packets directly to the wire, so treats TCP as a datagram based protocol rather than as a stream based protocol
     \item When the link gets saturated packets get fragmented and concatenated by my program
     \item As the packets get broken up the HMAC for each datagram becomes invalid
 \end{itemize}
-The errors I got when running openvpn are the following:
+The errors produced when running OpenVPN are the following:
 \begin{lstlisting}[language=none,numbers=none,firstline=2,lastline=7]
 \begin{verbatim}
 Wed Apr  4 03:47:31 2018 127.0.0.1:48830 TLS Error: cannot locate HMAC in incoming packet from [AF_INET]127.0.0.1:48830
@@ -102,9 +102,9 @@ It may have been possible to debug and solve all of the issues, however the thro
 
 \subsubsection{iperf}
 Iperf is a TCP-based performance tester.
-I setup a listening server on the remote end, and a client on the local server.
-Over a variety of tests, I was able to get 32.7kb/s download, and 17.8kb/s upload.\\
-While these speeds are not blisteringly fast, they are reasonable and roughly what I would expect as the overhead is so great.
+A listening server was setup on the remote end, and a client on the local server.
+Over a variety of tests, the average performance was 32.7kb/s download, and 17.8kb/s upload.\\
+While these speeds are not blisteringly fast, they are reasonable and roughly what can be expected as the overhead is so great.
 
 \subsection{Functional testing}
 The three initial aims for the project were:
