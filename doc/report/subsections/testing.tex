@@ -4,19 +4,19 @@
 In this section, the various ways the project was tested during development and the more in depth testing upon completion.
 \subsection{Development Testing}
 As described in the design section, the project was built in layers, and each of these have been tested individually.
-\subsubsection{Proxy}
+\subsubsection*{Proxy}
 The proxy was tested in development by using it as a TCP passthrough by transmitting files through it, and verifying the files were identical before and after transmission.
 On top of this, time-sensitive tests were run to ensure that buffering was not massively increasing latency.\par
 The next tests run were disconnecting the sockets at both ends at different times and reopening the sockets to see if the connection could be re-established.\par
-\subsubsection{HTTP layer}
+\subsubsection*{HTTP layer}
 Testing the HTTP layer was done by parsing a variety of HTTP requests from a browser to multiple website's and the sites responses and making sure that the layer correctly interpreted all of the data that it was being given.\par
 Data was then manipulated in the requests to ensure that both chunked and normal encoding types were supported when the data was manipulated.
-\subsubsection{Obfuscation layer}
+\subsubsection*{Obfuscation layer}
 Testing the obfuscation layer consisted of lots of tests involving large files of random data to check that data that has been obfuscated can be recovered correctly.\par
 Testing the whitespace was simple, as it is a linear data transfer, and if some data gets through, there are no complexities and edge cases that could cause issues with certain inputs, which means that large scale testing as with the other parts was not necessary.
 Testing the shuffling is slightly more difficult to test because as the shuffling algorithm is new work, there are no guarantees it would work correctly.\par It was tested with large lists and lots of data.
 Testing the generic obfuscation was a multi stage process, firstly testing that simple obfuscation can work, with large random data files. Once this was fully tested, it was tested with more complex obfuscation and similar large files, finally resulting in being tested with the full HTTP obfuscation and large files.
-\subsubsection{End to end testing}
+\subsubsection*{End to end testing}
 The end to end testing was similar to testing the proxy, as the goal was for the behavior to be the same, namely reliable data transfer without mounting latency caused by overzealous buffering.
 
 \subsection{Application testing}
@@ -27,27 +27,25 @@ The applications that were tested are the following:
     \item SSH
     \item SSH Socks Proxy
     \item OpenVPN
-    \item iperf
+    \item iPerf
 \end{itemize}
 
-\subsubsection{Testing setup}
 The client was set up on one computer, and the server was setup on a second, connected over a fast local network.
-The webserver that the server connects to was also hosted on the local network.
+The webserver that the server connects to was also hosted on the local network.\par
 
-\subsubsection{TCP Server-Server adapter}
 For all of the following tests as the server exposes a TCP listening socket, and as does the service with which to connect, a bridge is needed between the two, so a small program was created which connects to both servers and forwards all data between them.
 
-\subsubsection{Testing with cUrl}
+\subsubsection*{Testing with cUrl}
 cUrl is a program that can be used to download web pages and make HTTP requests.
 The remote server was pointed at a webserver, and then curl requests could be made to the local listening port.\\
 cUrl was able to get web pages of varying sizes correctly.
 
-\subsubsection{Testing with SSH}
+\subsubsection*{Testing with SSH}
 SSH is a program that can be used to remotely manage computers and perform tasks on them.
 The remote server was pointed at an SSH server, and ssh was used to connect to the local socket and make an SSH connection.
 It was possible to do server administration and even file editing with programs like \texttt{vim}, and the responsiveness that was provided was surprising, given the very limited bandwidth that was available.
 
-\subsubsection{Testing with SSH Socks Proxy}
+\subsubsection*{Testing with SSH Socks Proxy}
 A feature that SSH provides is the ability to advertise a local socks proxy on the client side.
 A socks proxy receives HTTP requests for remote webservers and forwards the requests on to get the response.
 When testing with this, the setup was similar to the SSH test previously, except the client connected and acted as a SOCKS5 client.
@@ -70,7 +68,7 @@ The below diagram is applicable for both SSH tests, and provides a good overview
 \end{tikzpicture}
 \end{center}
 
-\subsubsection{OpenVPN}
+\subsubsection*{OpenVPN}
 OpenVPN is the main open source VPN server and client.\\
 To test OpenVPN, it was setup and tested as a server and client pair separately to verify the configuration was correct.\par
 OpenVPN was then used on top of the HTTP-Tunnel.\par
@@ -100,8 +98,8 @@ Wed Apr  4 03:49:32 2018 127.0.0.1:49474 SIGUSR1[soft,connection-reset] received
 They seem to be linked and caused by the issues highlighted above.\\
 It may have been possible to debug and solve all of the issues, however the throughput from OpenVPN was so low, it was almost unusable so it would serve little purpose
 
-\subsubsection{iperf}
-Iperf is a TCP-based performance tester.
+\subsubsection*{iPerf}
+iPerf is a TCP-based performance tester.
 A listening server was setup on the remote end, and a client on the local server.
 Over a variety of tests, the average performance was 32.7kb/s download, and 17.8kb/s upload.\\
 While these speeds are not blisteringly fast, they are reasonable and roughly what can be expected as the overhead is so great.
@@ -115,16 +113,16 @@ The three initial aims for the project were:
     \item To make the traffic appear as valid HTTP
 \end{enumerate}
 In this section, the aims are tested.
-\subsubsection{To hide data in the HTTP requests and responses}
+\subsubsection*{To hide data in the HTTP requests and responses}
 This aim was fulfilled, and is tested by transmitting data between the server and client.
 
-\subsubsection{For the Server to be able to function as a valid HTTP Server}
+\subsubsection*{For the Server to be able to function as a valid HTTP Server}
 This aim was fulfilled, as the HTTP server could be communicated with by using a typical web browser and it would respond correctly.
 
-\subsubsection{To be able to communicate between the server and client using only HTTP}
+\subsubsection*{To be able to communicate between the server and client using only HTTP}
 With only port 80 (HTTP) available to communicate on, the server and client were able to communicate and send data.
 
-\subsubsection{To make the traffic appear as valid HTTP}
+\subsubsection*{To make the traffic appear as valid HTTP}
 To test this, a network was created with a blacklist of websites, and only port 80 (HTTP) and DNS was allowed to leave the network.\par
 Using the project, SSH was able to access remote servers, and a SOCKS proxy was able to be used to access the blocked websites.\par
 A PFSense router was used as router/firewall for the network previously described, and PFSense comes with a suite of tools for deep packet inspection, and all of the traffic was shown as being HTTP traffic.\par

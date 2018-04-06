@@ -304,10 +304,9 @@ def get_position(length):
     return current
 \end{lstlisting}
 This sequence was used because it provides a small number of points to test to see if data is present, and it expands exponentially, but starts quite slow. There was a lot of testing and trial and error to get a sensible function.
-Typically a HTML page does not even have \texttt{55573} `insertion' points, however in testing, pages with up to \texttt{300,000} insertion points were found.
+Typically a HTML page does not even have \texttt{55573} `insertion' points, however in testing, pages with up to \texttt{300,000} insertion points were found.\par
 
-\subsubsection{Chunked Encoding}
-Chunked encoding differs from standard HTTP by not sending the length of the entire response, but sending it in chunks, and sending the length of each chunk individually.
+HTTP has a feature called chunked encoding which differs from standard HTTP by not sending the length of the entire response, but sending it in chunks, and sending the length of each chunk individually.
 More headers can also be sent with each chunk, and the webserver does not have to inform the client when all of the chunks have been sent. All of these complicate the matter of receiving data via chunked encoding.\par
 To solve these issues, the program concatenates multiple chunks together before inserting the extra HTML-encoded data inside.
 
@@ -317,9 +316,8 @@ To make the HTTP Requests, the Python Requests library is used. When headers are
 HTTP is a response/request protocol, so the client has to poll the server at regular intervals to check to see if the server has any data to return. If the server returns any data encoded into the HTML response, the client waits for a short amount of time before requesting another page. This continues until the server returns no data when the client goes back to polling at regular intervals. The same behavior occurs if the client has any data to send to the server, it makes frequent requests until all of the data has been sent.
 
 \subsection{Complete data flow}
+In this section, an end to end data flow will be explained by sending short messages in both directions with a direct connection to the TCP sockets exposed by the client and server of the program. All of the data here is present in a Wireshark capture which is submitted as appendix 12.2.
 \subsubsection{Configuration}
-In this section, an end to end data flow will be explained by sending short messages in both directions with a direct connection to the TCP sockets exposed by the client and server of the program. All of the data here is present in a Wireshark capture which is submitted as appendix 12.2.\par
-\vspace{0.2cm}
 
 \texttt{netcat} is used to connect to listening socket on each computer.\par
 \vspace{0.2cm}

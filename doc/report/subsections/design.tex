@@ -100,7 +100,7 @@ The Obfuscation layer consists of three parts:
     \item Whitespace obfuscation
 \end{itemize}
 
-\subsubsection{Generic Obfuscation}
+\subsubsection*{Generic Obfuscation}
 Generic obfuscation is where a structure is defined, and then data can be placed into the defined structure.
 The structure is defined in a configuration file, called a `\texttt{page}' file, which sets out the structure the obfuscated data should fit into. It uses a custom configuration file format, for a number of reasons:
 \begin{itemize}
@@ -121,19 +121,15 @@ byte <- %bin%bin%bin%bin%bin%bin%bin%bin
 \end{verbatim}
 This is a simple example that will print out a byte of the input at a time, but in binary.
 The obfuscation was designed like this because it makes it easy to modify, extend and debug.
-The obfuscation is completely reversible, and more details about how it works will be explained in the implementation section.
-\subsubsection{List-Order Obfuscation}
-The idea behind List-Order obfuscation is that data can be stored in the order of a list, and retrieved. This is explained in the implementation section.
+The obfuscation is completely reversible, and more details about how it works will be explained in the implementation section.\par
 
-\subsubsection{Whitespace Obfuscation}
-Whitespace Obfuscation is when binary data is converted to unary, and appended to whitespace insensitive fields.
+The Obfuscation layer also includes {\bf List-Order} obfuscation, which stores data in the order of a list, and {\bf Whitespace Obfuscation} which is when binary data is converted to unary and appended to the end of elements as whitespace.\\
+Both of these are explained in detail in the implementation section.
 
 \subsection{HTTP Layer}
 The HTTP Layer consists of a `\texttt{mutator}' (as mentioned in the previous section), and a corresponding client. The HTTP layer understands the HTTP Protocol, and how data can be inserted into it.\par
 The mutator is simply used to modify data on the HTTP layer.\par
-The layer also calls the `\texttt{obfuscator}' which is used to insert data into the HTTP protocol.
-
-\subsubsection{Listening Ports}
+The layer also calls the `\texttt{obfuscator}' which is used to insert data into the HTTP protocol.\par
 The HTTP layer also contains the data endpoints, which are a pair of listening HTTP Sockets, one on the server and one on the client.\par
 This is where the data to be encoded is read from, and after decoding on the remote end, written to.
 \begin{center}
