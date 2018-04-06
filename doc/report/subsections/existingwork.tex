@@ -25,11 +25,11 @@ Javascript,
 Binary files,
 and more.
 All of which can be used to hide data.\par
-The HTTP headers could also be an area where data could be concealed, as they are whitespace insensitive, and they represent a dictionary which means that the order in which they are sent does not matter\cite{rfc2616}.
+The HTTP headers could also be an area where data could be concealed, as they are whitespace insensitive, and they represent a dictionary which means that the order in which they are sent does not matter.
 
 \subsection{Detecting tunneled DNS traffic}
 There are a variety of ways to detect traffic being tunneled through DNS, from entropy analysis to performing DNS requests\cite{detectingdns}.
-Entropy analysis is in simple terms looking at the `\texttt{randomness}' of the data to determine whether there is compressed or encrypted data within a stream, this works because compressed and encrypted data both strive to appear random (for different reasons), which means that they will have higher entropy than English text.
+Entropy analysis is in simple terms looking at the `\texttt{randomness}' of the data to determine whether there is compressed or encrypted data within a stream, this works because compressed and encrypted data both strive to appear random (for different reasons), which means that they will have higher entropy than English text.\par
 Another way of performing the lookup is to do character frequency analysis\cite{freqanal}.
 Frequency analysis looks at the difference in frequency of letters in domain names/english words and in random data. It is similar to but not quite the same as entropy analysis, and it is also more effective. 
-This is more effective because Domain names and English words have slightly different frequency characteristics to large passages of text, so determining whether something is likely to appear in a domain name is slightly different to determining whether it will appear in a block of text.
+This is more effective because domain names and English words have slightly different frequency characteristics to large passages of text, so determining whether something is likely to appear in a domain name is slightly different to determining whether it will appear in a block of text.
