@@ -3,17 +3,17 @@
 \section{Testing}
 In this section, the various ways the project was tested during development and the more in depth testing upon completion.
 \subsection{Development Testing}
-As described in the design section, the project was built in layers, and each of these could be testing individually.
+As described in the design section, the project was built in layers, and each of these have been tested individually.
 \subsubsection{Proxy}
 The proxy was tested in development by using it as a TCP passthrough by transmitting files through it, and verifying the files were identical before and after transmission.
 On top of this, time-sensitive tests were run to ensure that buffering was not massively increasing latency.\par
 The next tests run were disconnecting the sockets at both ends at different times and reopening the sockets to see if the connection could be re-established.\par
 \subsubsection{HTTP layer}
-Testing the HTTP layer was done by parsing a variety of HTTP requests from a browser to multiple sites and the sites responses and making sure that the layer correctly understood all of the data that it was being given.\par
+Testing the HTTP layer was done by parsing a variety of HTTP requests from a browser to multiple website's and the sites responses and making sure that the layer correctly interpreted all of the data that it was being given.\par
 Data was then manipulated in the requests to ensure that both chunked and normal encoding types were supported when the data was manipulated.
 \subsubsection{Obfuscation layer}
-Testing the obfuscation layer consisted of lots of tests involving large files and random data to check that data that has been obfuscated can be recovered correctly.\par
-Testing the whitespace was simple, as it is a linear data transfer, and if some data gets through, it can be safely assumed that more will follow.
+Testing the obfuscation layer consisted of lots of tests involving large files of random data to check that data that has been obfuscated can be recovered correctly.\par
+Testing the whitespace was simple, as it is a linear data transfer, and if some data gets through, there are no complexities and edge cases that could cause issues with certain inputs, which means that large scale testing as with the other parts was not necessary.
 Testing the shuffling is slightly more difficult to test because as the shuffling algorithm is new work, there are no guarantees it would work correctly.\par It was tested with large lists and lots of data.
 Testing the generic obfuscation was a multi stage process, firstly testing that simple obfuscation can work, with large random data files. Once this was fully tested, it was tested with more complex obfuscation and similar large files, finally resulting in being tested with the full HTTP obfuscation and large files.
 \subsubsection{End to end testing}

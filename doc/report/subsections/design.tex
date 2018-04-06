@@ -1,9 +1,9 @@
 \section{Design}
-This section sets out the High level program architecture and design, along with areas that are configurable and the different design choices that were made in the development of the project.
+This section sets out the high level program architecture and design, along with areas that are configurable and the different design choices that were made in the development of the project.
 
-During the design of the project, efforts were made to keep the entire program modular, so all sections are reusable and replaceable.
+During the design of the project, efforts were made to keep the entire program modular, so all sections are reusable and replaceable. This means that it is easier to maintain the code base and also makes it far easier to add functionality and re-purpose the exising code in the future.
 \subsection{HTTP Analysis}
-To embed data in HTTP on its own would be trivial, putting the data to send and receive as the request/response body as data, while this would get around many web filters, it would only require trivial inspection to determine it is in fact not real HTTP traffic.
+To embed data in HTTP on its own would be trivial, putting the data to send and receive as the request/response body as data. While this would get around many web filters, it would only require trivial inspection to determine it is in fact not real HTTP traffic.
 For this reason, data is inserted into real websites and realistic browsing patterns, and to do this the VPN-Server will act as a website mirror when navigated to in the browser.
 
 This means that to an observer, the VPN-Server will appear as a live mirror of a real website that updates as the original does.
@@ -11,7 +11,7 @@ This means that to an observer, the VPN-Server will appear as a live mirror of a
 When talking about how data is transferred in detail, the client uploading, or sending data to the server is called the `Request' side, and when the client downloads, or receives data from the server is the `Response' side.
 
 Putting data in the Response side of the connection is trivial, as when a user make a HTTP request, data is returned, and it is often different even if the same request is sent multiple times.
-The Request side, however is significantly more difficult. This is because when a user is browsing a website, the request doesn't significantly change, and it would be incredibly obvious to an observer if for example the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order doesn't matter, and insensitive to whitespace.
+The Request side, however, is significantly more difficult. This is because when a user is browsing a website, the request doesn't significantly change, and it would be incredibly obvious to an observer if, for example, the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order does not matter, and insensitive to whitespace.
 
 \newpage
 \subsection{Server Overview}
@@ -81,13 +81,15 @@ config:
     proxy-mutate-receive: receive
     proxy-mutate-send: send
 \end{verbatim}
-The config file is in yaml format.\par
-The `\texttt{name}' field is just a unique identifier.\\
-The `\texttt{remote}' and `\texttt{remote-port}' specify the remote host and port to connect to.\\
-The `\texttt{local-port}' specifies the local port to listen on.\\
-The `\texttt{test-request}' provides an example request to send to the remote server to check it is active, and the first `\texttt{test-response-length}' bytes are read from the socket and compared to the regular expression defined in `\texttt{test-response}'.\\
-`\texttt{proxy-mutator-location}' is the location of the file that stores the mutator code.
-`\texttt{proxy-mutate-receive}' and `\texttt{proxy-mutate-send}' are the names of the functions that are called when data is received from the remote server and needs mutating before sending to the client, and vice versa.\par
+The config file is in yaml format, and it is defined as follows:
+\begin{itemize}
+\item `\texttt{name}' field is just a unique identifier.
+\item `\texttt{remote}' and `\texttt{remote-port}' specify the remote host and port to connect to.
+\item `\texttt{local-port}' specifies the local port to listen on.
+\item `\texttt{test-request}' provides an example request to send to the remote server to check it is active, and the first `\texttt{test-response-length}' bytes are read from the socket and compared to the regular expression defined in `\texttt{test-response}'.
+\item `\texttt{proxy-mutator-location}' is the location of the file that stores the mutator code.
+\item `\texttt{proxy-mutate-receive}' and `\texttt{proxy-mutate-send}' are the names of the functions that are called when data is received from the remote server and needs mutating before sending to the client, and vice versa.
+\end{itemize}
 Because of all of this configuration testing connections, debugging, and attempting new things were made significantly simpler. It has also left significant scope for future expansion of the project.
 
 \subsection{Obfuscation Layer}
@@ -119,9 +121,9 @@ byte <- %bin%bin%bin%bin%bin%bin%bin%bin
 \end{verbatim}
 This is a simple example that will print out a byte of the input at a time, but in binary.
 The obfuscation was designed like this because it makes it easy to modify, extend and debug.
-The obfuscation is completely reversible, and more details about how it works will be explained later.
+The obfuscation is completely reversible, and more details about how it works will be explained in the implementation section.
 \subsubsection{List-Order Obfuscation}
-The idea behind List-Order obfuscation is that data can be stored in the order of a list, and retrieved. This is explained in detail later.
+The idea behind List-Order obfuscation is that data can be stored in the order of a list, and retrieved. This is explained in the implementation section.
 
 \subsubsection{Whitespace Obfuscation}
 Whitespace Obfuscation is when binary data is converted to unary, and appended to whitespace insensitive fields.
@@ -175,7 +177,7 @@ Both the server and the client have a HTTP section and an Obfuscater section.
 Either of these sections (on both the server and the client) could be switched out with an equivalent pair, and it would continue to function correctly without changing other parts of the program.
 
 \subsection{Data Buffer}
-As the entire project is about transmitting data, a lot of the data transfer is built on `Data Buffers' which are essentially a bit-stream that encapsulates length, which means it's easy to tell when the bit-stream is complete.
+As the entire project is about transmitting data, a lot of the data transfer is built on `Data Buffers' which are essentially a bit-stream that encapsulates length, which means it is easy to tell when the bit-stream is complete because the correct number of bits will be recieved, and thenext length header will not have been.
 
 \subsection{Server-Server adapter}
-Because on both ends of the project there is a TCP listening socket, an adapter is needed which can connect two listening sockets together, because most applications will have a client/server model and therefore one listening socket and one connecting.
+On both ends of the project there is a TCP listening socket, an adapter is needed which can connect two listening sockets together, because most applications will have a client/server model and therefore one listening socket and one connecting.

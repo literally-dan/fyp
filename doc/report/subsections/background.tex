@@ -41,26 +41,26 @@ A passive socket is listening, and is typically a \texttt{server} whereas an act
 
 \subsection{Steganography}
 Steganography is defined as\cite{dictsteno}:
-\begin{verbatim}
+\begin{quotation}
     the art or practice of concealing a message, image, or file within
     another message, image, or file
-\end{verbatim}
+\end{quotation}
 An example of this could be encoding data into an image, or into a HTTP stream.
 
 \subsection{Obfuscation}
 To obfuscate is defined as\cite{dictobfs}:
-\begin{verbatim}
+\begin{quotation}
      to be evasive, unclear, or confusing
-\end{verbatim}
+\end{quotation}
 Obfuscation is simply the act of being \texttt{evasive, unclear, or confusing}.\par
 When applied to computers, this is similar to steganography and the two terms are often used interchangeably, however steganography is the art of concealing and disguising data, whereas obfuscation just makes data difficult to read and understand. 
 
 \subsection{Encryption}
-\begin{Verbatim}[commandchars=\\\[\]]
+\begin{quotation}
     Encryption is the process of converting data to an unrecognizable or
     `encrypted' form. It is commonly used to protect sensitive
-    information so that only authorized parties can view it\cite[dictenc].
-\end{Verbatim}
+    information so that only authorized parties can view it\cite{dictenc}.
+\end{quotation}
 There are many types of encryption, AES and RSA are two major examples.\par
 It's generally referred to as bad practice to `\texttt{roll your own crypto}'\cite{memtocrypto}, which simply means that it is a bad idea to write a bespoke cryptographic algorithm, or to try and come up with your own cryptographic scheme.
 
@@ -74,10 +74,6 @@ HTTP is run over port 80, and this is often one of the only ports available. ISP
 
 \subsection{Data Tunnelling}
 Data Tunnelling is a term for transmitting data in a different form to how it is usually transmitted. A VPN is an example of this, as is an SSH (Secure SHell) tunnel.
-
-\subsection{Binary}
-Binary is how a computer represents data, and it is a series of 1's and 0's, each one is called a bit.
-All characters have a binary representation, and typically characters are made up of 8 bits. Some file formats may not have a concept of characters, and instead may utilise a stream, which means data is processed one bit at a time.
 
 \subsection{VPN}
 A VPN or Virtual Private Network which is defined in \texttt{RFC2764}\cite{rfc2764}, is a piece of software, split into a server and a client, where the server and the client (or clients) form a network which is both virtual and private.\\
