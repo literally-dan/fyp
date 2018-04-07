@@ -45,8 +45,9 @@ In the most basic configuration, data is read from one socket and written direct
 \end{tikzpicture}
 \end{center}
 
-The server runs two threads, one from the client to the server, and one in the return direction.\newpage
-This design was chosen because it allows traffic to be `\texttt{mutated}' on the fly:
+The server runs two threads completely independently, one from the client to the server, and one in the return direction.\newpage
+This design was chosen because it allows traffic to be `\texttt{mutated}' on the fly by the Proxy server:
+
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 4cm ,on grid,
     semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=1 cm}, line/.style={color=black,line width=0.07cm}]
@@ -133,12 +134,12 @@ The layer also calls the `\texttt{obfuscator}' which is used to insert data into
 The HTTP layer also contains the data endpoints, which are a pair of listening HTTP Sockets, one on the server and one on the client.\par
 This is where the data to be encoded is read from, and after decoding on the remote end, written to.
 \begin{center}
-\begin{tikzpicture}[-latex ,auto ,node distance =2 cm and 6cm ,on grid,
+\begin{tikzpicture}[-latex ,auto ,node distance =2 cm and 6.5cm ,on grid,
     semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=2 cm}, line/.style={color=black,line width=0.02cm}]
 \node[state] (A)[]{Server};
 \node[state] (B)[right=of A]{Client};
-\node[state] (C)[below=of B]{Client listening socket};
-\node[state] (D)[below=of A]{Server listening socket};
+\node[state] (C)[below=of B]{Application connected to client};
+\node[state] (D)[below=of A]{Application connected to server};
 \draw[line] (B) to[bend right] node[above] {HTTP encoded data}(A);
 \draw[line] (A) to[bend left] (B);
 \draw[line] (B) -- node[right] {IO from the socket}(C);
@@ -176,4 +177,5 @@ Either of these sections (on both the server and the client) could be switched o
 As the entire project is about transmitting data, a lot of the data transfer is built on `Data Buffers' which are essentially a bit-stream that encapsulates length, which means it is easy to tell when the bit-stream is complete because the correct number of bits will be recieved, and thenext length header will not have been.
 
 \subsection{Server-Server adapter}
-On both ends of the project there is a TCP listening socket, an adapter is needed which can connect two listening sockets together, because most applications will have a client/server model and therefore one listening socket and one connecting.
+On the client and server side of the project there is a TCP listening socket, which provides flexibility, however most applications form a server/client pair which means one is listening and the other connecting.
+Therefore an adapter is needed to connect two listening sockets together --- one on the project and the other on the application.

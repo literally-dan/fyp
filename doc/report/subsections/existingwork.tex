@@ -4,18 +4,17 @@ In this section, related works are explored, and some literature surrounding Ste
 There has been much research done regarding steganography to hide data inside networking protocols, and a large proportion of this work has been done on DNS, as it is often below the radar for firewalls and checking if data is being exfiltrated.
 \subsection{Image Steganography}
 Steganography is most commonly used for hiding data in unused or unimportant areas of data\cite{exploringsteno}, and the most common form of data for this is images. This is because all of the colour data in an image is not required for a human to see it, and the human eye is very good at filtering out noise.
-
-More advanced approaches to steganography can involve identifying redundant data in images\cite{introsteno} which can be better than changing the least significant bit in an image which can be detected by steganalysis.
+Basic image steganography is carried out by changing the least significant bit or bits in the data, whereas more advanced approaches to steganography can involve identifying redundant data in images\cite{introsteno}. This is better, because it is more difficult to detect using steganalysis.
 
 Steganography that is hidden from computers and is hidden from people are quite different things, and can require quite different approaches. The real challenge is to hide data from both.
 
-\subsection{DNS steganography}
+\subsection{DNS Steganography}
 It is possible to hide data in DNS requests, and this is called DNS Tunneling which is often used to get around firewalls and hide which websites are being accessed\cite{detectingdns}. The main benefit of this is that it often works when there is no direct access to the internet because DNS requests are often propagated through firewalls.
 This paper highlights the point raised in the previous section, that it is very easy for a human to look at the data and see it is abnormal, but non-trivial for a computer.
 The paper describes how the data is detected, and in doing so describes in depth how the data is encoded and tunneled.
 DNS tunneling as described in the aformentioned paper has a few advantages and disadvantages.
-The key advantage is that is can be used in locked down networks, as DNS traffic is often let out, but the main disadvantage is that data transfer is very slow with much overhead.
-
+The key advantage is that is can be used in locked down networks, as DNS traffic is often let out, but the main disadvantage is that data transfer is very slow with large amounts of overhead.
+This is because there is a very limited amount of data that can be encapsulated inside DNS requests and responses, and DNS requests are never hugely fast and the results can become cached.
 \subsection{HTTP protocol}
 The HTTP 1.1 Protocol\cite{rfc2616} is a protocol that describes how data is sent to and from a client, and it describes many areas where data could be included, such as:
 Images,
@@ -27,9 +26,10 @@ and more.
 All of which can be used to hide data.\par
 The HTTP headers could also be an area where data could be concealed, as they are whitespace insensitive, and they represent a dictionary which means that the order in which they are sent does not matter.
 
-\subsection{Detecting tunneled DNS traffic}
-There are a variety of ways to detect traffic being tunneled through DNS, from entropy analysis to performing DNS requests\cite{detectingdns}.
+\subsection{Detecting tunneled traffic}
+There are a variety of ways to detect traffic being tunneled, one of the most common is to perform entropy analysis\cite{detectingdns}.
 Entropy analysis is in simple terms looking at the `\texttt{randomness}' of the data to determine whether there is compressed or encrypted data within a stream, this works because compressed and encrypted data both strive to appear random (for different reasons), which means that they will have higher entropy than English text.\par
 Another way of performing the lookup is to do character frequency analysis\cite{freqanal}.
-Frequency analysis looks at the difference in frequency of letters in domain names/english words and in random data. It is similar to but not quite the same as entropy analysis, and it is also more effective. 
-This is more effective because domain names and English words have slightly different frequency characteristics to large passages of text, so determining whether something is likely to appear in a domain name is slightly different to determining whether it will appear in a block of text.
+Frequency analysis looks at the difference in frequency of letters in expected tokens or English words and in random data. It is similar to but not quite the same as entropy analysis, and it is also more effective.
+This is more effective because English words or tokens have slightly different frequency characteristics to large passages of text, so determining whether something is likely to appear in a domain name is slightly different to determining whether it will appear in a block of text.
+

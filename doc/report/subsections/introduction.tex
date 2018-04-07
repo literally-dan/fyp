@@ -19,6 +19,13 @@ In formal terms, the aims of the project are as follows:
     \item To be able to communicate between the server and client using only HTTP
     \item To make the traffic appear as valid HTTP
 \end{enumerate}
+For example, it could be valuable to be able SSH to a remote server, and make it very difficult for an onlooker to tell that:
+\begin{itemize}
+    \item Data Transfer is occurring
+    \item That the traffic is not HTTP
+    \item That other parties are involved in the connection
+\end{itemize}
+The benefit of the server acting as a valid HTTP server is because if it is being investigated, the server could be browsed to, and it would not be obvious that it is not a real HTTP server, or that at least HTTP is not the only function of the server.
 
 \subsection{Paper Overview}
 \begin{enumerate}

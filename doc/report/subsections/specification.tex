@@ -2,15 +2,11 @@
 \subsection{Functional Requirements}
 \begin{enumerate}
     \item The system must allow duplex communication with a remote server and local client
-    \item All communication between the user and the server abide by the HTTP Protocol
-    \item The user must be able to browse simple text based 
+    \item All communication between the user and the server must abide by the HTTP Protocol
+    \item The user must be able to browse simple text based web pages
     \item The user must be able to connect to a remote server, over SSH for example
-    \item The server and client must expose a TCP port which can be used for multiple applications
+    \item The user must be able to tunnel data between the server and client
     \item The server must act as a valid HTTP server serving a valid web page if navigated to
-    \item The server must act as a mirror to another HTTP server when serving HTTP to both the client and any other clients that may discover it
-    \item The system should not encrypt data traveling over it, data should be assumed to be already encrypted
-    \item The client should poll the server for data
-    \item When the client or server has data to send, the client should increase the frequency of requests
     \item The system should be able to serve multiple clients at a time without interference
 \end{enumerate}
 \subsection{Non-functional Requirements}
