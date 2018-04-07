@@ -83,7 +83,29 @@ HTTP is run over port 80, and this is often one of the only ports available. ISP
 In the field of networking in Computer Science, networking is split into layers.
 Tunnelling is when some of the layers are encapsulated and sent as a regular payload.
 A real world example of this would be putting a letter inside an envelope, addressing it, stamping it, and then putting that envelope inside a second larger envelope. The second larger envelope can then be addressed, stamped and posted independently.
-On receipt of the larger envelope, the one inside can then be taken out and posted. This has the effect of concealing that two parties are communicating, and is a good analogy of how encapsulation on a computer network functions.
+On receipt of the larger envelope, the one inside can then be taken out and posted. This has the effect of concealing that two parties are communicating, and is a good analogy of how encapsulation on a computer network functions.\\
+Below is a diagram explaining how tunneling works:
+\begin{center}
+\begin{tikzpicture}[-latex ,auto ,node distance =.7 cm and 6cm ,on grid,
+    semithick, red/.style={top color=white, bottom color = red!20, draw,processblue, text=blue, minimum width=4 cm}, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=4 cm}, line/.style={color=black,line width=0.04cm}]
+\node[state] (E)[]{IP Layer};
+\node[state] (F)[above=of E]{TCP Layer};
+\node[red] (G)[above=1cm of F]{IP Layer};
+\node[red] (H)[above=of G]{TCP Layer};
+\node[state] (A)[left=of G]{IP Layer};
+\node[state] (B)[above=of A]{TCP Layer};
+\node[state] (C)[above=of B]{Payload};
+\node[red] (I)[above=of H]{Payload};
+\node[fit=(G)(I), draw, thick, inner sep=0.2cm, blue,minimum width=4cm](PC1){};
+\node[label] (J)[above=1.5cm of PC1]{Encapsulated Traffic};
+\node[label] (D)[left=of J]{Typical Traffic};
+\node[label] (K)[right=4.5cm of PC1]{Encapsulated Payload};
+\draw[line] (A.east) -- (G.west);
+\draw[line] (B.east) -- (H.west);
+\draw[line] (C.east) -- (I.west);
+\end{tikzpicture}
+\end{center}
+
 
 \subsection{VPN}
 A VPN or Virtual Private Network which is defined in \texttt{RFC2764}\cite{rfc2764}, is a piece of software, split into a server and a client, where the server and the client (or clients) form a network which is both virtual and private.\\
