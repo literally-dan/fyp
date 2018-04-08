@@ -19,7 +19,7 @@
   morecomment=[s]{\{}{\}}
 }
 
-\section{Implementation}
+\section{Implementation Details}
 In this section all of the areas of the project that have been talked about in the design section are discussed in detail.
 
 \subsection{Programming Language Choice}
@@ -35,11 +35,11 @@ For the project, Python was chosen for a number of reasons:
 As discussed previously, the proxy creates and maintains two sockets, and acts as a `\texttt{man-in-the-middle}' between them, receiving data from one socket, mutating it with the current mutator, and then passing it on to the second socket. The sockets and remote server are defined in a configuration file, which is verified in the following ways:
 \begin{itemize}
     \item Checking the remote server has a port open and that it replies as expected
-    \item Check that the functions defined exist
+    \item Check that the specified mutator functions exist
 \end{itemize}
-This helps make sure the project is stable.\par
+This helps make sure the project is stable.
 
-The Proxy maintains both sockets by storing a buffer each way of data that is ready to send, but not yet sent. When the data is sent, it checks the sockets to make sure it has been sent successfully, and if it has not been, it tears down the socket and rebuilds it. If the socket cannot come back up, it terminates the program.
+The Proxy maintains both sockets by storing a buffer each way of data that is ready to send, but not yet sent. When the data is sent, it checks the sockets to make sure it has been sent successfully, and if it has not been, it tears down the sockets and rebuilds them. If the socket cannot come back up for any reason, it terminates the program.
 \subsection{Obfuscator}
 The Obfuscator is split into three parts:
 \begin{itemize}
@@ -51,7 +51,7 @@ The Obfuscator is split into three parts:
 \subsubsection{Generic Obfuscation}
 The generic obfuscator that was created as part of the project can be used to take any input and generate an output of any highly structured data which can be defined in the format used by the program.\par
 As this is for generating structured data, and in the context of this project, HTML, it is only used on the response side of the program to inject valid HTML into the page that is returned from the webserver.\par
-As an example, generating simple mathematical formulae from data is demonstrated below because it is significantly simpler and less verbose than HTML, however the process is the same.\par
+As an example, generating simple mathematical formulae from data is demonstrated below, because it is significantly simpler and less verbose than HTML, however the process is the same.\par
 The format defined for simple mathematical equations is as follows:
 \begin{lstlisting}[language=pagefile]
 op <- x
@@ -68,22 +68,20 @@ intexp <-(%intexp %op %intexp)
 \end{lstlisting}
 
 As can be seen here, the format is defined recursively. A tree representing this format and how it is interpreted can be seen on the next page.
-The format is the built up by selecting the top level element which is in this case `\texttt{exp}' (the asterisk is only to mark that it is the top level element).
+The format is the built up by selecting the top level element which is in this case `\texttt{exp}' (the asterisk is only to mark that it is the top level element).\\
 \texttt{exp} can only be represented by \texttt{\%intexp \%op \%intexp}. \\
-\texttt{intexp} can be represented by a single integer, or an expression.
+\texttt{intexp} can be represented by a single integer, \texttt{\%int}, or an expression, \texttt{(\%intexp \%op \%intexp)}.\\
 As there are two choices, the first bit in the bitstream will be selected and this will be used to choose between the two possible choices, as demonstrated in the tree on the next page.
-When there are more than two choices, multiple bits are used to make the decision.
-This is made slightly more complicated by the fact that the bytes are read backwards, but when multiple bits are required, they are interpreted the other way around.
-
-For example, the ASCII characters `hi' are represented by the binary `01101000 01101001'.\\
-As the bits are read backwards, they are used in the order: `00010110 10010110'\\
+When there are more than two choices, multiple bits are used to make the decision, however, when multiple bits are required, the order of the bits is reversed.\\
+For example, the ASCII characters `hi' are represented as: `\texttt{01101000 01101001}'.\\
+When bits are read from the bitstream, they are consumed least significant bit first, which means the order they are used in is: `\texttt{00010110 10010110}'\\
 To start with, we have:\\
 \texttt{\%intexp \%op \%intexp}\\
-The \texttt{intexp} requires a single bit, which in this case is \texttt{0} as that is the first bit of the input. A \texttt{0} means that the first of the two choices are chosen, resulting in an \texttt{int}. An \texttt{int} requires 2 bits to choose what will represent it and the next two bits of the input are \texttt{00}.
+The \texttt{intexp} requires a single bit, which in this case is \texttt{0} as that is the first bit of the input. A \texttt{0} means that the first of the two choices are chosen, resulting in an \texttt{int}. An \texttt{int} requires 2 bits to choose what will represent it and the next two bits of the input are \texttt{00}, again selecting the first option.
 Therefore the first int is 1. The next part is the \texttt{op} which also requires two bits, \texttt{10}.\\
-The order here is again flipped, which means a \texttt{+} is chosen.
-This continues recursively, and results in the following: \\
-\texttt{1 + ((2 \- 4) x 1)}\newpage
+The order here is again flipped, which means that a \texttt{+} is chosen.
+This continues recursively, and results in the following: 
+\texttt{$1 + ((2 - 4) \times 1)$}\newpage
 To make this clearer, the recursive tree that is generated by the format above, along with the choices to navigate each branch are defined below:
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 3cm ,on grid,
@@ -141,7 +139,7 @@ The way this works is by utilising `\texttt{unary}', which is where a number is 
 In the project, a maximum of 16 spaces (or 4 bits) is used, for example, 7 spaces out of a maximum of 16 would represent `0111'.
 
 \subsubsection{List Order Shuffling}
-HTTP headers are stored as a dictionary, which means that we can reorder them, and the remote server, nor anyone listening to the traffic are likely to notice.
+HTTP headers are stored as a dictionary, which means that we can reorder them without the remote server, or anyone listening to the traffic being likely to notice.
 In a list of, for example, 14 elements, there are $\Factorial{14}$ or $87178291200$ different ways to order the list.
 This means that there are $\Log[2]{\Factorial{14}}$, roughly $36$ bits, or around 4 bytes of data that can be stored.\par
 The algorithm devised resembles Quicksort, however instead of comparing two elements to each other, the next bit of a bitstream is used to decide the order.\\
@@ -233,16 +231,16 @@ If the datasource defined above is for the word `\texttt{data}' (which in binary
     ]
 \end{tikzpicture}
 \vspace{0.5cm}\\
-At each node, the first element (marked with a `\texttt{\#}') represents the `pivot' in the quicksort. The binary below each element is for deciding whether the element should go left (\texttt{1}) or right (\texttt{0}).\par
+At each node, the first element (marked with a `\texttt{\#}') represents the `pivot' in the quicksort. The binary below each element is for deciding whether the element should go left (\texttt{1}) or right (\texttt{0}).
+The binary is put into the tree in a depth first fashion, and in order to get the order of the list back out of the tree, it is traversed in-order.\par
 The output from encoding `data' into the order of:\\
 `\texttt{A B C D E F G H I J K L M N}' is:\\
 '\texttt{G H D J A E K L I N B C F M}'\par
+To retrieve the binary data back out from the reordered list is trivial, the tree is just built up, and then the binary can be easily extracted.\par
 \vspace{0.3cm}
-The binary is put into the tree in a depth first fashion, and in order to get the order of the list back out of the tree, it is traversed in-order.\par
-To get the binary data back out from the reordered list is trivial, the tree is just built up, and then the binary can be easily extracted.\par
 
 \newpage
-One side effect of building a tree based on binary data is that depending what the data to be encoded is, a different number of bits will be encoded*, which means that different amounts of data would be sent with each request.
+One side effect of building a tree based on binary data is that depending what the data to be encoded is, a different number of bits can be encoded*, which means that different amounts of data would be sent with each request.
 
 \begin{table}[ht]
 \begin{tabular}{@{}rllll@{}}
@@ -251,7 +249,9 @@ Type of data & English Text & Random Data & Binary 0's & Repeated `U's \\ \midru
 Bits Encoded & 482 & 493 & 4851 & 474 \\ \bottomrule
 \end{tabular}
 \end{table}
-{\small * The Random data test was run 100 times and this is the average.The English data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's.The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0b10101010).}\par
+{\small * The Random data test was run 100 times and this is the average.The English data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's.The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0b01010101).\\
+The data above was encoded into lists of length 100.
+}\par
 \vspace{0.5cm}
 It is notable that English text gets fewer bits encoded than random data, which is very different to typical compression schemes where English text is more compressible. This benefits this application, as the typical data that will be encoded will be more equivalent to random data because it will be compressed or encrypted.
 
@@ -259,19 +259,19 @@ This idea can be applied to HTTP headers, to get data from the client to the ser
 
 \subsection{HTTP Mutator}
 The HTTP Mutator is the layer that understands HTTP, and where data can be inserted.
-To make this work, the HTTP protocol had to be implemented to a level where every part of it can be manipulated. Using libraries was initially attempted, but the library support was not avaliable for chunked encoding, or modifying requests and forwarding them on.\par
+To make this work, the HTTP protocol had to be implemented to a level where every part of it can be manipulated. Using libraries was initially attempted, but the library support was not available for chunked encoding, or modifying requests and forwarding them on.\par
 Implementing HTTP was not too difficult, as it is a plaintext protocol that is reasonably well defined, however in order to make it work, all of the different compression types have to be handled. It was decided to strip the compression out rather than spend time implementing lots of variations on the same compression scheme.\par
 
 \subsubsection{Inserting HTML-Encoded Data}
 In order to insert HTML-encoded data in a sensible place, there are a some problems to solve:
 \begin{itemize}
-    \item The length of the HTML-encoded data will change
-    \item The length of the initial HTML will change
-    \item The position of the HTML-encoded data needs to be calculated
+    \item The length of the HTML-encoded data could change
+    \item The length of the initial HTML could change
+    \item The position of the HTML-encoded data could change
 \end{itemize}
 
 The solution used to solve the above issues is twofold.\par
-Firstly, the data is encoded with a length appended to the front.
+Firstly, the data is encoded with the length appended to the front.
 The length is in ASCII which while being more inefficient from a data-storage perspective, provides a token that allows the program to be certain that, if for a given section of HTML the HTML can be decoded into data, and the data is the same length as expected that it is in fact the data to be decoded.\par
 Secondly, there are only a limited number of places where the data can be inserted. The number of valid insertion points (where HTML can be correctly inserted) is counted, and then a function is run which generates the following sequence of numbers:
 \begin{lstlisting}
@@ -301,7 +301,7 @@ def get_position(length):
     return current
 \end{lstlisting}
 This sequence was used because it provides a small number of points to test to see if data is present, and it expands exponentially, but starts quite slowly. There was a lot of trial and error to get a sensible function.
-Typically a HTML page does not even have \texttt{55573} `insertion' points, however in testing, pages with up to \texttt{300,000} insertion points were found.\par
+Typically a HTML page does not even have \texttt{55,573} `insertion' points, however in testing, pages with up to \texttt{300,000} insertion points were found.\par
 
 HTTP has a feature called chunked encoding which differs from standard HTTP by not sending the length of the entire response, but sending it in chunks, and sending the length of each chunk individually.
 More headers can also be sent with each chunk, and the webserver does not have to inform the client when all of the chunks have been sent. All of these complicate the matter of receiving data via chunked encoding.\par
@@ -309,7 +309,7 @@ To solve these issues, the program concatenates multiple chunks together before 
 
 \subsection{HTTP Client}
 The HTTP client makes HTTP requests to the server, and data is encoded by changing the order of the headers and appending whitespace, as previously explained.\par
-To make the HTTP Requests, the Python Requests library is used. When headers are added to the requests created by the requests library, it does not preserve the order they are added in thus the client modifies the fields directly inside the library.\par
+To make the HTTP requests, the Python Requests library is used. When headers are added to the requests created by the requests library, it does not preserve the order they are added in thus the client modifies the fields directly inside the library.\par
 HTTP is a response/request protocol, so the client has to poll the server at regular intervals to check to see if the server has any data to return. If the server returns any data encoded into the HTML response, the client waits for a short amount of time before requesting another page. This continues until the server returns no data when the client goes back to polling at regular intervals. The same behavior occurs if the client has any data to send to the server, it makes frequent requests until all of the data has been sent.
 
 \subsection{Complete Data Flow}
