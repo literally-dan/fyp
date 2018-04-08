@@ -139,11 +139,11 @@ The way this works is by utilising `\texttt{unary}', which is where a number is 
 In the project, a maximum of 16 spaces (or 4 bits) is used, for example, 7 spaces out of a maximum of 16 would represent `0111'.
 
 \subsubsection{List Order Shuffling}
-HTTP headers are stored as a dictionary, which means that we can reorder them without the remote server, or anyone listening to the traffic being likely to notice.
-In a list of, for example, 14 elements, there are $\Factorial{14}$ or $87178291200$ different ways to order the list.
-This means that there are $\Log[2]{\Factorial{14}}$, roughly $36$ bits, or around 4 bytes of data that can be stored.\par
+HTTP headers are stored as a dictionary, which means that we can reorder them without the remote server, or anyone listening to the traffic, being likely to notice.
+In a list of 14 elements for example, there are $\Factorial{14}$ or $87178291200$ different ways to order the list.
+This means that there are $\Log[2]{\Factorial{14}}$, which is approximately $36$ bits, or around 4 bytes of data that can be stored.\par
 The algorithm devised resembles Quicksort, however instead of comparing two elements to each other, the next bit of a bitstream is used to decide the order.\\
-Below is some side-by-side python to demonstrate this, with the differences highlighted:
+Below is some side-by-side Python to demonstrate this, with the differences highlighted:
 \vspace{0.5cm}
 \hrule
 {\setlength\multicolsep{0pt}
@@ -249,7 +249,7 @@ Type of data & English Text & Random Data & Binary 0's & Repeated `U's \\ \midru
 Bits Encoded & 482 & 493 & 4851 & 474 \\ \bottomrule
 \end{tabular}
 \end{table}
-{\small * The Random data test was run 100 times and this is the average.The English data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's.The Repeated U's is binary switching between 1 and 0 (The binary representation of U in ASCII is 0b01010101).\\
+{\small * The Random data test was run 100 times and this is the average. The English data test was run on different data from Lorem Ipsum 100 times and this is the average. The binary 0's is a repeated binary steam of 0's. The Repeated U's is binary switching between 1 and 0 (the binary representation of U in ASCII is 0b01010101).\\
 The data above was encoded into lists of length 100.
 }\par
 \vspace{0.5cm}
@@ -272,8 +272,8 @@ In order to insert HTML-encoded data in a sensible place, there are a some probl
 
 The solution used to solve the above issues is twofold.\par
 Firstly, the data is encoded with the length appended to the front.
-The length is in ASCII which while being more inefficient from a data-storage perspective, provides a token that allows the program to be certain that, if for a given section of HTML the HTML can be decoded into data, and the data is the same length as expected that it is in fact the data to be decoded.\par
-Secondly, there are only a limited number of places where the data can be inserted. The number of valid insertion points (where HTML can be correctly inserted) is counted, and then a function is run which generates the following sequence of numbers:
+The length is in ASCII, which while being more inefficient from a data-storage perspective, provides a token that allows the program to be certain that, if for a given section of HTML the HTML can be decoded into data, and the data is the same length as expected, that it is in fact the data to be decoded.\par
+Secondly, there are only a limited number of places where the data can be inserted. The number of valid insertion points (where HTML can be correctly inserted) is counted, and then a function is executed which generates the following sequence of numbers:
 \begin{lstlisting}
 1
 12
@@ -314,10 +314,10 @@ HTTP is a response/request protocol, so the client has to poll the server at reg
 
 \subsection{Complete Data Flow}
 In this section, an end to end data flow will be explained by sending short messages in both directions with a direct connection to the TCP sockets exposed by the client and server of the program. All of the data here is present in a Wireshark capture which is submitted as appendix 12.2.
-The focus is on decoding the data, but the process is the same for encoding.
+The in this section is on decoding the data, but the process is the same for encoding.
 \subsubsection{Configuration}
 
-\texttt{netcat} is used to connect to listening socket on each computer.\par
+\texttt{netcat} is used to connect to a listening socket on each computer.\par
 \vspace{0.2cm}
 
 The program has been set up as follows on two separate computers:
@@ -363,7 +363,7 @@ Upgrade-Insecure-Requests: 1                                     (37)
 
 \end{lstlisting}
 The numbers at the end of each line are the number of spaces.
-For the purposes of demonstration, the number of bits transferred in whitespace have been increased, and there are a maximum of 64 spaces per line, which means 6 bits/header.
+For the purposes of demonstration, the number of bits transferred in whitespace have been increased, and there are a maximum of 64 spaces per line, which means 6 bits per header.
 The first number is \texttt{26}, which is \texttt{11010} in binary.
 However, this is only 5 binary digits, and each line represents 6, so a 0 is appended to the start, resulting in: \texttt{011010}. As previously, the binary is transferred as least significant bit first, which means the order is reversed to \texttt{010110}.\\
 Therefore, the fully computed binary from appending whitespace is the following:\\
@@ -373,7 +373,7 @@ Therefore, the fully computed binary from appending whitespace is the following:
 \subsubsection{Reordering of Headers}
 In the example above, the headers are out of order, and data is stored in the order of them.
 To get the data back out, the list is sorted alphabetically, and the first item is taken to act as a `pivot', which is the \texttt{Accept:} header.
-The sorted list is then compared to the original list, and for every element in the sorted list that appears before \texttt{Accept:} a 1 is output, and if it appears afterwards, a 0 is output.
+The sorted list is then compared to the original list, and for every element in the sorted list that appears before \texttt{Accept:} a 1 is returned, and if it appears afterwards, a 0.
 For the top level, this results in the following binary output: \texttt{1000110010011}, and this is recursed upon on each sub-list (before and after the pivot).
 When this has been repeated for all of the sub-lists until the sub-lists are empty, the following data is the result:\\
 \texttt{1000110010011100010111000010101000}.\\
@@ -385,10 +385,8 @@ The rest of the data is in another request, and is:\\
 000000000000000000000000000000000000000}\\
 Lots of the data is 0's, and this is because when the whitespace is appended to the headers, if no whitespace is appended, that represents only 0's.
 To get the initial data out, we append the current data to the end of this, and then reverse all of it.\\
-The first 24 bits of this are:\\
-\texttt{100011001001110001011100}\\
-Which is \texttt{:91} in ascii. However, this is backwards, and when it is reversed it tells us that the length is 19. Therefore, to get the full data out, we have to read the next $19 * 8 = 152$ bits.\\
-This means the resulting message is:\par
+The first 24 bits of this are \texttt{100011001001110001011100} which is \texttt{:91} in ascii. However, this is backwards, and when it is reversed it tells us that the length is 19. Therefore, to get the full data out, we have to read the next $19 * 8 = 152$ bits.\\
+This means that the resulting message is:\par
 \texttt{This is a message!}
 
 \newpage
@@ -478,4 +476,4 @@ Which when converted to ASCII is:\\
 The 4 digit number at the start is the length in bytes of the message that has been sent, and the length is sent in ASCII for the reasons described in the previous section.
 
 \subsubsection*{Note on Binary Reordering}
-In the previous sections, there is a lot of reversing the order of bits and bytes etc, this is because in the implementation, the binary byte order is least significant bit first, which is different to the typical use. There is no real reason for this, and no advantages/disadvantages, aside from that it makes it slightly more difficult to explain.
+In the previous sections, there is a lot of reversing the order of bits and bytes which is because in the implementation, the binary byte order is least significant bit first, which is different to the typical use. There is no real reason for this, and no advantages/disadvantages, aside from that it makes it slightly more difficult to explain.

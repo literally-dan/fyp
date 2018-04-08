@@ -1,17 +1,17 @@
 \section{Design and Architecture}
-This section sets out the high-level program architecture and design, along with areas that are configurable and the different design choices that were made in the development of the project.
+This section sets out the high-level program architecture and design, along with areas that are configurable, and the different design choices that were made in the development of the project.
 
 During the design of the project, efforts were made to keep the entire program modular, so all sections are reusable and replaceable which means that it is easier to maintain the codebase and also makes it easier to add functionality and repurpose the existing code in the future.
 \subsection{HTTP Analysis}
-To embed data in HTTP on its own would be trivial, putting the data to send and receive as the request/response body. While this approach would get around many web filters, it would only require trivial inspection to determine that it is in fact not real HTTP traffic.
+Embedding data in HTTP by simply putting the data to send and receive as the request/response body is one way to embed data in HTTP\@. While this approach would get around many web filters, it would only require trivial inspection to determine that it is in fact not real HTTP traffic.
 In order to look more realistic, data is inserted into real websites and the client will exhibit realistic browsing patterns. Additionally, the server will act as a real website when accessed with a typical HTTP client.
 
 This means that to an observer, the VPN-Server will appear as a live mirror of a real website that updates as the original does.
 
-When talking about how data is transferred in detail, the client uploading, or sending data to the server is called the `Request' side, and when the client downloads, or receives data from the server it is the `Response' side.
+When talking about how data is transferred in detail, the client uploading, or sending data to the server, is called the `Request' side, and when the client downloads, or receives data from the server, it is the `Response' side.
 
-Putting data in the response side of the connection is trivial, as when a user makes a HTTP request, data is returned and it is often different even if the same request is sent multiple times.
-The request side, however, is more difficult because when a user is browsing a website, the request does not significantly change, and it would be obvious to an observer if, for example, the `User-Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the `Header' fields being a dictionary, so order does not matter and that they are also insensitive to whitespace.
+Putting data in the response side of the connection is simple, as when a user makes a HTTP request, data is returned and it is often different even if the same request is sent multiple times.
+The request side, however, is more difficult because when a user is browsing a website, the request does not significantly change, and it would be obvious to an observer if, for example, the `User-Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the `Header' fields being a dictionary, so that order does not matter and that they are also insensitive to whitespace.
 
 \newpage
 \subsection{Server Overview}
@@ -23,14 +23,14 @@ The server is split into multiple layers:
 \end{itemize}
 Some of the reasons for choosing this design are:
 \begin{itemize}
-    \item It allows the proxy layer to deal with keeping the connection alive, and the upper levels can assume that if they are running all of the resources they require are available
+    \item It allows the proxy layer to deal with keeping the connection alive, and the upper levels can assume that if they are running, all of the resources they require are available
     \item It allows ease of customisation, because each layer can easily be switched out or modified
-    \item It allows the proxy layer to provide a `data storage' to the upper layers, which is provided thread safe and reliably so they can access current data about the session
+    \item It allows the proxy layer to provide a `data storage' to the upper layers, which is provided thread safe and reliably, so they can access current data about the session
 \end{itemize}
 
 
 \subsection{Proxy Layer}
-The proxy layer forwards data between a remote server, and a remote client and acts as a manager for the two duplex connections that are active. This creates a TCP listening socket which when it receives a connection, it creates a connection to the remote server.
+The proxy layer forwards data between a remote server and a remote client, and acts as a manager for the two duplex connections that are active. This creates a TCP listening socket which, when it receives a connection, creates a connection to the remote server.
 In the most basic configuration, data is read from one socket and written directly to the other, acting as a TCP-Forwarder:
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 5cm ,on grid,
@@ -149,10 +149,10 @@ This is where the data to be encoded is read from, and after decoding on the rem
 \draw[line] (D) -- (A);
 \end{tikzpicture}
 \end{center}
-Using listening ports instead of directly interfacing with an application means that there is significantly more flexibility with regards to the applications that it can be used with, because multiple applications can be connected, with minimal configuration.
+Using listening ports instead of directly interfacing with an application means that there is significantly more flexibility with regards to the applications that it can be used with because multiple applications can be connected with minimal configuration.
 
 \subsection{Modular Sections Overview}
-The overall design of the project is to be very modular, so things can be switched out and replaced with ease.
+The overall design of the project is to be very modular, so modules can be switched out and replaced with ease.
 
 Below is a diagram showing all of the parts that could be switched out and replaced between the server and client.
 \begin{center}
@@ -172,7 +172,7 @@ Below is a diagram showing all of the parts that could be switched out and repla
 \end{tikzpicture}
 \end{center}
 Both the server and the client have an HTTP section and an Obfuscator section.
-Either of these sections (on both the server and the client) could be switched out with an equivalent pair, for example if the HTTP layer was replaced with a DNS layer to tunnel data over DNS, the program would continue to function correctly without changing other parts of the program.
+Either of these sections (on both the server and the client) could be switched out with an equivalent pair, for example if the HTTP layer was replaced with a DNS layer to tunnel data over DNS, the program would continue to function correctly without affecting other parts of the program.
 
 \subsection{Data Buffer}
 As the entire project is about transmitting data, a lot of the data transfer is built on `Data Buffers'. These are a bit-stream that encapsulates length, which means it is easy to tell when the bit-stream is complete because the correct number of bits will be received, and the next length header will not have been received.

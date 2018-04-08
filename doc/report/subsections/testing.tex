@@ -5,7 +5,7 @@ In this section, the various ways the project was tested during development are 
 \subsection{Development Testing}
 As described in the design section, the project was built in layers, and each of these have been tested individually.
 \subsubsection*{Proxy}
-The proxy was tested in development by using it as a TCP passthrough by transmitting files through it, and verifying the files were identical before and after transmission.
+The proxy was tested in development by using it as a TCP passthrough by transmitting files through it and verifying the files were identical before and after transmission.
 On top of this, time-sensitive tests were run to ensure that buffering was not massively increasing latency.\par
 The next tests run were disconnecting the sockets at both ends at different times and reopening the sockets to see if the connection could be re-established.\par
 \subsubsection*{HTTP Layer}

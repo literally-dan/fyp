@@ -45,17 +45,17 @@ A passive socket is listening, and is typically a \texttt{server} whereas an act
 The passive, or listening socket is opened by a server and waits for a connection from an active, or client socket.
 
 \subsection{Steganography}
-Steganography is defined as~\cite{dictsteno}:
+Steganography is defined as:
 \begin{quotation}
     `the art or practice of concealing a message, image, or file within
-    another message, image, or file'
+    another message, image, or file'~\cite{dictsteno}
 \end{quotation}
 An example of this could be encoding data into an image, or into an HTTP stream.
 
 \subsection{Obfuscation}
-To obfuscate is defined as~\cite{dictobfs}:
+To obfuscate is defined as:
 \begin{quotation}
-     `to be evasive, unclear, or confusing'
+    `to be evasive, unclear, or confusing'~\cite{dictobfs}
 \end{quotation}
 When applied to computers, this is similar to steganography and the two terms are often used interchangeably, however, steganography is the art of concealing and disguising data, whereas obfuscation makes data difficult to read and understand. 
 
@@ -63,15 +63,15 @@ When applied to computers, this is similar to steganography and the two terms ar
 \begin{quotation}
     `Encryption is the process of converting data to an unrecognisable or
     `encrypted' form. It is commonly used to protect sensitive
-    information so that only authorized parties can view it~\cite{dictenc}.'
+    information so that only authorized parties can view it'~\cite{dictenc}
 \end{quotation}
 This definition means that if some data has been encrypted with a sensible encryption scheme, it will be very difficult for a third party to decrypt.
-There are many types of encryption, AES and RSA are two major examples.\par
-It is widely referred to as bad practice to `\texttt{roll your own crypto}'~\cite{memtocrypto}, which means that it is a bad idea to write a bespoke cryptographic algorithm, or to try and come up with your own cryptographic scheme.
+There are many types of encryption with AES and RSA being two major examples.\par
+It is widely referred to as bad practice to `\texttt{roll your own crypto}'~\cite{memtocrypto}, which means that it is not recommended to write a bespoke cryptographic algorithm, or to try and invent with your own cryptographic scheme.
 
 \subsection{Privacy}
-Privacy on the internet is often overlooked, however, it is vitally important, as explained by Bruce Schneier on his blog, `Schneier on Security'~\cite{privacyrulez}. Almost everything that is done on the internet is tracked by multiple parties: Internet service providers (ISPs), the websites visited, DNS servers, third party servers and many more. These parties could all be gathering information in order to profile a person and build a model to predict their behavior, which can then be used for highly targeted advertising --- not always desirable for the end user. An extreme example of highly targeted advertisement was a case in 2012 where a retailer inadvertently told a father that his daughter was pregnant by sending her coupons for baby clothes and cribs.
-Since this case was first reported by The Independent~\cite{babyshower}, statistical models have become significantly more complex and intrusive. Google, who are the worlds biggest advertiser, recently allowed users to mark Adverts as `knowing too much'~\cite{googlearewatching}, which demonstrates that the problem exists, and is perhaps endemic in the advertising industry.
+Privacy on the internet is often overlooked, however, it is `vitally important', as explained by Bruce Schneier on his blog, `Schneier on Security'~\cite{privacyrulez}. Almost everything that is done on the internet is tracked by multiple parties: Internet service providers (ISPs), the websites visited, DNS servers, third party servers and many more. These parties could all be gathering information in order to profile a person and build a model to predict their behavior, which can then be used for highly targeted advertising --- not always desirable for the end user. An extreme example of highly targeted advertisement was a case in 2012 where a retailer inadvertently told a father that his daughter was pregnant by sending her coupons for baby clothes and cribs.
+Since this case was first reported by The Independent~\cite{babyshower}, statistical models have become significantly more complex and intrusive. Google, who are the worlds biggest advertiser~\cite{biggoogle}, recently allowed users to mark adverts as `knowing too much'~\cite{googlearewatching}, which demonstrates that the problem exists, and is perhaps endemic in the advertising industry.
 As this case shows, lack of privacy is scary, and tools that increase privacy can only be a good thing.
 
 \subsection{Blocking of Services}
@@ -83,7 +83,7 @@ In the field of networking in Computer Science, networking is split into layers.
 Tunnelling is when some of the layers are encapsulated and sent as a regular payload.
 A real-world representation of data encapsulation could be putting a letter inside an envelope, addressing it, stamping it, and then putting that envelope inside a second larger envelope. The larger envelope can then be addressed, stamped and posted independently.
 On receipt of the larger envelope, the encapsulated envelope can then be taken out and posted. This has the effect of concealing that two parties are communicating, and is a good analogy of how encapsulation on a computer network functions.
-Below is a diagram explaining how tunnelling works:
+Below is a diagram to illustrate how tunnelling works:
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =.7 cm and 6cm ,on grid,
     semithick, red/.style={top color=white, bottom color = red!20, draw,processblue, text=blue, minimum width=4 cm}, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=4 cm}, line/.style={color=black,line width=0.04cm}]
@@ -107,9 +107,9 @@ Below is a diagram explaining how tunnelling works:
 
 
 \subsection{VPN}
-A VPN or Virtual Private Network (defined in \texttt{RFC2764}~\cite{rfc2764}) is a piece of software, split into a server and a client, where the server and client (or clients) form a network which is both virtual and private.\\
+A VPN (Virtual Private Network) as defined in \texttt{RFC2764}~\cite{rfc2764} is a piece of software, split into a server and a client, where the server and client\@(s) form a network which is both virtual and private.\\
 A typical example of a VPN is OpenVPN, \texttt{https://openvpn.net/}.\\
-For a network to be private, it needs to be encrypted so no one else can see the data, and for it to be virtual, it has to only exist inside computers, and not physically connected by cables.\par In practical terms this means that data is tunnelled from one computer to another, generally by use of \texttt{tun} or \texttt{tap} devices:\\
+For a network to be private, it needs to be encrypted so that no one else can see the data, and for it to be virtual, it has to only exist inside computers, and not be physically connected by cables.\par In practical terms, this means that data is tunnelled from one computer to another, generally by use of \texttt{tun} or \texttt{tap} devices:\\
 \texttt{IP} packets can be read from and written to a \texttt{tun} device, whereas \texttt{Ethernet} frames can be read from and written to a \texttt{tap} device.\par
-Tun and Tap devices are virtual devices that exist on a computer, packets routed down them can be read from the device as though it is a file.
+Tun and Tap devices are virtual devices that exist on a computer, packets routed through them can be read from the device as though it is a file.
 Whichever device type is used, the packets or frames are transmitted through an existing connection to a remote client or server.
