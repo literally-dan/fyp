@@ -1,32 +1,31 @@
 \section{Introduction}
-\subsection{Problem Definition}
-Censorship and monitoring of web traffic is a common occurrence around the world, as is deep packet inspection to ensure that traffic on port 80 is in fact HTTP traffic.
+Censorship and monitoring of web traffic is a common occurrence around the world, as is deep packet inspection to ensure that traffic on port 80 is in fact HTTP (Hypertext Transfer Protocol) traffic.
 On top of this, organisations have been known to man-in-the-middle HTTPS traffic by adding their own certificates to devices owned by the organisation.
-Therefore it would be useful to be able to tunnel data over HTTP and make it virtually impossible to tell that data transfer is occurring.
+Therefore it would be useful to be able to tunnel data over HTTP and make it virtually impossible to tell that additional data is being tunnelled through the protocol.
 
 \subsection{Aims}
-The aim of this project is to be able to tunnel data, and by extension operate a VPN over the Hypertext Transfer Protocol (HTTP). There are multiple reasons why this would want to be done, for example:
+The aim of this project is to be able to tunnel data, and by extension operate a VPN over HTTP\@. There are multiple reasons why this would want to be done, for example:
 \begin{itemize}
     \item To access services that are blocked by the current network
     \item To hide the fact that blocked services are being accessed
     \item To maintain privacy regarding services that are being accessed
 \end{itemize}
-In order to perform the above, a server and client pair would need to be created, a server that acts as a HTTP server, and can receive connections from the client that will act as the HTTP client.
+In order to perform the above, a server and client pair would need to be created, a server that acts as an HTTP server, and can receive connections from the client that will act as the HTTP client.
 \vspace{0.5cm}
 In formal terms, the aims of the project are as follows:
 \begin{enumerate}
-    \item To hide data in the HTTP requests and responses
+    \item To hide data in HTTP requests and responses
     \item For the server to be able to function as a valid HTTP Server
     \item To be able to communicate between the server and client using only HTTP
-    \item To make the traffic appear as valid HTTP
+    \item To make traffic appear as valid HTTP
 \end{enumerate}
-For example, it could be valuable to be able SSH to a remote server, and make it very difficult for an onlooker to tell that:
+For example, it could be valuable to be able to SSH to a remote server, and make it very difficult for an onlooker to tell that:
 \begin{itemize}
-    \item Data Transfer is occurring
-    \item That the traffic is not HTTP
-    \item That other parties are involved in the connection
+    \item Data transfer is occurring
+    \item The traffic is not HTTP
+    \item Other parties are involved in the connection
 \end{itemize}
-The benefit of the server acting as a valid HTTP server is because if it is being investigated, the server could be browsed to, and it would not be obvious that it is not a real HTTP server, or that at least HTTP is not the only function of the server.
+The benefit of the server acting as a valid HTTP server is that if it is being investigated, the server could be browsed to, and it would not be obvious that it is not a real HTTP server, or at least HTTP is not the only function of the server.
 
 \subsection{Paper Overview}
 \begin{enumerate}
@@ -41,7 +40,7 @@ The benefit of the server acting as a valid HTTP server is because if it is bein
         \end{itemize}
     \item Background
         \begin{itemize}
-            \item High level overview of concepts and designs essential for the project:
+            \item High-level overview of concepts and designs essential for the project:
                 \begin{itemize}
                     \item HTTP
                     \item TCP
@@ -55,14 +54,14 @@ The benefit of the server acting as a valid HTTP server is because if it is bein
         \end{itemize}
     \item Design
         \begin{itemize}
-            \item High level program architecture and design
+            \item High-level program architecture and design
             \item Configurable options
             \item Design choices
         \end{itemize}
     \item Implementation
         \begin{itemize}
             \item Detailed information about how each component functions
-            \item High level overview about data flows
+            \item High-level overview about data flows
         \end{itemize}
     \item Testing
         \begin{itemize}
