@@ -50,7 +50,7 @@ A feature that SSH provides is the ability to advertise a local socks proxy on t
 A socks proxy receives HTTP requests for remote webservers and forwards the requests on to get the response.
 When testing with this, the setup was similar to the SSH test previously, except the client connected and acted as a SOCKS5 client.
 
-The below diagram is applicable for both SSH tests, and provides a good overview of how all of the parts connect for all tests.
+The below diagram is applicable for both SSH tests, and provides a good overview of how all of the parts connect for all tests. All of the blue boxes represent separate processes and can occur on separate, or the same computers.
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 5cm ,on grid,
     semithick, state/.style={top color=white, bottom color = processblue!20, draw,processblue, text=blue, minimum width=1 cm}, line/.style={color=black,arrows=-,line cap=butt,line width=0.07cm}]
@@ -126,4 +126,4 @@ With only port 80 (HTTP) available to communicate on, the server and client were
 To test this, a network was created with a blacklist of websites, and only port 80 (HTTP) and DNS was allowed to leave the network.\par
 Using the project, SSH was able to access remote servers, and a SOCKS proxy was able to be used to access the blocked websites.\par
 A PFSense router was used as router/firewall for the network previously described, and PFSense comes with a suite of tools for deep packet inspection, and all of the traffic was shown as being HTTP traffic.\par
-This aim was fulfilled, as even sophisticated tools were unable to detect that the traffic is not HTTP\@.
+This aim was fulfilled, as even the sophisticated analysis tools packaged with PFSense were unable to detect that the traffic is not HTTP\@.

@@ -4,14 +4,14 @@ This section sets out the high level program architecture and design, along with
 During the design of the project, efforts were made to keep the entire program modular, so all sections are reusable and replaceable. This means that it is easier to maintain the code base and also makes it far easier to add functionality and re-purpose the exising code in the future.
 \subsection{HTTP Analysis}
 To embed data in HTTP on its own would be trivial, putting the data to send and receive as the request/response body as data. While this would get around many web filters, it would only require trivial inspection to determine it is in fact not real HTTP traffic.
-For this reason, data is inserted into real websites and realistic browsing patterns, and to do this the VPN-Server will act as a website mirror when navigated to in the browser.
+In order to look more realistic, data is inserted into real websites and the client will exhibit realistic browsing patterns. Additionally, the server will act as a real website when accessed with a typical HTTP client.
 
 This means that to an observer, the VPN-Server will appear as a live mirror of a real website that updates as the original does.
 
 When talking about how data is transferred in detail, the client uploading, or sending data to the server is called the `Request' side, and when the client downloads, or receives data from the server is the `Response' side.
 
-Putting data in the Response side of the connection is trivial, as when a user make a HTTP request, data is returned, and it is often different even if the same request is sent multiple times.
-The Request side, however, is significantly more difficult. This is because when a user is browsing a website, the request doesn't significantly change, and it would be incredibly obvious to an observer if, for example, the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order does not matter, and insensitive to whitespace.
+Putting data in the response side of the connection is trivial, as when a user make a HTTP request, data is returned, and it is often different even if the same request is sent multiple times.
+The request side, however, is significantly more difficult which is because when a user is browsing a website, the request does not significantly change, and it would be incredibly obvious to an observer if, for example, the `User Agent' field continuously changes. Therefore, the changes have to be subtle, and rely on the Header fields being a dictionary, so order does not matter, and insensitive to whitespace.
 
 \newpage
 \subsection{Server Overview}
@@ -30,7 +30,7 @@ Some of the reasons for choosing this design are:
 
 
 \subsection{Proxy Layer}
-The proxy layer acts as a manager for the two duplex connections that are active. This creates a TCP listening socket, and then when that socket is connected to it, it creates a connection to the remote server.
+The proxy layer forwards data between a remote server, and a remote client and acts as a manager for the two duplex connections that are active. This creates a TCP listening socket, and then when the socket receives a connection, it creates a connection to the remote server.
 In the most basic configuration, data is read from one socket and written directly to the other, acting as a TCP-Forwarder:
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =3 cm and 5cm ,on grid,
@@ -63,7 +63,7 @@ This design was chosen because it allows traffic to be `\texttt{mutated}' on the
 
 \subsubsection{Configurable Options}
 In the proxy layer, there are lots of options that are customisable.\\
-Here is an example configuration file:
+Here is an example configuration file, and the options are explained below:
 \begin{verbatim}
 config:
     name: localhost-http
@@ -101,15 +101,16 @@ The Obfuscation layer consists of three parts:
     \item Whitespace obfuscation
 \end{itemize}
 
-\subsubsection*{Generic Obfuscation}
-Generic obfuscation is where a structure is defined, and then data can be placed into the defined structure.
+\subsubsection*{Generic Structured Obfuscation}
+Generic structured obfuscation is where a structure is defined, and then data can be placed into the defined structure.
 The structure is defined in a configuration file, called a `\texttt{page}' file, which sets out the structure the obfuscated data should fit into. It uses a custom configuration file format, for a number of reasons:
 \begin{itemize}
     \item Easy to extend
     \item Concise
     \item Easy to understand
 \end{itemize}
-An example of the file format is as follows:
+\newpage
+An example of the file format is below, and it essentially defines a grammar of the language, however the important elements are explained later.
 \begin{verbatim}
 PAGE#0.1
 DELIM <-
@@ -124,7 +125,7 @@ This is a simple example that will print out a byte of the input at a time, but 
 The obfuscation was designed like this because it makes it easy to modify, extend and debug.
 The obfuscation is completely reversible, and more details about how it works will be explained in the implementation section.\par
 
-The Obfuscation layer also includes {\bf List-Order} obfuscation, which stores data in the order of a list, and {\bf Whitespace Obfuscation} which is when binary data is converted to unary and appended to the end of elements as whitespace.\\
+The Obfuscation layer also includes List-Order obfuscation, which stores data in the order of a list, and Whitespace Obfuscation which is when binary data is converted to unary and appended to the end of elements as whitespace.\\
 Both of these are explained in detail in the implementation section.
 
 \subsection{HTTP Layer}

@@ -1,13 +1,12 @@
 \section{Specification}
 \subsection{Functional Requirements}
 \begin{enumerate}
-    \item The system must allow duplex communication with a remote server and local client
-    \item All communication between the user and the server must abide by the HTTP Protocol
-    \item The user must be able to browse simple text based web pages
-    \item The user must be able to connect to a remote server, over SSH for example
-    \item The user must be able to tunnel data between the server and client
-    \item The server must act as a valid HTTP server serving a valid web page if navigated to
+    \item The system must consist of a server and a client
+    \item The system must allow duplex data transfer between the server and the client
+    \item The communication between the server and the client must all occur encapsulated within the HTTP protocol
+    \item The server must act as a valid HTTP server, if connected to by a standard HTTP client
     \item The system should be able to serve multiple clients at a time without interference
+    \item The throughput of the system should be high enough to enable browsing of simple websites
 \end{enumerate}
 \subsection{Non-functional Requirements}
 \begin{enumerate}
@@ -15,3 +14,5 @@
     \item The connection speed must be such that browsing the internet is possible without undue difficulty.
     \item If the connection drops, the server and client must work to re-establish the connection
 \end{enumerate}
+
+

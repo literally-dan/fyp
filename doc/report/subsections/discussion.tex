@@ -6,12 +6,12 @@ The project was successful in that it met all of its aims, and even surpassed so
 \subsection{Failures and Limitations}
 Most of the project went reasonably well, however there are areas that I feel the project performs badly, and design choices that were made that while they made sense at the time were not the most sensible choice upon reflection.\par
 Chief amongst these is to act as a TCP tunnel rather than a UDP tunnel. A TCP tunnel was chosen originally because it is easier to test and do the initial setup for the program.\par
-UDP would have been better, because it's split into packets, and UDP does not require any guarantees that the data arrives, instead relying on the applications at each end to keep track of everything that has and has not arrived.\par
+UDP would have been better, because it is split into packets, and UDP does not require any guarantees that the data arrives, instead relying on the applications at each end to keep track of everything that has and has not arrived.\par
 This would mean that the project internals could be streamlined, and everything could have been done on a packet-by-packet basis rather than breaking a TCP stream up into arbitrary chunks.\par
 Using UDP would also mean that OpenVPN would have worked considerably better than it does over TCP\@.\par
 The other issue that is noteworthy is the transmission speed of the data.\par
 At sub dial-up speeds, accessing the internet is not the most seamless experience.\par
-The reasons behind this are complex, and a considerable amount of it stems from my choice of using Python, rather than using a lower level language, as Python is relatively slow.
+One of the major reasons behind this stems from my choice of using Python, rather than using a lower level language, as Python is relatively slow.
 \subsection{Mitigations}
 While existing solutions do not seem to detect the presence of additional data being transferred over HTTP, if the project became widely used, or even noticed, it would be trivial to stop all of the methods of data insertion.\par
 \begin{itemize}

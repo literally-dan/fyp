@@ -11,11 +11,11 @@ Host: localhost
 User-Agent: curl/7.58.0
 Accept: */*
 \end{verbatim}
-In this request, the request line comes first (\texttt{GET / HTTP/1.1}), and the headers. The headers are a set of key-value pairs which form a dictionary that tells the server extra information about the client.
+In the above request, the request line comes first (\texttt{GET / HTTP/1.1}), and the headers. The headers are a set of key-value pairs which form a dictionary that tells the server extra information about the client.
 
 One of the headers is:\\
 \texttt{User-Agent: curl/7.58.0}\\
-This is the client telling the server that \texttt{User-Agent} or the program used to get the page is \texttt{curl} version \texttt{7.58.0}.\vspace{0.4cm}\newline
+Which is the client telling the server that \texttt{User-Agent} or the program used to get the page is \texttt{curl} version \texttt{7.58.0}.\vspace{0.4cm}\newline
 An example response is as follows:
 \begin{verbatim}
 HTTP/1.0 200 OK
@@ -35,7 +35,7 @@ In this request the response line is sent, along with some headers which provide
 \subsubsection{HTTP Encoding types}
 HTTP has a variety of different encoding types and methods.
 These are specified in the \texttt{Transfer-Encoding} and \texttt{Content-Encoding}, both of which are  used to perform compression and other encoding of data.\par
-\texttt{Transfer-Encoding} additionally allows for \texttt{Chunked} encoding\cite{rfc7230}, which splits the page or portions of data up into multiple sections, and sends the length for each section separately. This is done so web servers can send data as it is generated, rather than having to buffer the entire page. It is built into HTTP/1.1, so the client cannot request that the server does not use it.
+\texttt{Transfer-Encoding} additionally allows for \texttt{Chunked} encoding\cite{rfc7230}, which splits the page or portions of data up into multiple sections, and sends the length for each section separately. This is done so web servers can send data as it is generated, rather than having to buffer the entire page. Chunked Encoding is built into HTTP/1.1, so the client cannot request that the server does not use it.
 
 \subsection{TCP}
 TCP (Transmission Control Protocol) is defined in \texttt{RFC793}\cite{rfc793} and all of the information about TCP comes from there unless otherwise specified.
@@ -66,23 +66,23 @@ When applied to computers, this is similar to steganography and the two terms ar
     `encrypted' form. It is commonly used to protect sensitive
     information so that only authorized parties can view it\cite{dictenc}.
 \end{quotation}
-This means that if I have encrypted some data with a sensible encryption scheme, it will be very difficult for a third party to decrypt.
+Which means that if I have encrypted some data with a sensible encryption scheme, it will be very difficult for a third party to decrypt.
 There are many types of encryption, AES and RSA are two major examples.\par
 It's generally referred to as bad practice to `\texttt{roll your own crypto}'\cite{memtocrypto}, which simply means that it is a bad idea to write a bespoke cryptographic algorithm, or to try and come up with your own cryptographic scheme.
 
 \subsection{Privacy}
-Privacy on the internet is often overlooked, however, it is vitally important\cite{privacyrulez}. Almost everything that is done on the internet is tracked by multiple parties: Internet service providers (ISPs), the websites visited, DNS servers, third party servers and many more. These parties could all be gathering information in order to profile and build a model to predict behavior. This can then be used for highly targeted advertising which is not always desirable for the end user. An extreme example of this was a case in 2012 where a retailer inadvertently told a father his daughter was pregnant by sending her coupons for baby clothes and cribs.\cite{babyshower}
-This case was first reported in early 2012, and since then statistical models have become significantly more complex and intrusive. This is demonstrated by Google recently allowing you to mark Adverts as `\texttt{knowing too much}'\cite{googlearewatching}.
+Privacy on the internet is often overlooked, however, it is vitally important\cite{privacyrulez}. Almost everything that is done on the internet is tracked by multiple parties: Internet service providers (ISPs), the websites visited, DNS servers, third party servers and many more. These parties could all be gathering information in order to profile and build a model to predict behavior. This can then be used for highly targeted advertising which is not always desirable for the end user. An extreme example of highly targeted advertisment was a case in 2012 where a retailer inadvertently told a father his daughter was pregnant by sending her coupons for baby clothes and cribs.\cite{babyshower}
+This case was first reported in early 2012, and since then statistical models have become significantly more complex and intrusive. Google recently allowing you to mark Adverts as `\texttt{knowing too much}'\cite{googlearewatching}, which demonstrates that the problem exists, and is perhaps endemic in the advertising industry.
 As this case shows, lack of privacy is scary, and tools that increase privacy can only be a good thing. 
 
 \subsection{Blocking of services}
 When you connect to Public Wi-Fi, often the provider will limit what content you have access to, often by blocking `ports' or preventing a blacklist of websites.\\
-HTTP is run over port 80, and this is often one of the only ports available. ISP's have also been known to block certain websites.
+HTTP is run over port 80, and is often one of the only ports available. ISP's have also been known to block certain websites.
 
 \subsection{Data Tunnelling}
 In the field of networking in Computer Science, networking is split into layers.
 Tunnelling is when some of the layers are encapsulated and sent as a regular payload.
-A real world example of this would be putting a letter inside an envelope, addressing it, stamping it, and then putting that envelope inside a second larger envelope. The second larger envelope can then be addressed, stamped and posted independently.
+A real world representation of data encapsulation could be putting a letter inside an envelope, addressing it, stamping it, and then putting that envelope inside a second larger envelope. The second larger envelope can then be addressed, stamped and posted independently.
 On receipt of the larger envelope, the one inside can then be taken out and posted. This has the effect of concealing that two parties are communicating, and is a good analogy of how encapsulation on a computer network functions.\\
 Below is a diagram explaining how tunneling works:
 \begin{center}
