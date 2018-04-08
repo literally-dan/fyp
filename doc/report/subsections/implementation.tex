@@ -32,9 +32,7 @@ For the project, Python was chosen for a number of reasons:
 \end{itemize}
 
 \subsection{Proxy}
-As discussed previously, the proxy creates and maintains two sockets, and acts as a `\texttt{man-in-the-middle}' between them, receiving data from one socket, mutating it with the current mutator, and then passing it on to the second socket.\par
-
-It also verifies the config file passed to it in the following ways:
+As discussed previously, the proxy creates and maintains two sockets, and acts as a `\texttt{man-in-the-middle}' between them, receiving data from one socket, mutating it with the current mutator, and then passing it on to the second socket. The sockets and remote server are defined in a configuration file, which is verified in the following ways:
 \begin{itemize}
     \item Checking the remote server has a port open and that it replies as expected
     \item Check that the functions defined exist
@@ -138,7 +136,7 @@ The tree is navigated until either the input is exhausted, which means the strea
 \newpage
 \subsubsection{Appending Whitespace}
 Appending whitespace to whitespace insensitive fields is a simple way to insert more data into the header of the HTTP request, because as in previous sections it is assumed that if the traffic was being inspected, it would be sanitised before inspection. \\
-Whitespace can be added up to a customisable maximum, which represents data.
+Whitespace can be added up to a customisable maximum.
 The way this works is by utilising `\texttt{unary}', which is where a number is represented by a number of items.
 In the project, a maximum of 16 spaces (or 4 bits) is used, for example, 7 spaces out of a maximum of 16 would represent `0111'.
 
