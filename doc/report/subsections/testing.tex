@@ -25,7 +25,7 @@ The applications that were tested are the following:
 \begin{itemize}
     \item Curl
     \item SSH
-    \item SSH Socks Proxy
+    \item SSH SOCKS Proxy
     \item OpenVPN
     \item iPerf
 \end{itemize}
@@ -45,9 +45,9 @@ SSH is a program that can be used to remotely manage computers and perform tasks
 The remote server was pointed at an SSH server, and SSH was used to connect to the local socket and make an SSH connection.
 It was possible to do server administration and even file editing with programs like \texttt{vim}, and the responsiveness that was provided was surprising, given the very limited bandwidth that was available.
 
-\subsubsection*{Testing With SSH Socks Proxy}
-A feature that SSH provides is the ability to advertise a local socks proxy on the client side.
-A socks proxy receives HTTP requests for remote webservers and forwards the requests on to get the response.
+\subsubsection*{Testing With SSH SOCKS Proxy}
+A feature that SSH provides is the ability to advertise a local SOCKS proxy on the client side.
+A SOCKS proxy receives HTTP requests for remote webservers and forwards the requests on to get the response.
 When testing with this, the setup was similar to the SSH test previously, except the client connected and acted as a SOCKS5 client.
 
 The below diagram is applicable for both SSH tests, and provides a good overview of how all of the parts connect for all tests. All of the blue boxes represent separate processes and can occur on separate, or the same computers.
@@ -114,7 +114,7 @@ The three initial aims for the project were:
 \end{enumerate}
 In this section, the aims are tested.
 \subsubsection*{To hide data in the HTTP requests and responses}
-This aim was fulfilled, and is tested by transmitting data between the server and client.
+This aim was fulfilled, and was tested by transmitting data between the server and client.
 
 \subsubsection*{For the server to be able to function as a valid HTTP Server}
 This aim was fulfilled, as the HTTP server could be communicated with by using a typical web browser and it would respond correctly.
@@ -126,4 +126,4 @@ With only port 80 (HTTP) available to communicate on, the server and client were
 To test this, a network was created with a blacklist of websites, and only port 80 (HTTP) and DNS was allowed to leave the network.\par
 Using the project, SSH was able to access remote servers, and a SOCKS proxy was able to be used to access the blocked websites.\par
 A PFSense router was used as router/firewall for the network previously described, and PFSense comes with a suite of tools for deep packet inspection, and all of the traffic was shown as being HTTP traffic.\par
-This aim was fulfilled, as even the sophisticated analysis tools packaged with PFSense were unable to detect that the traffic is not HTTP\@.
+This aim was fulfilled, as even the sophisticated analysis tools packaged with PFSense were unable to detect that the traffic was not HTTP\@.
